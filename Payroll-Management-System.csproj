@@ -40,6 +40,24 @@
       <HintPath>packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
@@ -57,22 +75,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\Menu Form\Attendance\frmAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menu Form\Attendance\frmAttendance.Designer.cs">
+      <DependentUpon>frmAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menu Form\Employees\frmAddEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menu Form\Employees\frmAddEmployee.Designer.cs">
+      <DependentUpon>frmAddEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Menu Form\frmDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Menu Form\frmDashboard.Designer.cs">
       <DependentUpon>frmDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Menu Form\frmAttendance.cs">
+    <Compile Include="Forms\Menu Form\frmImportAttendance.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Menu Form\frmAttendance.Designer.cs">
-      <DependentUpon>frmAttendance.cs</DependentUpon>
+    <Compile Include="Forms\Menu Form\frmImportAttendance.Designer.cs">
+      <DependentUpon>frmImportAttendance.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Menu Form\frmEmployees.cs">
+    <Compile Include="Forms\Menu Form\Employees\frmEmployees.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Menu Form\frmEmployees.Designer.cs">
+    <Compile Include="Forms\Menu Form\Employees\frmEmployees.Designer.cs">
       <DependentUpon>frmEmployees.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Menu Form\frmHome.cs">
@@ -95,13 +125,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Forms\Menu Form\Attendance\frmAttendance.resx">
+      <DependentUpon>frmAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menu Form\Employees\frmAddEmployee.resx">
+      <DependentUpon>frmAddEmployee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Menu Form\frmDashboard.resx">
       <DependentUpon>frmDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Menu Form\frmAttendance.resx">
-      <DependentUpon>frmAttendance.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Menu Form\frmImportAttendance.resx">
+      <DependentUpon>frmImportAttendance.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Menu Form\frmEmployees.resx">
+    <EmbeddedResource Include="Forms\Menu Form\Employees\frmEmployees.resx">
       <DependentUpon>frmEmployees.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Menu Form\frmHome.resx">
@@ -155,6 +192,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\company logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

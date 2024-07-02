@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
+using Payroll_Management_System.Forms.Menu_Form.Attendance;
 
 namespace Payroll_Management_System.Forms.Menu_Form
 {
@@ -108,6 +109,14 @@ namespace Payroll_Management_System.Forms.Menu_Form
                 frmEmployees frmEmployees = new frmEmployees();
                 frmHome.DisplayForm(frmEmployees, frmHome.mainPanel);
             }
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            
+            frmLogin frmLogin = new frmLogin();
+            frmLogin.Show();
+            this.Close();
         }
     }
 }

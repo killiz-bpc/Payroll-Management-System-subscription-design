@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Payroll_Management_System.Forms.Menu_Form.Employees;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace Payroll_Management_System.Forms.Menu_Form
         public frmEmployees()
         {
             InitializeComponent();
+        }
+
+        private void btnAddEmployee_Click(object sender, EventArgs e)
+        {
+            frmAddEmployee frmAddEmployee = new frmAddEmployee();
+            frmAddEmployee.ShowDialog();
+
         }
     }
 }

@@ -11,9 +11,9 @@ using Microsoft.Office.Interop.Excel;
 
 namespace Payroll_Management_System.Forms.Menu_Form
 {
-    public partial class frmAttendance : Form
+    public partial class frmImportAttendance : Form
     {
-        public frmAttendance()
+        public frmImportAttendance()
         {
             InitializeComponent();
         }
@@ -36,16 +36,17 @@ namespace Payroll_Management_System.Forms.Menu_Form
             {
                 xlApp = new Microsoft.Office.Interop.Excel.Application();
                 xlWorkbook = xlApp.Workbooks.Open(strFileName);
-                xlWorksheet = xlWorkbook.Worksheets["biometrics"];
+                xlWorksheet = xlWorkbook.Worksheets["Final"];
                 xlRange = xlWorksheet.UsedRange;
 
                 int i = 0;
 
+                
 
                 for (xlRow = 2; xlRow <= xlRange.Rows.Count; xlRow++)
                 {
                     i++;
-                    dgvImportAttendance.Rows.Add(i, xlRange.Cells[xlRow, 1].Text, xlRange.Cells[xlRow, 2].Text, xlRange.Cells[xlRow, 3].Text, xlRange.Cells[xlRow, 4].Text);
+                    dgvImportAttendance.Rows.Add(i, xlRange.Cells[xlRow, 1].Text, xlRange.Cells[xlRow, 2].Text, xlRange.Cells[xlRow, 3].Text, xlRange.Cells[xlRow, 4].Text, xlRange.Cells[xlRow, 5].Text);
                 }
                 xlWorkbook.Close();
                 xlApp.Quit();
