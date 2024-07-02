@@ -9,11 +9,13 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Payroll_Management_System
 {
     public partial class frmLogin : Form
     {
+        public string connString;
         public frmLogin()
         {
             InitializeComponent();
@@ -29,12 +31,7 @@ namespace Payroll_Management_System
 
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-            frmLoading frmLoading = new frmLoading();
-            frmLoading.ShowDialog();
-            this.Hide();
-        }
+
 
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -63,6 +60,42 @@ namespace Payroll_Management_System
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        public void delete_text()
+        {
+            txtUsername.Clear();
+            txtPassword.Clear();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtUsername.Text))
+            {
+                MessageBox.Show("Please input username", "Message Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                delete_text();
+                return;
+            }
+            else if (string.IsNullOrEmpty(txtPassword.Text)) 
+            {
+                MessageBox.Show("Please input password", "Message Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                delete_text();
+                return;
+            }
+            else
+            {
+                using (MySqlConnection conn = new MySqlConnection(connString))
+                {
+                    conn.Open();
+                    string query = "SELECT username, password FROM employee_information where username=@username AND password=@password";
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@username", txtUsername.Text);
+                        cmd.Parameters.AddWithValue("@password", txtPassword.Text);
+
+                    }
+                }
+            }
         }
     }
 }

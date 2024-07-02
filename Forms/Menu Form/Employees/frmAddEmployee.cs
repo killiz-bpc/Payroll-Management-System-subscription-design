@@ -19,20 +19,11 @@ namespace Payroll_Management_System.Forms.Menu_Form.Employees
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            foreach (Control ctrl in this.Controls)
-            {
-                if (ctrl is TextBox)
-                {
-                    TextBox textBox = (TextBox)ctrl;
-                    if (string.IsNullOrWhiteSpace(textBox.Text))
-                    {
-                        MessageBox.Show("The text field " + textBox.Name + " is empty.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
-                }
-            }
+           if(string.IsNullOrEmpty(txtDepartment.Text)) {
 
-            MessageBox.Show("All text fields are filled.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("department empty");
+            
+            }
         }
     }
 }

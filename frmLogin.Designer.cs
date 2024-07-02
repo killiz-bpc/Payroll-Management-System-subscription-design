@@ -66,7 +66,7 @@
             this.btnLogin.Size = new System.Drawing.Size(283, 30);
             this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Login";
-            this.btnLogin.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // guna2Elipse1
             // 
