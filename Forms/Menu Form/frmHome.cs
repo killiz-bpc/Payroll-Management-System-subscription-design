@@ -3,18 +3,22 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
+using MySql.Data.MySqlClient;
 using Payroll_Management_System.Forms.Menu_Form.Attendance;
 
 namespace Payroll_Management_System.Forms.Menu_Form
 {
     public partial class frmHome : Form
     {
+        string connString = frmLogin.connString;
         public frmHome()
         {
             InitializeComponent();
@@ -53,28 +57,39 @@ namespace Payroll_Management_System.Forms.Menu_Form
 
         }
 
+        private Image ByteArrayToImage(byte[] byteArray)
+        {
+            using (MemoryStream ms = new MemoryStream(byteArray))
+            {
+                return Image.FromStream(ms);
+            }
+        }
+
 
 
         private void frmHome_Load(object sender, EventArgs e)
         {
-            //string firstName = frmLogin.firstName;
-            //string[] splitName = firstName.Split(' ');
 
-            //if (splitName.Length > 0)
-            //{
-            //   string splitFirstName = splitName[0];
-            //   lblName.Text = frmLogin.lastName + ", " + splitFirstName;
-            //   lblPosition.Text = frmLogin.position;
-            //}
+         
 
-            //string accessRights = frmLogin.accessRights;
+            string firstName = frmLogin.firstName;
+            string[] splitName = firstName.Split(' ');
 
-            //if (accessRights == "user")
-            //{
-            //    btnDashboard.Visible = false;   
-            //    btnPayroll.Visible = false;
-            //}
-            
+            if (splitName.Length > 0)
+            {
+                string splitFirstName = splitName[0];
+                lblName.Text = frmLogin.lastName + ", " + splitFirstName;
+                lblPosition.Text = frmLogin.position;
+            }
+
+            string accessRights = frmLogin.accessRights;
+
+            if (accessRights == "user")
+            {
+                btnDashboard.Visible = false;
+                btnPayroll.Visible = false;
+            }
+
 
 
 

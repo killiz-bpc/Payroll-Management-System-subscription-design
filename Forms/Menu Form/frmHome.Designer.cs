@@ -40,7 +40,7 @@
             this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.lblPosition = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.picEmployee = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.lblName = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panelMain = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.panelTop = new Guna.UI2.WinForms.Guna2Panel();
@@ -52,7 +52,7 @@
             this.panelLeft.SuspendLayout();
             this.panelButtons.SuspendLayout();
             this.guna2GradientPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEmployee)).BeginInit();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).BeginInit();
             this.SuspendLayout();
@@ -232,8 +232,8 @@
             // 
             this.guna2GradientPanel4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.guna2GradientPanel4.Controls.Add(this.lblPosition);
-            this.guna2GradientPanel4.Controls.Add(this.guna2CirclePictureBox2);
             this.guna2GradientPanel4.Controls.Add(this.lblName);
+            this.guna2GradientPanel4.Controls.Add(this.picEmployee);
             this.guna2GradientPanel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2GradientPanel4.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel4.Name = "guna2GradientPanel4";
@@ -246,23 +246,24 @@
             this.lblPosition.BackColor = System.Drawing.Color.Transparent;
             this.lblPosition.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPosition.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
-            this.lblPosition.Location = new System.Drawing.Point(53, 38);
+            this.lblPosition.Location = new System.Drawing.Point(54, 37);
             this.lblPosition.Name = "lblPosition";
-            this.lblPosition.Size = new System.Drawing.Size(126, 16);
+            this.lblPosition.Size = new System.Drawing.Size(157, 31);
             this.lblPosition.TabIndex = 1;
             this.lblPosition.Text = "Junior Programmer";
             // 
-            // guna2CirclePictureBox2
+            // picEmployee
             // 
-            this.guna2CirclePictureBox2.Image = global::Payroll_Management_System.Properties.Resources.user;
-            this.guna2CirclePictureBox2.ImageRotate = 0F;
-            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(12, 17);
-            this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
-            this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox2.Size = new System.Drawing.Size(36, 36);
-            this.guna2CirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox2.TabIndex = 2;
-            this.guna2CirclePictureBox2.TabStop = false;
+            this.picEmployee.FillColor = System.Drawing.Color.Transparent;
+            this.picEmployee.Image = global::Payroll_Management_System.Properties.Resources.user;
+            this.picEmployee.ImageRotate = 0F;
+            this.picEmployee.Location = new System.Drawing.Point(5, 16);
+            this.picEmployee.Name = "picEmployee";
+            this.picEmployee.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.picEmployee.Size = new System.Drawing.Size(53, 38);
+            this.picEmployee.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picEmployee.TabIndex = 2;
+            this.picEmployee.TabStop = false;
             // 
             // lblName
             // 
@@ -270,7 +271,7 @@
             this.lblName.BackColor = System.Drawing.Color.Transparent;
             this.lblName.Font = new System.Drawing.Font("Poppins SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
-            this.lblName.Location = new System.Drawing.Point(53, 14);
+            this.lblName.Location = new System.Drawing.Point(55, 15);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(164, 38);
             this.lblName.TabIndex = 0;
@@ -379,7 +380,7 @@
             this.panelLeft.ResumeLayout(false);
             this.panelButtons.ResumeLayout(false);
             this.guna2GradientPanel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEmployee)).EndInit();
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).EndInit();
@@ -399,7 +400,7 @@
         private Guna.UI2.WinForms.Guna2ControlBox btnClose;
         private Guna.UI2.WinForms.Guna2ControlBox btnMin;
         private Guna.UI2.WinForms.Guna2ControlBox btnMax;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox2;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox picEmployee;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox3;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblName;
