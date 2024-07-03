@@ -10,28 +10,42 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Configuration;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Payroll_Management_System
 {
     public partial class frmLogin : Form
     {
-        public string connString;
+       
         public frmLogin()
         {
             InitializeComponent();
         }
+
+        public static string connString;
+
+        public static string lastName = null;
+        public static string firstName = null;
+        public static string position = null;
+        public static string accessRights = null;
+
+
 
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+
         private void frmLogin_Load(object sender, EventArgs e)
         {
-
+            GetConnectionString();
+            txtUsername.Focus();
         }
 
 
+        
 
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -41,9 +55,23 @@ namespace Payroll_Management_System
         private void frmLogin_MouseMove(object sender, MouseEventArgs e)
         {
             
+
         }
+        public static bool useConnection = true;
 
+        public static string GetConnectionString()
+        {
+            if(useConnection)
+            {
+                return connString = ConfigurationManager.ConnectionStrings["mainConnection"].ConnectionString;  
+            }
+            else
+            {
+                return connString = ConfigurationManager.ConnectionStrings["outsideConnection"].ConnectionString;
+            }
 
+           
+        }
 
         private void guna2PictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
@@ -70,32 +98,76 @@ namespace Payroll_Management_System
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtUsername.Text))
-            {
-                MessageBox.Show("Please input username", "Message Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                delete_text();
-                return;
-            }
-            else if (string.IsNullOrEmpty(txtPassword.Text)) 
-            {
-                MessageBox.Show("Please input password", "Message Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                delete_text();
-                return;
-            }
-            else
-            {
-                using (MySqlConnection conn = new MySqlConnection(connString))
-                {
-                    conn.Open();
-                    string query = "SELECT username, password FROM employee_information where username=@username AND password=@password";
-                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@username", txtUsername.Text);
-                        cmd.Parameters.AddWithValue("@password", txtPassword.Text);
+            frmLoading loading = new frmLoading();
+            loading.ShowDialog();
+            this.Hide();
 
-                    }
-                }
-            }
+            //if (string.IsNullOrEmpty(txtUsername.Text))
+            //{
+            //    MessageBox.Show("Please input username", "Message Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    delete_text();
+            //    txtUsername.Focus();
+            //    return;
+            //}
+            //else if (string.IsNullOrEmpty(txtPassword.Text)) 
+            //{
+            //    MessageBox.Show("Please input password", "Message Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    delete_text();
+            //    txtPassword.Focus();
+            //    return;
+            //}
+            //else
+            //{
+            //    using (MySqlConnection conn = new MySqlConnection(connString))
+            //    {
+            //        try
+            //        {
+            //            conn.Open();
+            //            string query = "SELECT * FROM employee_information where email_work=@email_work COLLATE utf8mb4_bin AND password=@password";
+            //            using (MySqlCommand cmd = new MySqlCommand(query, conn))
+            //            {
+            //                cmd.Parameters.AddWithValue("@email_work", txtUsername.Text);
+            //                cmd.Parameters.AddWithValue("@password", txtPassword.Text);
+            //                MySqlDataReader reader = cmd.ExecuteReader();
+            //                if (reader.Read())
+            //                {
+            //                    firstName = reader.GetString("first_name");
+            //                    lastName = reader.GetString("last_name");
+            //                    position = reader.GetString("position");
+            //                    accessRights = reader.GetString("access_rights");
+
+            //                    frmLoading frmLoading = new frmLoading();
+            //                    frmLoading.ShowDialog();
+            //                    this.Hide();
+            //                }
+            //                else
+            //                {
+            //                    MessageBox.Show("Invalid Username and Password", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //                    txtUsername.Focus();
+            //                }
+            //            }
+                        
+
+            //        }
+            //        catch (MySqlException)
+            //        {
+            //            DialogResult result = MessageBox.Show("Connection Error. Do you want to connect as outside?","Message Warning",MessageBoxButtons.YesNo,MessageBoxIcon.Error);
+            //            if(result == DialogResult.Yes)
+            //            {
+            //                useConnection = false;
+            //                GetConnectionString();
+            //                MessageBox.Show("Connection successful. Please input username and password.","Message Information",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            //                delete_text();
+            //                txtUsername.Focus();
+            //            }
+            //            else
+            //            {
+            //                return;
+            //            }
+            //        }
+                   
+            //    }
+            //}
         }
     }
 }

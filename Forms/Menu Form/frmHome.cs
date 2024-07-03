@@ -57,8 +57,29 @@ namespace Payroll_Management_System.Forms.Menu_Form
 
         private void frmHome_Load(object sender, EventArgs e)
         {
+            //string firstName = frmLogin.firstName;
+            //string[] splitName = firstName.Split(' ');
+
+            //if (splitName.Length > 0)
+            //{
+            //   string splitFirstName = splitName[0];
+            //   lblName.Text = frmLogin.lastName + ", " + splitFirstName;
+            //   lblPosition.Text = frmLogin.position;
+            //}
+
+            //string accessRights = frmLogin.accessRights;
+
+            //if (accessRights == "user")
+            //{
+            //    btnDashboard.Visible = false;   
+            //    btnPayroll.Visible = false;
+            //}
+            
+
+
 
         }
+
 
         private void panel_top_MouseMove(object sender, MouseEventArgs e)
         {

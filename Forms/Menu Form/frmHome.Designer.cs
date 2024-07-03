@@ -39,9 +39,9 @@
             this.btnEmployees = new Guna.UI2.WinForms.Guna2Button();
             this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblPosition = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblName = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panelMain = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.panelTop = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -69,7 +69,7 @@
             this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLeft.Location = new System.Drawing.Point(0, 29);
             this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(199, 810);
+            this.panelLeft.Size = new System.Drawing.Size(216, 810);
             this.panelLeft.TabIndex = 0;
             // 
             // panelButtons
@@ -83,7 +83,7 @@
             this.panelButtons.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelButtons.Location = new System.Drawing.Point(0, 72);
             this.panelButtons.Name = "panelButtons";
-            this.panelButtons.Size = new System.Drawing.Size(199, 738);
+            this.panelButtons.Size = new System.Drawing.Size(216, 738);
             this.panelButtons.TabIndex = 1;
             // 
             // btnLogout
@@ -107,7 +107,7 @@
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
             this.btnLogout.PressedDepth = 50;
-            this.btnLogout.Size = new System.Drawing.Size(199, 53);
+            this.btnLogout.Size = new System.Drawing.Size(216, 53);
             this.btnLogout.TabIndex = 8;
             this.btnLogout.Text = "Log out";
             this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -136,7 +136,7 @@
             this.btnPayroll.Name = "btnPayroll";
             this.btnPayroll.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
             this.btnPayroll.PressedDepth = 50;
-            this.btnPayroll.Size = new System.Drawing.Size(199, 53);
+            this.btnPayroll.Size = new System.Drawing.Size(216, 53);
             this.btnPayroll.TabIndex = 7;
             this.btnPayroll.Text = "Payroll";
             this.btnPayroll.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -164,7 +164,7 @@
             this.btnAttendance.Name = "btnAttendance";
             this.btnAttendance.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
             this.btnAttendance.PressedDepth = 50;
-            this.btnAttendance.Size = new System.Drawing.Size(199, 53);
+            this.btnAttendance.Size = new System.Drawing.Size(216, 53);
             this.btnAttendance.TabIndex = 6;
             this.btnAttendance.Text = "Attendance";
             this.btnAttendance.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -193,7 +193,7 @@
             this.btnEmployees.Name = "btnEmployees";
             this.btnEmployees.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
             this.btnEmployees.PressedDepth = 50;
-            this.btnEmployees.Size = new System.Drawing.Size(199, 53);
+            this.btnEmployees.Size = new System.Drawing.Size(216, 53);
             this.btnEmployees.TabIndex = 5;
             this.btnEmployees.Text = "Employees";
             this.btnEmployees.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -221,7 +221,7 @@
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
             this.btnDashboard.PressedDepth = 50;
-            this.btnDashboard.Size = new System.Drawing.Size(199, 53);
+            this.btnDashboard.Size = new System.Drawing.Size(216, 53);
             this.btnDashboard.TabIndex = 0;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -231,32 +231,32 @@
             // guna2GradientPanel4
             // 
             this.guna2GradientPanel4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.guna2GradientPanel4.Controls.Add(this.guna2HtmlLabel2);
+            this.guna2GradientPanel4.Controls.Add(this.lblPosition);
             this.guna2GradientPanel4.Controls.Add(this.guna2CirclePictureBox2);
-            this.guna2GradientPanel4.Controls.Add(this.guna2HtmlLabel1);
+            this.guna2GradientPanel4.Controls.Add(this.lblName);
             this.guna2GradientPanel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2GradientPanel4.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel4.Name = "guna2GradientPanel4";
-            this.guna2GradientPanel4.Size = new System.Drawing.Size(199, 72);
+            this.guna2GradientPanel4.Size = new System.Drawing.Size(216, 72);
             this.guna2GradientPanel4.TabIndex = 2;
             // 
-            // guna2HtmlLabel2
+            // lblPosition
             // 
-            this.guna2HtmlLabel2.AutoSize = false;
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(60, 37);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(117, 19);
-            this.guna2HtmlLabel2.TabIndex = 1;
-            this.guna2HtmlLabel2.Text = "Junior Programmer";
+            this.lblPosition.AutoSize = false;
+            this.lblPosition.BackColor = System.Drawing.Color.Transparent;
+            this.lblPosition.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPosition.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
+            this.lblPosition.Location = new System.Drawing.Point(53, 38);
+            this.lblPosition.Name = "lblPosition";
+            this.lblPosition.Size = new System.Drawing.Size(126, 16);
+            this.lblPosition.TabIndex = 1;
+            this.lblPosition.Text = "Junior Programmer";
             // 
             // guna2CirclePictureBox2
             // 
             this.guna2CirclePictureBox2.Image = global::Payroll_Management_System.Properties.Resources.user;
             this.guna2CirclePictureBox2.ImageRotate = 0F;
-            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(21, 18);
+            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(12, 17);
             this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
             this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox2.Size = new System.Drawing.Size(36, 36);
@@ -264,26 +264,26 @@
             this.guna2CirclePictureBox2.TabIndex = 2;
             this.guna2CirclePictureBox2.TabStop = false;
             // 
-            // guna2HtmlLabel1
+            // lblName
             // 
-            this.guna2HtmlLabel1.AutoSize = false;
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Poppins SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(60, 17);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(117, 23);
-            this.guna2HtmlLabel1.TabIndex = 0;
-            this.guna2HtmlLabel1.Text = "Vidal, Cleeve";
-            this.guna2HtmlLabel1.Click += new System.EventHandler(this.guna2HtmlLabel1_Click);
+            this.lblName.AutoSize = false;
+            this.lblName.BackColor = System.Drawing.Color.Transparent;
+            this.lblName.Font = new System.Drawing.Font("Poppins SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
+            this.lblName.Location = new System.Drawing.Point(53, 14);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(164, 38);
+            this.lblName.TabIndex = 0;
+            this.lblName.Text = "Vidal, Cleeve 8";
+            this.lblName.Click += new System.EventHandler(this.guna2HtmlLabel1_Click);
             // 
             // panelMain
             // 
             this.panelMain.BackColor = System.Drawing.SystemColors.Control;
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(199, 29);
+            this.panelMain.Location = new System.Drawing.Point(216, 29);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1124, 810);
+            this.panelMain.Size = new System.Drawing.Size(1161, 810);
             this.panelMain.TabIndex = 1;
             this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel2_Paint);
             this.panelMain.MouseMove += new System.Windows.Forms.MouseEventHandler(this.guna2GradientPanel2_MouseMove);
@@ -299,7 +299,7 @@
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(0, 0);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(1323, 29);
+            this.panelTop.Size = new System.Drawing.Size(1377, 29);
             this.panelTop.TabIndex = 0;
             this.panelTop.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_top_Paint);
             this.panelTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_top_MouseMove);
@@ -333,7 +333,7 @@
             this.btnMin.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnMin.FillColor = System.Drawing.Color.Transparent;
             this.btnMin.IconColor = System.Drawing.Color.Black;
-            this.btnMin.Location = new System.Drawing.Point(1233, 0);
+            this.btnMin.Location = new System.Drawing.Point(1287, 0);
             this.btnMin.Name = "btnMin";
             this.btnMin.Size = new System.Drawing.Size(30, 29);
             this.btnMin.TabIndex = 6;
@@ -345,7 +345,7 @@
             this.btnMax.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnMax.FillColor = System.Drawing.Color.Transparent;
             this.btnMax.IconColor = System.Drawing.Color.Black;
-            this.btnMax.Location = new System.Drawing.Point(1263, 0);
+            this.btnMax.Location = new System.Drawing.Point(1317, 0);
             this.btnMax.Name = "btnMax";
             this.btnMax.Size = new System.Drawing.Size(30, 29);
             this.btnMax.TabIndex = 5;
@@ -356,7 +356,7 @@
             this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnClose.FillColor = System.Drawing.Color.Transparent;
             this.btnClose.IconColor = System.Drawing.Color.Black;
-            this.btnClose.Location = new System.Drawing.Point(1293, 0);
+            this.btnClose.Location = new System.Drawing.Point(1347, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(30, 29);
             this.btnClose.TabIndex = 4;
@@ -366,7 +366,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1323, 839);
+            this.ClientSize = new System.Drawing.Size(1377, 839);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelLeft);
             this.Controls.Add(this.panelTop);
@@ -402,8 +402,8 @@
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox2;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox3;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblName;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblPosition;
         private Guna.UI2.WinForms.Guna2Button btnPayroll;
         private Guna.UI2.WinForms.Guna2Button btnAttendance;
         private Guna.UI2.WinForms.Guna2Button btnEmployees;
