@@ -20,38 +20,40 @@ namespace Payroll_Management_System.Forms.Menu_Form
 
         public void import_attendance()
         {
-            Microsoft.Office.Interop.Excel.Application xlApp;
-            Microsoft.Office.Interop.Excel.Workbook xlWorkbook;
-            Microsoft.Office.Interop.Excel.Worksheet xlWorksheet;
-            Microsoft.Office.Interop.Excel.Range xlRange;
-
-            int xlRow;
-            string strFileName;
-
-            openFileDialog1.Filter = "Excel Office |*.xls; *xlsx";
-            openFileDialog1.ShowDialog();
-            strFileName = openFileDialog1.FileName;
-
-            if (strFileName != "")
+            if(openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                xlApp = new Microsoft.Office.Interop.Excel.Application();
-                xlWorkbook = xlApp.Workbooks.Open(strFileName);
-                xlWorksheet = xlWorkbook.Worksheets["Final"];
-                xlRange = xlWorksheet.UsedRange;
+                Microsoft.Office.Interop.Excel.Application xlApp;
+                Microsoft.Office.Interop.Excel.Workbook xlWorkbook;
+                Microsoft.Office.Interop.Excel.Worksheet xlWorksheet;
+                Microsoft.Office.Interop.Excel.Range xlRange;
 
-                int i = 0;
+                int xlRow;
+                string strFileName;
 
-                
+                openFileDialog1.Filter = "Excel Office |*.xls; *xlsx";
+                openFileDialog1.ShowDialog();
+                strFileName = openFileDialog1.FileName;
 
-                for (xlRow = 2; xlRow <= xlRange.Rows.Count; xlRow++)
+                if (strFileName != "")
                 {
-                    i++;
-                    dgvImportAttendance.Rows.Add(i, xlRange.Cells[xlRow, 1].Text, xlRange.Cells[xlRow, 2].Text, xlRange.Cells[xlRow, 3].Text, xlRange.Cells[xlRow, 4].Text, xlRange.Cells[xlRow, 5].Text);
-                }
-                xlWorkbook.Close();
-                xlApp.Quit();
-            }
+                    xlApp = new Microsoft.Office.Interop.Excel.Application();
+                    xlWorkbook = xlApp.Workbooks.Open(strFileName);
+                    xlWorksheet = xlWorkbook.Worksheets["Final"];
+                    xlRange = xlWorksheet.UsedRange;
 
+                    int i = 0;
+
+
+
+                    for (xlRow = 2; xlRow <= xlRange.Rows.Count; xlRow++)
+                    {
+                        i++;
+                        dgvImportAttendance.Rows.Add(i, xlRange.Cells[xlRow, 1].Text, xlRange.Cells[xlRow, 2].Text, xlRange.Cells[xlRow, 3].Text, xlRange.Cells[xlRow, 4].Text, xlRange.Cells[xlRow, 5].Text);
+                    }
+                    xlWorkbook.Close();
+                    xlApp.Quit();
+                }
+            }
 
         }
 
