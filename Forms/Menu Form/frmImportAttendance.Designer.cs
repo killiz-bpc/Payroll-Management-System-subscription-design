@@ -38,17 +38,11 @@
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.dgvImportAttendance = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emp_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Day = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.time_in = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.time_out = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnImport = new Guna.UI2.WinForms.Guna2Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
@@ -56,6 +50,12 @@
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employee_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.weekday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.date_day = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.time_in = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.time_out = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvImportAttendance)).BeginInit();
             this.guna2ContextMenuStrip1.SuspendLayout();
@@ -121,9 +121,9 @@
             this.dgvImportAttendance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvImportAttendance.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
-            this.emp_name,
-            this.Day,
-            this.date,
+            this.employee_name,
+            this.weekday,
+            this.date_day,
             this.time_in,
             this.time_out});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -173,50 +173,6 @@
             this.dgvImportAttendance.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvImportAttendance.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // id
-            // 
-            this.id.HeaderText = "id";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Visible = false;
-            // 
-            // emp_name
-            // 
-            this.emp_name.FillWeight = 104.0918F;
-            this.emp_name.HeaderText = "Employee Name";
-            this.emp_name.MinimumWidth = 50;
-            this.emp_name.Name = "emp_name";
-            this.emp_name.ReadOnly = true;
-            // 
-            // Day
-            // 
-            this.Day.FillWeight = 42.61514F;
-            this.Day.HeaderText = "Day";
-            this.Day.Name = "Day";
-            this.Day.ReadOnly = true;
-            this.Day.Visible = false;
-            // 
-            // date
-            // 
-            this.date.FillWeight = 41.2512F;
-            this.date.HeaderText = "Date";
-            this.date.Name = "date";
-            this.date.ReadOnly = true;
-            // 
-            // time_in
-            // 
-            this.time_in.FillWeight = 41.2512F;
-            this.time_in.HeaderText = "Time In";
-            this.time_in.Name = "time_in";
-            this.time_in.ReadOnly = true;
-            // 
-            // time_out
-            // 
-            this.time_out.FillWeight = 41.2512F;
-            this.time_out.HeaderText = "Time Out";
-            this.time_out.Name = "time_out";
-            this.time_out.ReadOnly = true;
-            // 
             // btnImport
             // 
             this.btnImport.Animated = true;
@@ -230,7 +186,7 @@
             this.btnImport.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
             this.btnImport.Font = new System.Drawing.Font("Poppins", 9F);
             this.btnImport.ForeColor = System.Drawing.Color.White;
-            this.btnImport.Location = new System.Drawing.Point(28, 70);
+            this.btnImport.Location = new System.Drawing.Point(28, 74);
             this.btnImport.Name = "btnImport";
             this.btnImport.Size = new System.Drawing.Size(639, 44);
             this.btnImport.TabIndex = 3;
@@ -241,25 +197,26 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // guna2Button1
+            // btnSave
             // 
-            this.guna2Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 10;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Poppins", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(533, 733);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(134, 42);
-            this.guna2Button1.TabIndex = 3;
-            this.guna2Button1.Text = "Save";
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSave.Animated = true;
+            this.btnSave.BackColor = System.Drawing.Color.Transparent;
+            this.btnSave.BorderColor = System.Drawing.Color.Transparent;
+            this.btnSave.BorderRadius = 10;
+            this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
+            this.btnSave.Font = new System.Drawing.Font("Poppins", 9F);
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(533, 733);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(134, 42);
+            this.btnSave.TabIndex = 3;
+            this.btnSave.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // guna2HtmlLabel1
             // 
@@ -332,7 +289,7 @@
             this.guna2GradientPanel1.Controls.Add(this.btnImport);
             this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel3);
             this.guna2GradientPanel1.Controls.Add(this.guna2CustomGradientPanel1);
-            this.guna2GradientPanel1.Controls.Add(this.guna2Button1);
+            this.guna2GradientPanel1.Controls.Add(this.btnSave);
             this.guna2GradientPanel1.Controls.Add(this.btnClose);
             this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel1);
             this.guna2GradientPanel1.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
@@ -342,6 +299,55 @@
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(700, 800);
             this.guna2GradientPanel1.TabIndex = 9;
+            // 
+            // id
+            // 
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            // 
+            // employee_name
+            // 
+            this.employee_name.DataPropertyName = "employee_name";
+            this.employee_name.FillWeight = 104.0918F;
+            this.employee_name.HeaderText = "Employee Name";
+            this.employee_name.MinimumWidth = 50;
+            this.employee_name.Name = "employee_name";
+            this.employee_name.ReadOnly = true;
+            // 
+            // weekday
+            // 
+            this.weekday.DataPropertyName = "weekday";
+            this.weekday.FillWeight = 42.61514F;
+            this.weekday.HeaderText = "Day";
+            this.weekday.Name = "weekday";
+            this.weekday.ReadOnly = true;
+            this.weekday.Visible = false;
+            // 
+            // date_day
+            // 
+            this.date_day.DataPropertyName = "date_day";
+            this.date_day.FillWeight = 41.2512F;
+            this.date_day.HeaderText = "Date";
+            this.date_day.Name = "date_day";
+            this.date_day.ReadOnly = true;
+            // 
+            // time_in
+            // 
+            this.time_in.DataPropertyName = "time_in";
+            this.time_in.FillWeight = 41.2512F;
+            this.time_in.HeaderText = "Time In";
+            this.time_in.Name = "time_in";
+            this.time_in.ReadOnly = true;
+            // 
+            // time_out
+            // 
+            this.time_out.DataPropertyName = "time_out";
+            this.time_out.FillWeight = 41.2512F;
+            this.time_out.HeaderText = "Time Out";
+            this.time_out.Name = "time_out";
+            this.time_out.ReadOnly = true;
             // 
             // frmImportAttendance
             // 
@@ -370,7 +376,7 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnSave;
         private Guna.UI2.WinForms.Guna2DataGridView dgvImportAttendance;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
@@ -381,9 +387,9 @@
         private Guna.UI2.WinForms.Guna2ControlBox btnClose;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emp_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Day;
-        private System.Windows.Forms.DataGridViewTextBoxColumn date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn employee_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn weekday;
+        private System.Windows.Forms.DataGridViewTextBoxColumn date_day;
         private System.Windows.Forms.DataGridViewTextBoxColumn time_in;
         private System.Windows.Forms.DataGridViewTextBoxColumn time_out;
     }

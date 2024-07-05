@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Office.Interop.Excel;
+using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Bcpg.OpenPgp;
 
 namespace Payroll_Management_System.Forms.Menu_Form
 {
@@ -18,10 +20,11 @@ namespace Payroll_Management_System.Forms.Menu_Form
             InitializeComponent();
         }
 
+        string connString = frmLogin.connString;
+
         public void import_attendance()
         {
-            if(openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
+            
                 Microsoft.Office.Interop.Excel.Application xlApp;
                 Microsoft.Office.Interop.Excel.Workbook xlWorkbook;
                 Microsoft.Office.Interop.Excel.Worksheet xlWorksheet;
@@ -31,9 +34,12 @@ namespace Payroll_Management_System.Forms.Menu_Form
                 string strFileName;
 
                 openFileDialog1.Filter = "Excel Office |*.xls; *xlsx";
-                openFileDialog1.ShowDialog();
-                strFileName = openFileDialog1.FileName;
+                //openFileDialog1.ShowDialog();
+                
 
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                strFileName = openFileDialog1.FileName;
                 if (strFileName != "")
                 {
                     xlApp = new Microsoft.Office.Interop.Excel.Application();
@@ -76,6 +82,88 @@ namespace Payroll_Management_System.Forms.Menu_Form
             else
             {
                 import_attendance();
+            }
+        }
+
+        public string GetEmpCode(string last_name, string first_name)
+        {
+            string query = "SELECT emp_code from list_of_employees WHERE last_name LIKE @last_name OR first_name LIKE @first_name";
+
+            using (MySqlConnection conn = new MySqlConnection(connString))
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@last_name", "%"+ last_name+"%");
+                cmd.Parameters.AddWithValue("@first_name", "%"+ first_name+"%");
+
+                object result = cmd.ExecuteScalar();
+
+                if (result != null && result != DBNull.Value)
+                {
+                    return result.ToString();
+                }
+                else
+                {
+                    // Handle the case when no result is found
+                    return "No Code"; // or return a default value or handle accordingly
+                }
+
+
+            }
+
+
+                
+
+        }
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if(dgvImportAttendance.Rows.Count > 0)
+            {
+                using (MySqlConnection conn = new MySqlConnection(connString))
+                {
+                    conn.Open();
+
+                    foreach(DataGridViewRow row in dgvImportAttendance.Rows)
+                    {
+                        if (!row.IsNewRow)
+                        {
+                            string emp_name = Convert.ToString(row.Cells["employee_name"].Value);
+
+                            string[]names = emp_name.Split(',');
+
+                            string last_name = names[0];
+                            string full_first_name = names[1];
+
+                            string[]first_names = full_first_name.Split(' ');
+
+                            string first_name = first_names[1];
+
+                            string emp_code = GetEmpCode(last_name, first_name);
+
+                            string query = "INSERT INTO import_attendance_logs (emp_code, employee_name, weekday, date_day, time_in, time_out) VALUES (@emp_code, @employee_name, @weekday, @date_day, @time_in, @time_out)";
+
+                            using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                            {
+                                cmd.Parameters.AddWithValue("@emp_code", emp_code);
+                                cmd.Parameters.AddWithValue("@employee_name", Convert.ToString(row.Cells["employee_name"].Value));
+                                cmd.Parameters.AddWithValue("@weekday", Convert.ToString(row.Cells["weekday"].Value));
+                                cmd.Parameters.AddWithValue("@date_day", Convert.ToString(row.Cells["date_day"].Value));
+                                cmd.Parameters.AddWithValue("@time_in", Convert.ToString(row.Cells["time_in"].Value));
+                                cmd.Parameters.AddWithValue("@time_out", Convert.ToString(row.Cells["time_out"].Value));
+
+                                cmd.ExecuteNonQuery();
+                                
+                            }
+                        }
+                       
+                    }
+                    MessageBox.Show("save");
+
+                    this.Close();
+
+                    conn.Dispose();
+                }
+               
             }
         }
     }
