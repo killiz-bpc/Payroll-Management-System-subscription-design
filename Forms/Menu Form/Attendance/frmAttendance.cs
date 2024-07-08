@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Payroll_Management_System.Connections;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -73,6 +74,18 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
                     guna2ContextMenuStrip1.Show(dgvAttendance, e.Location);
                 }
             }
+        }
+
+        private void frmAttendance_Load(object sender, EventArgs e)
+        {
+            List<string> departments = GetData.GetDepartments();
+
+            foreach(string department in departments)
+            {
+                txtDepartment.Items.Add(department);
+            }
+
+
         }
     }
 }

@@ -130,7 +130,7 @@ namespace Payroll_Management_System
                             {
                                 firstName = reader.GetString("first_name");
                                 lastName = reader.GetString("last_name");
-                                position = reader.GetString("position");
+                                position = reader.GetString("job_title");
                                 accessRights = reader.GetString("access_rights");
 
                                 frmLoading frmLoading = new frmLoading();

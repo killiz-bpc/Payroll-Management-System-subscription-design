@@ -35,49 +35,74 @@
             this.tabInformation = new Guna.UI2.WinForms.Guna2TabControl();
             this.tabPersonal = new System.Windows.Forms.TabPage();
             this.panelPersonal = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2ComboBox4 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txtEmergencyNumber = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel35 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtEmergencyPerson = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel36 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtPersonalEmail = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel22 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.container = new Guna.UI2.WinForms.Guna2Panel();
+            this.picEmployee = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2HtmlLabel20 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.btnImage = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2HtmlLabel19 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.btnUpdateImage = new Guna.UI2.WinForms.Guna2Button();
+            this.btnShow = new Guna.UI2.WinForms.Guna2Button();
+            this.pictureBox = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.txtCivilStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txtGender = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox6 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtAddress = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtMobileNo = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2DateTimePicker2 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtLastName = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtMiddleName = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtFirstName = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.tabWork = new System.Windows.Forms.TabPage();
             this.panelEmployment = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2DateTimePicker6 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.txtCity = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel34 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtSchedule = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2HtmlLabel28 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtBranch = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2HtmlLabel27 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel26 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel25 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtWorkEmail = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel23 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtJobTitle = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtEmployeeID = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel21 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2ComboBox7 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txtEmpLevel = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel18 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel17 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2HtmlLabel16 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2ComboBox6 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txtEmpType = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel15 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txtEmpStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtDepartment = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel33 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel14 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.tabGovernment = new System.Windows.Forms.TabPage();
+            this.guna2HtmlLabel37 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.tabOther = new System.Windows.Forms.TabPage();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2HtmlLabel24 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox18 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtHDMFNo = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel29 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox19 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtPHNo = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel30 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox20 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtTINNo = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel31 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox21 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtSSSNo = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel32 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -87,50 +112,34 @@
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.picEmployee = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnImage = new Guna.UI2.WinForms.Guna2Button();
             this.openFD = new System.Windows.Forms.OpenFileDialog();
-            this.pictureBox = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.btnShow = new Guna.UI2.WinForms.Guna2Button();
-            this.btnUpdateImage = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2HtmlLabel19 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel20 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.container = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2HtmlLabel38 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtSalary = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtHireDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.txtThirdDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.txtFifthDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.txtRegularizationDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.txtDateOfBirth = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.guna2HtmlLabel39 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel22 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox7 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox8 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel23 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel25 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel26 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2DateTimePicker4 = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.guna2HtmlLabel27 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2ComboBox3 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2ComboBox5 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2HtmlLabel28 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel34 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2DateTimePicker3 = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.guna2TextBox9 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox10 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel35 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox11 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel36 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel37 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel40 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel41 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel42 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2GradientPanel1.SuspendLayout();
             this.informationPanel.SuspendLayout();
             this.tabInformation.SuspendLayout();
             this.tabPersonal.SuspendLayout();
             this.panelPersonal.SuspendLayout();
-            this.tabWork.SuspendLayout();
-            this.panelEmployment.SuspendLayout();
-            this.tabGovernment.SuspendLayout();
-            this.guna2GradientPanel3.SuspendLayout();
+            this.container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
-            this.container.SuspendLayout();
+            this.tabWork.SuspendLayout();
+            this.panelEmployment.SuspendLayout();
+            this.tabOther.SuspendLayout();
+            this.guna2GradientPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
@@ -164,7 +173,7 @@
             // 
             this.tabInformation.Controls.Add(this.tabPersonal);
             this.tabInformation.Controls.Add(this.tabWork);
-            this.tabInformation.Controls.Add(this.tabGovernment);
+            this.tabInformation.Controls.Add(this.tabOther);
             this.tabInformation.ItemSize = new System.Drawing.Size(150, 40);
             this.tabInformation.Location = new System.Drawing.Point(0, 0);
             this.tabInformation.Name = "tabInformation";
@@ -204,29 +213,29 @@
             // panelPersonal
             // 
             this.panelPersonal.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panelPersonal.Controls.Add(this.guna2TextBox10);
+            this.panelPersonal.Controls.Add(this.txtDateOfBirth);
+            this.panelPersonal.Controls.Add(this.txtEmergencyNumber);
             this.panelPersonal.Controls.Add(this.guna2HtmlLabel35);
-            this.panelPersonal.Controls.Add(this.guna2TextBox11);
+            this.panelPersonal.Controls.Add(this.txtEmergencyPerson);
             this.panelPersonal.Controls.Add(this.guna2HtmlLabel36);
-            this.panelPersonal.Controls.Add(this.guna2TextBox1);
+            this.panelPersonal.Controls.Add(this.txtPersonalEmail);
             this.panelPersonal.Controls.Add(this.guna2HtmlLabel22);
             this.panelPersonal.Controls.Add(this.container);
             this.panelPersonal.Controls.Add(this.btnUpdateImage);
             this.panelPersonal.Controls.Add(this.btnShow);
             this.panelPersonal.Controls.Add(this.pictureBox);
-            this.panelPersonal.Controls.Add(this.guna2ComboBox4);
+            this.panelPersonal.Controls.Add(this.txtCivilStatus);
             this.panelPersonal.Controls.Add(this.guna2HtmlLabel5);
-            this.panelPersonal.Controls.Add(this.guna2ComboBox1);
+            this.panelPersonal.Controls.Add(this.txtGender);
             this.panelPersonal.Controls.Add(this.guna2HtmlLabel11);
             this.panelPersonal.Controls.Add(this.guna2HtmlLabel12);
-            this.panelPersonal.Controls.Add(this.guna2TextBox6);
-            this.panelPersonal.Controls.Add(this.guna2TextBox5);
+            this.panelPersonal.Controls.Add(this.txtAddress);
+            this.panelPersonal.Controls.Add(this.txtMobileNo);
             this.panelPersonal.Controls.Add(this.guna2HtmlLabel8);
-            this.panelPersonal.Controls.Add(this.guna2DateTimePicker2);
             this.panelPersonal.Controls.Add(this.guna2HtmlLabel7);
-            this.panelPersonal.Controls.Add(this.guna2TextBox3);
+            this.panelPersonal.Controls.Add(this.txtLastName);
             this.panelPersonal.Controls.Add(this.guna2HtmlLabel4);
-            this.panelPersonal.Controls.Add(this.guna2TextBox2);
+            this.panelPersonal.Controls.Add(this.txtMiddleName);
             this.panelPersonal.Controls.Add(this.guna2HtmlLabel2);
             this.panelPersonal.Controls.Add(this.txtFirstName);
             this.panelPersonal.Controls.Add(this.guna2HtmlLabel6);
@@ -237,27 +246,276 @@
             this.panelPersonal.TabIndex = 12;
             this.panelPersonal.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPersonal_Paint);
             // 
-            // guna2ComboBox4
+            // txtEmergencyNumber
             // 
-            this.guna2ComboBox4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox4.BorderRadius = 10;
-            this.guna2ComboBox4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox4.FocusedColor = System.Drawing.Color.Empty;
-            this.guna2ComboBox4.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ComboBox4.ForeColor = System.Drawing.Color.Black;
-            this.guna2ComboBox4.ItemHeight = 30;
-            this.guna2ComboBox4.Items.AddRange(new object[] {
+            this.txtEmergencyNumber.BorderRadius = 8;
+            this.txtEmergencyNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEmergencyNumber.DefaultText = "";
+            this.txtEmergencyNumber.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEmergencyNumber.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEmergencyNumber.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmergencyNumber.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmergencyNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmergencyNumber.Font = new System.Drawing.Font("Poppins", 9F);
+            this.txtEmergencyNumber.ForeColor = System.Drawing.Color.Black;
+            this.txtEmergencyNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmergencyNumber.Location = new System.Drawing.Point(607, 456);
+            this.txtEmergencyNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtEmergencyNumber.Name = "txtEmergencyNumber";
+            this.txtEmergencyNumber.PasswordChar = '\0';
+            this.txtEmergencyNumber.PlaceholderText = "Enter emergency contact number";
+            this.txtEmergencyNumber.SelectedText = "";
+            this.txtEmergencyNumber.Size = new System.Drawing.Size(261, 33);
+            this.txtEmergencyNumber.TabIndex = 11;
+            this.txtEmergencyNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmergencyNumber_KeyPress);
+            // 
+            // guna2HtmlLabel35
+            // 
+            this.guna2HtmlLabel35.AutoSize = false;
+            this.guna2HtmlLabel35.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel35.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel35.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel35.Location = new System.Drawing.Point(607, 433);
+            this.guna2HtmlLabel35.Name = "guna2HtmlLabel35";
+            this.guna2HtmlLabel35.Size = new System.Drawing.Size(220, 23);
+            this.guna2HtmlLabel35.TabIndex = 48;
+            this.guna2HtmlLabel35.Text = "Emergency Contact Number";
+            // 
+            // txtEmergencyPerson
+            // 
+            this.txtEmergencyPerson.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEmergencyPerson.BorderRadius = 8;
+            this.txtEmergencyPerson.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEmergencyPerson.DefaultText = "";
+            this.txtEmergencyPerson.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEmergencyPerson.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEmergencyPerson.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmergencyPerson.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmergencyPerson.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmergencyPerson.Font = new System.Drawing.Font("Poppins", 9F);
+            this.txtEmergencyPerson.ForeColor = System.Drawing.Color.Black;
+            this.txtEmergencyPerson.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmergencyPerson.Location = new System.Drawing.Point(333, 456);
+            this.txtEmergencyPerson.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtEmergencyPerson.Name = "txtEmergencyPerson";
+            this.txtEmergencyPerson.PasswordChar = '\0';
+            this.txtEmergencyPerson.PlaceholderText = "Enter Emergency Contact Person";
+            this.txtEmergencyPerson.SelectedText = "";
+            this.txtEmergencyPerson.Size = new System.Drawing.Size(247, 33);
+            this.txtEmergencyPerson.TabIndex = 10;
+            // 
+            // guna2HtmlLabel36
+            // 
+            this.guna2HtmlLabel36.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2HtmlLabel36.AutoSize = false;
+            this.guna2HtmlLabel36.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel36.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel36.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel36.Location = new System.Drawing.Point(333, 433);
+            this.guna2HtmlLabel36.Name = "guna2HtmlLabel36";
+            this.guna2HtmlLabel36.Size = new System.Drawing.Size(229, 23);
+            this.guna2HtmlLabel36.TabIndex = 47;
+            this.guna2HtmlLabel36.Text = "Emergency Contact Person";
+            // 
+            // txtPersonalEmail
+            // 
+            this.txtPersonalEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPersonalEmail.BorderRadius = 8;
+            this.txtPersonalEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPersonalEmail.DefaultText = "";
+            this.txtPersonalEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPersonalEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPersonalEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPersonalEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPersonalEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPersonalEmail.Font = new System.Drawing.Font("Poppins", 9F);
+            this.txtPersonalEmail.ForeColor = System.Drawing.Color.Black;
+            this.txtPersonalEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPersonalEmail.Location = new System.Drawing.Point(333, 382);
+            this.txtPersonalEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPersonalEmail.Name = "txtPersonalEmail";
+            this.txtPersonalEmail.PasswordChar = '\0';
+            this.txtPersonalEmail.PlaceholderText = "Enter last name";
+            this.txtPersonalEmail.SelectedText = "";
+            this.txtPersonalEmail.Size = new System.Drawing.Size(247, 33);
+            this.txtPersonalEmail.TabIndex = 8;
+            // 
+            // guna2HtmlLabel22
+            // 
+            this.guna2HtmlLabel22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2HtmlLabel22.AutoSize = false;
+            this.guna2HtmlLabel22.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel22.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel22.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel22.Location = new System.Drawing.Point(333, 359);
+            this.guna2HtmlLabel22.Name = "guna2HtmlLabel22";
+            this.guna2HtmlLabel22.Size = new System.Drawing.Size(106, 23);
+            this.guna2HtmlLabel22.TabIndex = 44;
+            this.guna2HtmlLabel22.Text = "Personal Email";
+            // 
+            // container
+            // 
+            this.container.BorderColor = System.Drawing.SystemColors.Control;
+            this.container.BorderRadius = 12;
+            this.container.BorderThickness = 2;
+            this.container.Controls.Add(this.picEmployee);
+            this.container.Controls.Add(this.guna2HtmlLabel20);
+            this.container.Controls.Add(this.btnImage);
+            this.container.Controls.Add(this.guna2HtmlLabel19);
+            this.container.Location = new System.Drawing.Point(23, 59);
+            this.container.Name = "container";
+            this.container.Size = new System.Drawing.Size(289, 432);
+            this.container.TabIndex = 42;
+            // 
+            // picEmployee
+            // 
+            this.picEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.picEmployee.BackColor = System.Drawing.Color.Transparent;
+            this.picEmployee.BorderRadius = 1;
+            this.picEmployee.FillColor = System.Drawing.SystemColors.Control;
+            this.picEmployee.ImageRotate = 0F;
+            this.picEmployee.Location = new System.Drawing.Point(22, 23);
+            this.picEmployee.Name = "picEmployee";
+            this.picEmployee.Size = new System.Drawing.Size(244, 310);
+            this.picEmployee.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picEmployee.TabIndex = 35;
+            this.picEmployee.TabStop = false;
+            // 
+            // guna2HtmlLabel20
+            // 
+            this.guna2HtmlLabel20.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2HtmlLabel20.AutoSize = false;
+            this.guna2HtmlLabel20.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel20.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel20.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel20.Location = new System.Drawing.Point(73, 397);
+            this.guna2HtmlLabel20.Name = "guna2HtmlLabel20";
+            this.guna2HtmlLabel20.Size = new System.Drawing.Size(138, 23);
+            this.guna2HtmlLabel20.TabIndex = 41;
+            this.guna2HtmlLabel20.Text = "JPG, JPEG, and PNG";
+            // 
+            // btnImage
+            // 
+            this.btnImage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnImage.Animated = true;
+            this.btnImage.BackColor = System.Drawing.Color.Transparent;
+            this.btnImage.BorderColor = System.Drawing.Color.Transparent;
+            this.btnImage.BorderRadius = 10;
+            this.btnImage.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnImage.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnImage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnImage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnImage.FillColor = System.Drawing.Color.Silver;
+            this.btnImage.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImage.ForeColor = System.Drawing.Color.Black;
+            this.btnImage.Location = new System.Drawing.Point(84, 339);
+            this.btnImage.Name = "btnImage";
+            this.btnImage.Size = new System.Drawing.Size(111, 29);
+            this.btnImage.TabIndex = 36;
+            this.btnImage.Text = "Choose Image";
+            this.btnImage.Click += new System.EventHandler(this.btnImage_Click);
+            // 
+            // guna2HtmlLabel19
+            // 
+            this.guna2HtmlLabel19.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2HtmlLabel19.AutoSize = false;
+            this.guna2HtmlLabel19.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel19.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel19.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.guna2HtmlLabel19.Location = new System.Drawing.Point(90, 379);
+            this.guna2HtmlLabel19.Name = "guna2HtmlLabel19";
+            this.guna2HtmlLabel19.Size = new System.Drawing.Size(104, 23);
+            this.guna2HtmlLabel19.TabIndex = 40;
+            this.guna2HtmlLabel19.Text = "Allowed Format";
+            // 
+            // btnUpdateImage
+            // 
+            this.btnUpdateImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUpdateImage.Animated = true;
+            this.btnUpdateImage.BackColor = System.Drawing.Color.Transparent;
+            this.btnUpdateImage.BorderColor = System.Drawing.Color.Transparent;
+            this.btnUpdateImage.BorderRadius = 10;
+            this.btnUpdateImage.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpdateImage.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpdateImage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUpdateImage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUpdateImage.FillColor = System.Drawing.Color.Silver;
+            this.btnUpdateImage.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateImage.ForeColor = System.Drawing.Color.Black;
+            this.btnUpdateImage.Location = new System.Drawing.Point(352, 546);
+            this.btnUpdateImage.Name = "btnUpdateImage";
+            this.btnUpdateImage.Size = new System.Drawing.Size(121, 32);
+            this.btnUpdateImage.TabIndex = 39;
+            this.btnUpdateImage.Text = "Update Image";
+            this.btnUpdateImage.Visible = false;
+            this.btnUpdateImage.Click += new System.EventHandler(this.btnUpdateImage_Click);
+            // 
+            // btnShow
+            // 
+            this.btnShow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnShow.Animated = true;
+            this.btnShow.BackColor = System.Drawing.Color.Transparent;
+            this.btnShow.BorderColor = System.Drawing.Color.Transparent;
+            this.btnShow.BorderRadius = 10;
+            this.btnShow.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnShow.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnShow.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnShow.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnShow.FillColor = System.Drawing.Color.Silver;
+            this.btnShow.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShow.ForeColor = System.Drawing.Color.Black;
+            this.btnShow.Location = new System.Drawing.Point(519, 546);
+            this.btnShow.Name = "btnShow";
+            this.btnShow.Size = new System.Drawing.Size(121, 32);
+            this.btnShow.TabIndex = 38;
+            this.btnShow.Text = "Show Image";
+            this.btnShow.Visible = false;
+            this.btnShow.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // pictureBox
+            // 
+            this.pictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox.FillColor = System.Drawing.Color.Silver;
+            this.pictureBox.ImageRotate = 0F;
+            this.pictureBox.Location = new System.Drawing.Point(667, 501);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.ShadowDecoration.BorderRadius = 10;
+            this.pictureBox.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.pictureBox.Size = new System.Drawing.Size(73, 107);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox.TabIndex = 37;
+            this.pictureBox.TabStop = false;
+            this.pictureBox.Visible = false;
+            // 
+            // txtCivilStatus
+            // 
+            this.txtCivilStatus.BackColor = System.Drawing.Color.Transparent;
+            this.txtCivilStatus.BorderRadius = 10;
+            this.txtCivilStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.txtCivilStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtCivilStatus.FocusedColor = System.Drawing.Color.Empty;
+            this.txtCivilStatus.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCivilStatus.ForeColor = System.Drawing.Color.Black;
+            this.txtCivilStatus.ItemHeight = 30;
+            this.txtCivilStatus.Items.AddRange(new object[] {
             "Married",
             "Single",
             "Widowed"});
-            this.guna2ComboBox4.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
-            this.guna2ComboBox4.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
-            this.guna2ComboBox4.Location = new System.Drawing.Point(607, 234);
-            this.guna2ComboBox4.Name = "guna2ComboBox4";
-            this.guna2ComboBox4.Size = new System.Drawing.Size(261, 36);
-            this.guna2ComboBox4.Sorted = true;
-            this.guna2ComboBox4.TabIndex = 33;
+            this.txtCivilStatus.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
+            this.txtCivilStatus.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
+            this.txtCivilStatus.Location = new System.Drawing.Point(607, 234);
+            this.txtCivilStatus.Name = "txtCivilStatus";
+            this.txtCivilStatus.Size = new System.Drawing.Size(261, 36);
+            this.txtCivilStatus.Sorted = true;
+            this.txtCivilStatus.TabIndex = 6;
             // 
             // guna2HtmlLabel5
             // 
@@ -271,27 +529,27 @@
             this.guna2HtmlLabel5.TabIndex = 34;
             this.guna2HtmlLabel5.Text = "Civil Status";
             // 
-            // guna2ComboBox1
+            // txtGender
             // 
-            this.guna2ComboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderRadius = 10;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.Empty;
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Items.AddRange(new object[] {
+            this.txtGender.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtGender.BackColor = System.Drawing.Color.Transparent;
+            this.txtGender.BorderRadius = 10;
+            this.txtGender.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.txtGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtGender.FocusedColor = System.Drawing.Color.Empty;
+            this.txtGender.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGender.ForeColor = System.Drawing.Color.Black;
+            this.txtGender.ItemHeight = 30;
+            this.txtGender.Items.AddRange(new object[] {
             "Female",
             "Male"});
-            this.guna2ComboBox1.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
-            this.guna2ComboBox1.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(607, 305);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(261, 36);
-            this.guna2ComboBox1.Sorted = true;
-            this.guna2ComboBox1.TabIndex = 31;
+            this.txtGender.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
+            this.txtGender.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
+            this.txtGender.Location = new System.Drawing.Point(607, 305);
+            this.txtGender.Name = "txtGender";
+            this.txtGender.Size = new System.Drawing.Size(261, 36);
+            this.txtGender.Sorted = true;
+            this.txtGender.TabIndex = 7;
             // 
             // guna2HtmlLabel11
             // 
@@ -319,62 +577,51 @@
             this.guna2HtmlLabel12.TabIndex = 13;
             this.guna2HtmlLabel12.Text = "Basic Information";
             // 
-            // guna2HtmlLabel9
+            // txtAddress
             // 
-            this.guna2HtmlLabel9.AutoSize = false;
-            this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel9.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel9.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(333, 213);
-            this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
-            this.guna2HtmlLabel9.Size = new System.Drawing.Size(134, 23);
-            this.guna2HtmlLabel9.TabIndex = 28;
-            this.guna2HtmlLabel9.Text = "Present Address";
+            this.txtAddress.BorderRadius = 8;
+            this.txtAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAddress.DefaultText = "";
+            this.txtAddress.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtAddress.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtAddress.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAddress.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAddress.Font = new System.Drawing.Font("Poppins", 9F);
+            this.txtAddress.ForeColor = System.Drawing.Color.Black;
+            this.txtAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAddress.Location = new System.Drawing.Point(333, 234);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAddress.Multiline = true;
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.PasswordChar = '\0';
+            this.txtAddress.PlaceholderText = "Enter present address";
+            this.txtAddress.SelectedText = "";
+            this.txtAddress.Size = new System.Drawing.Size(247, 107);
+            this.txtAddress.TabIndex = 5;
             // 
-            // guna2TextBox6
+            // txtMobileNo
             // 
-            this.guna2TextBox6.BorderRadius = 8;
-            this.guna2TextBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox6.DefaultText = "";
-            this.guna2TextBox6.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox6.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox6.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox6.Font = new System.Drawing.Font("Poppins", 9F);
-            this.guna2TextBox6.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox6.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox6.Location = new System.Drawing.Point(333, 234);
-            this.guna2TextBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox6.Multiline = true;
-            this.guna2TextBox6.Name = "guna2TextBox6";
-            this.guna2TextBox6.PasswordChar = '\0';
-            this.guna2TextBox6.PlaceholderText = "Enter present address";
-            this.guna2TextBox6.SelectedText = "";
-            this.guna2TextBox6.Size = new System.Drawing.Size(247, 107);
-            this.guna2TextBox6.TabIndex = 7;
-            // 
-            // guna2TextBox5
-            // 
-            this.guna2TextBox5.BorderRadius = 8;
-            this.guna2TextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox5.DefaultText = "";
-            this.guna2TextBox5.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox5.Font = new System.Drawing.Font("Poppins", 9F);
-            this.guna2TextBox5.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox5.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox5.Location = new System.Drawing.Point(607, 157);
-            this.guna2TextBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox5.Name = "guna2TextBox5";
-            this.guna2TextBox5.PasswordChar = '\0';
-            this.guna2TextBox5.PlaceholderText = "Enter mobile number";
-            this.guna2TextBox5.SelectedText = "";
-            this.guna2TextBox5.Size = new System.Drawing.Size(261, 33);
-            this.guna2TextBox5.TabIndex = 6;
+            this.txtMobileNo.BorderRadius = 8;
+            this.txtMobileNo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMobileNo.DefaultText = "";
+            this.txtMobileNo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMobileNo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMobileNo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMobileNo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMobileNo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMobileNo.Font = new System.Drawing.Font("Poppins", 9F);
+            this.txtMobileNo.ForeColor = System.Drawing.Color.Black;
+            this.txtMobileNo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMobileNo.Location = new System.Drawing.Point(607, 157);
+            this.txtMobileNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtMobileNo.Name = "txtMobileNo";
+            this.txtMobileNo.PasswordChar = '\0';
+            this.txtMobileNo.PlaceholderText = "Enter mobile number";
+            this.txtMobileNo.SelectedText = "";
+            this.txtMobileNo.Size = new System.Drawing.Size(261, 33);
+            this.txtMobileNo.TabIndex = 4;
+            this.txtMobileNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMobileNo_KeyPress);
             // 
             // guna2HtmlLabel8
             // 
@@ -387,23 +634,7 @@
             this.guna2HtmlLabel8.Size = new System.Drawing.Size(182, 23);
             this.guna2HtmlLabel8.TabIndex = 25;
             this.guna2HtmlLabel8.Text = "Mobile Number";
-            // 
-            // guna2DateTimePicker2
-            // 
-            this.guna2DateTimePicker2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.guna2DateTimePicker2.BorderRadius = 5;
-            this.guna2DateTimePicker2.Checked = true;
-            this.guna2DateTimePicker2.CustomFormat = "mm/dd/yyyy";
-            this.guna2DateTimePicker2.FillColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.guna2DateTimePicker2.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.guna2DateTimePicker2.Location = new System.Drawing.Point(607, 382);
-            this.guna2DateTimePicker2.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker2.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker2.Name = "guna2DateTimePicker2";
-            this.guna2DateTimePicker2.Size = new System.Drawing.Size(261, 33);
-            this.guna2DateTimePicker2.TabIndex = 5;
-            this.guna2DateTimePicker2.Value = new System.DateTime(2024, 7, 1, 14, 6, 29, 436);
+            this.guna2HtmlLabel8.Click += new System.EventHandler(this.guna2HtmlLabel8_Click);
             // 
             // guna2HtmlLabel7
             // 
@@ -417,28 +648,28 @@
             this.guna2HtmlLabel7.TabIndex = 23;
             this.guna2HtmlLabel7.Text = "Date of Birth";
             // 
-            // guna2TextBox3
+            // txtLastName
             // 
-            this.guna2TextBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2TextBox3.BorderRadius = 8;
-            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox3.DefaultText = "";
-            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Font = new System.Drawing.Font("Poppins", 9F);
-            this.guna2TextBox3.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Location = new System.Drawing.Point(333, 157);
-            this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox3.Name = "guna2TextBox3";
-            this.guna2TextBox3.PasswordChar = '\0';
-            this.guna2TextBox3.PlaceholderText = "Enter last name";
-            this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.Size = new System.Drawing.Size(247, 33);
-            this.guna2TextBox3.TabIndex = 3;
+            this.txtLastName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtLastName.BorderRadius = 8;
+            this.txtLastName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtLastName.DefaultText = "";
+            this.txtLastName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtLastName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtLastName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtLastName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtLastName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtLastName.Font = new System.Drawing.Font("Poppins", 9F);
+            this.txtLastName.ForeColor = System.Drawing.Color.Black;
+            this.txtLastName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtLastName.Location = new System.Drawing.Point(333, 157);
+            this.txtLastName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtLastName.Name = "txtLastName";
+            this.txtLastName.PasswordChar = '\0';
+            this.txtLastName.PlaceholderText = "Enter last name";
+            this.txtLastName.SelectedText = "";
+            this.txtLastName.Size = new System.Drawing.Size(247, 33);
+            this.txtLastName.TabIndex = 3;
             // 
             // guna2HtmlLabel4
             // 
@@ -453,27 +684,27 @@
             this.guna2HtmlLabel4.TabIndex = 19;
             this.guna2HtmlLabel4.Text = "Last Name";
             // 
-            // guna2TextBox2
+            // txtMiddleName
             // 
-            this.guna2TextBox2.BorderRadius = 8;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Poppins", 9F);
-            this.guna2TextBox2.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Location = new System.Drawing.Point(607, 82);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderText = "Enter middle name";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(261, 33);
-            this.guna2TextBox2.TabIndex = 2;
+            this.txtMiddleName.BorderRadius = 8;
+            this.txtMiddleName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMiddleName.DefaultText = "";
+            this.txtMiddleName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMiddleName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMiddleName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMiddleName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMiddleName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMiddleName.Font = new System.Drawing.Font("Poppins", 9F);
+            this.txtMiddleName.ForeColor = System.Drawing.Color.Black;
+            this.txtMiddleName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMiddleName.Location = new System.Drawing.Point(607, 82);
+            this.txtMiddleName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtMiddleName.Name = "txtMiddleName";
+            this.txtMiddleName.PasswordChar = '\0';
+            this.txtMiddleName.PlaceholderText = "Enter middle name";
+            this.txtMiddleName.SelectedText = "";
+            this.txtMiddleName.Size = new System.Drawing.Size(261, 33);
+            this.txtMiddleName.TabIndex = 2;
             // 
             // guna2HtmlLabel2
             // 
@@ -521,6 +752,18 @@
             this.guna2HtmlLabel6.TabIndex = 15;
             this.guna2HtmlLabel6.Text = "First Name";
             // 
+            // guna2HtmlLabel9
+            // 
+            this.guna2HtmlLabel9.AutoSize = false;
+            this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel9.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel9.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(333, 213);
+            this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
+            this.guna2HtmlLabel9.Size = new System.Drawing.Size(134, 23);
+            this.guna2HtmlLabel9.TabIndex = 28;
+            this.guna2HtmlLabel9.Text = "Present Address";
+            // 
             // tabWork
             // 
             this.tabWork.BackColor = System.Drawing.SystemColors.Control;
@@ -535,31 +778,33 @@
             // panelEmployment
             // 
             this.panelEmployment.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panelEmployment.Controls.Add(this.guna2TextBox9);
+            this.panelEmployment.Controls.Add(this.txtRegularizationDate);
+            this.panelEmployment.Controls.Add(this.txtFifthDate);
+            this.panelEmployment.Controls.Add(this.txtThirdDate);
+            this.panelEmployment.Controls.Add(this.txtHireDate);
+            this.panelEmployment.Controls.Add(this.txtSalary);
+            this.panelEmployment.Controls.Add(this.guna2HtmlLabel38);
+            this.panelEmployment.Controls.Add(this.txtCity);
             this.panelEmployment.Controls.Add(this.guna2HtmlLabel34);
-            this.panelEmployment.Controls.Add(this.guna2ComboBox5);
+            this.panelEmployment.Controls.Add(this.txtSchedule);
             this.panelEmployment.Controls.Add(this.guna2HtmlLabel28);
-            this.panelEmployment.Controls.Add(this.guna2ComboBox3);
-            this.panelEmployment.Controls.Add(this.guna2DateTimePicker4);
+            this.panelEmployment.Controls.Add(this.txtBranch);
             this.panelEmployment.Controls.Add(this.guna2HtmlLabel27);
-            this.panelEmployment.Controls.Add(this.guna2DateTimePicker3);
             this.panelEmployment.Controls.Add(this.guna2HtmlLabel26);
             this.panelEmployment.Controls.Add(this.guna2HtmlLabel25);
-            this.panelEmployment.Controls.Add(this.guna2TextBox8);
+            this.panelEmployment.Controls.Add(this.txtWorkEmail);
             this.panelEmployment.Controls.Add(this.guna2HtmlLabel23);
-            this.panelEmployment.Controls.Add(this.guna2TextBox4);
-            this.panelEmployment.Controls.Add(this.guna2TextBox7);
+            this.panelEmployment.Controls.Add(this.txtJobTitle);
+            this.panelEmployment.Controls.Add(this.txtEmployeeID);
             this.panelEmployment.Controls.Add(this.guna2HtmlLabel10);
-            this.panelEmployment.Controls.Add(this.guna2DateTimePicker6);
             this.panelEmployment.Controls.Add(this.guna2HtmlLabel21);
-            this.panelEmployment.Controls.Add(this.guna2ComboBox7);
+            this.panelEmployment.Controls.Add(this.txtEmpLevel);
             this.panelEmployment.Controls.Add(this.guna2HtmlLabel18);
             this.panelEmployment.Controls.Add(this.guna2HtmlLabel17);
-            this.panelEmployment.Controls.Add(this.guna2DateTimePicker1);
             this.panelEmployment.Controls.Add(this.guna2HtmlLabel16);
-            this.panelEmployment.Controls.Add(this.guna2ComboBox6);
+            this.panelEmployment.Controls.Add(this.txtEmpType);
             this.panelEmployment.Controls.Add(this.guna2HtmlLabel15);
-            this.panelEmployment.Controls.Add(this.guna2ComboBox2);
+            this.panelEmployment.Controls.Add(this.txtEmpStatus);
             this.panelEmployment.Controls.Add(this.guna2HtmlLabel13);
             this.panelEmployment.Controls.Add(this.txtDepartment);
             this.panelEmployment.Controls.Add(this.guna2HtmlLabel33);
@@ -571,21 +816,227 @@
             this.panelEmployment.TabIndex = 13;
             this.panelEmployment.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel2_Paint);
             // 
-            // guna2DateTimePicker6
+            // txtCity
             // 
-            this.guna2DateTimePicker6.BorderRadius = 5;
-            this.guna2DateTimePicker6.Checked = true;
-            this.guna2DateTimePicker6.CustomFormat = "";
-            this.guna2DateTimePicker6.FillColor = System.Drawing.Color.White;
-            this.guna2DateTimePicker6.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DateTimePicker6.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.guna2DateTimePicker6.Location = new System.Drawing.Point(623, 421);
-            this.guna2DateTimePicker6.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker6.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker6.Name = "guna2DateTimePicker6";
-            this.guna2DateTimePicker6.Size = new System.Drawing.Size(250, 33);
-            this.guna2DateTimePicker6.TabIndex = 49;
-            this.guna2DateTimePicker6.Value = new System.DateTime(2024, 7, 1, 14, 6, 29, 436);
+            this.txtCity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCity.BorderRadius = 8;
+            this.txtCity.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCity.DefaultText = "";
+            this.txtCity.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCity.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCity.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCity.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCity.Font = new System.Drawing.Font("Poppins", 9F);
+            this.txtCity.ForeColor = System.Drawing.Color.Black;
+            this.txtCity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCity.Location = new System.Drawing.Point(623, 256);
+            this.txtCity.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtCity.Name = "txtCity";
+            this.txtCity.PasswordChar = '\0';
+            this.txtCity.PlaceholderText = "Enter Assigned City";
+            this.txtCity.SelectedText = "";
+            this.txtCity.Size = new System.Drawing.Size(250, 33);
+            this.txtCity.TabIndex = 9;
+            // 
+            // guna2HtmlLabel34
+            // 
+            this.guna2HtmlLabel34.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2HtmlLabel34.AutoSize = false;
+            this.guna2HtmlLabel34.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel34.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel34.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel34.Location = new System.Drawing.Point(623, 233);
+            this.guna2HtmlLabel34.Name = "guna2HtmlLabel34";
+            this.guna2HtmlLabel34.Size = new System.Drawing.Size(166, 23);
+            this.guna2HtmlLabel34.TabIndex = 65;
+            this.guna2HtmlLabel34.Text = "Assigned City";
+            // 
+            // txtSchedule
+            // 
+            this.txtSchedule.BackColor = System.Drawing.Color.Transparent;
+            this.txtSchedule.BorderRadius = 10;
+            this.txtSchedule.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.txtSchedule.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtSchedule.FocusedColor = System.Drawing.Color.Empty;
+            this.txtSchedule.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSchedule.ForeColor = System.Drawing.Color.Black;
+            this.txtSchedule.ItemHeight = 30;
+            this.txtSchedule.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
+            this.txtSchedule.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
+            this.txtSchedule.Location = new System.Drawing.Point(334, 334);
+            this.txtSchedule.Name = "txtSchedule";
+            this.txtSchedule.Size = new System.Drawing.Size(250, 36);
+            this.txtSchedule.Sorted = true;
+            this.txtSchedule.TabIndex = 11;
+            // 
+            // guna2HtmlLabel28
+            // 
+            this.guna2HtmlLabel28.AutoSize = false;
+            this.guna2HtmlLabel28.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel28.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel28.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel28.Location = new System.Drawing.Point(334, 314);
+            this.guna2HtmlLabel28.Name = "guna2HtmlLabel28";
+            this.guna2HtmlLabel28.Size = new System.Drawing.Size(86, 23);
+            this.guna2HtmlLabel28.TabIndex = 64;
+            this.guna2HtmlLabel28.Text = "Schedule";
+            // 
+            // txtBranch
+            // 
+            this.txtBranch.BackColor = System.Drawing.Color.Transparent;
+            this.txtBranch.BorderRadius = 10;
+            this.txtBranch.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.txtBranch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtBranch.FocusedColor = System.Drawing.Color.Empty;
+            this.txtBranch.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBranch.ForeColor = System.Drawing.Color.Black;
+            this.txtBranch.ItemHeight = 30;
+            this.txtBranch.Items.AddRange(new object[] {
+            "Field",
+            "Field & Main Office",
+            "Main Office",
+            "Mindanao",
+            "Visayas"});
+            this.txtBranch.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
+            this.txtBranch.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
+            this.txtBranch.Location = new System.Drawing.Point(334, 256);
+            this.txtBranch.Name = "txtBranch";
+            this.txtBranch.Size = new System.Drawing.Size(250, 36);
+            this.txtBranch.Sorted = true;
+            this.txtBranch.TabIndex = 8;
+            // 
+            // guna2HtmlLabel27
+            // 
+            this.guna2HtmlLabel27.AutoSize = false;
+            this.guna2HtmlLabel27.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel27.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel27.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel27.Location = new System.Drawing.Point(334, 393);
+            this.guna2HtmlLabel27.Name = "guna2HtmlLabel27";
+            this.guna2HtmlLabel27.Size = new System.Drawing.Size(133, 23);
+            this.guna2HtmlLabel27.TabIndex = 61;
+            this.guna2HtmlLabel27.Text = "Fifth Month (5th)";
+            // 
+            // guna2HtmlLabel26
+            // 
+            this.guna2HtmlLabel26.AutoSize = false;
+            this.guna2HtmlLabel26.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel26.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel26.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel26.Location = new System.Drawing.Point(25, 393);
+            this.guna2HtmlLabel26.Name = "guna2HtmlLabel26";
+            this.guna2HtmlLabel26.Size = new System.Drawing.Size(128, 23);
+            this.guna2HtmlLabel26.TabIndex = 59;
+            this.guna2HtmlLabel26.Text = "Third Month (3rd)";
+            // 
+            // guna2HtmlLabel25
+            // 
+            this.guna2HtmlLabel25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2HtmlLabel25.AutoSize = false;
+            this.guna2HtmlLabel25.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel25.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel25.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel25.Location = new System.Drawing.Point(334, 233);
+            this.guna2HtmlLabel25.Name = "guna2HtmlLabel25";
+            this.guna2HtmlLabel25.Size = new System.Drawing.Size(166, 23);
+            this.guna2HtmlLabel25.TabIndex = 57;
+            this.guna2HtmlLabel25.Text = "Assigned Branch";
+            // 
+            // txtWorkEmail
+            // 
+            this.txtWorkEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtWorkEmail.BorderRadius = 8;
+            this.txtWorkEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtWorkEmail.DefaultText = "";
+            this.txtWorkEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtWorkEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtWorkEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtWorkEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtWorkEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtWorkEmail.Font = new System.Drawing.Font("Poppins", 9F);
+            this.txtWorkEmail.ForeColor = System.Drawing.Color.Black;
+            this.txtWorkEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtWorkEmail.Location = new System.Drawing.Point(25, 256);
+            this.txtWorkEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtWorkEmail.Name = "txtWorkEmail";
+            this.txtWorkEmail.PasswordChar = '\0';
+            this.txtWorkEmail.PlaceholderText = "Enter last name";
+            this.txtWorkEmail.SelectedText = "";
+            this.txtWorkEmail.Size = new System.Drawing.Size(273, 33);
+            this.txtWorkEmail.TabIndex = 7;
+            // 
+            // guna2HtmlLabel23
+            // 
+            this.guna2HtmlLabel23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2HtmlLabel23.AutoSize = false;
+            this.guna2HtmlLabel23.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel23.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel23.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel23.Location = new System.Drawing.Point(25, 233);
+            this.guna2HtmlLabel23.Name = "guna2HtmlLabel23";
+            this.guna2HtmlLabel23.Size = new System.Drawing.Size(106, 23);
+            this.guna2HtmlLabel23.TabIndex = 55;
+            this.guna2HtmlLabel23.Text = "Work Email";
+            // 
+            // txtJobTitle
+            // 
+            this.txtJobTitle.BorderRadius = 8;
+            this.txtJobTitle.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtJobTitle.DefaultText = "";
+            this.txtJobTitle.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtJobTitle.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtJobTitle.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtJobTitle.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtJobTitle.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtJobTitle.Font = new System.Drawing.Font("Poppins", 9F);
+            this.txtJobTitle.ForeColor = System.Drawing.Color.Black;
+            this.txtJobTitle.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtJobTitle.Location = new System.Drawing.Point(255, 99);
+            this.txtJobTitle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtJobTitle.Name = "txtJobTitle";
+            this.txtJobTitle.PasswordChar = '\0';
+            this.txtJobTitle.PlaceholderText = "Enter job title";
+            this.txtJobTitle.SelectedText = "";
+            this.txtJobTitle.Size = new System.Drawing.Size(329, 33);
+            this.txtJobTitle.TabIndex = 2;
+            // 
+            // txtEmployeeID
+            // 
+            this.txtEmployeeID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEmployeeID.BorderRadius = 8;
+            this.txtEmployeeID.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEmployeeID.DefaultText = "";
+            this.txtEmployeeID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEmployeeID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEmployeeID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmployeeID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmployeeID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmployeeID.Font = new System.Drawing.Font("Poppins", 9F);
+            this.txtEmployeeID.ForeColor = System.Drawing.Color.Black;
+            this.txtEmployeeID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmployeeID.Location = new System.Drawing.Point(63, 99);
+            this.txtEmployeeID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtEmployeeID.Name = "txtEmployeeID";
+            this.txtEmployeeID.PasswordChar = '\0';
+            this.txtEmployeeID.PlaceholderText = "Enter employee ID";
+            this.txtEmployeeID.SelectedText = "";
+            this.txtEmployeeID.Size = new System.Drawing.Size(160, 33);
+            this.txtEmployeeID.TabIndex = 1;
+            this.txtEmployeeID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmployeeID_KeyPress);
+            // 
+            // guna2HtmlLabel10
+            // 
+            this.guna2HtmlLabel10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2HtmlLabel10.AutoSize = false;
+            this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel10.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel10.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel10.Location = new System.Drawing.Point(28, 76);
+            this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
+            this.guna2HtmlLabel10.Size = new System.Drawing.Size(118, 23);
+            this.guna2HtmlLabel10.TabIndex = 52;
+            this.guna2HtmlLabel10.Text = "Employee ID";
             // 
             // guna2HtmlLabel21
             // 
@@ -593,23 +1044,23 @@
             this.guna2HtmlLabel21.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel21.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel21.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel21.Location = new System.Drawing.Point(623, 401);
+            this.guna2HtmlLabel21.Location = new System.Drawing.Point(623, 393);
             this.guna2HtmlLabel21.Name = "guna2HtmlLabel21";
             this.guna2HtmlLabel21.Size = new System.Drawing.Size(159, 23);
             this.guna2HtmlLabel21.TabIndex = 50;
             this.guna2HtmlLabel21.Text = "Regularization Date";
             // 
-            // guna2ComboBox7
+            // txtEmpLevel
             // 
-            this.guna2ComboBox7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox7.BorderRadius = 10;
-            this.guna2ComboBox7.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox7.FocusedColor = System.Drawing.Color.Empty;
-            this.guna2ComboBox7.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ComboBox7.ForeColor = System.Drawing.Color.Black;
-            this.guna2ComboBox7.ItemHeight = 30;
-            this.guna2ComboBox7.Items.AddRange(new object[] {
+            this.txtEmpLevel.BackColor = System.Drawing.Color.Transparent;
+            this.txtEmpLevel.BorderRadius = 10;
+            this.txtEmpLevel.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.txtEmpLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtEmpLevel.FocusedColor = System.Drawing.Color.Empty;
+            this.txtEmpLevel.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpLevel.ForeColor = System.Drawing.Color.Black;
+            this.txtEmpLevel.ItemHeight = 30;
+            this.txtEmpLevel.Items.AddRange(new object[] {
             "A2",
             "A3",
             "A4",
@@ -623,13 +1074,13 @@
             "S1",
             "S2",
             "S3"});
-            this.guna2ComboBox7.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
-            this.guna2ComboBox7.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
-            this.guna2ComboBox7.Location = new System.Drawing.Point(623, 173);
-            this.guna2ComboBox7.Name = "guna2ComboBox7";
-            this.guna2ComboBox7.Size = new System.Drawing.Size(250, 36);
-            this.guna2ComboBox7.Sorted = true;
-            this.guna2ComboBox7.TabIndex = 43;
+            this.txtEmpLevel.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
+            this.txtEmpLevel.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
+            this.txtEmpLevel.Location = new System.Drawing.Point(623, 173);
+            this.txtEmpLevel.Name = "txtEmpLevel";
+            this.txtEmpLevel.Size = new System.Drawing.Size(250, 36);
+            this.txtEmpLevel.Sorted = true;
+            this.txtEmpLevel.TabIndex = 6;
             // 
             // guna2HtmlLabel18
             // 
@@ -649,27 +1100,11 @@
             this.guna2HtmlLabel17.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel17.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel17.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel17.Location = new System.Drawing.Point(334, 70);
+            this.guna2HtmlLabel17.Location = new System.Drawing.Point(255, 76);
             this.guna2HtmlLabel17.Name = "guna2HtmlLabel17";
-            this.guna2HtmlLabel17.Size = new System.Drawing.Size(204, 23);
+            this.guna2HtmlLabel17.Size = new System.Drawing.Size(199, 23);
             this.guna2HtmlLabel17.TabIndex = 42;
             this.guna2HtmlLabel17.Text = "Job Title";
-            // 
-            // guna2DateTimePicker1
-            // 
-            this.guna2DateTimePicker1.BorderRadius = 5;
-            this.guna2DateTimePicker1.Checked = true;
-            this.guna2DateTimePicker1.CustomFormat = "";
-            this.guna2DateTimePicker1.FillColor = System.Drawing.Color.White;
-            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(623, 337);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(250, 33);
-            this.guna2DateTimePicker1.TabIndex = 39;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2024, 7, 1, 14, 6, 29, 436);
             // 
             // guna2HtmlLabel16
             // 
@@ -677,34 +1112,34 @@
             this.guna2HtmlLabel16.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel16.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel16.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel16.Location = new System.Drawing.Point(623, 317);
+            this.guna2HtmlLabel16.Location = new System.Drawing.Point(623, 314);
             this.guna2HtmlLabel16.Name = "guna2HtmlLabel16";
             this.guna2HtmlLabel16.Size = new System.Drawing.Size(133, 23);
             this.guna2HtmlLabel16.TabIndex = 40;
             this.guna2HtmlLabel16.Text = "Hired Date";
             // 
-            // guna2ComboBox6
+            // txtEmpType
             // 
-            this.guna2ComboBox6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox6.BorderRadius = 10;
-            this.guna2ComboBox6.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox6.FocusedColor = System.Drawing.Color.Empty;
-            this.guna2ComboBox6.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ComboBox6.ForeColor = System.Drawing.Color.Black;
-            this.guna2ComboBox6.ItemHeight = 30;
-            this.guna2ComboBox6.Items.AddRange(new object[] {
+            this.txtEmpType.BackColor = System.Drawing.Color.Transparent;
+            this.txtEmpType.BorderRadius = 10;
+            this.txtEmpType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.txtEmpType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtEmpType.FocusedColor = System.Drawing.Color.Empty;
+            this.txtEmpType.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpType.ForeColor = System.Drawing.Color.Black;
+            this.txtEmpType.ItemHeight = 30;
+            this.txtEmpType.Items.AddRange(new object[] {
             "Executive",
             "Managerial",
             "Officer",
             "Rank & File"});
-            this.guna2ComboBox6.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
-            this.guna2ComboBox6.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
-            this.guna2ComboBox6.Location = new System.Drawing.Point(334, 173);
-            this.guna2ComboBox6.Name = "guna2ComboBox6";
-            this.guna2ComboBox6.Size = new System.Drawing.Size(250, 36);
-            this.guna2ComboBox6.Sorted = true;
-            this.guna2ComboBox6.TabIndex = 37;
+            this.txtEmpType.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
+            this.txtEmpType.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
+            this.txtEmpType.Location = new System.Drawing.Point(334, 173);
+            this.txtEmpType.Name = "txtEmpType";
+            this.txtEmpType.Size = new System.Drawing.Size(250, 36);
+            this.txtEmpType.Sorted = true;
+            this.txtEmpType.TabIndex = 5;
             // 
             // guna2HtmlLabel15
             // 
@@ -718,27 +1153,27 @@
             this.guna2HtmlLabel15.TabIndex = 38;
             this.guna2HtmlLabel15.Text = "Employee Type";
             // 
-            // guna2ComboBox2
+            // txtEmpStatus
             // 
-            this.guna2ComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox2.BorderRadius = 10;
-            this.guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox2.FocusedColor = System.Drawing.Color.Empty;
-            this.guna2ComboBox2.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ComboBox2.ForeColor = System.Drawing.Color.Black;
-            this.guna2ComboBox2.ItemHeight = 30;
-            this.guna2ComboBox2.Items.AddRange(new object[] {
+            this.txtEmpStatus.BackColor = System.Drawing.Color.Transparent;
+            this.txtEmpStatus.BorderRadius = 10;
+            this.txtEmpStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.txtEmpStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtEmpStatus.FocusedColor = System.Drawing.Color.Empty;
+            this.txtEmpStatus.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpStatus.ForeColor = System.Drawing.Color.Black;
+            this.txtEmpStatus.ItemHeight = 30;
+            this.txtEmpStatus.Items.AddRange(new object[] {
             "Probationary",
             "Project-based",
             "Regular"});
-            this.guna2ComboBox2.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
-            this.guna2ComboBox2.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
-            this.guna2ComboBox2.Location = new System.Drawing.Point(27, 173);
-            this.guna2ComboBox2.Name = "guna2ComboBox2";
-            this.guna2ComboBox2.Size = new System.Drawing.Size(271, 36);
-            this.guna2ComboBox2.Sorted = true;
-            this.guna2ComboBox2.TabIndex = 35;
+            this.txtEmpStatus.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
+            this.txtEmpStatus.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
+            this.txtEmpStatus.Location = new System.Drawing.Point(27, 173);
+            this.txtEmpStatus.Name = "txtEmpStatus";
+            this.txtEmpStatus.Size = new System.Drawing.Size(271, 36);
+            this.txtEmpStatus.Sorted = true;
+            this.txtEmpStatus.TabIndex = 4;
             // 
             // guna2HtmlLabel13
             // 
@@ -762,22 +1197,13 @@
             this.txtDepartment.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDepartment.ForeColor = System.Drawing.Color.Black;
             this.txtDepartment.ItemHeight = 30;
-            this.txtDepartment.Items.AddRange(new object[] {
-            "Admin",
-            "Finance & Accounting",
-            "Human Resources (HR)",
-            "Marketing",
-            "Sales",
-            "Sales & Marketing",
-            "Sales (Field)",
-            "Warehouse & Logistics"});
             this.txtDepartment.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
             this.txtDepartment.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
             this.txtDepartment.Location = new System.Drawing.Point(27, 334);
             this.txtDepartment.Name = "txtDepartment";
             this.txtDepartment.Size = new System.Drawing.Size(271, 36);
             this.txtDepartment.Sorted = true;
-            this.txtDepartment.TabIndex = 33;
+            this.txtDepartment.TabIndex = 10;
             // 
             // guna2HtmlLabel33
             // 
@@ -804,28 +1230,48 @@
             this.guna2HtmlLabel14.TabIndex = 13;
             this.guna2HtmlLabel14.Text = "Employment Details";
             // 
-            // tabGovernment
+            // guna2HtmlLabel37
             // 
-            this.tabGovernment.BackColor = System.Drawing.SystemColors.Control;
-            this.tabGovernment.Controls.Add(this.guna2GradientPanel3);
-            this.tabGovernment.Location = new System.Drawing.Point(4, 44);
-            this.tabGovernment.Name = "tabGovernment";
-            this.tabGovernment.Padding = new System.Windows.Forms.Padding(3);
-            this.tabGovernment.Size = new System.Drawing.Size(930, 598);
-            this.tabGovernment.TabIndex = 2;
-            this.tabGovernment.Text = "Government Info";
+            this.guna2HtmlLabel37.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2HtmlLabel37.AutoSize = false;
+            this.guna2HtmlLabel37.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel37.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel37.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel37.Location = new System.Drawing.Point(28, 105);
+            this.guna2HtmlLabel37.Name = "guna2HtmlLabel37";
+            this.guna2HtmlLabel37.Size = new System.Drawing.Size(38, 23);
+            this.guna2HtmlLabel37.TabIndex = 67;
+            this.guna2HtmlLabel37.Text = "BIO-";
+            // 
+            // tabOther
+            // 
+            this.tabOther.BackColor = System.Drawing.SystemColors.Control;
+            this.tabOther.Controls.Add(this.guna2GradientPanel3);
+            this.tabOther.Location = new System.Drawing.Point(4, 44);
+            this.tabOther.Name = "tabOther";
+            this.tabOther.Padding = new System.Windows.Forms.Padding(3);
+            this.tabOther.Size = new System.Drawing.Size(930, 598);
+            this.tabOther.TabIndex = 2;
+            this.tabOther.Text = "Other Info";
             // 
             // guna2GradientPanel3
             // 
             this.guna2GradientPanel3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.guna2GradientPanel3.Controls.Add(this.guna2ComboBox2);
+            this.guna2GradientPanel3.Controls.Add(this.guna2ComboBox1);
+            this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel42);
+            this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel41);
+            this.guna2GradientPanel3.Controls.Add(this.guna2TextBox1);
+            this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel40);
+            this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel39);
             this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel24);
-            this.guna2GradientPanel3.Controls.Add(this.guna2TextBox18);
+            this.guna2GradientPanel3.Controls.Add(this.txtHDMFNo);
             this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel29);
-            this.guna2GradientPanel3.Controls.Add(this.guna2TextBox19);
+            this.guna2GradientPanel3.Controls.Add(this.txtPHNo);
             this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel30);
-            this.guna2GradientPanel3.Controls.Add(this.guna2TextBox20);
+            this.guna2GradientPanel3.Controls.Add(this.txtTINNo);
             this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel31);
-            this.guna2GradientPanel3.Controls.Add(this.guna2TextBox21);
+            this.guna2GradientPanel3.Controls.Add(this.txtSSSNo);
             this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel32);
             this.guna2GradientPanel3.Location = new System.Drawing.Point(9, 6);
             this.guna2GradientPanel3.Name = "guna2GradientPanel3";
@@ -839,33 +1285,33 @@
             this.guna2HtmlLabel24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.guna2HtmlLabel24.Font = new System.Drawing.Font("Poppins Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel24.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel24.Location = new System.Drawing.Point(12, 13);
+            this.guna2HtmlLabel24.Location = new System.Drawing.Point(15, 16);
             this.guna2HtmlLabel24.Name = "guna2HtmlLabel24";
             this.guna2HtmlLabel24.Size = new System.Drawing.Size(509, 33);
             this.guna2HtmlLabel24.TabIndex = 13;
             this.guna2HtmlLabel24.Text = "Government Information";
             // 
-            // guna2TextBox18
+            // txtHDMFNo
             // 
-            this.guna2TextBox18.BorderRadius = 8;
-            this.guna2TextBox18.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox18.DefaultText = "";
-            this.guna2TextBox18.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox18.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox18.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox18.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox18.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox18.Font = new System.Drawing.Font("Poppins", 9F);
-            this.guna2TextBox18.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox18.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox18.Location = new System.Drawing.Point(16, 169);
-            this.guna2TextBox18.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox18.Name = "guna2TextBox18";
-            this.guna2TextBox18.PasswordChar = '\0';
-            this.guna2TextBox18.PlaceholderText = "Enter HDMF No.";
-            this.guna2TextBox18.SelectedText = "";
-            this.guna2TextBox18.Size = new System.Drawing.Size(283, 33);
-            this.guna2TextBox18.TabIndex = 4;
+            this.txtHDMFNo.BorderRadius = 8;
+            this.txtHDMFNo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtHDMFNo.DefaultText = "";
+            this.txtHDMFNo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtHDMFNo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtHDMFNo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtHDMFNo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtHDMFNo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtHDMFNo.Font = new System.Drawing.Font("Poppins", 9F);
+            this.txtHDMFNo.ForeColor = System.Drawing.Color.Black;
+            this.txtHDMFNo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtHDMFNo.Location = new System.Drawing.Point(26, 191);
+            this.txtHDMFNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtHDMFNo.Name = "txtHDMFNo";
+            this.txtHDMFNo.PasswordChar = '\0';
+            this.txtHDMFNo.PlaceholderText = "Enter HDMF No.";
+            this.txtHDMFNo.SelectedText = "";
+            this.txtHDMFNo.Size = new System.Drawing.Size(378, 33);
+            this.txtHDMFNo.TabIndex = 3;
             // 
             // guna2HtmlLabel29
             // 
@@ -873,33 +1319,33 @@
             this.guna2HtmlLabel29.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel29.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel29.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel29.Location = new System.Drawing.Point(16, 146);
+            this.guna2HtmlLabel29.Location = new System.Drawing.Point(26, 168);
             this.guna2HtmlLabel29.Name = "guna2HtmlLabel29";
-            this.guna2HtmlLabel29.Size = new System.Drawing.Size(170, 23);
+            this.guna2HtmlLabel29.Size = new System.Drawing.Size(159, 23);
             this.guna2HtmlLabel29.TabIndex = 21;
             this.guna2HtmlLabel29.Text = "HDMF No.";
             // 
-            // guna2TextBox19
+            // txtPHNo
             // 
-            this.guna2TextBox19.BorderRadius = 8;
-            this.guna2TextBox19.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox19.DefaultText = "";
-            this.guna2TextBox19.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox19.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox19.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox19.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox19.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox19.Font = new System.Drawing.Font("Poppins", 9F);
-            this.guna2TextBox19.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox19.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox19.Location = new System.Drawing.Point(372, 169);
-            this.guna2TextBox19.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox19.Name = "guna2TextBox19";
-            this.guna2TextBox19.PasswordChar = '\0';
-            this.guna2TextBox19.PlaceholderText = "Enter Philhealth No.";
-            this.guna2TextBox19.SelectedText = "";
-            this.guna2TextBox19.Size = new System.Drawing.Size(283, 33);
-            this.guna2TextBox19.TabIndex = 3;
+            this.txtPHNo.BorderRadius = 8;
+            this.txtPHNo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPHNo.DefaultText = "";
+            this.txtPHNo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPHNo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPHNo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPHNo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPHNo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPHNo.Font = new System.Drawing.Font("Poppins", 9F);
+            this.txtPHNo.ForeColor = System.Drawing.Color.Black;
+            this.txtPHNo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPHNo.Location = new System.Drawing.Point(461, 191);
+            this.txtPHNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPHNo.Name = "txtPHNo";
+            this.txtPHNo.PasswordChar = '\0';
+            this.txtPHNo.PlaceholderText = "Enter Philhealth No.";
+            this.txtPHNo.SelectedText = "";
+            this.txtPHNo.Size = new System.Drawing.Size(385, 33);
+            this.txtPHNo.TabIndex = 4;
             // 
             // guna2HtmlLabel30
             // 
@@ -907,33 +1353,33 @@
             this.guna2HtmlLabel30.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel30.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel30.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel30.Location = new System.Drawing.Point(372, 146);
+            this.guna2HtmlLabel30.Location = new System.Drawing.Point(461, 168);
             this.guna2HtmlLabel30.Name = "guna2HtmlLabel30";
-            this.guna2HtmlLabel30.Size = new System.Drawing.Size(149, 23);
+            this.guna2HtmlLabel30.Size = new System.Drawing.Size(251, 23);
             this.guna2HtmlLabel30.TabIndex = 19;
             this.guna2HtmlLabel30.Text = "PhilHealth No.";
             // 
-            // guna2TextBox20
+            // txtTINNo
             // 
-            this.guna2TextBox20.BorderRadius = 8;
-            this.guna2TextBox20.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox20.DefaultText = "";
-            this.guna2TextBox20.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox20.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox20.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox20.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox20.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox20.Font = new System.Drawing.Font("Poppins", 9F);
-            this.guna2TextBox20.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox20.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox20.Location = new System.Drawing.Point(372, 84);
-            this.guna2TextBox20.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox20.Name = "guna2TextBox20";
-            this.guna2TextBox20.PasswordChar = '\0';
-            this.guna2TextBox20.PlaceholderText = "Enter TIN No.";
-            this.guna2TextBox20.SelectedText = "";
-            this.guna2TextBox20.Size = new System.Drawing.Size(283, 33);
-            this.guna2TextBox20.TabIndex = 2;
+            this.txtTINNo.BorderRadius = 8;
+            this.txtTINNo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTINNo.DefaultText = "";
+            this.txtTINNo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTINNo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTINNo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTINNo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTINNo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTINNo.Font = new System.Drawing.Font("Poppins", 9F);
+            this.txtTINNo.ForeColor = System.Drawing.Color.Black;
+            this.txtTINNo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTINNo.Location = new System.Drawing.Point(461, 106);
+            this.txtTINNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTINNo.Name = "txtTINNo";
+            this.txtTINNo.PasswordChar = '\0';
+            this.txtTINNo.PlaceholderText = "Enter TIN No.";
+            this.txtTINNo.SelectedText = "";
+            this.txtTINNo.Size = new System.Drawing.Size(385, 33);
+            this.txtTINNo.TabIndex = 2;
             // 
             // guna2HtmlLabel31
             // 
@@ -941,34 +1387,34 @@
             this.guna2HtmlLabel31.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel31.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel31.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel31.Location = new System.Drawing.Point(372, 61);
+            this.guna2HtmlLabel31.Location = new System.Drawing.Point(461, 83);
             this.guna2HtmlLabel31.Name = "guna2HtmlLabel31";
-            this.guna2HtmlLabel31.Size = new System.Drawing.Size(233, 23);
+            this.guna2HtmlLabel31.Size = new System.Drawing.Size(335, 23);
             this.guna2HtmlLabel31.TabIndex = 17;
             this.guna2HtmlLabel31.Text = "Tax Identifcation Number (TIN)";
             // 
-            // guna2TextBox21
+            // txtSSSNo
             // 
-            this.guna2TextBox21.BorderRadius = 8;
-            this.guna2TextBox21.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox21.DefaultText = "";
-            this.guna2TextBox21.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox21.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox21.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox21.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox21.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox21.Font = new System.Drawing.Font("Poppins", 9F);
-            this.guna2TextBox21.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox21.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox21.IconLeftCursor = System.Windows.Forms.Cursors.No;
-            this.guna2TextBox21.Location = new System.Drawing.Point(16, 84);
-            this.guna2TextBox21.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox21.Name = "guna2TextBox21";
-            this.guna2TextBox21.PasswordChar = '\0';
-            this.guna2TextBox21.PlaceholderText = "Enter SSS No.";
-            this.guna2TextBox21.SelectedText = "";
-            this.guna2TextBox21.Size = new System.Drawing.Size(283, 33);
-            this.guna2TextBox21.TabIndex = 1;
+            this.txtSSSNo.BorderRadius = 8;
+            this.txtSSSNo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSSSNo.DefaultText = "";
+            this.txtSSSNo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSSSNo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSSSNo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSSSNo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSSSNo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSSSNo.Font = new System.Drawing.Font("Poppins", 9F);
+            this.txtSSSNo.ForeColor = System.Drawing.Color.Black;
+            this.txtSSSNo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSSSNo.IconLeftCursor = System.Windows.Forms.Cursors.No;
+            this.txtSSSNo.Location = new System.Drawing.Point(26, 106);
+            this.txtSSSNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSSSNo.Name = "txtSSSNo";
+            this.txtSSSNo.PasswordChar = '\0';
+            this.txtSSSNo.PlaceholderText = "Enter SSS No.";
+            this.txtSSSNo.SelectedText = "";
+            this.txtSSSNo.Size = new System.Drawing.Size(378, 33);
+            this.txtSSSNo.TabIndex = 1;
             // 
             // guna2HtmlLabel32
             // 
@@ -976,9 +1422,9 @@
             this.guna2HtmlLabel32.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel32.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel32.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel32.Location = new System.Drawing.Point(16, 61);
+            this.guna2HtmlLabel32.Location = new System.Drawing.Point(26, 83);
             this.guna2HtmlLabel32.Name = "guna2HtmlLabel32";
-            this.guna2HtmlLabel32.Size = new System.Drawing.Size(89, 23);
+            this.guna2HtmlLabel32.Size = new System.Drawing.Size(78, 23);
             this.guna2HtmlLabel32.TabIndex = 15;
             this.guna2HtmlLabel32.Text = "SSS No.";
             // 
@@ -1056,159 +1502,145 @@
             // 
             this.guna2Elipse4.TargetControl = this.tabInformation;
             // 
-            // picEmployee
-            // 
-            this.picEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.picEmployee.BackColor = System.Drawing.Color.Transparent;
-            this.picEmployee.BorderRadius = 1;
-            this.picEmployee.FillColor = System.Drawing.SystemColors.Control;
-            this.picEmployee.ImageRotate = 0F;
-            this.picEmployee.Location = new System.Drawing.Point(22, 23);
-            this.picEmployee.Name = "picEmployee";
-            this.picEmployee.Size = new System.Drawing.Size(244, 310);
-            this.picEmployee.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picEmployee.TabIndex = 35;
-            this.picEmployee.TabStop = false;
-            // 
-            // btnImage
-            // 
-            this.btnImage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnImage.Animated = true;
-            this.btnImage.BackColor = System.Drawing.Color.Transparent;
-            this.btnImage.BorderColor = System.Drawing.Color.Transparent;
-            this.btnImage.BorderRadius = 10;
-            this.btnImage.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnImage.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnImage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnImage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnImage.FillColor = System.Drawing.Color.Silver;
-            this.btnImage.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImage.ForeColor = System.Drawing.Color.Black;
-            this.btnImage.Location = new System.Drawing.Point(84, 339);
-            this.btnImage.Name = "btnImage";
-            this.btnImage.Size = new System.Drawing.Size(111, 29);
-            this.btnImage.TabIndex = 36;
-            this.btnImage.Text = "Choose Image";
-            this.btnImage.Click += new System.EventHandler(this.btnImage_Click);
-            // 
             // openFD
             // 
             this.openFD.FileName = "openFileDialog1";
-            // 
-            // pictureBox
-            // 
-            this.pictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox.FillColor = System.Drawing.Color.Silver;
-            this.pictureBox.ImageRotate = 0F;
-            this.pictureBox.Location = new System.Drawing.Point(667, 501);
-            this.pictureBox.Name = "pictureBox";
-            this.pictureBox.ShadowDecoration.BorderRadius = 10;
-            this.pictureBox.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.pictureBox.Size = new System.Drawing.Size(73, 107);
-            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox.TabIndex = 37;
-            this.pictureBox.TabStop = false;
-            this.pictureBox.Visible = false;
-            // 
-            // btnShow
-            // 
-            this.btnShow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnShow.Animated = true;
-            this.btnShow.BackColor = System.Drawing.Color.Transparent;
-            this.btnShow.BorderColor = System.Drawing.Color.Transparent;
-            this.btnShow.BorderRadius = 10;
-            this.btnShow.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnShow.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnShow.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnShow.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnShow.FillColor = System.Drawing.Color.Silver;
-            this.btnShow.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShow.ForeColor = System.Drawing.Color.Black;
-            this.btnShow.Location = new System.Drawing.Point(519, 546);
-            this.btnShow.Name = "btnShow";
-            this.btnShow.Size = new System.Drawing.Size(121, 32);
-            this.btnShow.TabIndex = 38;
-            this.btnShow.Text = "Show Image";
-            this.btnShow.Visible = false;
-            this.btnShow.Click += new System.EventHandler(this.guna2Button1_Click);
-            // 
-            // btnUpdateImage
-            // 
-            this.btnUpdateImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUpdateImage.Animated = true;
-            this.btnUpdateImage.BackColor = System.Drawing.Color.Transparent;
-            this.btnUpdateImage.BorderColor = System.Drawing.Color.Transparent;
-            this.btnUpdateImage.BorderRadius = 10;
-            this.btnUpdateImage.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnUpdateImage.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnUpdateImage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnUpdateImage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnUpdateImage.FillColor = System.Drawing.Color.Silver;
-            this.btnUpdateImage.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateImage.ForeColor = System.Drawing.Color.Black;
-            this.btnUpdateImage.Location = new System.Drawing.Point(352, 546);
-            this.btnUpdateImage.Name = "btnUpdateImage";
-            this.btnUpdateImage.Size = new System.Drawing.Size(121, 32);
-            this.btnUpdateImage.TabIndex = 39;
-            this.btnUpdateImage.Text = "Update Image";
-            this.btnUpdateImage.Visible = false;
-            this.btnUpdateImage.Click += new System.EventHandler(this.btnUpdateImage_Click);
             // 
             // guna2Elipse5
             // 
             this.guna2Elipse5.TargetControl = this.picEmployee;
             // 
-            // guna2HtmlLabel19
+            // guna2HtmlLabel38
             // 
-            this.guna2HtmlLabel19.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2HtmlLabel19.AutoSize = false;
-            this.guna2HtmlLabel19.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel19.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel19.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.guna2HtmlLabel19.Location = new System.Drawing.Point(90, 379);
-            this.guna2HtmlLabel19.Name = "guna2HtmlLabel19";
-            this.guna2HtmlLabel19.Size = new System.Drawing.Size(104, 23);
-            this.guna2HtmlLabel19.TabIndex = 40;
-            this.guna2HtmlLabel19.Text = "Allowed Format";
+            this.guna2HtmlLabel38.AutoSize = false;
+            this.guna2HtmlLabel38.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel38.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel38.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel38.Location = new System.Drawing.Point(623, 70);
+            this.guna2HtmlLabel38.Name = "guna2HtmlLabel38";
+            this.guna2HtmlLabel38.Size = new System.Drawing.Size(86, 23);
+            this.guna2HtmlLabel38.TabIndex = 69;
+            this.guna2HtmlLabel38.Text = "Salary";
             // 
-            // guna2HtmlLabel20
+            // txtSalary
             // 
-            this.guna2HtmlLabel20.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2HtmlLabel20.AutoSize = false;
-            this.guna2HtmlLabel20.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel20.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel20.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel20.Location = new System.Drawing.Point(73, 397);
-            this.guna2HtmlLabel20.Name = "guna2HtmlLabel20";
-            this.guna2HtmlLabel20.Size = new System.Drawing.Size(138, 23);
-            this.guna2HtmlLabel20.TabIndex = 41;
-            this.guna2HtmlLabel20.Text = "JPG, JPEG, and PNG";
+            this.txtSalary.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSalary.BorderRadius = 8;
+            this.txtSalary.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSalary.DefaultText = "";
+            this.txtSalary.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSalary.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSalary.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSalary.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSalary.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSalary.Font = new System.Drawing.Font("Poppins", 9F);
+            this.txtSalary.ForeColor = System.Drawing.Color.Black;
+            this.txtSalary.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSalary.Location = new System.Drawing.Point(623, 93);
+            this.txtSalary.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSalary.Name = "txtSalary";
+            this.txtSalary.PasswordChar = '\0';
+            this.txtSalary.PlaceholderText = "Enter amount";
+            this.txtSalary.SelectedText = "";
+            this.txtSalary.Size = new System.Drawing.Size(250, 33);
+            this.txtSalary.TabIndex = 3;
+            this.txtSalary.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSalary_KeyPress);
             // 
-            // container
+            // txtHireDate
             // 
-            this.container.BorderColor = System.Drawing.SystemColors.Control;
-            this.container.BorderRadius = 12;
-            this.container.BorderThickness = 2;
-            this.container.Controls.Add(this.picEmployee);
-            this.container.Controls.Add(this.guna2HtmlLabel20);
-            this.container.Controls.Add(this.btnImage);
-            this.container.Controls.Add(this.guna2HtmlLabel19);
-            this.container.Location = new System.Drawing.Point(23, 59);
-            this.container.Name = "container";
-            this.container.Size = new System.Drawing.Size(289, 432);
-            this.container.TabIndex = 42;
+            this.txtHireDate.BorderRadius = 5;
+            this.txtHireDate.Checked = true;
+            this.txtHireDate.CustomFormat = "yyyy-MM-dd";
+            this.txtHireDate.FillColor = System.Drawing.Color.White;
+            this.txtHireDate.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHireDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.txtHireDate.Location = new System.Drawing.Point(623, 334);
+            this.txtHireDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.txtHireDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.txtHireDate.Name = "txtHireDate";
+            this.txtHireDate.Size = new System.Drawing.Size(250, 36);
+            this.txtHireDate.TabIndex = 12;
+            this.txtHireDate.Value = new System.DateTime(2024, 7, 1, 14, 6, 29, 436);
+            // 
+            // txtThirdDate
+            // 
+            this.txtThirdDate.BorderRadius = 5;
+            this.txtThirdDate.Checked = true;
+            this.txtThirdDate.CustomFormat = "yyyy-MM-dd";
+            this.txtThirdDate.FillColor = System.Drawing.Color.White;
+            this.txtThirdDate.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtThirdDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.txtThirdDate.Location = new System.Drawing.Point(27, 419);
+            this.txtThirdDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.txtThirdDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.txtThirdDate.Name = "txtThirdDate";
+            this.txtThirdDate.Size = new System.Drawing.Size(271, 36);
+            this.txtThirdDate.TabIndex = 13;
+            this.txtThirdDate.Value = new System.DateTime(2024, 7, 1, 14, 6, 29, 436);
+            // 
+            // txtFifthDate
+            // 
+            this.txtFifthDate.BorderRadius = 5;
+            this.txtFifthDate.Checked = true;
+            this.txtFifthDate.CustomFormat = "yyyy-MM-dd";
+            this.txtFifthDate.FillColor = System.Drawing.Color.White;
+            this.txtFifthDate.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFifthDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.txtFifthDate.Location = new System.Drawing.Point(334, 419);
+            this.txtFifthDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.txtFifthDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.txtFifthDate.Name = "txtFifthDate";
+            this.txtFifthDate.Size = new System.Drawing.Size(250, 36);
+            this.txtFifthDate.TabIndex = 14;
+            this.txtFifthDate.Value = new System.DateTime(2024, 7, 1, 14, 6, 29, 436);
+            // 
+            // txtRegularizationDate
+            // 
+            this.txtRegularizationDate.BorderRadius = 5;
+            this.txtRegularizationDate.Checked = true;
+            this.txtRegularizationDate.CustomFormat = "yyyy-MM-dd";
+            this.txtRegularizationDate.FillColor = System.Drawing.Color.White;
+            this.txtRegularizationDate.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRegularizationDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.txtRegularizationDate.Location = new System.Drawing.Point(623, 419);
+            this.txtRegularizationDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.txtRegularizationDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.txtRegularizationDate.Name = "txtRegularizationDate";
+            this.txtRegularizationDate.Size = new System.Drawing.Size(250, 36);
+            this.txtRegularizationDate.TabIndex = 15;
+            this.txtRegularizationDate.Value = new System.DateTime(2024, 7, 1, 14, 6, 29, 436);
+            // 
+            // txtDateOfBirth
+            // 
+            this.txtDateOfBirth.BorderRadius = 5;
+            this.txtDateOfBirth.Checked = true;
+            this.txtDateOfBirth.CustomFormat = "yyyy-MM-dd";
+            this.txtDateOfBirth.FillColor = System.Drawing.Color.White;
+            this.txtDateOfBirth.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDateOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.txtDateOfBirth.Location = new System.Drawing.Point(607, 382);
+            this.txtDateOfBirth.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.txtDateOfBirth.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.txtDateOfBirth.Name = "txtDateOfBirth";
+            this.txtDateOfBirth.Size = new System.Drawing.Size(261, 33);
+            this.txtDateOfBirth.TabIndex = 9;
+            this.txtDateOfBirth.Value = new System.DateTime(2024, 7, 1, 14, 6, 29, 436);
+            // 
+            // guna2HtmlLabel39
+            // 
+            this.guna2HtmlLabel39.AutoSize = false;
+            this.guna2HtmlLabel39.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel39.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.guna2HtmlLabel39.Font = new System.Drawing.Font("Poppins Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel39.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel39.Location = new System.Drawing.Point(15, 265);
+            this.guna2HtmlLabel39.Name = "guna2HtmlLabel39";
+            this.guna2HtmlLabel39.Size = new System.Drawing.Size(283, 33);
+            this.guna2HtmlLabel39.TabIndex = 22;
+            this.guna2HtmlLabel39.Text = "Other Information";
             // 
             // guna2TextBox1
             // 
-            this.guna2TextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2TextBox1.BorderRadius = 8;
             this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBox1.DefaultText = "";
@@ -1220,371 +1652,93 @@
             this.guna2TextBox1.Font = new System.Drawing.Font("Poppins", 9F);
             this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(333, 382);
+            this.guna2TextBox1.Location = new System.Drawing.Point(461, 336);
             this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "Enter last name";
+            this.guna2TextBox1.PasswordChar = '*';
+            this.guna2TextBox1.PlaceholderText = "Enter Password";
             this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(247, 33);
-            this.guna2TextBox1.TabIndex = 43;
+            this.guna2TextBox1.Size = new System.Drawing.Size(385, 36);
+            this.guna2TextBox1.TabIndex = 23;
             // 
-            // guna2HtmlLabel22
+            // guna2HtmlLabel40
             // 
-            this.guna2HtmlLabel22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2HtmlLabel22.AutoSize = false;
-            this.guna2HtmlLabel22.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel22.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel22.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel22.Location = new System.Drawing.Point(333, 359);
-            this.guna2HtmlLabel22.Name = "guna2HtmlLabel22";
-            this.guna2HtmlLabel22.Size = new System.Drawing.Size(106, 23);
-            this.guna2HtmlLabel22.TabIndex = 44;
-            this.guna2HtmlLabel22.Text = "Personal Email";
+            this.guna2HtmlLabel40.AutoSize = false;
+            this.guna2HtmlLabel40.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel40.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel40.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel40.Location = new System.Drawing.Point(461, 313);
+            this.guna2HtmlLabel40.Name = "guna2HtmlLabel40";
+            this.guna2HtmlLabel40.Size = new System.Drawing.Size(170, 23);
+            this.guna2HtmlLabel40.TabIndex = 24;
+            this.guna2HtmlLabel40.Text = "Password";
             // 
-            // guna2TextBox7
+            // guna2HtmlLabel41
             // 
-            this.guna2TextBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2TextBox7.BorderRadius = 8;
-            this.guna2TextBox7.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox7.DefaultText = "";
-            this.guna2TextBox7.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox7.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox7.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox7.Font = new System.Drawing.Font("Poppins", 9F);
-            this.guna2TextBox7.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox7.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox7.Location = new System.Drawing.Point(60, 93);
-            this.guna2TextBox7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox7.Name = "guna2TextBox7";
-            this.guna2TextBox7.PasswordChar = '\0';
-            this.guna2TextBox7.PlaceholderText = "Enter employee ID";
-            this.guna2TextBox7.SelectedText = "";
-            this.guna2TextBox7.Size = new System.Drawing.Size(238, 33);
-            this.guna2TextBox7.TabIndex = 51;
+            this.guna2HtmlLabel41.AutoSize = false;
+            this.guna2HtmlLabel41.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel41.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel41.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel41.Location = new System.Drawing.Point(26, 392);
+            this.guna2HtmlLabel41.Name = "guna2HtmlLabel41";
+            this.guna2HtmlLabel41.Size = new System.Drawing.Size(159, 23);
+            this.guna2HtmlLabel41.TabIndex = 26;
+            this.guna2HtmlLabel41.Text = "Access Rights";
             // 
-            // guna2HtmlLabel10
+            // guna2HtmlLabel42
             // 
-            this.guna2HtmlLabel10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2HtmlLabel10.AutoSize = false;
-            this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel10.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel10.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel10.Location = new System.Drawing.Point(25, 70);
-            this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
-            this.guna2HtmlLabel10.Size = new System.Drawing.Size(118, 23);
-            this.guna2HtmlLabel10.TabIndex = 52;
-            this.guna2HtmlLabel10.Text = "Employee ID";
+            this.guna2HtmlLabel42.AutoSize = false;
+            this.guna2HtmlLabel42.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel42.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel42.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel42.Location = new System.Drawing.Point(26, 313);
+            this.guna2HtmlLabel42.Name = "guna2HtmlLabel42";
+            this.guna2HtmlLabel42.Size = new System.Drawing.Size(159, 23);
+            this.guna2HtmlLabel42.TabIndex = 28;
+            this.guna2HtmlLabel42.Text = "Employee Status";
             // 
-            // guna2TextBox4
+            // guna2ComboBox1
             // 
-            this.guna2TextBox4.BorderRadius = 8;
-            this.guna2TextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox4.DefaultText = "";
-            this.guna2TextBox4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.Font = new System.Drawing.Font("Poppins", 9F);
-            this.guna2TextBox4.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.Location = new System.Drawing.Point(334, 93);
-            this.guna2TextBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox4.Name = "guna2TextBox4";
-            this.guna2TextBox4.PasswordChar = '\0';
-            this.guna2TextBox4.PlaceholderText = "Enter job title";
-            this.guna2TextBox4.SelectedText = "";
-            this.guna2TextBox4.Size = new System.Drawing.Size(539, 33);
-            this.guna2TextBox4.TabIndex = 53;
+            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ComboBox1.BorderRadius = 10;
+            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.Empty;
+            this.guna2ComboBox1.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ComboBox1.ForeColor = System.Drawing.Color.Black;
+            this.guna2ComboBox1.ItemHeight = 30;
+            this.guna2ComboBox1.Items.AddRange(new object[] {
+            "Active",
+            "Inactive"});
+            this.guna2ComboBox1.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
+            this.guna2ComboBox1.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
+            this.guna2ComboBox1.Location = new System.Drawing.Point(26, 336);
+            this.guna2ComboBox1.Name = "guna2ComboBox1";
+            this.guna2ComboBox1.Size = new System.Drawing.Size(378, 36);
+            this.guna2ComboBox1.Sorted = true;
+            this.guna2ComboBox1.TabIndex = 29;
             // 
-            // guna2TextBox8
+            // guna2ComboBox2
             // 
-            this.guna2TextBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2TextBox8.BorderRadius = 8;
-            this.guna2TextBox8.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox8.DefaultText = "";
-            this.guna2TextBox8.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox8.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox8.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox8.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox8.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox8.Font = new System.Drawing.Font("Poppins", 9F);
-            this.guna2TextBox8.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox8.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox8.Location = new System.Drawing.Point(25, 256);
-            this.guna2TextBox8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox8.Name = "guna2TextBox8";
-            this.guna2TextBox8.PasswordChar = '\0';
-            this.guna2TextBox8.PlaceholderText = "Enter last name";
-            this.guna2TextBox8.SelectedText = "";
-            this.guna2TextBox8.Size = new System.Drawing.Size(273, 33);
-            this.guna2TextBox8.TabIndex = 54;
-            // 
-            // guna2HtmlLabel23
-            // 
-            this.guna2HtmlLabel23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2HtmlLabel23.AutoSize = false;
-            this.guna2HtmlLabel23.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel23.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel23.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel23.Location = new System.Drawing.Point(25, 233);
-            this.guna2HtmlLabel23.Name = "guna2HtmlLabel23";
-            this.guna2HtmlLabel23.Size = new System.Drawing.Size(106, 23);
-            this.guna2HtmlLabel23.TabIndex = 55;
-            this.guna2HtmlLabel23.Text = "Work Email";
-            // 
-            // guna2HtmlLabel25
-            // 
-            this.guna2HtmlLabel25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2HtmlLabel25.AutoSize = false;
-            this.guna2HtmlLabel25.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel25.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel25.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel25.Location = new System.Drawing.Point(334, 233);
-            this.guna2HtmlLabel25.Name = "guna2HtmlLabel25";
-            this.guna2HtmlLabel25.Size = new System.Drawing.Size(166, 23);
-            this.guna2HtmlLabel25.TabIndex = 57;
-            this.guna2HtmlLabel25.Text = "Assigned Branch";
-            // 
-            // guna2HtmlLabel26
-            // 
-            this.guna2HtmlLabel26.AutoSize = false;
-            this.guna2HtmlLabel26.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel26.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel26.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel26.Location = new System.Drawing.Point(27, 401);
-            this.guna2HtmlLabel26.Name = "guna2HtmlLabel26";
-            this.guna2HtmlLabel26.Size = new System.Drawing.Size(128, 23);
-            this.guna2HtmlLabel26.TabIndex = 59;
-            this.guna2HtmlLabel26.Text = "Third Month (3rd)";
-            // 
-            // guna2DateTimePicker4
-            // 
-            this.guna2DateTimePicker4.BorderRadius = 5;
-            this.guna2DateTimePicker4.Checked = true;
-            this.guna2DateTimePicker4.CustomFormat = "";
-            this.guna2DateTimePicker4.FillColor = System.Drawing.Color.White;
-            this.guna2DateTimePicker4.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.guna2DateTimePicker4.Location = new System.Drawing.Point(334, 421);
-            this.guna2DateTimePicker4.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker4.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker4.Name = "guna2DateTimePicker4";
-            this.guna2DateTimePicker4.Size = new System.Drawing.Size(250, 33);
-            this.guna2DateTimePicker4.TabIndex = 60;
-            this.guna2DateTimePicker4.Value = new System.DateTime(2024, 7, 1, 14, 6, 29, 436);
-            // 
-            // guna2HtmlLabel27
-            // 
-            this.guna2HtmlLabel27.AutoSize = false;
-            this.guna2HtmlLabel27.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel27.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel27.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel27.Location = new System.Drawing.Point(334, 401);
-            this.guna2HtmlLabel27.Name = "guna2HtmlLabel27";
-            this.guna2HtmlLabel27.Size = new System.Drawing.Size(133, 23);
-            this.guna2HtmlLabel27.TabIndex = 61;
-            this.guna2HtmlLabel27.Text = "Fifth Month (5th)";
-            // 
-            // guna2ComboBox3
-            // 
-            this.guna2ComboBox3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox3.BorderRadius = 10;
-            this.guna2ComboBox3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox3.FocusedColor = System.Drawing.Color.Empty;
-            this.guna2ComboBox3.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ComboBox3.ForeColor = System.Drawing.Color.Black;
-            this.guna2ComboBox3.ItemHeight = 30;
-            this.guna2ComboBox3.Items.AddRange(new object[] {
-            "Field",
-            "Main Office",
-            "Mindanao",
-            "Visayas"});
-            this.guna2ComboBox3.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
-            this.guna2ComboBox3.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
-            this.guna2ComboBox3.Location = new System.Drawing.Point(334, 256);
-            this.guna2ComboBox3.Name = "guna2ComboBox3";
-            this.guna2ComboBox3.Size = new System.Drawing.Size(250, 36);
-            this.guna2ComboBox3.Sorted = true;
-            this.guna2ComboBox3.TabIndex = 62;
-            // 
-            // guna2ComboBox5
-            // 
-            this.guna2ComboBox5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox5.BorderRadius = 10;
-            this.guna2ComboBox5.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox5.FocusedColor = System.Drawing.Color.Empty;
-            this.guna2ComboBox5.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ComboBox5.ForeColor = System.Drawing.Color.Black;
-            this.guna2ComboBox5.ItemHeight = 30;
-            this.guna2ComboBox5.Items.AddRange(new object[] {
+            this.guna2ComboBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ComboBox2.BorderRadius = 10;
+            this.guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.guna2ComboBox2.FocusedColor = System.Drawing.Color.Empty;
+            this.guna2ComboBox2.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ComboBox2.ForeColor = System.Drawing.Color.Black;
+            this.guna2ComboBox2.ItemHeight = 30;
+            this.guna2ComboBox2.Items.AddRange(new object[] {
             "Admin",
-            "Finance & Accounting",
-            "Human Resources (HR)",
-            "Marketing",
-            "Sales",
-            "Sales & Marketing",
-            "Sales (Field)",
-            "Warehouse & Logistics"});
-            this.guna2ComboBox5.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
-            this.guna2ComboBox5.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
-            this.guna2ComboBox5.Location = new System.Drawing.Point(334, 334);
-            this.guna2ComboBox5.Name = "guna2ComboBox5";
-            this.guna2ComboBox5.Size = new System.Drawing.Size(250, 36);
-            this.guna2ComboBox5.Sorted = true;
-            this.guna2ComboBox5.TabIndex = 63;
-            // 
-            // guna2HtmlLabel28
-            // 
-            this.guna2HtmlLabel28.AutoSize = false;
-            this.guna2HtmlLabel28.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel28.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel28.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel28.Location = new System.Drawing.Point(334, 314);
-            this.guna2HtmlLabel28.Name = "guna2HtmlLabel28";
-            this.guna2HtmlLabel28.Size = new System.Drawing.Size(86, 23);
-            this.guna2HtmlLabel28.TabIndex = 64;
-            this.guna2HtmlLabel28.Text = "Schedule";
-            // 
-            // guna2HtmlLabel34
-            // 
-            this.guna2HtmlLabel34.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2HtmlLabel34.AutoSize = false;
-            this.guna2HtmlLabel34.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel34.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel34.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel34.Location = new System.Drawing.Point(623, 233);
-            this.guna2HtmlLabel34.Name = "guna2HtmlLabel34";
-            this.guna2HtmlLabel34.Size = new System.Drawing.Size(166, 23);
-            this.guna2HtmlLabel34.TabIndex = 65;
-            this.guna2HtmlLabel34.Text = "Assigned City";
-            // 
-            // guna2DateTimePicker3
-            // 
-            this.guna2DateTimePicker3.BorderRadius = 5;
-            this.guna2DateTimePicker3.Checked = true;
-            this.guna2DateTimePicker3.CustomFormat = "";
-            this.guna2DateTimePicker3.FillColor = System.Drawing.Color.White;
-            this.guna2DateTimePicker3.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.guna2DateTimePicker3.Location = new System.Drawing.Point(27, 421);
-            this.guna2DateTimePicker3.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker3.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker3.Name = "guna2DateTimePicker3";
-            this.guna2DateTimePicker3.Size = new System.Drawing.Size(271, 33);
-            this.guna2DateTimePicker3.TabIndex = 58;
-            this.guna2DateTimePicker3.Value = new System.DateTime(2024, 7, 1, 14, 6, 29, 436);
-            // 
-            // guna2TextBox9
-            // 
-            this.guna2TextBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2TextBox9.BorderRadius = 8;
-            this.guna2TextBox9.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox9.DefaultText = "";
-            this.guna2TextBox9.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox9.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox9.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox9.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox9.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox9.Font = new System.Drawing.Font("Poppins", 9F);
-            this.guna2TextBox9.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox9.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox9.Location = new System.Drawing.Point(623, 256);
-            this.guna2TextBox9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox9.Name = "guna2TextBox9";
-            this.guna2TextBox9.PasswordChar = '\0';
-            this.guna2TextBox9.PlaceholderText = "Enter Assigned City";
-            this.guna2TextBox9.SelectedText = "";
-            this.guna2TextBox9.Size = new System.Drawing.Size(250, 33);
-            this.guna2TextBox9.TabIndex = 66;
-            // 
-            // guna2TextBox10
-            // 
-            this.guna2TextBox10.BorderRadius = 8;
-            this.guna2TextBox10.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox10.DefaultText = "";
-            this.guna2TextBox10.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox10.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox10.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox10.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox10.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox10.Font = new System.Drawing.Font("Poppins", 9F);
-            this.guna2TextBox10.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox10.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox10.Location = new System.Drawing.Point(607, 456);
-            this.guna2TextBox10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox10.Name = "guna2TextBox10";
-            this.guna2TextBox10.PasswordChar = '\0';
-            this.guna2TextBox10.PlaceholderText = "Enter emergency contact number";
-            this.guna2TextBox10.SelectedText = "";
-            this.guna2TextBox10.Size = new System.Drawing.Size(261, 33);
-            this.guna2TextBox10.TabIndex = 46;
-            // 
-            // guna2HtmlLabel35
-            // 
-            this.guna2HtmlLabel35.AutoSize = false;
-            this.guna2HtmlLabel35.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel35.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel35.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel35.Location = new System.Drawing.Point(607, 433);
-            this.guna2HtmlLabel35.Name = "guna2HtmlLabel35";
-            this.guna2HtmlLabel35.Size = new System.Drawing.Size(220, 23);
-            this.guna2HtmlLabel35.TabIndex = 48;
-            this.guna2HtmlLabel35.Text = "Emergency Contact Number";
-            // 
-            // guna2TextBox11
-            // 
-            this.guna2TextBox11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2TextBox11.BorderRadius = 8;
-            this.guna2TextBox11.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox11.DefaultText = "";
-            this.guna2TextBox11.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox11.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox11.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox11.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox11.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox11.Font = new System.Drawing.Font("Poppins", 9F);
-            this.guna2TextBox11.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox11.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox11.Location = new System.Drawing.Point(333, 456);
-            this.guna2TextBox11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox11.Name = "guna2TextBox11";
-            this.guna2TextBox11.PasswordChar = '\0';
-            this.guna2TextBox11.PlaceholderText = "Enter Emergency Contact Person";
-            this.guna2TextBox11.SelectedText = "";
-            this.guna2TextBox11.Size = new System.Drawing.Size(247, 33);
-            this.guna2TextBox11.TabIndex = 45;
-            // 
-            // guna2HtmlLabel36
-            // 
-            this.guna2HtmlLabel36.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2HtmlLabel36.AutoSize = false;
-            this.guna2HtmlLabel36.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel36.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel36.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel36.Location = new System.Drawing.Point(333, 433);
-            this.guna2HtmlLabel36.Name = "guna2HtmlLabel36";
-            this.guna2HtmlLabel36.Size = new System.Drawing.Size(229, 23);
-            this.guna2HtmlLabel36.TabIndex = 47;
-            this.guna2HtmlLabel36.Text = "Emergency Contact Person";
-            // 
-            // guna2HtmlLabel37
-            // 
-            this.guna2HtmlLabel37.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2HtmlLabel37.AutoSize = false;
-            this.guna2HtmlLabel37.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel37.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel37.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel37.Location = new System.Drawing.Point(25, 99);
-            this.guna2HtmlLabel37.Name = "guna2HtmlLabel37";
-            this.guna2HtmlLabel37.Size = new System.Drawing.Size(38, 23);
-            this.guna2HtmlLabel37.TabIndex = 67;
-            this.guna2HtmlLabel37.Text = "BIO-";
+            "Superadmin",
+            "User"});
+            this.guna2ComboBox2.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
+            this.guna2ComboBox2.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
+            this.guna2ComboBox2.Location = new System.Drawing.Point(26, 417);
+            this.guna2ComboBox2.Name = "guna2ComboBox2";
+            this.guna2ComboBox2.Size = new System.Drawing.Size(378, 36);
+            this.guna2ComboBox2.Sorted = true;
+            this.guna2ComboBox2.TabIndex = 30;
             // 
             // frmAddEmployee
             // 
@@ -1597,18 +1751,19 @@
             this.Name = "frmAddEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmAddEmployee";
+            this.Load += new System.EventHandler(this.frmAddEmployee_Load);
             this.guna2GradientPanel1.ResumeLayout(false);
             this.informationPanel.ResumeLayout(false);
             this.tabInformation.ResumeLayout(false);
             this.tabPersonal.ResumeLayout(false);
             this.panelPersonal.ResumeLayout(false);
-            this.tabWork.ResumeLayout(false);
-            this.panelEmployment.ResumeLayout(false);
-            this.tabGovernment.ResumeLayout(false);
-            this.guna2GradientPanel3.ResumeLayout(false);
+            this.container.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picEmployee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
-            this.container.ResumeLayout(false);
+            this.tabWork.ResumeLayout(false);
+            this.panelEmployment.ResumeLayout(false);
+            this.tabOther.ResumeLayout(false);
+            this.guna2GradientPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1623,17 +1778,16 @@
         private Guna.UI2.WinForms.Guna2GradientPanel panelPersonal;
         private Guna.UI2.WinForms.Guna2TextBox txtFirstName;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
+        private Guna.UI2.WinForms.Guna2TextBox txtLastName;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2TextBox txtMiddleName;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox6;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
+        private Guna.UI2.WinForms.Guna2TextBox txtAddress;
+        private Guna.UI2.WinForms.Guna2TextBox txtMobileNo;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker2;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox txtGender;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
         private Guna.UI2.WinForms.Guna2GradientPanel informationPanel;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
@@ -1642,32 +1796,30 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel24;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox18;
+        private Guna.UI2.WinForms.Guna2TextBox txtHDMFNo;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel29;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox19;
+        private Guna.UI2.WinForms.Guna2TextBox txtPHNo;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel30;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox20;
+        private Guna.UI2.WinForms.Guna2TextBox txtTINNo;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel31;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox21;
+        private Guna.UI2.WinForms.Guna2TextBox txtSSSNo;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel32;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox4;
+        private Guna.UI2.WinForms.Guna2ComboBox txtCivilStatus;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2TabControl tabInformation;
         private System.Windows.Forms.TabPage tabPersonal;
         private System.Windows.Forms.TabPage tabWork;
-        private System.Windows.Forms.TabPage tabGovernment;
+        private System.Windows.Forms.TabPage tabOther;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
         private Guna.UI2.WinForms.Guna2GradientPanel panelEmployment;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker6;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel21;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox7;
+        private Guna.UI2.WinForms.Guna2ComboBox txtEmpLevel;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel18;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel17;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel16;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox6;
+        private Guna.UI2.WinForms.Guna2ComboBox txtEmpType;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel15;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
+        private Guna.UI2.WinForms.Guna2ComboBox txtEmpStatus;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel13;
         private Guna.UI2.WinForms.Guna2ComboBox txtDepartment;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel33;
@@ -1682,27 +1834,39 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel20;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel19;
         private Guna.UI2.WinForms.Guna2Panel container;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtPersonalEmail;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel22;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox7;
+        private Guna.UI2.WinForms.Guna2TextBox txtEmployeeID;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker4;
+        private Guna.UI2.WinForms.Guna2TextBox txtJobTitle;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel27;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel26;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel25;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox8;
+        private Guna.UI2.WinForms.Guna2TextBox txtWorkEmail;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel23;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox5;
+        private Guna.UI2.WinForms.Guna2ComboBox txtSchedule;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel28;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox3;
+        private Guna.UI2.WinForms.Guna2ComboBox txtBranch;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel34;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker3;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox10;
+        private Guna.UI2.WinForms.Guna2TextBox txtEmergencyNumber;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel35;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox11;
+        private Guna.UI2.WinForms.Guna2TextBox txtEmergencyPerson;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel36;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox9;
+        private Guna.UI2.WinForms.Guna2TextBox txtCity;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel37;
+        private Guna.UI2.WinForms.Guna2TextBox txtSalary;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel38;
+        private Guna.UI2.WinForms.Guna2DateTimePicker txtDateOfBirth;
+        private Guna.UI2.WinForms.Guna2DateTimePicker txtRegularizationDate;
+        private Guna.UI2.WinForms.Guna2DateTimePicker txtFifthDate;
+        private Guna.UI2.WinForms.Guna2DateTimePicker txtThirdDate;
+        private Guna.UI2.WinForms.Guna2DateTimePicker txtHireDate;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel40;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel39;
+        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
+        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel42;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel41;
     }
 }
