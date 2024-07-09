@@ -179,6 +179,12 @@
     <Compile Include="Forms\Menu Form\Attendance\frmAttendance.Designer.cs">
       <DependentUpon>frmAttendance.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Menu Form\Attendance\frmCreateAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menu Form\Attendance\frmCreateAttendance.Designer.cs">
+      <DependentUpon>frmCreateAttendance.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Menu Form\Employees\frmAddEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,6 +232,9 @@
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="Forms\Menu Form\Attendance\frmAttendance.resx">
       <DependentUpon>frmAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menu Form\Attendance\frmCreateAttendance.resx">
+      <DependentUpon>frmCreateAttendance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Menu Form\Employees\frmAddEmployee.resx">
       <DependentUpon>frmAddEmployee.cs</DependentUpon>
