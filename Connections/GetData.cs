@@ -11,6 +11,8 @@ using MySql.Data.MySqlClient;
 using Mysqlx.Session;
 using MySqlX.XDevAPI.Common;
 using Org.BouncyCastle.Asn1;
+using Payroll_Management_System.Forms.Menu_Form;
+using Payroll_Management_System.Forms.Menu_Form.Employees;
 
 namespace Payroll_Management_System.Connections
 {
@@ -73,6 +75,9 @@ namespace Payroll_Management_System.Connections
             return shifts;
 
         }
+
+
+
 
     }
     

@@ -201,7 +201,7 @@
             this.txtPassword.Location = new System.Drawing.Point(38, 281);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.PasswordChar = '●';
             this.txtPassword.PlaceholderText = "Enter your password";
             this.txtPassword.SelectedText = "";
             this.txtPassword.Size = new System.Drawing.Size(283, 33);

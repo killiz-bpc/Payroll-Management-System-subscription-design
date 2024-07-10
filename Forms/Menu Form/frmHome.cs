@@ -131,8 +131,8 @@ namespace Payroll_Management_System.Forms.Menu_Form
 
             if (frmHome.mainPanel != null)
             {
-                frmCreateAttendance frmCreateAttendance = new frmCreateAttendance();
-                frmHome.DisplayForm(frmCreateAttendance, frmHome.mainPanel);
+                frmOverviewAttendance frmOverviewAttendance = new frmOverviewAttendance();
+                frmHome.DisplayForm(frmOverviewAttendance, frmHome.mainPanel);
             }
         }
 

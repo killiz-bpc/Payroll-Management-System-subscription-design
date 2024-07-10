@@ -107,5 +107,18 @@ namespace Payroll_Management_System.Forms.Menu_Form
                 conn.Dispose();
             }
         }
+
+        private void dgvEmployees_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dgvEmployees.Columns["view_more"].Index && e.RowIndex >= 0)
+            {
+                dgvEmployees.CurrentCell = dgvEmployees.Rows[e.RowIndex].Cells[e.ColumnIndex];
+
+                string employee_id = dgvEmployees.CurrentRow.Cells["emp_id"].Value.ToString();
+                frmEditEmployee frmEditEmployee = new frmEditEmployee();
+                frmEditEmployee.employee_id = employee_id;
+                frmEditEmployee.ShowDialog();
+            }
+        }
     }
 }

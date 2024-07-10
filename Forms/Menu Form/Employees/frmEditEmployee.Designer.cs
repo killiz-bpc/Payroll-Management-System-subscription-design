@@ -1,6 +1,6 @@
 ﻿namespace Payroll_Management_System.Forms.Menu_Form.Employees
 {
-    partial class frmAddEmployee
+    partial class frmEditEmployee
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddEmployee));
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.informationPanel = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.tabInformation = new Guna.UI2.WinForms.Guna2TabControl();
@@ -47,9 +46,6 @@
             this.guna2HtmlLabel20 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnImage = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel19 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.btnUpdateImage = new Guna.UI2.WinForms.Guna2Button();
-            this.btnShow = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureBox = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.txtCivilStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtGender = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -101,12 +97,12 @@
             this.guna2HtmlLabel14 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel37 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.tabOther = new System.Windows.Forms.TabPage();
-            this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.gradientpanel = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.txtAccessRights = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txtActiveStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel42 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel41 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel40 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel39 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel24 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -122,14 +118,10 @@
             this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.openFD = new System.Windows.Forms.OpenFileDialog();
-            this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.isSalary = new Guna.UI2.WinForms.Guna2CheckBox();
             this.guna2Elipse6 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.openFD = new System.Windows.Forms.OpenFileDialog();
             this.guna2GradientPanel1.SuspendLayout();
             this.informationPanel.SuspendLayout();
             this.tabInformation.SuspendLayout();
@@ -137,29 +129,29 @@
             this.panelPersonal.SuspendLayout();
             this.container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picEmployee)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.tabWork.SuspendLayout();
             this.panelEmployment.SuspendLayout();
             this.tabOther.SuspendLayout();
-            this.guna2GradientPanel3.SuspendLayout();
+            this.gradientpanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
             // 
             this.guna2GradientPanel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.guna2GradientPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
+            this.guna2GradientPanel1.Controls.Add(this.guna2Button1);
             this.guna2GradientPanel1.Controls.Add(this.informationPanel);
             this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel3);
             this.guna2GradientPanel1.Controls.Add(this.btnClose);
-            this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel1);
             this.guna2GradientPanel1.Controls.Add(this.btnSave);
+            this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel1);
             this.guna2GradientPanel1.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
             this.guna2GradientPanel1.CustomBorderThickness = new System.Windows.Forms.Padding(3);
             this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(1000, 800);
-            this.guna2GradientPanel1.TabIndex = 10;
+            this.guna2GradientPanel1.TabIndex = 11;
             // 
             // informationPanel
             // 
@@ -223,9 +215,6 @@
             this.panelPersonal.Controls.Add(this.txtPersonalEmail);
             this.panelPersonal.Controls.Add(this.guna2HtmlLabel22);
             this.panelPersonal.Controls.Add(this.container);
-            this.panelPersonal.Controls.Add(this.btnUpdateImage);
-            this.panelPersonal.Controls.Add(this.btnShow);
-            this.panelPersonal.Controls.Add(this.pictureBox);
             this.panelPersonal.Controls.Add(this.txtCivilStatus);
             this.panelPersonal.Controls.Add(this.guna2HtmlLabel5);
             this.panelPersonal.Controls.Add(this.txtGender);
@@ -246,7 +235,6 @@
             this.panelPersonal.Name = "panelPersonal";
             this.panelPersonal.Size = new System.Drawing.Size(895, 562);
             this.panelPersonal.TabIndex = 12;
-            this.panelPersonal.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPersonal_Paint);
             // 
             // txtDateOfBirth
             // 
@@ -285,7 +273,6 @@
             this.txtEmergencyNumber.SelectedText = "";
             this.txtEmergencyNumber.Size = new System.Drawing.Size(261, 33);
             this.txtEmergencyNumber.TabIndex = 11;
-            this.txtEmergencyNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmergencyNumber_KeyPress);
             // 
             // guna2HtmlLabel35
             // 
@@ -454,65 +441,6 @@
             this.guna2HtmlLabel19.TabIndex = 40;
             this.guna2HtmlLabel19.Text = "Allowed Format";
             // 
-            // btnUpdateImage
-            // 
-            this.btnUpdateImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUpdateImage.Animated = true;
-            this.btnUpdateImage.BackColor = System.Drawing.Color.Transparent;
-            this.btnUpdateImage.BorderColor = System.Drawing.Color.Transparent;
-            this.btnUpdateImage.BorderRadius = 10;
-            this.btnUpdateImage.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnUpdateImage.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnUpdateImage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnUpdateImage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnUpdateImage.FillColor = System.Drawing.Color.Silver;
-            this.btnUpdateImage.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateImage.ForeColor = System.Drawing.Color.Black;
-            this.btnUpdateImage.Location = new System.Drawing.Point(352, 546);
-            this.btnUpdateImage.Name = "btnUpdateImage";
-            this.btnUpdateImage.Size = new System.Drawing.Size(121, 32);
-            this.btnUpdateImage.TabIndex = 39;
-            this.btnUpdateImage.Text = "Update Image";
-            this.btnUpdateImage.Visible = false;
-            this.btnUpdateImage.Click += new System.EventHandler(this.btnUpdateImage_Click);
-            // 
-            // btnShow
-            // 
-            this.btnShow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnShow.Animated = true;
-            this.btnShow.BackColor = System.Drawing.Color.Transparent;
-            this.btnShow.BorderColor = System.Drawing.Color.Transparent;
-            this.btnShow.BorderRadius = 10;
-            this.btnShow.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnShow.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnShow.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnShow.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnShow.FillColor = System.Drawing.Color.Silver;
-            this.btnShow.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShow.ForeColor = System.Drawing.Color.Black;
-            this.btnShow.Location = new System.Drawing.Point(519, 546);
-            this.btnShow.Name = "btnShow";
-            this.btnShow.Size = new System.Drawing.Size(121, 32);
-            this.btnShow.TabIndex = 38;
-            this.btnShow.Text = "Show Image";
-            this.btnShow.Visible = false;
-            this.btnShow.Click += new System.EventHandler(this.guna2Button1_Click);
-            // 
-            // pictureBox
-            // 
-            this.pictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox.FillColor = System.Drawing.Color.Silver;
-            this.pictureBox.ImageRotate = 0F;
-            this.pictureBox.Location = new System.Drawing.Point(667, 501);
-            this.pictureBox.Name = "pictureBox";
-            this.pictureBox.ShadowDecoration.BorderRadius = 10;
-            this.pictureBox.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.pictureBox.Size = new System.Drawing.Size(73, 107);
-            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox.TabIndex = 37;
-            this.pictureBox.TabStop = false;
-            this.pictureBox.Visible = false;
-            // 
             // txtCivilStatus
             // 
             this.txtCivilStatus.BackColor = System.Drawing.Color.Transparent;
@@ -639,7 +567,6 @@
             this.txtMobileNo.SelectedText = "";
             this.txtMobileNo.Size = new System.Drawing.Size(261, 33);
             this.txtMobileNo.TabIndex = 4;
-            this.txtMobileNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMobileNo_KeyPress);
             // 
             // guna2HtmlLabel8
             // 
@@ -652,7 +579,6 @@
             this.guna2HtmlLabel8.Size = new System.Drawing.Size(182, 23);
             this.guna2HtmlLabel8.TabIndex = 25;
             this.guna2HtmlLabel8.Text = "Mobile Number";
-            this.guna2HtmlLabel8.Click += new System.EventHandler(this.guna2HtmlLabel8_Click);
             // 
             // guna2HtmlLabel7
             // 
@@ -833,7 +759,6 @@
             this.panelEmployment.Name = "panelEmployment";
             this.panelEmployment.Size = new System.Drawing.Size(905, 563);
             this.panelEmployment.TabIndex = 13;
-            this.panelEmployment.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel2_Paint);
             // 
             // txtRegularizationDate
             // 
@@ -913,7 +838,7 @@
             this.txtSalary.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtSalary.ForeColor = System.Drawing.Color.Black;
             this.txtSalary.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSalary.Location = new System.Drawing.Point(623, 93);
+            this.txtSalary.Location = new System.Drawing.Point(623, 99);
             this.txtSalary.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSalary.Name = "txtSalary";
             this.txtSalary.PasswordChar = '●';
@@ -921,7 +846,6 @@
             this.txtSalary.SelectedText = "";
             this.txtSalary.Size = new System.Drawing.Size(250, 33);
             this.txtSalary.TabIndex = 3;
-            this.txtSalary.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSalary_KeyPress);
             // 
             // guna2HtmlLabel38
             // 
@@ -929,7 +853,7 @@
             this.guna2HtmlLabel38.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel38.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel38.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel38.Location = new System.Drawing.Point(623, 70);
+            this.guna2HtmlLabel38.Location = new System.Drawing.Point(623, 76);
             this.guna2HtmlLabel38.Name = "guna2HtmlLabel38";
             this.guna2HtmlLabel38.Size = new System.Drawing.Size(86, 23);
             this.guna2HtmlLabel38.TabIndex = 69;
@@ -1142,7 +1066,6 @@
             this.txtEmployeeID.SelectedText = "";
             this.txtEmployeeID.Size = new System.Drawing.Size(160, 33);
             this.txtEmployeeID.TabIndex = 1;
-            this.txtEmployeeID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmployeeID_KeyPress);
             // 
             // guna2HtmlLabel10
             // 
@@ -1365,7 +1288,7 @@
             // tabOther
             // 
             this.tabOther.BackColor = System.Drawing.SystemColors.Control;
-            this.tabOther.Controls.Add(this.guna2GradientPanel3);
+            this.tabOther.Controls.Add(this.gradientpanel);
             this.tabOther.Location = new System.Drawing.Point(4, 44);
             this.tabOther.Name = "tabOther";
             this.tabOther.Padding = new System.Windows.Forms.Padding(3);
@@ -1373,72 +1296,72 @@
             this.tabOther.TabIndex = 2;
             this.tabOther.Text = "Other Info";
             // 
-            // guna2GradientPanel3
+            // gradientpanel
             // 
-            this.guna2GradientPanel3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.guna2GradientPanel3.Controls.Add(this.guna2ComboBox2);
-            this.guna2GradientPanel3.Controls.Add(this.guna2ComboBox1);
-            this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel42);
-            this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel41);
-            this.guna2GradientPanel3.Controls.Add(this.guna2TextBox1);
-            this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel40);
-            this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel39);
-            this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel24);
-            this.guna2GradientPanel3.Controls.Add(this.txtHDMFNo);
-            this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel29);
-            this.guna2GradientPanel3.Controls.Add(this.txtPHNo);
-            this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel30);
-            this.guna2GradientPanel3.Controls.Add(this.txtTINNo);
-            this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel31);
-            this.guna2GradientPanel3.Controls.Add(this.txtSSSNo);
-            this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel32);
-            this.guna2GradientPanel3.Location = new System.Drawing.Point(9, 6);
-            this.guna2GradientPanel3.Name = "guna2GradientPanel3";
-            this.guna2GradientPanel3.Size = new System.Drawing.Size(905, 572);
-            this.guna2GradientPanel3.TabIndex = 14;
+            this.gradientpanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.gradientpanel.Controls.Add(this.txtAccessRights);
+            this.gradientpanel.Controls.Add(this.txtActiveStatus);
+            this.gradientpanel.Controls.Add(this.guna2HtmlLabel42);
+            this.gradientpanel.Controls.Add(this.guna2HtmlLabel41);
+            this.gradientpanel.Controls.Add(this.txtPassword);
+            this.gradientpanel.Controls.Add(this.guna2HtmlLabel40);
+            this.gradientpanel.Controls.Add(this.guna2HtmlLabel39);
+            this.gradientpanel.Controls.Add(this.guna2HtmlLabel24);
+            this.gradientpanel.Controls.Add(this.txtHDMFNo);
+            this.gradientpanel.Controls.Add(this.guna2HtmlLabel29);
+            this.gradientpanel.Controls.Add(this.txtPHNo);
+            this.gradientpanel.Controls.Add(this.guna2HtmlLabel30);
+            this.gradientpanel.Controls.Add(this.txtTINNo);
+            this.gradientpanel.Controls.Add(this.guna2HtmlLabel31);
+            this.gradientpanel.Controls.Add(this.txtSSSNo);
+            this.gradientpanel.Controls.Add(this.guna2HtmlLabel32);
+            this.gradientpanel.Location = new System.Drawing.Point(9, 6);
+            this.gradientpanel.Name = "gradientpanel";
+            this.gradientpanel.Size = new System.Drawing.Size(905, 572);
+            this.gradientpanel.TabIndex = 14;
             // 
-            // guna2ComboBox2
+            // txtAccessRights
             // 
-            this.guna2ComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox2.BorderRadius = 10;
-            this.guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox2.FocusedColor = System.Drawing.Color.Empty;
-            this.guna2ComboBox2.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ComboBox2.ForeColor = System.Drawing.Color.Black;
-            this.guna2ComboBox2.ItemHeight = 30;
-            this.guna2ComboBox2.Items.AddRange(new object[] {
+            this.txtAccessRights.BackColor = System.Drawing.Color.Transparent;
+            this.txtAccessRights.BorderRadius = 10;
+            this.txtAccessRights.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.txtAccessRights.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtAccessRights.FocusedColor = System.Drawing.Color.Empty;
+            this.txtAccessRights.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAccessRights.ForeColor = System.Drawing.Color.Black;
+            this.txtAccessRights.ItemHeight = 30;
+            this.txtAccessRights.Items.AddRange(new object[] {
             "Admin",
             "Superadmin",
             "User"});
-            this.guna2ComboBox2.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
-            this.guna2ComboBox2.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
-            this.guna2ComboBox2.Location = new System.Drawing.Point(26, 417);
-            this.guna2ComboBox2.Name = "guna2ComboBox2";
-            this.guna2ComboBox2.Size = new System.Drawing.Size(378, 36);
-            this.guna2ComboBox2.Sorted = true;
-            this.guna2ComboBox2.TabIndex = 30;
+            this.txtAccessRights.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
+            this.txtAccessRights.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
+            this.txtAccessRights.Location = new System.Drawing.Point(26, 417);
+            this.txtAccessRights.Name = "txtAccessRights";
+            this.txtAccessRights.Size = new System.Drawing.Size(378, 36);
+            this.txtAccessRights.Sorted = true;
+            this.txtAccessRights.TabIndex = 30;
             // 
-            // guna2ComboBox1
+            // txtActiveStatus
             // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderRadius = 10;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.Empty;
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Items.AddRange(new object[] {
+            this.txtActiveStatus.BackColor = System.Drawing.Color.Transparent;
+            this.txtActiveStatus.BorderRadius = 10;
+            this.txtActiveStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.txtActiveStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtActiveStatus.FocusedColor = System.Drawing.Color.Empty;
+            this.txtActiveStatus.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtActiveStatus.ForeColor = System.Drawing.Color.Black;
+            this.txtActiveStatus.ItemHeight = 30;
+            this.txtActiveStatus.Items.AddRange(new object[] {
             "Active",
             "Inactive"});
-            this.guna2ComboBox1.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
-            this.guna2ComboBox1.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(26, 336);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(378, 36);
-            this.guna2ComboBox1.Sorted = true;
-            this.guna2ComboBox1.TabIndex = 29;
+            this.txtActiveStatus.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
+            this.txtActiveStatus.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
+            this.txtActiveStatus.Location = new System.Drawing.Point(26, 336);
+            this.txtActiveStatus.Name = "txtActiveStatus";
+            this.txtActiveStatus.Size = new System.Drawing.Size(378, 36);
+            this.txtActiveStatus.Sorted = true;
+            this.txtActiveStatus.TabIndex = 29;
             // 
             // guna2HtmlLabel42
             // 
@@ -1464,27 +1387,27 @@
             this.guna2HtmlLabel41.TabIndex = 26;
             this.guna2HtmlLabel41.Text = "Access Rights";
             // 
-            // guna2TextBox1
+            // txtPassword
             // 
-            this.guna2TextBox1.BorderRadius = 8;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Poppins", 9F);
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(461, 336);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '*';
-            this.guna2TextBox1.PlaceholderText = "Enter Password";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(385, 36);
-            this.guna2TextBox1.TabIndex = 23;
+            this.txtPassword.BorderRadius = 8;
+            this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPassword.DefaultText = "";
+            this.txtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPassword.Font = new System.Drawing.Font("Poppins", 9F);
+            this.txtPassword.ForeColor = System.Drawing.Color.Black;
+            this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPassword.Location = new System.Drawing.Point(461, 336);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.PlaceholderText = "Enter Password";
+            this.txtPassword.SelectedText = "";
+            this.txtPassword.Size = new System.Drawing.Size(385, 36);
+            this.txtPassword.TabIndex = 23;
             // 
             // guna2HtmlLabel40
             // 
@@ -1671,7 +1594,7 @@
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(353, 22);
             this.guna2HtmlLabel3.TabIndex = 5;
-            this.guna2HtmlLabel3.Text = "Create account for a new employee";
+            this.guna2HtmlLabel3.Text = "Edit details of an employee";
             // 
             // btnClose
             // 
@@ -1693,9 +1616,9 @@
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(28, 12);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(270, 36);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(429, 36);
             this.guna2HtmlLabel1.TabIndex = 4;
-            this.guna2HtmlLabel1.Text = "Add New Employee";
+            this.guna2HtmlLabel1.Text = "Employee\'s Information";
             // 
             // btnSave
             // 
@@ -1711,37 +1634,32 @@
             this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
             this.btnSave.Font = new System.Drawing.Font("Poppins", 9F);
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(825, 722);
+            this.btnSave.Location = new System.Drawing.Point(841, 733);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(121, 42);
             this.btnSave.TabIndex = 3;
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // guna2Elipse1
+            // guna2Button1
             // 
-            this.guna2Elipse1.BorderRadius = 8;
-            this.guna2Elipse1.TargetControl = this.informationPanel;
-            // 
-            // guna2Elipse2
-            // 
-            this.guna2Elipse2.TargetControl = this.panelPersonal;
-            // 
-            // guna2Elipse3
-            // 
-            this.guna2Elipse3.TargetControl = this.panelEmployment;
-            // 
-            // guna2Elipse4
-            // 
-            this.guna2Elipse4.TargetControl = this.tabInformation;
-            // 
-            // openFD
-            // 
-            this.openFD.FileName = "openFileDialog1";
-            // 
-            // guna2Elipse5
-            // 
-            this.guna2Elipse5.TargetControl = this.picEmployee;
+            this.guna2Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Button1.Animated = true;
+            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.BorderRadius = 10;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Poppins", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(691, 733);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(121, 42);
+            this.guna2Button1.TabIndex = 15;
+            this.guna2Button1.Text = "Delete";
             // 
             // isSalary
             // 
@@ -1751,10 +1669,10 @@
             this.isSalary.CheckedState.BorderRadius = 0;
             this.isSalary.CheckedState.BorderThickness = 0;
             this.isSalary.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
-            this.isSalary.Location = new System.Drawing.Point(846, 102);
+            this.isSalary.Location = new System.Drawing.Point(845, 108);
             this.isSalary.Name = "isSalary";
             this.isSalary.Size = new System.Drawing.Size(15, 14);
-            this.isSalary.TabIndex = 70;
+            this.isSalary.TabIndex = 71;
             this.isSalary.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.isSalary.UncheckedState.BorderRadius = 0;
             this.isSalary.UncheckedState.BorderThickness = 0;
@@ -1765,18 +1683,21 @@
             // 
             this.guna2Elipse6.TargetControl = this.isSalary;
             // 
-            // frmAddEmployee
+            // openFD
+            // 
+            this.openFD.FileName = "openFileDialog1";
+            // 
+            // frmEditEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 800);
             this.Controls.Add(this.guna2GradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmAddEmployee";
+            this.Name = "frmEditEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "frmAddEmployee";
-            this.Load += new System.EventHandler(this.frmAddEmployee_Load);
+            this.Text = "frmEditEmployee";
+            this.Load += new System.EventHandler(this.frmEditEmployee_Load);
             this.guna2GradientPanel1.ResumeLayout(false);
             this.informationPanel.ResumeLayout(false);
             this.tabInformation.ResumeLayout(false);
@@ -1784,12 +1705,11 @@
             this.panelPersonal.ResumeLayout(false);
             this.container.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picEmployee)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.tabWork.ResumeLayout(false);
             this.panelEmployment.ResumeLayout(false);
             this.panelEmployment.PerformLayout();
             this.tabOther.ResumeLayout(false);
-            this.guna2GradientPanel3.ResumeLayout(false);
+            this.gradientpanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1797,47 +1717,59 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
-        private Guna.UI2.WinForms.Guna2Button btnSave;
-        private Guna.UI2.WinForms.Guna2ControlBox btnClose;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private Guna.UI2.WinForms.Guna2GradientPanel informationPanel;
+        private Guna.UI2.WinForms.Guna2TabControl tabInformation;
+        private System.Windows.Forms.TabPage tabPersonal;
         private Guna.UI2.WinForms.Guna2GradientPanel panelPersonal;
-        private Guna.UI2.WinForms.Guna2TextBox txtFirstName;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
+        private Guna.UI2.WinForms.Guna2DateTimePicker txtDateOfBirth;
+        private Guna.UI2.WinForms.Guna2TextBox txtEmergencyNumber;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel35;
+        private Guna.UI2.WinForms.Guna2TextBox txtEmergencyPerson;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel36;
+        private Guna.UI2.WinForms.Guna2TextBox txtPersonalEmail;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel22;
+        private Guna.UI2.WinForms.Guna2Panel container;
+        private Guna.UI2.WinForms.Guna2PictureBox picEmployee;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel20;
+        private Guna.UI2.WinForms.Guna2Button btnImage;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel19;
+        private Guna.UI2.WinForms.Guna2ComboBox txtCivilStatus;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
+        private Guna.UI2.WinForms.Guna2ComboBox txtGender;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
+        private Guna.UI2.WinForms.Guna2TextBox txtAddress;
+        private Guna.UI2.WinForms.Guna2TextBox txtMobileNo;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private Guna.UI2.WinForms.Guna2TextBox txtLastName;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2TextBox txtMiddleName;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
+        private Guna.UI2.WinForms.Guna2TextBox txtFirstName;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
-        private Guna.UI2.WinForms.Guna2TextBox txtAddress;
-        private Guna.UI2.WinForms.Guna2TextBox txtMobileNo;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
-        private Guna.UI2.WinForms.Guna2ComboBox txtGender;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
-        private Guna.UI2.WinForms.Guna2GradientPanel informationPanel;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel24;
-        private Guna.UI2.WinForms.Guna2TextBox txtHDMFNo;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel29;
-        private Guna.UI2.WinForms.Guna2TextBox txtPHNo;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel30;
-        private Guna.UI2.WinForms.Guna2TextBox txtTINNo;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel31;
-        private Guna.UI2.WinForms.Guna2TextBox txtSSSNo;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel32;
-        private Guna.UI2.WinForms.Guna2ComboBox txtCivilStatus;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
-        private Guna.UI2.WinForms.Guna2TabControl tabInformation;
-        private System.Windows.Forms.TabPage tabPersonal;
         private System.Windows.Forms.TabPage tabWork;
-        private System.Windows.Forms.TabPage tabOther;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
         private Guna.UI2.WinForms.Guna2GradientPanel panelEmployment;
+        private Guna.UI2.WinForms.Guna2DateTimePicker txtRegularizationDate;
+        private Guna.UI2.WinForms.Guna2DateTimePicker txtFifthDate;
+        private Guna.UI2.WinForms.Guna2DateTimePicker txtThirdDate;
+        private Guna.UI2.WinForms.Guna2DateTimePicker txtHireDate;
+        private Guna.UI2.WinForms.Guna2TextBox txtSalary;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel38;
+        private Guna.UI2.WinForms.Guna2TextBox txtCity;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel34;
+        private Guna.UI2.WinForms.Guna2ComboBox txtSchedule;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel28;
+        private Guna.UI2.WinForms.Guna2ComboBox txtBranch;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel27;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel26;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel25;
+        private Guna.UI2.WinForms.Guna2TextBox txtWorkEmail;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel23;
+        private Guna.UI2.WinForms.Guna2TextBox txtJobTitle;
+        private Guna.UI2.WinForms.Guna2TextBox txtEmployeeID;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel21;
         private Guna.UI2.WinForms.Guna2ComboBox txtEmpLevel;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel18;
@@ -1850,51 +1782,32 @@
         private Guna.UI2.WinForms.Guna2ComboBox txtDepartment;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel33;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel14;
-        private Guna.UI2.WinForms.Guna2Button btnImage;
-        private Guna.UI2.WinForms.Guna2PictureBox picEmployee;
-        private System.Windows.Forms.OpenFileDialog openFD;
-        private Guna.UI2.WinForms.Guna2Button btnShow;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox pictureBox;
-        private Guna.UI2.WinForms.Guna2Button btnUpdateImage;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse5;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel20;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel19;
-        private Guna.UI2.WinForms.Guna2Panel container;
-        private Guna.UI2.WinForms.Guna2TextBox txtPersonalEmail;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel22;
-        private Guna.UI2.WinForms.Guna2TextBox txtEmployeeID;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
-        private Guna.UI2.WinForms.Guna2TextBox txtJobTitle;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel27;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel26;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel25;
-        private Guna.UI2.WinForms.Guna2TextBox txtWorkEmail;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel23;
-        private Guna.UI2.WinForms.Guna2ComboBox txtSchedule;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel28;
-        private Guna.UI2.WinForms.Guna2ComboBox txtBranch;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel34;
-        private Guna.UI2.WinForms.Guna2TextBox txtEmergencyNumber;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel35;
-        private Guna.UI2.WinForms.Guna2TextBox txtEmergencyPerson;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel36;
-        private Guna.UI2.WinForms.Guna2TextBox txtCity;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel37;
-        private Guna.UI2.WinForms.Guna2TextBox txtSalary;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel38;
-        private Guna.UI2.WinForms.Guna2DateTimePicker txtDateOfBirth;
-        private Guna.UI2.WinForms.Guna2DateTimePicker txtRegularizationDate;
-        private Guna.UI2.WinForms.Guna2DateTimePicker txtFifthDate;
-        private Guna.UI2.WinForms.Guna2DateTimePicker txtThirdDate;
-        private Guna.UI2.WinForms.Guna2DateTimePicker txtHireDate;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel40;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel39;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private System.Windows.Forms.TabPage tabOther;
+        private Guna.UI2.WinForms.Guna2GradientPanel gradientpanel;
+        private Guna.UI2.WinForms.Guna2ComboBox txtAccessRights;
+        private Guna.UI2.WinForms.Guna2ComboBox txtActiveStatus;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel42;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel41;
+        private Guna.UI2.WinForms.Guna2TextBox txtPassword;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel40;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel39;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel24;
+        private Guna.UI2.WinForms.Guna2TextBox txtHDMFNo;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel29;
+        private Guna.UI2.WinForms.Guna2TextBox txtPHNo;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel30;
+        private Guna.UI2.WinForms.Guna2TextBox txtTINNo;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel31;
+        private Guna.UI2.WinForms.Guna2TextBox txtSSSNo;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel32;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private Guna.UI2.WinForms.Guna2ControlBox btnClose;
+        private Guna.UI2.WinForms.Guna2Button btnSave;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2CheckBox isSalary;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse6;
+        private System.Windows.Forms.OpenFileDialog openFD;
     }
 }

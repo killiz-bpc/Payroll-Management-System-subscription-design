@@ -25,19 +25,36 @@ namespace Payroll_Management_System.Forms.Menu_Form.Employees
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            string query = "INSERT INTO employee_information(employee_img, employee_name, first_name, middle_name, last_name, mobile_number, address, civil_status, gender, personal_email, date_of_birth, emergency_person, emergency_number, emp_id, job_title, department)" +
+                            "VALUES (@employee_img, @employee_name, @first_name, @middle_name, @last_name, @mobile_number, @address, @civil_status, @gender, @personal_email, @date_of_birth, @emergency_person, @emergency_number, @emp_id, @job_title, @department)";
 
-            string query = "INSERT INTO employee_information(first_name, middle_name, last_name, mobile_number, address, civil_status, gender, personal_email, date_of_birth, emergency_person, emergency_number, emp_id, job_title, department)" +
-                            "VALUES (@first_name, @middle_name, @last_name, @mobile_number, @address, @civil_status, @gender, @personal_email, @date_of_birth, @emergency_person, @emergency_number, @emp_id, @job_title, @department)";
-
-            //MemoryStream stream = new MemoryStream();
-            //picEmployee.Image.Save(stream, picEmployee.Image.RawFormat);
+            MemoryStream stream = new MemoryStream();
+            picEmployee.Image.Save(stream, picEmployee.Image.RawFormat);
 
             using (MySqlConnection conn = new MySqlConnection(connString))
             {
                 conn.Open();
                 MySqlCommand cmd = new MySqlCommand(query, conn);
 
-                //cmd.Parameters.AddWithValue("@employee_img", stream.ToArray());
+                string first_name = txtFirstName.Text.Trim();
+                string last_name = txtLastName.Text.Trim();
+                string middle_name = txtMiddleName.Text.Trim();
+                string middle_initial;
+
+                if (string.IsNullOrEmpty(middle_name))
+                {
+                    middle_initial = "";
+                }
+                else
+                {
+                    middle_initial = middle_name.Substring(0, 1);
+                }
+
+                string employee_name = last_name +", "+first_name+" "+middle_initial;
+
+
+                cmd.Parameters.AddWithValue("@employee_img", stream.ToArray());
+                cmd.Parameters.AddWithValue("@employee_name", employee_name);
                 cmd.Parameters.AddWithValue("@first_name", txtFirstName.Text);
                 cmd.Parameters.AddWithValue("@middle_name", txtMiddleName.Text);
                 cmd.Parameters.AddWithValue("@last_name", txtLastName.Text);
@@ -57,7 +74,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Employees
                 cmd.ExecuteNonQuery();
 
 
-                MessageBox.Show("Employee has been added succefully","Message Information",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Employee has been added succefully", "Message Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
 
 
@@ -77,7 +94,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Employees
         }
 
 
-        private Image ByteArrayToImage(byte[] byteArray)
+        public Image ByteArrayToImage(byte[] byteArray)
         {
             using (MemoryStream ms = new MemoryStream(byteArray))
             {
@@ -194,7 +211,21 @@ namespace Payroll_Management_System.Forms.Menu_Form.Employees
         {
             load_data();
 
+            picEmployee.Image = Properties.Resources.user;
 
+
+        }
+
+        private void isSalary_CheckedChanged(object sender, EventArgs e)
+        {
+            if (isSalary.Checked)
+            {
+                txtSalary.PasswordChar = '\0';
+            }
+            else
+            {
+                txtSalary.PasswordChar = '●';
+            }
         }
     }
 }

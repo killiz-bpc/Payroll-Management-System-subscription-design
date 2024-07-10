@@ -112,6 +112,23 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
             if (dgvAttendance.Rows.Count>0)
             {
                 txtEmployeeName.Text = dgvAttendance.CurrentRow.Cells["employee_name"].Value.ToString();
+                txtOvertime.Text = dgvAttendance.CurrentRow.Cells["overtime"].Value.ToString();
+            }
+        }
+
+        private void guna2GradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            frmHome frmHome = Application.OpenForms.OfType<frmHome>().FirstOrDefault();
+
+            if (frmHome.mainPanel != null)
+            {
+                frmOverviewAttendance frmOverviewAttendance = new frmOverviewAttendance();
+                frmHome.DisplayForm(frmOverviewAttendance, frmHome.mainPanel);
             }
         }
     }
