@@ -50,6 +50,8 @@
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtActiveStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.emp_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.first_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.middle_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,6 +60,7 @@
             this.mobile_number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.job_title = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.department = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.active_status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.view_more = new System.Windows.Forms.DataGridViewLinkColumn();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
@@ -125,6 +128,7 @@
             this.mobile_number,
             this.job_title,
             this.department,
+            this.active_status,
             this.view_more});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -179,6 +183,8 @@
             this.guna2GradientPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2GradientPanel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.guna2GradientPanel2.Controls.Add(this.txtActiveStatus);
+            this.guna2GradientPanel2.Controls.Add(this.guna2HtmlLabel6);
             this.guna2GradientPanel2.Controls.Add(this.txtDepartment);
             this.guna2GradientPanel2.Controls.Add(this.guna2HtmlLabel5);
             this.guna2GradientPanel2.Controls.Add(this.txtSearch);
@@ -205,9 +211,9 @@
             "All"});
             this.txtDepartment.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
             this.txtDepartment.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
-            this.txtDepartment.Location = new System.Drawing.Point(583, 45);
+            this.txtDepartment.Location = new System.Drawing.Point(505, 45);
             this.txtDepartment.Name = "txtDepartment";
-            this.txtDepartment.Size = new System.Drawing.Size(271, 36);
+            this.txtDepartment.Size = new System.Drawing.Size(215, 36);
             this.txtDepartment.Sorted = true;
             this.txtDepartment.TabIndex = 21;
             this.txtDepartment.SelectedIndexChanged += new System.EventHandler(this.txtDepartment_SelectedIndexChanged);
@@ -218,9 +224,9 @@
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(344, 58);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(297, 57);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(202, 23);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(187, 23);
             this.guna2HtmlLabel5.TabIndex = 19;
             this.guna2HtmlLabel5.Text = "Total number of employees";
             // 
@@ -246,7 +252,7 @@
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderText = "Enter first name";
             this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(286, 33);
+            this.txtSearch.Size = new System.Drawing.Size(258, 33);
             this.txtSearch.TabIndex = 18;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
@@ -276,9 +282,9 @@
             this.btnAddEmployee.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
             this.btnAddEmployee.Font = new System.Drawing.Font("Poppins", 9F);
             this.btnAddEmployee.ForeColor = System.Drawing.Color.White;
-            this.btnAddEmployee.Location = new System.Drawing.Point(986, 33);
+            this.btnAddEmployee.Location = new System.Drawing.Point(994, 33);
             this.btnAddEmployee.Name = "btnAddEmployee";
-            this.btnAddEmployee.Size = new System.Drawing.Size(167, 47);
+            this.btnAddEmployee.Size = new System.Drawing.Size(159, 47);
             this.btnAddEmployee.TabIndex = 15;
             this.btnAddEmployee.Text = "&Add Employee";
             this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click);
@@ -289,7 +295,7 @@
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(583, 23);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(505, 23);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(103, 23);
             this.guna2HtmlLabel4.TabIndex = 10;
@@ -301,7 +307,7 @@
             this.lblTotalEmployees.BackColor = System.Drawing.Color.Transparent;
             this.lblTotalEmployees.Font = new System.Drawing.Font("Poppins", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalEmployees.ForeColor = System.Drawing.Color.Black;
-            this.lblTotalEmployees.Location = new System.Drawing.Point(344, 29);
+            this.lblTotalEmployees.Location = new System.Drawing.Point(297, 28);
             this.lblTotalEmployees.Name = "lblTotalEmployees";
             this.lblTotalEmployees.Size = new System.Drawing.Size(180, 42);
             this.lblTotalEmployees.TabIndex = 20;
@@ -350,6 +356,41 @@
             // guna2Elipse2
             // 
             this.guna2Elipse2.TargetControl = this.guna2GradientPanel3;
+            // 
+            // guna2HtmlLabel6
+            // 
+            this.guna2HtmlLabel6.AutoSize = false;
+            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(760, 23);
+            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(137, 23);
+            this.guna2HtmlLabel6.TabIndex = 22;
+            this.guna2HtmlLabel6.Text = "Employee Status";
+            // 
+            // txtActiveStatus
+            // 
+            this.txtActiveStatus.BackColor = System.Drawing.Color.Transparent;
+            this.txtActiveStatus.BorderRadius = 10;
+            this.txtActiveStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.txtActiveStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtActiveStatus.FocusedColor = System.Drawing.Color.Empty;
+            this.txtActiveStatus.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtActiveStatus.ForeColor = System.Drawing.Color.Black;
+            this.txtActiveStatus.ItemHeight = 30;
+            this.txtActiveStatus.Items.AddRange(new object[] {
+            "Active",
+            "All",
+            "Inactive"});
+            this.txtActiveStatus.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
+            this.txtActiveStatus.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
+            this.txtActiveStatus.Location = new System.Drawing.Point(760, 45);
+            this.txtActiveStatus.Name = "txtActiveStatus";
+            this.txtActiveStatus.Size = new System.Drawing.Size(178, 36);
+            this.txtActiveStatus.Sorted = true;
+            this.txtActiveStatus.TabIndex = 30;
+            this.txtActiveStatus.SelectedIndexChanged += new System.EventHandler(this.txtActiveStatus_SelectedIndexChanged);
             // 
             // emp_id
             // 
@@ -420,6 +461,14 @@
             this.department.Name = "department";
             this.department.ReadOnly = true;
             // 
+            // active_status
+            // 
+            this.active_status.DataPropertyName = "active_status";
+            this.active_status.HeaderText = "Status";
+            this.active_status.Name = "active_status";
+            this.active_status.ReadOnly = true;
+            this.active_status.Visible = false;
+            // 
             // view_more
             // 
             this.view_more.DataPropertyName = "view_more";
@@ -471,6 +520,8 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2DataGridView dgvEmployees;
         private Guna.UI2.WinForms.Guna2ComboBox txtDepartment;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
+        private Guna.UI2.WinForms.Guna2ComboBox txtActiveStatus;
         private System.Windows.Forms.DataGridViewTextBoxColumn emp_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn first_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn middle_name;
@@ -479,6 +530,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn mobile_number;
         private System.Windows.Forms.DataGridViewTextBoxColumn job_title;
         private System.Windows.Forms.DataGridViewTextBoxColumn department;
+        private System.Windows.Forms.DataGridViewTextBoxColumn active_status;
         private System.Windows.Forms.DataGridViewLinkColumn view_more;
     }
 }

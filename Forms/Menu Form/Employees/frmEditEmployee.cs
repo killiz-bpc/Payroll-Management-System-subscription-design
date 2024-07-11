@@ -144,6 +144,17 @@ namespace Payroll_Management_System.Forms.Menu_Form.Employees
 
         private void frmEditEmployee_Load(object sender, EventArgs e)
         {
+            List<string> departments = GetData.GetDepartments();
+            foreach (string department in departments)
+            {
+                txtDepartment.Items.Add(department);
+            }
+
+            List<string> schedules = GetData.GetSchedule();
+            foreach (string schedule in schedules)
+            {
+                txtSchedule.Items.Add(schedule);
+            }
             load_data();
         }
 
@@ -155,7 +166,8 @@ namespace Payroll_Management_System.Forms.Menu_Form.Employees
                 conn.Open();
                 string query;
                 query = "UPDATE employee_information SET " +
-                        "first_name=@first_name, middle_name=@middle_name, last_name=@last_name, salary=@salary, civil_status=@civil_status";
+                        "first_name=@first_name, middle_name=@middle_name, last_name=@last_name, mobile_number=@mobile_number, address=@address, civil_status=@civil_status, gender=@gender, personal_email=@personal_email, date_of_birth=@date_of_birth, emergency_person=@emergency_person, emergency_number=@emergency_number, job_title=@job_title, salary=@salary, employment_status=@employment_status, employee_type=@employee_type, employee_level=@employee_level, email_work=@email_work, assigned_branch=@assigned_branch, assigned_city=@assigned_city, department=@department, schedule=@schedule, hired_date=@hired_date, third_date=@third_date, fifth_date=@fifth_date, regularization_date=@regularization_date, sss_no=@sss_no, tin_no=@tin_no, hdmf_no=@hdmf_no, philhealth_no=@philhealth_no, active_status=@active_status, access_rights=@access_rights, password=@password, basic_salary=@basic_salary, daily_rate=@daily_rate, hourly_rate=@hourly_rate, minute_rate=@minute_rate";
+
                 if (isUpdateImg)
                 {
                     query += ", employee_img=@employee_img";
@@ -173,12 +185,60 @@ namespace Payroll_Management_System.Forms.Menu_Form.Employees
                 }
 
                 cmd.Parameters.AddWithValue("@emp_id", employee_id);
+
+
+                //rate of employee
+                int salary = Convert.ToInt32(txtSalary.Text);
+                var result = GetData.GetSalary(salary);
+                double basic_salary = result.basic_salary;
+                double daily_rate = result.daily_rate;
+                double hourly_rate = result.hourly_rate;
+                double minute_rate = result.minute_rate;
+                cmd.Parameters.AddWithValue("@basic_salary", basic_salary);
+                cmd.Parameters.AddWithValue("@daily_rate", daily_rate);
+                cmd.Parameters.AddWithValue("@hourly_rate", hourly_rate);
+                cmd.Parameters.AddWithValue("@minute_rate", minute_rate);
+
+
+                //basic info
                 cmd.Parameters.AddWithValue("@first_name", txtFirstName.Text);
                 cmd.Parameters.AddWithValue("@middle_name", txtMiddleName.Text);
                 cmd.Parameters.AddWithValue("@last_name", txtLastName.Text);
-                cmd.Parameters.AddWithValue("@salary", txtSalary.Text);
+                cmd.Parameters.AddWithValue("@mobile_number", txtMobileNo.Text);
+                cmd.Parameters.AddWithValue("@address", txtAddress.Text);
                 cmd.Parameters.AddWithValue("@civil_status", txtCivilStatus.Text);
+                cmd.Parameters.AddWithValue("@gender", txtGender.Text);
+                cmd.Parameters.AddWithValue("@personal_email", txtPersonalEmail.Text);
+                cmd.Parameters.AddWithValue("@date_of_birth", txtDateOfBirth.Text);
+                cmd.Parameters.AddWithValue("@emergency_person", txtEmergencyPerson.Text);
+                cmd.Parameters.AddWithValue("@emergency_number", txtEmergencyNumber.Text);
 
+                //work info
+                cmd.Parameters.AddWithValue("@job_title", txtJobTitle.Text);
+                cmd.Parameters.AddWithValue("@salary", txtSalary.Text);
+                cmd.Parameters.AddWithValue("@employment_status", txtEmpStatus.Text);
+                cmd.Parameters.AddWithValue("@employee_type", txtEmpType.Text);
+                cmd.Parameters.AddWithValue("@employee_level", txtEmpLevel.Text);
+                cmd.Parameters.AddWithValue("@email_work", txtWorkEmail.Text);
+                cmd.Parameters.AddWithValue("@assigned_branch", txtBranch.Text);
+                cmd.Parameters.AddWithValue("@assigned_city", txtCity.Text);
+                cmd.Parameters.AddWithValue("@department", txtDepartment.Text);
+                cmd.Parameters.AddWithValue("@schedule", txtSchedule.Text);
+                cmd.Parameters.AddWithValue("@hired_date", txtHireDate.Text);
+                cmd.Parameters.AddWithValue("@third_date", txtThirdDate.Text);
+                cmd.Parameters.AddWithValue("@fifth_date", txtFifthDate.Text);
+                cmd.Parameters.AddWithValue("@regularization_date", txtRegularizationDate.Text);
+
+
+                //other info
+                cmd.Parameters.AddWithValue("@sss_no", txtSSSNo.Text);
+                cmd.Parameters.AddWithValue("@tin_no", txtTINNo.Text);
+                cmd.Parameters.AddWithValue("@hdmf_no", txtHDMFNo.Text);
+                cmd.Parameters.AddWithValue("@philhealth_no", txtPHNo.Text);
+                cmd.Parameters.AddWithValue("@active_status", txtActiveStatus.Text);
+                cmd.Parameters.AddWithValue("@access_rights", txtAccessRights.Text);
+                cmd.Parameters.AddWithValue("@password", txtPassword.Text);
+               
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Information has been updated successfully","Message Information",MessageBoxButtons.OK,MessageBoxIcon.Information);
 
@@ -242,6 +302,11 @@ namespace Payroll_Management_System.Forms.Menu_Form.Employees
             }
            
 
+
+        }
+
+        private void txtAccessRights_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

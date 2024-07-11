@@ -34,15 +34,27 @@ namespace Payroll_Management_System.Forms.Menu_Form
             {
                 string query;
                 conn.Open();
-                query = "SELECT emp_id, first_name, middle_name, last_name, gender, mobile_number, job_title, department FROM employee_information ";
+                query = "SELECT emp_id, first_name, middle_name, last_name, gender, mobile_number, job_title, department, active_status FROM employee_information ";
 
-                if (txtDepartment.Text != "All")
+                if (txtDepartment.Text != "All" && txtActiveStatus.Text != "All") //same naka filter
                 {
-                    query += "WHERE department=@department";
+                    query += " WHERE department=@department AND active_status=@active_status";
                 }
+
+                if (txtDepartment.Text == "All" && txtActiveStatus.Text != "All") //active status lang yung naka-filter
+                {
+                    query += " WHERE active_status=@active_status";
+                }
+
+                if (txtDepartment.Text != "All" && txtActiveStatus.Text == "All") //department lang yung nakafilter
+                {
+                    query += " WHERE department=@department";
+                }
+
 
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@department", txtDepartment.Text);
+                cmd.Parameters.AddWithValue("@active_status", txtActiveStatus.Text);
 
                 MySqlDataAdapter sda = new MySqlDataAdapter(cmd);
                 DataTable dataTable = new DataTable();
@@ -62,6 +74,8 @@ namespace Payroll_Management_System.Forms.Menu_Form
         {
             txtDepartment.Text = "All";
 
+            txtActiveStatus.Text = "All";
+
             load_data();
 
            
@@ -76,6 +90,7 @@ namespace Payroll_Management_System.Forms.Menu_Form
 
         private void txtDepartment_SelectedIndexChanged(object sender, EventArgs e)
         {
+            txtSearch.Clear();
             load_data();
         }
 
@@ -85,11 +100,29 @@ namespace Payroll_Management_System.Forms.Menu_Form
             {
                 string query;
                 conn.Open();
-                query = "SELECT emp_id, first_name, middle_name, last_name, gender, mobile_number, job_title, department FROM employee_information ";
+                query = "SELECT emp_id, first_name, middle_name, last_name, gender, mobile_number, job_title, department, active_status FROM employee_information";
+
+
+                if (txtDepartment.Text != "All" && txtActiveStatus.Text != "All") //same naka filter
+                {
+                    query += " WHERE department=@department AND active_status=@active_status";
+                }
+
+                if (txtDepartment.Text == "All" && txtActiveStatus.Text != "All") //active status lang yung naka-filter
+                {
+                    query += " WHERE active_status=@active_status";
+                }
+
+                if (txtDepartment.Text != "All" && txtActiveStatus.Text == "All") //department lang yung nakafilter
+                {
+                    query += " WHERE department=@department";
+                }
+
 
 
                 MySqlCommand cmd = new MySqlCommand(query, conn);
-              
+                cmd.Parameters.AddWithValue("@department", txtDepartment.Text);
+                cmd.Parameters.AddWithValue("@active_status", txtActiveStatus.Text);
 
                 MySqlDataAdapter sda = new MySqlDataAdapter(cmd);
                 DataTable dataTable = new DataTable();
@@ -118,7 +151,13 @@ namespace Payroll_Management_System.Forms.Menu_Form
                 frmEditEmployee frmEditEmployee = new frmEditEmployee();
                 frmEditEmployee.employee_id = employee_id;
                 frmEditEmployee.ShowDialog();
-            }
+            }  
+        }
+
+        private void txtActiveStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtSearch.Clear();
+            load_data();
         }
     }
 }

@@ -40,15 +40,15 @@
             this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.lblPosition = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.picEmployee = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.lblName = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.picEmployee = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panelMain = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.panelTop = new Guna.UI2.WinForms.Guna2Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.guna2CirclePictureBox3 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnMin = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.btnMax = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.txtVersion = new System.Windows.Forms.Label();
+            this.guna2CirclePictureBox3 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panelLeft.SuspendLayout();
             this.panelButtons.SuspendLayout();
             this.guna2GradientPanel4.SuspendLayout();
@@ -252,19 +252,6 @@
             this.lblPosition.TabIndex = 1;
             this.lblPosition.Text = "Junior Programmer";
             // 
-            // picEmployee
-            // 
-            this.picEmployee.FillColor = System.Drawing.Color.Transparent;
-            this.picEmployee.Image = global::Payroll_Management_System.Properties.Resources.user;
-            this.picEmployee.ImageRotate = 0F;
-            this.picEmployee.Location = new System.Drawing.Point(5, 16);
-            this.picEmployee.Name = "picEmployee";
-            this.picEmployee.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.picEmployee.Size = new System.Drawing.Size(53, 38);
-            this.picEmployee.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picEmployee.TabIndex = 2;
-            this.picEmployee.TabStop = false;
-            // 
             // lblName
             // 
             this.lblName.AutoSize = false;
@@ -278,6 +265,19 @@
             this.lblName.Text = "Vidal, Cleeve 8";
             this.lblName.Click += new System.EventHandler(this.guna2HtmlLabel1_Click);
             // 
+            // picEmployee
+            // 
+            this.picEmployee.FillColor = System.Drawing.Color.Transparent;
+            this.picEmployee.Image = global::Payroll_Management_System.Properties.Resources.user;
+            this.picEmployee.ImageRotate = 0F;
+            this.picEmployee.Location = new System.Drawing.Point(5, 16);
+            this.picEmployee.Name = "picEmployee";
+            this.picEmployee.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.picEmployee.Size = new System.Drawing.Size(53, 38);
+            this.picEmployee.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picEmployee.TabIndex = 2;
+            this.picEmployee.TabStop = false;
+            // 
             // panelMain
             // 
             this.panelMain.BackColor = System.Drawing.SystemColors.Control;
@@ -289,13 +289,32 @@
             this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel2_Paint);
             this.panelMain.MouseMove += new System.Windows.Forms.MouseEventHandler(this.guna2GradientPanel2_MouseMove);
             // 
+            // btnClose
+            // 
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnClose.FillColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.ImageSize = new System.Drawing.Size(15, 15);
+            this.btnClose.Location = new System.Drawing.Point(1347, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(30, 29);
+            this.btnClose.TabIndex = 0;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // panelTop
             // 
             this.panelTop.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panelTop.Controls.Add(this.label1);
-            this.panelTop.Controls.Add(this.guna2CirclePictureBox3);
             this.panelTop.Controls.Add(this.btnMin);
-            this.panelTop.Controls.Add(this.btnMax);
+            this.panelTop.Controls.Add(this.guna2ControlBox1);
+            this.panelTop.Controls.Add(this.txtVersion);
+            this.panelTop.Controls.Add(this.guna2CirclePictureBox3);
             this.panelTop.Controls.Add(this.btnClose);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(0, 0);
@@ -304,28 +323,6 @@
             this.panelTop.TabIndex = 0;
             this.panelTop.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_top_Paint);
             this.panelTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_top_MouseMove);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 19);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Payroll Management System";
-            // 
-            // guna2CirclePictureBox3
-            // 
-            this.guna2CirclePictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox3.Image")));
-            this.guna2CirclePictureBox3.ImageRotate = 0F;
-            this.guna2CirclePictureBox3.Location = new System.Drawing.Point(5, 4);
-            this.guna2CirclePictureBox3.Name = "guna2CirclePictureBox3";
-            this.guna2CirclePictureBox3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox3.Size = new System.Drawing.Size(23, 20);
-            this.guna2CirclePictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox3.TabIndex = 7;
-            this.guna2CirclePictureBox3.TabStop = false;
             // 
             // btnMin
             // 
@@ -339,28 +336,39 @@
             this.btnMin.Size = new System.Drawing.Size(30, 29);
             this.btnMin.TabIndex = 6;
             // 
-            // btnMax
+            // guna2ControlBox1
             // 
-            this.btnMax.BorderRadius = 2;
-            this.btnMax.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
-            this.btnMax.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnMax.FillColor = System.Drawing.Color.Transparent;
-            this.btnMax.IconColor = System.Drawing.Color.Black;
-            this.btnMax.Location = new System.Drawing.Point(1317, 0);
-            this.btnMax.Name = "btnMax";
-            this.btnMax.Size = new System.Drawing.Size(30, 29);
-            this.btnMax.TabIndex = 5;
+            this.guna2ControlBox1.BorderRadius = 2;
+            this.guna2ControlBox1.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
+            this.guna2ControlBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1317, 0);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(30, 29);
+            this.guna2ControlBox1.TabIndex = 7;
             // 
-            // btnClose
+            // txtVersion
             // 
-            this.btnClose.BorderRadius = 2;
-            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnClose.FillColor = System.Drawing.Color.Transparent;
-            this.btnClose.IconColor = System.Drawing.Color.Black;
-            this.btnClose.Location = new System.Drawing.Point(1347, 0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(30, 29);
-            this.btnClose.TabIndex = 4;
+            this.txtVersion.AutoSize = true;
+            this.txtVersion.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVersion.Location = new System.Drawing.Point(26, 6);
+            this.txtVersion.Name = "txtVersion";
+            this.txtVersion.Size = new System.Drawing.Size(164, 19);
+            this.txtVersion.TabIndex = 8;
+            this.txtVersion.Text = "Payroll Management System";
+            // 
+            // guna2CirclePictureBox3
+            // 
+            this.guna2CirclePictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox3.Image")));
+            this.guna2CirclePictureBox3.ImageRotate = 0F;
+            this.guna2CirclePictureBox3.Location = new System.Drawing.Point(5, 4);
+            this.guna2CirclePictureBox3.Name = "guna2CirclePictureBox3";
+            this.guna2CirclePictureBox3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox3.Size = new System.Drawing.Size(23, 20);
+            this.guna2CirclePictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2CirclePictureBox3.TabIndex = 7;
+            this.guna2CirclePictureBox3.TabStop = false;
             // 
             // frmHome
             // 
@@ -397,11 +405,9 @@
         private Guna.UI2.WinForms.Guna2Button btnDashboard;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel4;
         private Guna.UI2.WinForms.Guna2Panel panelTop;
-        private Guna.UI2.WinForms.Guna2ControlBox btnClose;
         private Guna.UI2.WinForms.Guna2ControlBox btnMin;
-        private Guna.UI2.WinForms.Guna2ControlBox btnMax;
         private Guna.UI2.WinForms.Guna2CirclePictureBox picEmployee;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label txtVersion;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox3;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblName;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblPosition;
@@ -409,5 +415,7 @@
         private Guna.UI2.WinForms.Guna2Button btnAttendance;
         private Guna.UI2.WinForms.Guna2Button btnEmployees;
         private Guna.UI2.WinForms.Guna2Button btnLogout;
+        private Guna.UI2.WinForms.Guna2Button btnClose;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
     }
 }

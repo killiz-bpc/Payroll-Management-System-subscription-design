@@ -69,8 +69,12 @@ namespace Payroll_Management_System.Forms.Menu_Form
 
         private void frmHome_Load(object sender, EventArgs e)
         {
+            if (System.Deployment.Application.ApplicationDeployment.IsNetworkDeployed)  //display ng version ng app
+            {
+                System.Deployment.Application.ApplicationDeployment ad = System.Deployment.Application.ApplicationDeployment.CurrentDeployment;
+                this.txtVersion.Text = "Payroll Management System v" + ad.CurrentVersion.ToString();
+            }
 
-         
 
             string firstName = frmLogin.firstName;
             string[] splitName = firstName.Split(' ');
@@ -84,9 +88,10 @@ namespace Payroll_Management_System.Forms.Menu_Form
 
             string accessRights = frmLogin.accessRights;
 
-            if (accessRights == "user")
+            if (accessRights == "User")
             {
-                btnDashboard.Visible = false;
+                btnEmployees.Visible = false;
+                btnAttendance.Visible = false;
                 btnPayroll.Visible = false;
             }
 
@@ -149,10 +154,23 @@ namespace Payroll_Management_System.Forms.Menu_Form
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show("Are you sure you want to logout?", "Message Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(DialogResult.Yes == result)
+            {
+                frmLogin frmLogin = new frmLogin();
+                frmLogin.Show();
+                this.Close();
+            }
+            else
+            {
+                return;
+            }
             
-            frmLogin frmLogin = new frmLogin();
-            frmLogin.Show();
-            this.Close();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            btnLogout.PerformClick();
         }
     }
 }

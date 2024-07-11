@@ -34,7 +34,7 @@ namespace Payroll_Management_System
 
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
 
@@ -174,6 +174,11 @@ namespace Payroll_Management_System
             {
                 btnLogin.PerformClick();
             }
+        }
+
+        private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
         }
     }
 }

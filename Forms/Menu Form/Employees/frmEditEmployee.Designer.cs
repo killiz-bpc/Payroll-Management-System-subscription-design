@@ -64,6 +64,7 @@
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.tabWork = new System.Windows.Forms.TabPage();
             this.panelEmployment = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.isSalary = new Guna.UI2.WinForms.Guna2CheckBox();
             this.txtRegularizationDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.txtFifthDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.txtThirdDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -116,10 +117,8 @@
             this.guna2HtmlLabel32 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.isSalary = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Elipse6 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.openFD = new System.Windows.Forms.OpenFileDialog();
             this.guna2GradientPanel1.SuspendLayout();
@@ -139,7 +138,6 @@
             // 
             this.guna2GradientPanel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.guna2GradientPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
-            this.guna2GradientPanel1.Controls.Add(this.guna2Button1);
             this.guna2GradientPanel1.Controls.Add(this.informationPanel);
             this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel3);
             this.guna2GradientPanel1.Controls.Add(this.btnClose);
@@ -760,6 +758,24 @@
             this.panelEmployment.Size = new System.Drawing.Size(905, 563);
             this.panelEmployment.TabIndex = 13;
             // 
+            // isSalary
+            // 
+            this.isSalary.Animated = true;
+            this.isSalary.AutoSize = true;
+            this.isSalary.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
+            this.isSalary.CheckedState.BorderRadius = 0;
+            this.isSalary.CheckedState.BorderThickness = 0;
+            this.isSalary.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
+            this.isSalary.Location = new System.Drawing.Point(845, 108);
+            this.isSalary.Name = "isSalary";
+            this.isSalary.Size = new System.Drawing.Size(15, 14);
+            this.isSalary.TabIndex = 71;
+            this.isSalary.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.isSalary.UncheckedState.BorderRadius = 0;
+            this.isSalary.UncheckedState.BorderThickness = 0;
+            this.isSalary.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.isSalary.CheckedChanged += new System.EventHandler(this.isSalary_CheckedChanged);
+            // 
             // txtRegularizationDate
             // 
             this.txtRegularizationDate.BorderRadius = 5;
@@ -1054,6 +1070,7 @@
             this.txtEmployeeID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtEmployeeID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtEmployeeID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmployeeID.Enabled = false;
             this.txtEmployeeID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmployeeID.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtEmployeeID.ForeColor = System.Drawing.Color.Black;
@@ -1063,6 +1080,7 @@
             this.txtEmployeeID.Name = "txtEmployeeID";
             this.txtEmployeeID.PasswordChar = '\0';
             this.txtEmployeeID.PlaceholderText = "Enter employee ID";
+            this.txtEmployeeID.ReadOnly = true;
             this.txtEmployeeID.SelectedText = "";
             this.txtEmployeeID.Size = new System.Drawing.Size(160, 33);
             this.txtEmployeeID.TabIndex = 1;
@@ -1341,6 +1359,7 @@
             this.txtAccessRights.Size = new System.Drawing.Size(378, 36);
             this.txtAccessRights.Sorted = true;
             this.txtAccessRights.TabIndex = 30;
+            this.txtAccessRights.SelectedIndexChanged += new System.EventHandler(this.txtAccessRights_SelectedIndexChanged);
             // 
             // txtActiveStatus
             // 
@@ -1607,19 +1626,6 @@
             this.btnClose.Size = new System.Drawing.Size(30, 29);
             this.btnClose.TabIndex = 8;
             // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.AutoSize = false;
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Poppins Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(28, 12);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(429, 36);
-            this.guna2HtmlLabel1.TabIndex = 4;
-            this.guna2HtmlLabel1.Text = "Employee\'s Information";
-            // 
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -1641,43 +1647,18 @@
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // guna2Button1
+            // guna2HtmlLabel1
             // 
-            this.guna2Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 10;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Poppins", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(691, 733);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(121, 42);
-            this.guna2Button1.TabIndex = 15;
-            this.guna2Button1.Text = "Delete";
-            // 
-            // isSalary
-            // 
-            this.isSalary.Animated = true;
-            this.isSalary.AutoSize = true;
-            this.isSalary.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
-            this.isSalary.CheckedState.BorderRadius = 0;
-            this.isSalary.CheckedState.BorderThickness = 0;
-            this.isSalary.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
-            this.isSalary.Location = new System.Drawing.Point(845, 108);
-            this.isSalary.Name = "isSalary";
-            this.isSalary.Size = new System.Drawing.Size(15, 14);
-            this.isSalary.TabIndex = 71;
-            this.isSalary.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.isSalary.UncheckedState.BorderRadius = 0;
-            this.isSalary.UncheckedState.BorderThickness = 0;
-            this.isSalary.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.isSalary.CheckedChanged += new System.EventHandler(this.isSalary_CheckedChanged);
+            this.guna2HtmlLabel1.AutoSize = false;
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Poppins Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(28, 12);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(429, 36);
+            this.guna2HtmlLabel1.TabIndex = 4;
+            this.guna2HtmlLabel1.Text = "Employee\'s Information";
             // 
             // guna2Elipse6
             // 
@@ -1805,7 +1786,6 @@
         private Guna.UI2.WinForms.Guna2ControlBox btnClose;
         private Guna.UI2.WinForms.Guna2Button btnSave;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2CheckBox isSalary;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse6;
         private System.Windows.Forms.OpenFileDialog openFD;
