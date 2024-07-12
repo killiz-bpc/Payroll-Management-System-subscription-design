@@ -82,7 +82,7 @@ namespace Payroll_Management_System.Connections
                 middle_name = "";
             }
 
-            return last_name + "," + first_name + " "+middle_name;
+            return last_name + ", " + first_name + " "+middle_name;
         }
        
 
