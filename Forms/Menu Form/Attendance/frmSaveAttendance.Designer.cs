@@ -38,18 +38,19 @@
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.btnSave = new Guna.UI2.WinForms.Guna2Button();
-            this.txtDateFrom = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtDateTo = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtPreparedBy = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtDateCreated = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtPreparedBy = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtDateTo = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtDateFrom = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnSave = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.txtSeries = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,6 +75,7 @@
             this.txtAttendanceBatch.Size = new System.Drawing.Size(334, 36);
             this.txtAttendanceBatch.Sorted = true;
             this.txtAttendanceBatch.TabIndex = 20;
+            this.txtAttendanceBatch.SelectedIndexChanged += new System.EventHandler(this.txtAttendanceBatch_SelectedIndexChanged);
             // 
             // guna2HtmlLabel4
             // 
@@ -154,6 +156,7 @@
             // 
             // guna2GradientPanel1
             // 
+            this.guna2GradientPanel1.Controls.Add(this.txtSeries);
             this.guna2GradientPanel1.Controls.Add(this.txtDateCreated);
             this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel8);
             this.guna2GradientPanel1.Controls.Add(this.txtPreparedBy);
@@ -178,156 +181,6 @@
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(424, 505);
             this.guna2GradientPanel1.TabIndex = 37;
-            // 
-            // guna2HtmlLabel2
-            // 
-            this.guna2HtmlLabel2.AutoSize = false;
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Poppins Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(13, 12);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(265, 36);
-            this.guna2HtmlLabel2.TabIndex = 37;
-            this.guna2HtmlLabel2.Text = "Save Attendance";
-            // 
-            // guna2HtmlLabel3
-            // 
-            this.guna2HtmlLabel3.AutoSize = false;
-            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(13, 38);
-            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(353, 22);
-            this.guna2HtmlLabel3.TabIndex = 38;
-            this.guna2HtmlLabel3.Text = "Provide attendance information";
-            // 
-            // btnSave
-            // 
-            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnSave.Animated = true;
-            this.btnSave.BackColor = System.Drawing.Color.Transparent;
-            this.btnSave.BorderColor = System.Drawing.Color.Transparent;
-            this.btnSave.BorderRadius = 10;
-            this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
-            this.btnSave.Font = new System.Drawing.Font("Poppins", 9F);
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(41, 433);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(334, 34);
-            this.btnSave.TabIndex = 39;
-            this.btnSave.Text = "&Save";
-            // 
-            // txtDateFrom
-            // 
-            this.txtDateFrom.BorderRadius = 8;
-            this.txtDateFrom.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDateFrom.DefaultText = "";
-            this.txtDateFrom.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtDateFrom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtDateFrom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDateFrom.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDateFrom.Enabled = false;
-            this.txtDateFrom.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDateFrom.Font = new System.Drawing.Font("Poppins", 9F);
-            this.txtDateFrom.ForeColor = System.Drawing.Color.Black;
-            this.txtDateFrom.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDateFrom.Location = new System.Drawing.Point(41, 236);
-            this.txtDateFrom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtDateFrom.Name = "txtDateFrom";
-            this.txtDateFrom.PasswordChar = '\0';
-            this.txtDateFrom.PlaceholderText = "Date From";
-            this.txtDateFrom.SelectedText = "";
-            this.txtDateFrom.Size = new System.Drawing.Size(151, 36);
-            this.txtDateFrom.TabIndex = 49;
-            // 
-            // guna2HtmlLabel5
-            // 
-            this.guna2HtmlLabel5.AutoSize = false;
-            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(41, 215);
-            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(97, 23);
-            this.guna2HtmlLabel5.TabIndex = 51;
-            this.guna2HtmlLabel5.Text = "Date From";
-            // 
-            // txtDateTo
-            // 
-            this.txtDateTo.BorderRadius = 8;
-            this.txtDateTo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDateTo.DefaultText = "";
-            this.txtDateTo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtDateTo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtDateTo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDateTo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDateTo.Enabled = false;
-            this.txtDateTo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDateTo.Font = new System.Drawing.Font("Poppins", 9F);
-            this.txtDateTo.ForeColor = System.Drawing.Color.Black;
-            this.txtDateTo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDateTo.Location = new System.Drawing.Point(224, 236);
-            this.txtDateTo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtDateTo.Name = "txtDateTo";
-            this.txtDateTo.PasswordChar = '\0';
-            this.txtDateTo.PlaceholderText = "Date To";
-            this.txtDateTo.SelectedText = "";
-            this.txtDateTo.Size = new System.Drawing.Size(151, 36);
-            this.txtDateTo.TabIndex = 52;
-            // 
-            // guna2HtmlLabel6
-            // 
-            this.guna2HtmlLabel6.AutoSize = false;
-            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(224, 215);
-            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(97, 23);
-            this.guna2HtmlLabel6.TabIndex = 53;
-            this.guna2HtmlLabel6.Text = "Date To";
-            // 
-            // guna2HtmlLabel7
-            // 
-            this.guna2HtmlLabel7.AutoSize = false;
-            this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(39, 352);
-            this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(97, 23);
-            this.guna2HtmlLabel7.TabIndex = 54;
-            this.guna2HtmlLabel7.Text = "Prepared by";
-            // 
-            // txtPreparedBy
-            // 
-            this.txtPreparedBy.BorderRadius = 8;
-            this.txtPreparedBy.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPreparedBy.DefaultText = "";
-            this.txtPreparedBy.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPreparedBy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPreparedBy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPreparedBy.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPreparedBy.Enabled = false;
-            this.txtPreparedBy.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPreparedBy.Font = new System.Drawing.Font("Poppins", 9F);
-            this.txtPreparedBy.ForeColor = System.Drawing.Color.Black;
-            this.txtPreparedBy.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPreparedBy.Location = new System.Drawing.Point(41, 373);
-            this.txtPreparedBy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtPreparedBy.Name = "txtPreparedBy";
-            this.txtPreparedBy.PasswordChar = '\0';
-            this.txtPreparedBy.PlaceholderText = "Prepared by";
-            this.txtPreparedBy.SelectedText = "";
-            this.txtPreparedBy.Size = new System.Drawing.Size(334, 36);
-            this.txtPreparedBy.TabIndex = 55;
             // 
             // txtDateCreated
             // 
@@ -364,9 +217,184 @@
             this.guna2HtmlLabel8.TabIndex = 57;
             this.guna2HtmlLabel8.Text = "Date Created";
             // 
+            // txtPreparedBy
+            // 
+            this.txtPreparedBy.BorderRadius = 8;
+            this.txtPreparedBy.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPreparedBy.DefaultText = "";
+            this.txtPreparedBy.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPreparedBy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPreparedBy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPreparedBy.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPreparedBy.Enabled = false;
+            this.txtPreparedBy.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPreparedBy.Font = new System.Drawing.Font("Poppins", 9F);
+            this.txtPreparedBy.ForeColor = System.Drawing.Color.Black;
+            this.txtPreparedBy.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPreparedBy.Location = new System.Drawing.Point(41, 373);
+            this.txtPreparedBy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPreparedBy.Name = "txtPreparedBy";
+            this.txtPreparedBy.PasswordChar = '\0';
+            this.txtPreparedBy.PlaceholderText = "Prepared by";
+            this.txtPreparedBy.SelectedText = "";
+            this.txtPreparedBy.Size = new System.Drawing.Size(334, 36);
+            this.txtPreparedBy.TabIndex = 55;
+            // 
+            // guna2HtmlLabel7
+            // 
+            this.guna2HtmlLabel7.AutoSize = false;
+            this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(39, 352);
+            this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
+            this.guna2HtmlLabel7.Size = new System.Drawing.Size(97, 23);
+            this.guna2HtmlLabel7.TabIndex = 54;
+            this.guna2HtmlLabel7.Text = "Prepared by";
+            // 
+            // txtDateTo
+            // 
+            this.txtDateTo.BorderRadius = 8;
+            this.txtDateTo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDateTo.DefaultText = "";
+            this.txtDateTo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtDateTo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtDateTo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDateTo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDateTo.Enabled = false;
+            this.txtDateTo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDateTo.Font = new System.Drawing.Font("Poppins", 9F);
+            this.txtDateTo.ForeColor = System.Drawing.Color.Black;
+            this.txtDateTo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDateTo.Location = new System.Drawing.Point(224, 236);
+            this.txtDateTo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtDateTo.Name = "txtDateTo";
+            this.txtDateTo.PasswordChar = '\0';
+            this.txtDateTo.PlaceholderText = "Date To";
+            this.txtDateTo.SelectedText = "";
+            this.txtDateTo.Size = new System.Drawing.Size(151, 36);
+            this.txtDateTo.TabIndex = 52;
+            // 
+            // guna2HtmlLabel6
+            // 
+            this.guna2HtmlLabel6.AutoSize = false;
+            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(224, 215);
+            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(97, 23);
+            this.guna2HtmlLabel6.TabIndex = 53;
+            this.guna2HtmlLabel6.Text = "Date To";
+            // 
+            // txtDateFrom
+            // 
+            this.txtDateFrom.BorderRadius = 8;
+            this.txtDateFrom.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDateFrom.DefaultText = "";
+            this.txtDateFrom.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtDateFrom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtDateFrom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDateFrom.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDateFrom.Enabled = false;
+            this.txtDateFrom.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDateFrom.Font = new System.Drawing.Font("Poppins", 9F);
+            this.txtDateFrom.ForeColor = System.Drawing.Color.Black;
+            this.txtDateFrom.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDateFrom.Location = new System.Drawing.Point(41, 236);
+            this.txtDateFrom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtDateFrom.Name = "txtDateFrom";
+            this.txtDateFrom.PasswordChar = '\0';
+            this.txtDateFrom.PlaceholderText = "Date From";
+            this.txtDateFrom.SelectedText = "";
+            this.txtDateFrom.Size = new System.Drawing.Size(151, 36);
+            this.txtDateFrom.TabIndex = 49;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnSave.Animated = true;
+            this.btnSave.BackColor = System.Drawing.Color.Transparent;
+            this.btnSave.BorderColor = System.Drawing.Color.Transparent;
+            this.btnSave.BorderRadius = 10;
+            this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
+            this.btnSave.Font = new System.Drawing.Font("Poppins", 9F);
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(41, 433);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(334, 34);
+            this.btnSave.TabIndex = 39;
+            this.btnSave.Text = "&Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // guna2HtmlLabel3
+            // 
+            this.guna2HtmlLabel3.AutoSize = false;
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(13, 38);
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(353, 22);
+            this.guna2HtmlLabel3.TabIndex = 38;
+            this.guna2HtmlLabel3.Text = "Provide attendance information";
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.AutoSize = false;
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Poppins Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(13, 12);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(265, 36);
+            this.guna2HtmlLabel2.TabIndex = 37;
+            this.guna2HtmlLabel2.Text = "Save Attendance";
+            // 
+            // guna2HtmlLabel5
+            // 
+            this.guna2HtmlLabel5.AutoSize = false;
+            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(41, 215);
+            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(97, 23);
+            this.guna2HtmlLabel5.TabIndex = 51;
+            this.guna2HtmlLabel5.Text = "Date From";
+            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // txtSeries
+            // 
+            this.txtSeries.BorderRadius = 8;
+            this.txtSeries.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSeries.DefaultText = "";
+            this.txtSeries.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSeries.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSeries.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSeries.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSeries.Enabled = false;
+            this.txtSeries.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSeries.Font = new System.Drawing.Font("Poppins", 9F);
+            this.txtSeries.ForeColor = System.Drawing.Color.Black;
+            this.txtSeries.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSeries.Location = new System.Drawing.Point(63, 60);
+            this.txtSeries.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSeries.Name = "txtSeries";
+            this.txtSeries.PasswordChar = '\0';
+            this.txtSeries.PlaceholderText = "Series No.";
+            this.txtSeries.SelectedText = "";
+            this.txtSeries.Size = new System.Drawing.Size(274, 21);
+            this.txtSeries.TabIndex = 58;
+            this.txtSeries.Visible = false;
             // 
             // frmSaveAttendance
             // 
@@ -409,5 +437,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtDateCreated;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
         private System.Windows.Forms.Timer timer1;
+        private Guna.UI2.WinForms.Guna2TextBox txtSeries;
     }
 }
