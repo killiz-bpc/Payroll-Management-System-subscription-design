@@ -31,13 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSaveAttendance));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.txtAttendanceBatch = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.isNewBatch = new Guna.UI2.WinForms.Guna2CheckBox();
             this.txtPeriod = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.txtSeries = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtDateCreated = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtPreparedBy = new Guna.UI2.WinForms.Guna2TextBox();
@@ -50,7 +49,6 @@
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.txtSeries = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,56 +56,17 @@
             // 
             this.guna2Elipse1.TargetControl = this;
             // 
-            // txtAttendanceBatch
-            // 
-            this.txtAttendanceBatch.BackColor = System.Drawing.Color.Transparent;
-            this.txtAttendanceBatch.BorderRadius = 10;
-            this.txtAttendanceBatch.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.txtAttendanceBatch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtAttendanceBatch.FocusedColor = System.Drawing.Color.Empty;
-            this.txtAttendanceBatch.Font = new System.Drawing.Font("Poppins", 9F);
-            this.txtAttendanceBatch.ForeColor = System.Drawing.Color.Black;
-            this.txtAttendanceBatch.ItemHeight = 30;
-            this.txtAttendanceBatch.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
-            this.txtAttendanceBatch.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
-            this.txtAttendanceBatch.Location = new System.Drawing.Point(41, 110);
-            this.txtAttendanceBatch.Name = "txtAttendanceBatch";
-            this.txtAttendanceBatch.Size = new System.Drawing.Size(334, 36);
-            this.txtAttendanceBatch.Sorted = true;
-            this.txtAttendanceBatch.TabIndex = 20;
-            this.txtAttendanceBatch.SelectedIndexChanged += new System.EventHandler(this.txtAttendanceBatch_SelectedIndexChanged);
-            // 
             // guna2HtmlLabel4
             // 
             this.guna2HtmlLabel4.AutoSize = false;
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(41, 88);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(39, 88);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(151, 23);
             this.guna2HtmlLabel4.TabIndex = 19;
             this.guna2HtmlLabel4.Text = "Attendance Batch No.";
-            // 
-            // isNewBatch
-            // 
-            this.isNewBatch.Animated = true;
-            this.isNewBatch.AutoSize = true;
-            this.isNewBatch.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
-            this.isNewBatch.CheckedState.BorderRadius = 0;
-            this.isNewBatch.CheckedState.BorderThickness = 0;
-            this.isNewBatch.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
-            this.isNewBatch.Font = new System.Drawing.Font("Poppins Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.isNewBatch.Location = new System.Drawing.Point(198, 88);
-            this.isNewBatch.Name = "isNewBatch";
-            this.isNewBatch.Size = new System.Drawing.Size(97, 23);
-            this.isNewBatch.TabIndex = 33;
-            this.isNewBatch.Text = "Save as New";
-            this.isNewBatch.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.isNewBatch.UncheckedState.BorderRadius = 0;
-            this.isNewBatch.UncheckedState.BorderThickness = 0;
-            this.isNewBatch.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.isNewBatch.CheckedChanged += new System.EventHandler(this.isNewBatch_CheckedChanged);
             // 
             // txtPeriod
             // 
@@ -167,11 +126,9 @@
             this.guna2GradientPanel1.Controls.Add(this.btnSave);
             this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel3);
             this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel2);
-            this.guna2GradientPanel1.Controls.Add(this.txtAttendanceBatch);
             this.guna2GradientPanel1.Controls.Add(this.btnClose);
             this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel4);
             this.guna2GradientPanel1.Controls.Add(this.txtPeriod);
-            this.guna2GradientPanel1.Controls.Add(this.isNewBatch);
             this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel1);
             this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel5);
             this.guna2GradientPanel1.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
@@ -181,6 +138,30 @@
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(424, 505);
             this.guna2GradientPanel1.TabIndex = 37;
+            // 
+            // txtSeries
+            // 
+            this.txtSeries.BorderRadius = 8;
+            this.txtSeries.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSeries.DefaultText = "";
+            this.txtSeries.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSeries.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSeries.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSeries.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSeries.Enabled = false;
+            this.txtSeries.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSeries.Font = new System.Drawing.Font("Poppins", 9F);
+            this.txtSeries.ForeColor = System.Drawing.Color.Black;
+            this.txtSeries.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSeries.Location = new System.Drawing.Point(41, 109);
+            this.txtSeries.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSeries.Name = "txtSeries";
+            this.txtSeries.PasswordChar = '\0';
+            this.txtSeries.PlaceholderText = "Attendance No.";
+            this.txtSeries.SelectedText = "";
+            this.txtSeries.Size = new System.Drawing.Size(334, 36);
+            this.txtSeries.TabIndex = 58;
+            this.txtSeries.TextChanged += new System.EventHandler(this.txtSeries_TextChanged);
             // 
             // txtDateCreated
             // 
@@ -372,30 +353,6 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // txtSeries
-            // 
-            this.txtSeries.BorderRadius = 8;
-            this.txtSeries.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSeries.DefaultText = "";
-            this.txtSeries.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSeries.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSeries.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSeries.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSeries.Enabled = false;
-            this.txtSeries.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSeries.Font = new System.Drawing.Font("Poppins", 9F);
-            this.txtSeries.ForeColor = System.Drawing.Color.Black;
-            this.txtSeries.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSeries.Location = new System.Drawing.Point(63, 60);
-            this.txtSeries.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtSeries.Name = "txtSeries";
-            this.txtSeries.PasswordChar = '\0';
-            this.txtSeries.PlaceholderText = "Series No.";
-            this.txtSeries.SelectedText = "";
-            this.txtSeries.Size = new System.Drawing.Size(274, 21);
-            this.txtSeries.TabIndex = 58;
-            this.txtSeries.Visible = false;
-            // 
             // frmSaveAttendance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -410,7 +367,6 @@
             this.Text = "frmSaveAttendance";
             this.Load += new System.EventHandler(this.frmSaveAttendance_Load);
             this.guna2GradientPanel1.ResumeLayout(false);
-            this.guna2GradientPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -418,9 +374,7 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private Guna.UI2.WinForms.Guna2ComboBox txtAttendanceBatch;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
-        private Guna.UI2.WinForms.Guna2CheckBox isNewBatch;
         private Guna.UI2.WinForms.Guna2ComboBox txtPeriod;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;

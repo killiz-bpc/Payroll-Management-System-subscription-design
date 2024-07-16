@@ -1,6 +1,6 @@
 ﻿namespace Payroll_Management_System.Forms.Menu_Form.Attendance
 {
-    partial class frmCreateAttendance
+    partial class frmEditAttendance
     {
         /// <summary>
         /// Required designer variable.
@@ -28,18 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditAttendance));
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.btnBack = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.labelAttendanceDetails = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.dgvAttendance = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.guna2HtmlLabel16 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.labelAttendance = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.isRemarks = new Guna.UI2.WinForms.Guna2CheckBox();
             this.txtRemarks = new Guna.UI2.WinForms.Guna2TextBox();
@@ -83,17 +82,14 @@
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.txtEmpID = new Guna.UI2.WinForms.Guna2TextBox();
+            this.dgvAttendance = new Guna.UI2.WinForms.Guna2DataGridView();
             this.department = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emp_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.employee_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.over_time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.overtime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.night_premium = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.special_holiday = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.legal_holiday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.restday_duty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rest_day = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vacation_leave = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sick_leave = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.absences = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -102,9 +98,9 @@
             this.remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAttendance)).BeginInit();
             this.guna2GradientPanel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAttendance)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
@@ -116,8 +112,7 @@
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(1145, 845);
-            this.guna2GradientPanel1.TabIndex = 11;
-            this.guna2GradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel1_Paint);
+            this.guna2GradientPanel1.TabIndex = 12;
             // 
             // btnBack
             // 
@@ -139,7 +134,6 @@
             this.btnBack.Text = "< Back";
             this.btnBack.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnBack.UseTransparentBackground = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // guna2GradientPanel3
             // 
@@ -147,138 +141,48 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2GradientPanel3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.guna2GradientPanel3.Controls.Add(this.labelAttendanceDetails);
             this.guna2GradientPanel3.Controls.Add(this.dgvAttendance);
+            this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel16);
             this.guna2GradientPanel3.Location = new System.Drawing.Point(346, 38);
             this.guna2GradientPanel3.Name = "guna2GradientPanel3";
             this.guna2GradientPanel3.Size = new System.Drawing.Size(787, 795);
             this.guna2GradientPanel3.TabIndex = 11;
             // 
-            // labelAttendanceDetails
+            // guna2HtmlLabel16
             // 
-            this.labelAttendanceDetails.AutoSize = false;
-            this.labelAttendanceDetails.BackColor = System.Drawing.Color.Transparent;
-            this.labelAttendanceDetails.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.labelAttendanceDetails.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAttendanceDetails.ForeColor = System.Drawing.Color.Black;
-            this.labelAttendanceDetails.Location = new System.Drawing.Point(10, 11);
-            this.labelAttendanceDetails.Name = "labelAttendanceDetails";
-            this.labelAttendanceDetails.Size = new System.Drawing.Size(641, 27);
-            this.labelAttendanceDetails.TabIndex = 34;
-            this.labelAttendanceDetails.Text = "Attendance Details";
-            // 
-            // dgvAttendance
-            // 
-            this.dgvAttendance.AllowUserToAddRows = false;
-            this.dgvAttendance.AllowUserToDeleteRows = false;
-            this.dgvAttendance.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Poppins Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvAttendance.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvAttendance.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvAttendance.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAttendance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvAttendance.ColumnHeadersHeight = 30;
-            this.dgvAttendance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvAttendance.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.department,
-            this.emp_id,
-            this.employee_name,
-            this.over_time,
-            this.night_premium,
-            this.special_holiday,
-            this.legal_holiday,
-            this.restday_duty,
-            this.vacation_leave,
-            this.sick_leave,
-            this.absences,
-            this.lates,
-            this.under_time,
-            this.remarks});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAttendance.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvAttendance.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvAttendance.Location = new System.Drawing.Point(10, 53);
-            this.dgvAttendance.Name = "dgvAttendance";
-            this.dgvAttendance.ReadOnly = true;
-            this.dgvAttendance.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAttendance.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvAttendance.RowHeadersVisible = false;
-            this.dgvAttendance.RowTemplate.Height = 40;
-            this.dgvAttendance.Size = new System.Drawing.Size(763, 723);
-            this.dgvAttendance.TabIndex = 1;
-            this.dgvAttendance.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvAttendance.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Poppins Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvAttendance.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.dgvAttendance.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvAttendance.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvAttendance.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dgvAttendance.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvAttendance.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.White;
-            this.dgvAttendance.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvAttendance.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Poppins Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvAttendance.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvAttendance.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvAttendance.ThemeStyle.HeaderStyle.Height = 30;
-            this.dgvAttendance.ThemeStyle.ReadOnly = true;
-            this.dgvAttendance.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvAttendance.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvAttendance.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Poppins Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvAttendance.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvAttendance.ThemeStyle.RowsStyle.Height = 40;
-            this.dgvAttendance.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvAttendance.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvAttendance.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAttendance_CellClick);
+            this.guna2HtmlLabel16.AutoSize = false;
+            this.guna2HtmlLabel16.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.guna2HtmlLabel16.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel16.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel16.Location = new System.Drawing.Point(10, 5);
+            this.guna2HtmlLabel16.Name = "guna2HtmlLabel16";
+            this.guna2HtmlLabel16.Size = new System.Drawing.Size(189, 27);
+            this.guna2HtmlLabel16.TabIndex = 34;
+            this.guna2HtmlLabel16.Text = "Attendance Details";
             // 
             // guna2GradientPanel2
             // 
             this.guna2GradientPanel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.guna2GradientPanel2.Controls.Add(this.txtEmpID);
-            this.guna2GradientPanel2.Controls.Add(this.labelAttendance);
+            this.guna2GradientPanel2.Controls.Add(this.guna2HtmlLabel1);
             this.guna2GradientPanel2.Controls.Add(this.guna2Panel1);
             this.guna2GradientPanel2.Location = new System.Drawing.Point(12, 38);
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
             this.guna2GradientPanel2.Size = new System.Drawing.Size(315, 792);
             this.guna2GradientPanel2.TabIndex = 10;
-            this.guna2GradientPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel2_Paint);
             // 
-            // labelAttendance
+            // guna2HtmlLabel1
             // 
-            this.labelAttendance.AutoSize = false;
-            this.labelAttendance.BackColor = System.Drawing.Color.Transparent;
-            this.labelAttendance.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.labelAttendance.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAttendance.ForeColor = System.Drawing.Color.Black;
-            this.labelAttendance.Location = new System.Drawing.Point(10, 11);
-            this.labelAttendance.Name = "labelAttendance";
-            this.labelAttendance.Size = new System.Drawing.Size(189, 27);
-            this.labelAttendance.TabIndex = 33;
-            this.labelAttendance.Text = "Create Attendance";
+            this.guna2HtmlLabel1.AutoSize = false;
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(10, 11);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(189, 27);
+            this.guna2HtmlLabel1.TabIndex = 33;
+            this.guna2HtmlLabel1.Text = "Edit Attendance";
             // 
             // guna2Panel1
             // 
@@ -347,7 +251,6 @@
             this.isRemarks.UncheckedState.BorderRadius = 0;
             this.isRemarks.UncheckedState.BorderThickness = 0;
             this.isRemarks.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.isRemarks.CheckedChanged += new System.EventHandler(this.isRemarks_CheckedChanged);
             // 
             // txtRemarks
             // 
@@ -391,7 +294,6 @@
             this.btnUpdate.Size = new System.Drawing.Size(126, 34);
             this.btnUpdate.TabIndex = 68;
             this.btnUpdate.Text = "&Update";
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
@@ -412,7 +314,6 @@
             this.btnDelete.Size = new System.Drawing.Size(126, 34);
             this.btnDelete.TabIndex = 67;
             this.btnDelete.Text = "&Delete";
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnSave
             // 
@@ -433,7 +334,6 @@
             this.btnSave.Size = new System.Drawing.Size(263, 34);
             this.btnSave.TabIndex = 17;
             this.btnSave.Text = "&Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClear
             // 
@@ -454,7 +354,6 @@
             this.btnClear.Size = new System.Drawing.Size(126, 34);
             this.btnClear.TabIndex = 66;
             this.btnClear.Text = "&Clear";
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // isUndertime
             // 
@@ -472,7 +371,6 @@
             this.isUndertime.UncheckedState.BorderRadius = 0;
             this.isUndertime.UncheckedState.BorderThickness = 0;
             this.isUndertime.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.isUndertime.CheckedChanged += new System.EventHandler(this.isUndertime_CheckedChanged);
             // 
             // txtUndertime
             // 
@@ -495,7 +393,6 @@
             this.txtUndertime.SelectedText = "";
             this.txtUndertime.Size = new System.Drawing.Size(128, 41);
             this.txtUndertime.TabIndex = 63;
-            this.txtUndertime.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
             // 
             // guna2HtmlLabel9
             // 
@@ -525,7 +422,6 @@
             this.isRestDay.UncheckedState.BorderRadius = 0;
             this.isRestDay.UncheckedState.BorderThickness = 0;
             this.isRestDay.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.isRestDay.CheckedChanged += new System.EventHandler(this.isRestDay_CheckedChanged);
             // 
             // btnGenerate
             // 
@@ -546,7 +442,6 @@
             this.btnGenerate.Size = new System.Drawing.Size(126, 34);
             this.btnGenerate.TabIndex = 15;
             this.btnGenerate.Text = "&Add Data";
-            this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
             // 
             // txtRestDay
             // 
@@ -569,7 +464,6 @@
             this.txtRestDay.SelectedText = "";
             this.txtRestDay.Size = new System.Drawing.Size(126, 41);
             this.txtRestDay.TabIndex = 60;
-            this.txtRestDay.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
             // 
             // guna2HtmlLabel12
             // 
@@ -599,29 +493,24 @@
             this.isLate.UncheckedState.BorderRadius = 0;
             this.isLate.UncheckedState.BorderThickness = 0;
             this.isLate.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.isLate.CheckedChanged += new System.EventHandler(this.isLate_CheckedChanged);
             // 
             // txtEmployeeName
             // 
             this.txtEmployeeName.BackColor = System.Drawing.Color.Transparent;
             this.txtEmployeeName.BorderRadius = 10;
             this.txtEmployeeName.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.txtEmployeeName.DropDownHeight = 250;
             this.txtEmployeeName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtEmployeeName.FocusedColor = System.Drawing.Color.Empty;
             this.txtEmployeeName.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmployeeName.ForeColor = System.Drawing.Color.Black;
-            this.txtEmployeeName.IntegralHeight = false;
             this.txtEmployeeName.ItemHeight = 30;
             this.txtEmployeeName.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
             this.txtEmployeeName.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
             this.txtEmployeeName.Location = new System.Drawing.Point(3, 99);
-            this.txtEmployeeName.MaxDropDownItems = 10;
             this.txtEmployeeName.Name = "txtEmployeeName";
             this.txtEmployeeName.Size = new System.Drawing.Size(284, 36);
             this.txtEmployeeName.Sorted = true;
             this.txtEmployeeName.TabIndex = 19;
-            this.txtEmployeeName.SelectedIndexChanged += new System.EventHandler(this.txtEmployeeName_SelectedIndexChanged);
             // 
             // txtDepartment
             // 
@@ -640,7 +529,6 @@
             this.txtDepartment.Size = new System.Drawing.Size(282, 36);
             this.txtDepartment.Sorted = true;
             this.txtDepartment.TabIndex = 18;
-            this.txtDepartment.SelectedIndexChanged += new System.EventHandler(this.txtDepartment_SelectedIndexChanged);
             // 
             // txtLates
             // 
@@ -663,7 +551,6 @@
             this.txtLates.SelectedText = "";
             this.txtLates.Size = new System.Drawing.Size(126, 41);
             this.txtLates.TabIndex = 57;
-            this.txtLates.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
             // 
             // guna2HtmlLabel13
             // 
@@ -705,7 +592,6 @@
             this.isLegal.UncheckedState.BorderRadius = 0;
             this.isLegal.UncheckedState.BorderThickness = 0;
             this.isLegal.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.isLegal.CheckedChanged += new System.EventHandler(this.isLegal_CheckedChanged);
             // 
             // txtLegalHoli
             // 
@@ -728,7 +614,6 @@
             this.txtLegalHoli.SelectedText = "";
             this.txtLegalHoli.Size = new System.Drawing.Size(126, 41);
             this.txtLegalHoli.TabIndex = 54;
-            this.txtLegalHoli.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
             // 
             // guna2HtmlLabel14
             // 
@@ -758,7 +643,6 @@
             this.isAbsences.UncheckedState.BorderRadius = 0;
             this.isAbsences.UncheckedState.BorderThickness = 0;
             this.isAbsences.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.isAbsences.CheckedChanged += new System.EventHandler(this.isAbsences_CheckedChanged);
             // 
             // txtAbsences
             // 
@@ -781,7 +665,6 @@
             this.txtAbsences.SelectedText = "";
             this.txtAbsences.Size = new System.Drawing.Size(126, 41);
             this.txtAbsences.TabIndex = 51;
-            this.txtAbsences.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
             // 
             // guna2HtmlLabel7
             // 
@@ -811,7 +694,6 @@
             this.isSpecial.UncheckedState.BorderRadius = 0;
             this.isSpecial.UncheckedState.BorderThickness = 0;
             this.isSpecial.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.isSpecial.CheckedChanged += new System.EventHandler(this.isSpecial_CheckedChanged);
             // 
             // txtSpecialHoli
             // 
@@ -834,7 +716,6 @@
             this.txtSpecialHoli.SelectedText = "";
             this.txtSpecialHoli.Size = new System.Drawing.Size(126, 41);
             this.txtSpecialHoli.TabIndex = 48;
-            this.txtSpecialHoli.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
             // 
             // guna2HtmlLabel8
             // 
@@ -864,7 +745,6 @@
             this.isSick.UncheckedState.BorderRadius = 0;
             this.isSick.UncheckedState.BorderThickness = 0;
             this.isSick.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.isSick.CheckedChanged += new System.EventHandler(this.isSick_CheckedChanged);
             // 
             // txtSickL
             // 
@@ -887,7 +767,6 @@
             this.txtSickL.SelectedText = "";
             this.txtSickL.Size = new System.Drawing.Size(126, 41);
             this.txtSickL.TabIndex = 45;
-            this.txtSickL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
             // 
             // guna2HtmlLabel11
             // 
@@ -917,7 +796,6 @@
             this.isVacation.UncheckedState.BorderRadius = 0;
             this.isVacation.UncheckedState.BorderThickness = 0;
             this.isVacation.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.isVacation.CheckedChanged += new System.EventHandler(this.isVacation_CheckedChanged);
             // 
             // txtVacationL
             // 
@@ -940,7 +818,6 @@
             this.txtVacationL.SelectedText = "";
             this.txtVacationL.Size = new System.Drawing.Size(126, 41);
             this.txtVacationL.TabIndex = 42;
-            this.txtVacationL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
             // 
             // guna2HtmlLabel10
             // 
@@ -970,7 +847,6 @@
             this.isNightPrem.UncheckedState.BorderRadius = 0;
             this.isNightPrem.UncheckedState.BorderThickness = 0;
             this.isNightPrem.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.isNightPrem.CheckedChanged += new System.EventHandler(this.isNightPrem_CheckedChanged);
             // 
             // txtNightprem
             // 
@@ -993,7 +869,6 @@
             this.txtNightprem.SelectedText = "";
             this.txtNightprem.Size = new System.Drawing.Size(126, 41);
             this.txtNightprem.TabIndex = 30;
-            this.txtNightprem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
             // 
             // guna2HtmlLabel6
             // 
@@ -1023,7 +898,6 @@
             this.isOvertime.UncheckedState.BorderRadius = 0;
             this.isOvertime.UncheckedState.BorderThickness = 0;
             this.isOvertime.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.isOvertime.CheckedChanged += new System.EventHandler(this.isOvertime_CheckedChanged);
             // 
             // txtOvertime
             // 
@@ -1046,7 +920,6 @@
             this.txtOvertime.SelectedText = "";
             this.txtOvertime.Size = new System.Drawing.Size(126, 41);
             this.txtOvertime.TabIndex = 21;
-            this.txtOvertime.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
             // 
             // guna2HtmlLabel5
             // 
@@ -1084,36 +957,91 @@
             this.guna2HtmlLabel3.TabIndex = 70;
             this.guna2HtmlLabel3.Text = "Remarks";
             // 
-            // guna2Elipse1
+            // dgvAttendance
             // 
-            this.guna2Elipse1.TargetControl = this.guna2GradientPanel2;
-            // 
-            // guna2Elipse2
-            // 
-            this.guna2Elipse2.TargetControl = this.guna2GradientPanel3;
-            // 
-            // txtEmpID
-            // 
-            this.txtEmpID.BorderRadius = 8;
-            this.txtEmpID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEmpID.DefaultText = "";
-            this.txtEmpID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtEmpID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtEmpID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEmpID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEmpID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmpID.Font = new System.Drawing.Font("Poppins", 9F);
-            this.txtEmpID.ForeColor = System.Drawing.Color.Black;
-            this.txtEmpID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmpID.Location = new System.Drawing.Point(195, 11);
-            this.txtEmpID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtEmpID.Name = "txtEmpID";
-            this.txtEmpID.PasswordChar = '\0';
-            this.txtEmpID.PlaceholderText = "Employee ID";
-            this.txtEmpID.SelectedText = "";
-            this.txtEmpID.Size = new System.Drawing.Size(102, 26);
-            this.txtEmpID.TabIndex = 72;
-            this.txtEmpID.Visible = false;
+            this.dgvAttendance.AllowUserToAddRows = false;
+            this.dgvAttendance.AllowUserToDeleteRows = false;
+            this.dgvAttendance.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Poppins Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvAttendance.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvAttendance.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvAttendance.BackgroundColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAttendance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvAttendance.ColumnHeadersHeight = 30;
+            this.dgvAttendance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvAttendance.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.department,
+            this.employee_name,
+            this.overtime,
+            this.night_premium,
+            this.special_holiday,
+            this.legal_holiday,
+            this.rest_day,
+            this.vacation_leave,
+            this.sick_leave,
+            this.absences,
+            this.lates,
+            this.under_time,
+            this.remarks});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAttendance.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvAttendance.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvAttendance.Location = new System.Drawing.Point(12, 38);
+            this.dgvAttendance.Name = "dgvAttendance";
+            this.dgvAttendance.ReadOnly = true;
+            this.dgvAttendance.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAttendance.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvAttendance.RowHeadersVisible = false;
+            this.dgvAttendance.RowTemplate.Height = 40;
+            this.dgvAttendance.Size = new System.Drawing.Size(763, 728);
+            this.dgvAttendance.TabIndex = 35;
+            this.dgvAttendance.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvAttendance.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Poppins Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvAttendance.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.dgvAttendance.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvAttendance.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvAttendance.ThemeStyle.BackColor = System.Drawing.Color.Silver;
+            this.dgvAttendance.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvAttendance.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.White;
+            this.dgvAttendance.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvAttendance.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Poppins Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvAttendance.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvAttendance.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvAttendance.ThemeStyle.HeaderStyle.Height = 30;
+            this.dgvAttendance.ThemeStyle.ReadOnly = true;
+            this.dgvAttendance.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvAttendance.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvAttendance.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Poppins Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvAttendance.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvAttendance.ThemeStyle.RowsStyle.Height = 40;
+            this.dgvAttendance.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvAttendance.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // department
             // 
@@ -1123,15 +1051,6 @@
             this.department.Name = "department";
             this.department.ReadOnly = true;
             this.department.Width = 115;
-            // 
-            // emp_id
-            // 
-            this.emp_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.emp_id.DataPropertyName = "emp_id";
-            this.emp_id.HeaderText = "Employee ID";
-            this.emp_id.Name = "emp_id";
-            this.emp_id.ReadOnly = true;
-            this.emp_id.Width = 118;
             // 
             // employee_name
             // 
@@ -1144,14 +1063,14 @@
             this.employee_name.ReadOnly = true;
             this.employee_name.Width = 144;
             // 
-            // over_time
+            // overtime
             // 
-            this.over_time.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.over_time.DataPropertyName = "over_time";
-            this.over_time.HeaderText = "Overtime";
-            this.over_time.Name = "over_time";
-            this.over_time.ReadOnly = true;
-            this.over_time.Width = 95;
+            this.overtime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.overtime.DataPropertyName = "overtime";
+            this.overtime.HeaderText = "Overtime";
+            this.overtime.Name = "overtime";
+            this.overtime.ReadOnly = true;
+            this.overtime.Width = 95;
             // 
             // night_premium
             // 
@@ -1180,14 +1099,14 @@
             this.legal_holiday.ReadOnly = true;
             this.legal_holiday.Width = 126;
             // 
-            // restday_duty
+            // rest_day
             // 
-            this.restday_duty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.restday_duty.DataPropertyName = "restday_duty";
-            this.restday_duty.HeaderText = "Rest Day Duty";
-            this.restday_duty.Name = "restday_duty";
-            this.restday_duty.ReadOnly = true;
-            this.restday_duty.Width = 131;
+            this.rest_day.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.rest_day.DataPropertyName = "rest_day";
+            this.rest_day.HeaderText = "Rest Day Duty";
+            this.rest_day.Name = "rest_day";
+            this.rest_day.ReadOnly = true;
+            this.rest_day.Width = 131;
             // 
             // vacation_leave
             // 
@@ -1243,23 +1162,23 @@
             this.remarks.ReadOnly = true;
             this.remarks.Width = 93;
             // 
-            // frmCreateAttendance
+            // frmEditAttendance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1145, 845);
             this.Controls.Add(this.guna2GradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmCreateAttendance";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "frmCreateAttendance";
-            this.Load += new System.EventHandler(this.frmCreateAttendance_Load);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "frmEditAttendance";
+            this.Text = "frmEditAttendance";
+            this.Load += new System.EventHandler(this.frmEditAttendance_Load);
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAttendance)).EndInit();
             this.guna2GradientPanel2.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAttendance)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1267,21 +1186,34 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
+        private Guna.UI2.WinForms.Guna2Button btnBack;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvAttendance;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel16;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
-        private Guna.UI2.WinForms.Guna2ComboBox txtDepartment;
-        private Guna.UI2.WinForms.Guna2Button btnGenerate;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2ComboBox txtEmployeeName;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
-        private Guna.UI2.WinForms.Guna2TextBox txtOvertime;
-        private Guna.UI2.WinForms.Guna2CheckBox isOvertime;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2CheckBox isNightPrem;
-        private Guna.UI2.WinForms.Guna2TextBox txtNightprem;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
+        private Guna.UI2.WinForms.Guna2CheckBox isRemarks;
+        private Guna.UI2.WinForms.Guna2TextBox txtRemarks;
+        private Guna.UI2.WinForms.Guna2Button btnUpdate;
+        private Guna.UI2.WinForms.Guna2Button btnDelete;
+        private Guna.UI2.WinForms.Guna2Button btnSave;
+        private Guna.UI2.WinForms.Guna2Button btnClear;
+        private Guna.UI2.WinForms.Guna2CheckBox isUndertime;
+        private Guna.UI2.WinForms.Guna2TextBox txtUndertime;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
+        private Guna.UI2.WinForms.Guna2CheckBox isRestDay;
+        private Guna.UI2.WinForms.Guna2Button btnGenerate;
+        private Guna.UI2.WinForms.Guna2TextBox txtRestDay;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
+        private Guna.UI2.WinForms.Guna2CheckBox isLate;
+        private Guna.UI2.WinForms.Guna2ComboBox txtEmployeeName;
+        private Guna.UI2.WinForms.Guna2ComboBox txtDepartment;
+        private Guna.UI2.WinForms.Guna2TextBox txtLates;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel13;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
+        private Guna.UI2.WinForms.Guna2CheckBox isLegal;
+        private Guna.UI2.WinForms.Guna2TextBox txtLegalHoli;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel14;
         private Guna.UI2.WinForms.Guna2CheckBox isAbsences;
         private Guna.UI2.WinForms.Guna2TextBox txtAbsences;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
@@ -1294,39 +1226,22 @@
         private Guna.UI2.WinForms.Guna2CheckBox isVacation;
         private Guna.UI2.WinForms.Guna2TextBox txtVacationL;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
-        private Guna.UI2.WinForms.Guna2CheckBox isUndertime;
-        private Guna.UI2.WinForms.Guna2TextBox txtUndertime;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
-        private Guna.UI2.WinForms.Guna2CheckBox isRestDay;
-        private Guna.UI2.WinForms.Guna2TextBox txtRestDay;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
-        private Guna.UI2.WinForms.Guna2CheckBox isLate;
-        private Guna.UI2.WinForms.Guna2TextBox txtLates;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel13;
-        private Guna.UI2.WinForms.Guna2CheckBox isLegal;
-        private Guna.UI2.WinForms.Guna2TextBox txtLegalHoli;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel14;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
-        private Guna.UI2.WinForms.Guna2Button btnBack;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labelAttendance;
-        private Guna.UI2.WinForms.Guna2Button btnSave;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labelAttendanceDetails;
-        private Guna.UI2.WinForms.Guna2Button btnClear;
-        private Guna.UI2.WinForms.Guna2Button btnDelete;
-        private Guna.UI2.WinForms.Guna2Button btnUpdate;
-        private Guna.UI2.WinForms.Guna2TextBox txtRemarks;
-        private Guna.UI2.WinForms.Guna2CheckBox isRemarks;
+        private Guna.UI2.WinForms.Guna2CheckBox isNightPrem;
+        private Guna.UI2.WinForms.Guna2TextBox txtNightprem;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
+        private Guna.UI2.WinForms.Guna2CheckBox isOvertime;
+        private Guna.UI2.WinForms.Guna2TextBox txtOvertime;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
-        private Guna.UI2.WinForms.Guna2TextBox txtEmpID;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvAttendance;
         private System.Windows.Forms.DataGridViewTextBoxColumn department;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emp_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn employee_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn over_time;
+        private System.Windows.Forms.DataGridViewTextBoxColumn overtime;
         private System.Windows.Forms.DataGridViewTextBoxColumn night_premium;
         private System.Windows.Forms.DataGridViewTextBoxColumn special_holiday;
         private System.Windows.Forms.DataGridViewTextBoxColumn legal_holiday;
-        private System.Windows.Forms.DataGridViewTextBoxColumn restday_duty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rest_day;
         private System.Windows.Forms.DataGridViewTextBoxColumn vacation_leave;
         private System.Windows.Forms.DataGridViewTextBoxColumn sick_leave;
         private System.Windows.Forms.DataGridViewTextBoxColumn absences;

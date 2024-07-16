@@ -19,69 +19,30 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
     public partial class frmSaveAttendance : Form
     {
         string connString = frmLogin.connString;
-        public frmSaveAttendance()
+
+        public DataGridView _dgvAttendance;
+        public frmSaveAttendance(DataGridView dgvAttendance)
         {
             InitializeComponent();
+            _dgvAttendance = dgvAttendance;
             timer1.Start();
         }
 
         public void load_default()
         {
-
-            txtDateFrom.Clear();
-            txtDateTo.Clear();
             txtPreparedBy.Text = GetData.GetEmployeeName(frmLogin.lastName, frmLogin.firstName, "");
-            txtPeriod.Enabled = false;
         }
 
-        public void load_attendance_batch_no()
-        {
-            using (MySqlConnection conn = new MySqlConnection(connString))
-            {
-                txtAttendanceBatch.Items.Clear();
-                conn.Open();
-                string query = "SELECT attendance_batch_no from attendance_monitoring";
-                MySqlCommand cmd = new MySqlCommand(query, conn);
-
-                MySqlDataReader sdr;
-
-                sdr=cmd.ExecuteReader();
-                while (sdr.Read())
-                {
-                   
-                    string attendance_batch_no = sdr.GetString("attendance_batch_no");
-                    txtAttendanceBatch.Items.Add(attendance_batch_no);
-                }
-
-                conn.Dispose();
-            }
-        }
+        
         private void frmSaveAttendance_Load(object sender, EventArgs e)
         {
+            series_number();
             load_default();
-
-            load_attendance_batch_no();
         }
 
         private void isNewBatch_CheckedChanged(object sender, EventArgs e)
         {
-            load_default();
-            if (isNewBatch.Checked == true)
-            {
-                
-                txtAttendanceBatch.SelectedItem = null;
-                txtAttendanceBatch.Enabled = false;
 
-                txtPeriod.Enabled=true;
-                txtPeriod.Focus();
-            }
-            else
-            {
-                txtAttendanceBatch.Enabled = true;
-
-                txtPeriod.SelectedItem = null;
-                txtPeriod.Enabled = false;
-            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -174,12 +135,33 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
             using (MySqlConnection conn = new MySqlConnection(connString))
             {
                 conn.Open();
-                query= "INSERT INTO attendance_monitoring (attendance_batch_no, date_from, date_to, status) VALUES (@attendance_batch_no, @date_from, @date_to, 'Prepared')";
-                MySqlCommand cmd = new MySqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@attendance_batch_no", txtSeries.Text);
-                cmd.Parameters.AddWithValue("@date_from", txtDateFrom.Text);
-                cmd.Parameters.AddWithValue("@date_to", txtDateTo.Text);
-                cmd.ExecuteNonQuery();
+                foreach (DataGridViewRow row in _dgvAttendance.Rows)
+                {
+                    
+                    query= "INSERT INTO attendance_monitoring (attendance_batch_no, date_from, date_to, status,  department, employee_name, emp_id, over_time, night_premium, special_holiday, legal_holiday, restday_duty, vacation_leave, sick_leave, absences, lates, under_time, remarks) " +
+                                                      "VALUES (@attendance_batch_no, @date_from, @date_to, 'Prepared',  @department, @employee_name, @emp_id, @over_time, @night_premium, @special_holiday, @legal_holiday, @restday_duty, @vacation_leave, @sick_leave, @absences, @lates, @under_time, @remarks)";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@attendance_batch_no", txtSeries.Text);
+                    cmd.Parameters.AddWithValue("@date_from", txtDateFrom.Text);
+                    cmd.Parameters.AddWithValue("@date_to", txtDateTo.Text);
+
+                    cmd.Parameters.AddWithValue("@department", row.Cells["department"].Value.ToString());
+                    cmd.Parameters.AddWithValue("@employee_name", row.Cells["employee_name"].Value.ToString());
+                    cmd.Parameters.AddWithValue("@emp_id", row.Cells["emp_id"].Value.ToString());
+                    cmd.Parameters.AddWithValue("@over_time", row.Cells["over_time"].Value.ToString());
+                    cmd.Parameters.AddWithValue("@night_premium", row.Cells["night_premium"].Value.ToString());
+                    cmd.Parameters.AddWithValue("@special_holiday", row.Cells["special_holiday"].Value.ToString());
+                    cmd.Parameters.AddWithValue("@legal_holiday", row.Cells["legal_holiday"].Value.ToString());
+                    cmd.Parameters.AddWithValue("@restday_duty", row.Cells["restday_duty"].Value.ToString());
+                    cmd.Parameters.AddWithValue("@vacation_leave", row.Cells["vacation_leave"].Value.ToString());
+                    cmd.Parameters.AddWithValue("@sick_leave", row.Cells["sick_leave"].Value.ToString());
+                    cmd.Parameters.AddWithValue("@absences", row.Cells["absences"].Value.ToString());
+                    cmd.Parameters.AddWithValue("@lates", row.Cells["lates"].Value.ToString());
+                    cmd.Parameters.AddWithValue("@under_time", row.Cells["under_time"].Value.ToString());
+                    cmd.Parameters.AddWithValue("@remarks", row.Cells["remarks"].Value.ToString());
+
+                    cmd.ExecuteNonQuery();
+                }
 
 
                 update_series();
@@ -193,8 +175,8 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
                     frmOverviewAttendance frmOverviewAttendance = new frmOverviewAttendance();
                     frmHome.DisplayForm(frmOverviewAttendance, frmHome.mainPanel);
                 }
-                
-                
+
+                conn.Dispose();
             }
            
 
@@ -225,6 +207,11 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
 
                 conn.Dispose();
             }
+        }
+
+        private void txtSeries_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

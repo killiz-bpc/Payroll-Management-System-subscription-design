@@ -12,6 +12,7 @@ using MySql.Data.MySqlClient;
 using Mysqlx.Session;
 using MySqlX.XDevAPI.Common;
 using Org.BouncyCastle.Asn1;
+using Org.BouncyCastle.Bcpg.OpenPgp;
 using Org.BouncyCastle.Crypto.Utilities;
 using Payroll_Management_System.Forms.Menu_Form;
 using Payroll_Management_System.Forms.Menu_Form.Employees;
@@ -77,12 +78,17 @@ namespace Payroll_Management_System.Connections
 
         public static string GetEmployeeName(string last_name, string first_name, string middle_name)
         {
-            if (middle_name  == null)
+            string ini;
+            if (string.IsNullOrWhiteSpace(middle_name))
             {
-                middle_name = "";
+                ini = "";
+            }
+            else
+            {
+                ini = middle_name.Substring(0, 1) + ".";
             }
 
-            return last_name + ", " + first_name + " "+middle_name;
+            return last_name + ", " + first_name + " "+ini;
         }
        
 
