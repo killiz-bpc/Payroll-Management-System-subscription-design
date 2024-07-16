@@ -59,7 +59,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
             using (MySqlConnection conn = new MySqlConnection(connString))
             {
                 conn.Open();
-                string query = "SELECT department, employee_name, emp_id, over_time, night_premium, special_holiday, legal_holiday, restday_duty, vacation_leave, sick_leave, absences, lates, under_time, remarks FROM attendance_monitoring WHERE attendance_batch_no=@attendance_batch_no";
+                string query = "SELECT department, emp_id, employee_name, absences, lates, under_time, night_premium, over_time, restday_duty, vacation_leave, sick_leave, legal_holiday, special_holiday, maternity_leave, paternity_leave, bereavement_leave, emergency_leave, magnacarta_leave, remarks FROM attendance_monitoring WHERE attendance_batch_no=@attendance_batch_no";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@attendance_batch_no",attendance_batch_no.ToString());
                 cmd.ExecuteNonQuery();
@@ -77,6 +77,8 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
         private void frmCreateAttendance_Load(object sender, EventArgs e)
         {
 
+
+
             if (attendance_batch_no != null)
             {
                 isNewAttendance = false;
@@ -84,6 +86,8 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
                 string label_string = attendance_batch_no;
                 labelAttendanceDetails.Text = "Attendance Details: "+label_string;
                 load_data();
+
+                btnSave.Visible=false;
             }
 
             // load department
@@ -107,7 +111,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
             using (MySqlConnection conn = new MySqlConnection(connString))
             {
                 conn.Open();
-                string query = "SELECT emp_id, last_name, first_name, middle_name FROM employee_information where department=@department";
+                string query = "SELECT emp_id, employee_name FROM employee_information where department=@department";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@department", txtDepartment.Text);
 
@@ -115,12 +119,8 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
                 while (reader.Read())
                 {
 
-                    string first_name = reader.GetString("first_name");
-                    string last_name = reader.GetString("last_name");
-                    string middle_name = reader.GetString("middle_name");
-
-                    string full_name = GetData.GetEmployeeName(last_name, first_name, middle_name);
-                    txtEmployeeName.Items.Add(full_name);
+                    string employee_name = reader.GetString("employee_name");
+                    txtEmployeeName.Items.Add(employee_name);
                     
                 }
                 conn.Dispose();
@@ -131,33 +131,44 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
 
         public void default_textboxes()
         {
-            isOvertime.Checked = false;
-            isNightPrem.Checked = false;
-            isSpecial.Checked = false;
-            isLegal.Checked = false;
-            isRestDay.Checked = false;
-            isVacation.Checked = false;
-            isSick.Checked = false;
             isAbsences.Checked = false;
             isLate.Checked = false;
             isUndertime.Checked = false;
+            isOvertime.Checked = false;
+            isNightPrem.Checked = false;
+            isRestDay.Checked = false;
+            isVacation.Checked = false;
+            isSick.Checked = false;
+            isLegal.Checked = false;
+            isSpecial.Checked = false;
+            isMaternity.Checked = false;
+            isPaternity.Checked = false;
+            isBereavement.Checked = false;
+            isEmergency.Checked = false;
+            isMagnacarta.Checked=false;
             isRemarks.Checked=false;    
 
 
             txtEmployeeName.SelectedItem=null;
             txtEmpID.Clear();
-            txtOvertime.Clear();
-            txtNightprem.Clear();
-            txtSpecialHoli.Clear();
-            txtLegalHoli.Clear();
-            txtSpecialHoli.Clear();
-            txtRestDay.Clear();
-            txtVacationL.Clear();
-            txtSickL.Clear();
             txtAbsences.Clear();
             txtLates.Clear();
             txtUndertime.Clear();
+            txtOvertime.Clear();
+            txtNightprem.Clear();
+            txtRestDay.Clear();
+            txtVacationL.Clear();
+            txtSickL.Clear();
+            txtLegalHoli.Clear();
+            txtSpecialHoli.Clear();
+            txtMaternityL.Clear();
+            txtPaternityL.Clear();
+            txtBereavementL.Clear();
+            txtEmergencyL.Clear();
+            txtMagnaL.Clear();
             txtRemarks.Clear();
+
+
 
             txtOvertime.Enabled=false;
             txtNightprem.Enabled=false;
@@ -171,6 +182,13 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
             txtLates.Enabled=false;
             txtUndertime.Enabled=false;
             txtRemarks.Enabled=false;   
+
+            txtMaternityL.Enabled=false;
+            txtPaternityL.Enabled=false;
+            txtBereavementL.Enabled=false;
+            txtEmergencyL.Enabled=false;
+            txtMagnaL.Enabled=false;
+
 
             dgvAttendance.CurrentCell=null;
         }
@@ -186,9 +204,10 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
             add_employee_id();
             using (MySqlConnection conn = new MySqlConnection(connString))
             {
+                string query;
                 conn.Open();
-                string query= "INSERT INTO attendance_monitoring (attendance_batch_no, date_from, date_to, status,  department, employee_name, emp_id, over_time, night_premium, special_holiday, legal_holiday, restday_duty, vacation_leave, sick_leave, absences, lates, under_time, remarks) " +
-                                                      "VALUES (@attendance_batch_no, @date_from, @date_to, @status,  @department, @employee_name, @emp_id, @over_time, @night_premium, @special_holiday, @legal_holiday, @restday_duty, @vacation_leave, @sick_leave, @absences, @lates, @under_time, @remarks)";
+                query= "INSERT INTO attendance_monitoring (attendance_batch_no, date_from, date_to, status,  department, emp_id, employee_name, absences, lates, under_time, night_premium, over_time, restday_duty, vacation_leave, sick_leave, legal_holiday, special_holiday, maternity_leave, paternity_leave, bereavement_leave, emergency_leave, magnacarta_leave, remarks) VALUES(@attendance_batch_no, @date_from, @date_to, 'Prepared',  @department, @emp_id, @employee_name, @absences, @lates, @under_time, @night_premium, @over_time, @restday_duty, @vacation_leave, @sick_leave, @legal_holiday, @special_holiday, @maternity_leave, @paternity_leave, @bereavement_leave, @emergency_leave, @magnacarta_leave, @remarks)"; 
+                
                 MySqlCommand cmd = new MySqlCommand(query, conn);
 
                 cmd.Parameters.AddWithValue("@attendance_batch_no", attendance_batch_no);
@@ -199,16 +218,22 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
                 cmd.Parameters.AddWithValue("@department", txtDepartment.Text);
                 cmd.Parameters.AddWithValue("@employee_name", txtEmployeeName.Text);
                 cmd.Parameters.AddWithValue("@emp_id", txtEmpID.Text);
-                cmd.Parameters.AddWithValue("@over_time", txtOvertime.Text);
-                cmd.Parameters.AddWithValue("@night_premium", txtNightprem.Text);
-                cmd.Parameters.AddWithValue("@special_holiday", txtSpecialHoli.Text);
-                cmd.Parameters.AddWithValue("@legal_holiday", txtLegalHoli.Text);
-                cmd.Parameters.AddWithValue("@restday_duty", txtRestDay.Text);
-                cmd.Parameters.AddWithValue("@vacation_leave", txtVacationL.Text);
-                cmd.Parameters.AddWithValue("@sick_leave", txtSickL.Text);
                 cmd.Parameters.AddWithValue("@absences", txtAbsences.Text);
                 cmd.Parameters.AddWithValue("@lates", txtLates.Text);
                 cmd.Parameters.AddWithValue("@under_time", txtUndertime.Text);
+                cmd.Parameters.AddWithValue("@over_time", txtOvertime.Text);
+                cmd.Parameters.AddWithValue("@night_premium", txtNightprem.Text);
+                cmd.Parameters.AddWithValue("@restday_duty", txtRestDay.Text);
+                cmd.Parameters.AddWithValue("@vacation_leave", txtVacationL.Text);
+                cmd.Parameters.AddWithValue("@sick_leave", txtSickL.Text);
+                cmd.Parameters.AddWithValue("@legal_holiday", txtLegalHoli.Text);
+                cmd.Parameters.AddWithValue("@special_holiday", txtSpecialHoli.Text);
+                cmd.Parameters.AddWithValue("@maternity_leave", txtMaternityL.Text);
+                cmd.Parameters.AddWithValue("@paternity_leave", txtPaternityL.Text);
+
+                cmd.Parameters.AddWithValue("@bereavement_leave", txtBereavementL.Text);
+                cmd.Parameters.AddWithValue("@emergency_leave", txtEmergencyL.Text);
+                cmd.Parameters.AddWithValue("@magnacarta_leave", txtMagnaL.Text);
                 cmd.Parameters.AddWithValue("@remarks", txtRemarks.Text);
 
                 cmd.ExecuteNonQuery();
@@ -216,8 +241,15 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
                 MessageBox.Show("added");
                 conn.Dispose();
 
+
+
+
                 load_data();
             }
+
+
+
+
         }
 
         public void add_employee_id()
@@ -229,16 +261,15 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
             using (MySqlConnection conn = new MySqlConnection(connString))
             {
                 conn.Open();
-                string query = "SELECT emp_id FROM employee_information where department=@department AND last_name=@last_name AND first_name LIKE @first_name";
+                string query = "SELECT emp_id FROM employee_information where department=@department AND employee_name=@employee_name";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@department", txtDepartment.Text);
-                cmd.Parameters.AddWithValue("@last_name", last_name);
-                cmd.Parameters.AddWithValue("@first_name", "%"+first_name+"%");
+                cmd.Parameters.AddWithValue("@employee_name", txtEmployeeName.Text);
 
                 MySqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    txtEmpID.Text= reader.GetString("emp_id").ToString();  //insert employee ID
+                    txtEmpID.Text= reader.GetInt32("emp_id").ToString();  //insert employee ID
                 }
                 conn.Dispose();
             }
@@ -249,13 +280,36 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
             add_employee_id();
             
             MessageBox.Show("Employee has been added successfully", "Message Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            dgvAttendance.Rows.Add(txtDepartment.Text, txtEmpID.Text, txtEmployeeName.Text, txtOvertime.Text, txtNightprem.Text, txtSpecialHoli.Text, txtLegalHoli.Text, txtRestDay.Text, txtVacationL.Text, txtSickL.Text, txtAbsences.Text, txtLates.Text, txtUndertime.Text, txtRemarks.Text);
-
+            dgvAttendance.Rows.Add(txtDepartment.Text, txtEmpID.Text, txtEmployeeName.Text, txtAbsences.Text, txtLates.Text, txtUndertime.Text, txtOvertime.Text, txtNightprem.Text, txtRestDay.Text, txtVacationL.Text, txtSickL.Text, txtLegalHoli.Text, txtSpecialHoli.Text, txtMaternityL.Text, txtPaternityL.Text, txtBereavementL.Text,  txtEmergencyL.Text, txtMagnaL.Text, txtRemarks.Text);
 
             default_textboxes();
 
         }
-        
+
+        private void CheckAllCheckBoxStates(Panel infoPanel)
+        {
+            // Iterate through all controls in the container
+            foreach (Control control in infoPanel.Controls)
+            {
+                // If the control is a CheckBox
+                if (control is CheckBox checkBox)
+                {
+                    // Process the Checked property
+                    if (!checkBox.Checked)
+                    {
+                        // Do something if the CheckBox is checked
+                        MessageBox.Show($"{checkBox.Name} is checked.");
+                    }
+                    else
+                    {
+                        // Do something if the CheckBox is not checked
+                        MessageBox.Show($"{checkBox.Name} is not checked.");
+                    }
+                }
+
+            }
+        }
+
         private void btnGenerate_Click(object sender, EventArgs e)
         {
             bool isDuplicate = false;
@@ -316,6 +370,14 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
             isLate.Checked = !string.IsNullOrEmpty(txtLates.Text);
             isUndertime.Checked = !string.IsNullOrEmpty(txtUndertime.Text);
             isRemarks.Checked = !string.IsNullOrEmpty(txtRemarks.Text);
+
+            isMaternity.Checked = !string.IsNullOrEmpty(txtMaternityL.Text);
+            isPaternity.Checked = !string.IsNullOrEmpty(txtPaternityL.Text);
+            isBereavement.Checked = !string.IsNullOrEmpty(txtBereavementL.Text);
+            isEmergency.Checked = !string.IsNullOrEmpty(txtEmergencyL.Text);
+            isMagnacarta.Checked = !string.IsNullOrEmpty(txtMagnaL.Text);
+
+
         }
 
         private void dgvAttendance_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -337,6 +399,14 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
                 txtLates.Text = dgvAttendance.CurrentRow.Cells["lates"].Value.ToString();
                 txtUndertime.Text = dgvAttendance.CurrentRow.Cells["under_time"].Value.ToString();
                 txtRemarks.Text = dgvAttendance.CurrentRow.Cells["remarks"].Value.ToString();
+
+                txtMaternityL.Text = dgvAttendance.CurrentRow.Cells["maternity_leave"].Value.ToString();
+                txtPaternityL.Text = dgvAttendance.CurrentRow.Cells["paternity_leave"].Value.ToString();
+                txtBereavementL.Text = dgvAttendance.CurrentRow.Cells["bereavement_leave"].Value.ToString();
+                txtEmergencyL.Text = dgvAttendance.CurrentRow.Cells["emergency_leave"].Value.ToString();
+                txtMagnaL.Text = dgvAttendance.CurrentRow.Cells["magnacarta_leave"].Value.ToString();
+
+
             }
 
             check_tickboxes();
@@ -490,7 +560,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
 
         private void txtOvertime_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
             {
                 e.Handled = true;
             }
@@ -512,9 +582,10 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
             using (MySqlConnection conn = new MySqlConnection(connString))
             {
                 conn.Open();
-                string query = "DELETE FROM employee_information WHERE emp_id=@emp_id";
+                string query = "DELETE FROM attendance_monitoring WHERE emp_id=@emp_id AND attendance_batch_no=@attendance_batch_no";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
 
+                cmd.Parameters.AddWithValue("@attendance_batch_no", attendance_batch_no);
                 cmd.Parameters.AddWithValue("@emp_id", txtEmpID.Text);
                 cmd.ExecuteNonQuery();
 
@@ -568,17 +639,27 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
             {
                 DataGridViewRow selectedRow = dgvAttendance.SelectedRows[0];
 
-                selectedRow.Cells["overtime"].Value = txtOvertime.Text;
+                selectedRow.Cells["over_time"].Value = txtOvertime.Text;
                 selectedRow.Cells["night_premium"].Value = txtNightprem.Text;
                 selectedRow.Cells["special_holiday"].Value = txtSpecialHoli.Text;
                 selectedRow.Cells["legal_holiday"].Value = txtLegalHoli.Text;
-                selectedRow.Cells["rest_day"].Value = txtRestDay.Text;
+                selectedRow.Cells["restday_duty"].Value = txtRestDay.Text;
                 selectedRow.Cells["vacation_leave"].Value = txtVacationL.Text;
                 selectedRow.Cells["sick_leave"].Value = txtSickL.Text;
                 selectedRow.Cells["absences"].Value = txtAbsences.Text;
                 selectedRow.Cells["lates"].Value = txtLates.Text;
                 selectedRow.Cells["under_time"].Value = txtUndertime.Text;
                 selectedRow.Cells["remarks"].Value = txtRemarks.Text;
+
+                selectedRow.Cells["maternity_leave"].Value = txtMaternityL.Text;
+                selectedRow.Cells["paternity_leave"].Value = txtPaternityL.Text;
+                selectedRow.Cells["bereavement_leave"].Value = txtBereavementL.Text;
+                selectedRow.Cells["emergency_leave"].Value = txtEmergencyL.Text;
+                selectedRow.Cells["magnacarta_leave"].Value = txtMagnaL.Text;
+
+
+
+
             }
 
             MessageBox.Show("Data has been updated successfully", "Message Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -588,33 +669,44 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
 
         public void update_existing_data()
         {
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            if (dgvAttendance.SelectedRows.Count>0)
             {
-                conn.Open();
-                string query = "UPDATE attendance_monitoring SET over_time=@over_time, night_premium=@night_premium, special_holiday=@special_holiday, legal_holiday=@legal_holiday, restday_duty=@restday_duty, vacation_leave=@vacation_leave, sick_leave=@sick_leave, absences=@absences, lates=@lates, under_time=@under_time, remarks=@remarks WHERE emp_id=@emp_id AND attendance_batch_no=@attendance_batch_no";
-                MySqlCommand cmd = new MySqlCommand(query, conn);
+                using (MySqlConnection conn = new MySqlConnection(connString))
+                {
+                    conn.Open();
+                    string query = "UPDATE attendance_monitoring SET absences=@absences, lates=@lates, under_time=@under_time, night_premium=@night_premium, over_time=@over_time, restday_duty=@restday_duty, vacation_leave=@vacation_leave, sick_leave=@sick_leave, legal_holiday=@legal_holiday, special_holiday=@special_holiday, maternity_leave=@maternity_leave, paternity_leave=@paternity_leave, bereavement_leave=@bereavement_leave, emergency_leave=@emergency_leave, magnacarta_leave=@magnacarta_leave, remarks=@remarks WHERE emp_id=@emp_id AND attendance_batch_no=@attendance_batch_no";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
 
-                cmd.Parameters.AddWithValue("@emp_id", txtEmpID.Text);
-                cmd.Parameters.AddWithValue("@attendance_batch_no", attendance_batch_no);
-                cmd.Parameters.AddWithValue("@over_time", txtOvertime.Text);
-                cmd.Parameters.AddWithValue("@night_premium", txtNightprem.Text);
-                cmd.Parameters.AddWithValue("@special_holiday", txtSpecialHoli.Text);
-                cmd.Parameters.AddWithValue("@legal_holiday", txtLegalHoli.Text);
-                cmd.Parameters.AddWithValue("@restday_duty", txtRestDay.Text);
-                cmd.Parameters.AddWithValue("@vacation_leave", txtVacationL.Text);
-                cmd.Parameters.AddWithValue("@sick_leave", txtSickL.Text);
-                cmd.Parameters.AddWithValue("@absences", txtAbsences.Text);
-                cmd.Parameters.AddWithValue("@lates", txtLates.Text);
-                cmd.Parameters.AddWithValue("@under_time", txtUndertime.Text);
-                cmd.Parameters.AddWithValue("@remarks", txtRemarks.Text);
+                    cmd.Parameters.AddWithValue("@emp_id", txtEmpID.Text);
+                    cmd.Parameters.AddWithValue("@attendance_batch_no", attendance_batch_no);
 
-                cmd.ExecuteNonQuery();
+                    cmd.Parameters.AddWithValue("@absences", txtAbsences.Text);
+                    cmd.Parameters.AddWithValue("@lates", txtLates.Text);
+                    cmd.Parameters.AddWithValue("@under_time", txtUndertime.Text);
+                    cmd.Parameters.AddWithValue("@over_time", txtOvertime.Text);
+                    cmd.Parameters.AddWithValue("@night_premium", txtNightprem.Text);
+                    cmd.Parameters.AddWithValue("@restday_duty", txtRestDay.Text);
+                    cmd.Parameters.AddWithValue("@vacation_leave", txtVacationL.Text);
+                    cmd.Parameters.AddWithValue("@sick_leave", txtSickL.Text);
+                    cmd.Parameters.AddWithValue("@legal_holiday", txtLegalHoli.Text);
+                    cmd.Parameters.AddWithValue("@special_holiday", txtSpecialHoli.Text);
 
-                MessageBox.Show("updated");
-                conn.Dispose();
+                    cmd.Parameters.AddWithValue("@maternity_leave", txtMaternityL.Text);
+                    cmd.Parameters.AddWithValue("@paternity_leave", txtPaternityL.Text);
+                    cmd.Parameters.AddWithValue("@bereavement_leave", txtBereavementL.Text);
+                    cmd.Parameters.AddWithValue("@emergency_leave", txtEmergencyL.Text);
+                    cmd.Parameters.AddWithValue("@magnacarta_leave", txtMagnaL.Text);
+                    cmd.Parameters.AddWithValue("@remarks", txtRemarks.Text);
 
-                load_data();
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("updated");
+                    conn.Dispose();
+
+                    load_data();
+                }
             }
+           
         }
         private void btnUpdate_Click(object sender, EventArgs e)
         {
@@ -647,9 +739,85 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+
             frmSaveAttendance frmSaveAttendance = new frmSaveAttendance(dgvAttendance);
             frmSaveAttendance.ShowDialog();
 
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void isMaternity_CheckedChanged(object sender, EventArgs e)
+        {
+            if (isMaternity.Checked == true)
+            {
+                txtMaternityL.Enabled = true;
+                txtMaternityL.Focus();
+            }
+            else
+            {
+                txtMaternityL.Clear();
+                txtMaternityL.Enabled = false;
+            }
+        }
+
+        private void isPaternity_CheckedChanged(object sender, EventArgs e)
+        {
+            if (isPaternity.Checked == true)
+            {
+                txtPaternityL.Enabled = true;
+                txtPaternityL.Focus();
+            }
+            else
+            {
+                txtPaternityL.Clear();
+                txtPaternityL.Enabled = false;
+            }
+        }
+
+        private void isBereavement_CheckedChanged(object sender, EventArgs e)
+        {
+            if (isBereavement.Checked == true)
+            {
+                txtBereavementL.Enabled = true;
+                txtBereavementL.Focus();
+            }
+            else
+            {
+                txtBereavementL.Clear();
+                txtBereavementL.Enabled = false;
+            }
+        }
+
+        private void isEmergency_CheckedChanged(object sender, EventArgs e)
+        {
+            if (isEmergency.Checked == true)
+            {
+                txtEmergencyL.Enabled = true;
+                txtEmergencyL.Focus();
+            }
+            else
+            {
+                txtEmergencyL.Clear();
+                txtEmergencyL.Enabled = false;
+            }
+        }
+
+        private void isMagnacarta_CheckedChanged(object sender, EventArgs e)
+        {
+            if (isMagnacarta.Checked == true)
+            {
+                txtMagnaL.Enabled = true;
+                txtMagnaL.Focus();
+            }
+            else
+            {
+                txtMagnaL.Clear();
+                txtMagnaL.Enabled = false;
+            }
         }
     }
 }

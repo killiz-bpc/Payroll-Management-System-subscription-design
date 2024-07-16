@@ -102,6 +102,35 @@ namespace Payroll_Management_System.Connections
 
             return (basic_salary, daily_rate, hourly_rate, minute_rate);
         }
+
+
+        //public static int GetEmployeeDeducaation GetEmployeeDeduction(int salary, int money, out int outSalary, out int outMoney)
+        //{
+        //    string daily_rate;
+        //    int total;
+        //    using (MySqlConnection conn = new MySqlConnection(connString))
+        //    {
+
+        //        conn.Open();
+        //        string query = "SELECT daily_rate, hourly_rate, minute_rate FROM attendance_monitoring where emp_id=@emp_id";
+        //        MySqlCommand cmd = new MySqlCommand(query, conn);
+        //        cmd.Parameters.AddWithValue("@emp_id", money);
+
+        //        MySqlDataReader sdr = cmd.ExecuteReader();
+
+        //        while (sdr.Read())
+        //        {
+        //            daily_rate = sdr.GetString("daily_rate");
+        //            string hourly_rate = sdr.GetString("hourly_rate");
+        //            string minute_rate = sdr.GetString("minute_rate");
+        //            total = Convert.ToInt32((Convert.ToInt32(daily_rate)-1));
+        //        }
+        //        conn.Dispose();
+        //    }
+
+        //    return outSalary = salary;
+        }
+
     }
-    
-}
+
+    }

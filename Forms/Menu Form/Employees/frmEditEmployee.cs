@@ -88,7 +88,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Employees
                     
 
                     //work info
-                    string emp_id = reader.GetString("emp_id").ToString();
+                    string emp_id = reader.GetInt32("emp_id").ToString();
                     string job_title = reader.GetString("job_title").ToString();
                     string salary = Convert.ToString(reader.GetInt32("salary"));
                     string employment_status = reader.GetString("employment_status").ToString();
@@ -166,7 +166,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Employees
                 conn.Open();
                 string query;
                 query = "UPDATE employee_information SET " +
-                        "first_name=@first_name, middle_name=@middle_name, last_name=@last_name, mobile_number=@mobile_number, address=@address, civil_status=@civil_status, gender=@gender, personal_email=@personal_email, date_of_birth=@date_of_birth, emergency_person=@emergency_person, emergency_number=@emergency_number, job_title=@job_title, salary=@salary, employment_status=@employment_status, employee_type=@employee_type, employee_level=@employee_level, email_work=@email_work, assigned_branch=@assigned_branch, assigned_city=@assigned_city, department=@department, schedule=@schedule, hired_date=@hired_date, third_date=@third_date, fifth_date=@fifth_date, regularization_date=@regularization_date, sss_no=@sss_no, tin_no=@tin_no, hdmf_no=@hdmf_no, philhealth_no=@philhealth_no, active_status=@active_status, access_rights=@access_rights, password=@password, basic_salary=@basic_salary, daily_rate=@daily_rate, hourly_rate=@hourly_rate, minute_rate=@minute_rate";
+                        "employee_name=@employee_name, first_name=@first_name, middle_name=@middle_name, last_name=@last_name, mobile_number=@mobile_number, address=@address, civil_status=@civil_status, gender=@gender, personal_email=@personal_email, date_of_birth=@date_of_birth, emergency_person=@emergency_person, emergency_number=@emergency_number, job_title=@job_title, salary=@salary, employment_status=@employment_status, employee_type=@employee_type, employee_level=@employee_level, email_work=@email_work, assigned_branch=@assigned_branch, assigned_city=@assigned_city, department=@department, schedule=@schedule, hired_date=@hired_date, third_date=@third_date, fifth_date=@fifth_date, regularization_date=@regularization_date, sss_no=@sss_no, tin_no=@tin_no, hdmf_no=@hdmf_no, philhealth_no=@philhealth_no, active_status=@active_status, access_rights=@access_rights, password=@password, basic_salary=@basic_salary, daily_rate=@daily_rate, hourly_rate=@hourly_rate, minute_rate=@minute_rate";
 
                 if (isUpdateImg)
                 {
@@ -199,8 +199,11 @@ namespace Payroll_Management_System.Forms.Menu_Form.Employees
                 cmd.Parameters.AddWithValue("@hourly_rate", hourly_rate);
                 cmd.Parameters.AddWithValue("@minute_rate", minute_rate);
 
+                string employee_name = GetData.GetEmployeeName(txtLastName.Text.Trim(), txtFirstName.Text.Trim(), txtMiddleName.Text.Trim());
+
 
                 //basic info
+                cmd.Parameters.AddWithValue("@employee_name", employee_name);
                 cmd.Parameters.AddWithValue("@first_name", txtFirstName.Text);
                 cmd.Parameters.AddWithValue("@middle_name", txtMiddleName.Text);
                 cmd.Parameters.AddWithValue("@last_name", txtLastName.Text);

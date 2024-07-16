@@ -26,8 +26,8 @@ namespace Payroll_Management_System.Forms.Menu_Form.Employees
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string query = "INSERT INTO employee_information(employee_img, first_name, middle_name, last_name, mobile_number, address, civil_status, gender, personal_email, date_of_birth, emergency_person, emergency_number, emp_id, job_title, salary, employment_status, employee_type, employee_level, email_work, assigned_branch, assigned_city, department, schedule, hired_date, third_date, fifth_date, regularization_date, sss_no, tin_no, hdmf_no, philhealth_no, active_status, access_rights, password, basic_salary, daily_rate, hourly_rate, minute_rate)" +
-              "VALUES (@employee_img, @first_name, @middle_name, @last_name, @mobile_number, @address, @civil_status, @gender, @personal_email, @date_of_birth, @emergency_person, @emergency_number, @emp_id, @job_title, @salary, @employment_status, @employee_type, @employee_level, @email_work, @assigned_branch, @assigned_city, @department, @schedule, @hired_date, @third_date, @fifth_date, @regularization_date, @sss_no, @tin_no, @hdmf_no, @philhealth_no, @active_status, @access_rights, @password, @basic_salary, @daily_rate, @hourly_rate, @minute_rate)";
+            string query = "INSERT INTO employee_information(employee_img, employee_name, first_name, middle_name, last_name, mobile_number, address, civil_status, gender, personal_email, date_of_birth, emergency_person, emergency_number, emp_id, job_title, salary, employment_status, employee_type, employee_level, email_work, assigned_branch, assigned_city, department, schedule, hired_date, third_date, fifth_date, regularization_date, sss_no, tin_no, hdmf_no, philhealth_no, active_status, access_rights, password, basic_salary, daily_rate, hourly_rate, minute_rate)" +
+              "VALUES (@employee_img, @employee_name, @first_name, @middle_name, @last_name, @mobile_number, @address, @civil_status, @gender, @personal_email, @date_of_birth, @emergency_person, @emergency_number, @emp_id, @job_title, @salary, @employment_status, @employee_type, @employee_level, @email_work, @assigned_branch, @assigned_city, @department, @schedule, @hired_date, @third_date, @fifth_date, @regularization_date, @sss_no, @tin_no, @hdmf_no, @philhealth_no, @active_status, @access_rights, @password, @basic_salary, @daily_rate, @hourly_rate, @minute_rate)";
 
             MemoryStream stream = new MemoryStream();
             picEmployee.Image.Save(stream, picEmployee.Image.RawFormat);
@@ -40,18 +40,8 @@ namespace Payroll_Management_System.Forms.Menu_Form.Employees
                 string first_name = txtFirstName.Text.Trim();
                 string last_name = txtLastName.Text.Trim();
                 string middle_name = txtMiddleName.Text.Trim();
-                string middle_initial;
 
-                if (string.IsNullOrEmpty(middle_name))
-                {
-                    middle_initial = "";
-                }
-                else
-                {
-                    middle_initial = middle_name.Substring(0, 1);
-                }
-
-                string employee_name = last_name +", "+first_name+" "+middle_initial;  // for future purposes
+                string employee_name = GetData.GetEmployeeName(last_name, first_name, middle_name);
 
                 int salary = Convert.ToInt32(txtSalary.Text);
                 var result = GetData.GetSalary(salary);
@@ -69,6 +59,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Employees
 
                 //basic info
                 cmd.Parameters.AddWithValue("@employee_img", stream.ToArray());
+                cmd.Parameters.AddWithValue("@employee_name", employee_name);
                 cmd.Parameters.AddWithValue("@first_name", txtFirstName.Text);
                 cmd.Parameters.AddWithValue("@middle_name", txtMiddleName.Text);
                 cmd.Parameters.AddWithValue("@last_name", txtLastName.Text);
@@ -243,6 +234,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Employees
 
         private void frmAddEmployee_Load(object sender, EventArgs e)
         {
+            
             load_data();
 
             picEmployee.Image = Properties.Resources.user;

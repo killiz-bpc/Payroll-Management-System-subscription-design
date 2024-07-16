@@ -91,5 +91,10 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
 
             }
         }
+
+        private void dgvAttendance_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            
+        }
     }
 }

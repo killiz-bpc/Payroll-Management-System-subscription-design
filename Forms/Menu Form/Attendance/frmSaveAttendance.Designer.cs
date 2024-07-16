@@ -41,14 +41,14 @@
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtPreparedBy = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtDateTo = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtDateFrom = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.txtDateFrom = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.txtDateTo = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2GradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -115,14 +115,14 @@
             // 
             // guna2GradientPanel1
             // 
+            this.guna2GradientPanel1.Controls.Add(this.txtDateTo);
+            this.guna2GradientPanel1.Controls.Add(this.txtDateFrom);
             this.guna2GradientPanel1.Controls.Add(this.txtSeries);
             this.guna2GradientPanel1.Controls.Add(this.txtDateCreated);
             this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel8);
             this.guna2GradientPanel1.Controls.Add(this.txtPreparedBy);
             this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel7);
-            this.guna2GradientPanel1.Controls.Add(this.txtDateTo);
             this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel6);
-            this.guna2GradientPanel1.Controls.Add(this.txtDateFrom);
             this.guna2GradientPanel1.Controls.Add(this.btnSave);
             this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel3);
             this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel2);
@@ -233,29 +233,6 @@
             this.guna2HtmlLabel7.TabIndex = 54;
             this.guna2HtmlLabel7.Text = "Prepared by";
             // 
-            // txtDateTo
-            // 
-            this.txtDateTo.BorderRadius = 8;
-            this.txtDateTo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDateTo.DefaultText = "";
-            this.txtDateTo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtDateTo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtDateTo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDateTo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDateTo.Enabled = false;
-            this.txtDateTo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDateTo.Font = new System.Drawing.Font("Poppins", 9F);
-            this.txtDateTo.ForeColor = System.Drawing.Color.Black;
-            this.txtDateTo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDateTo.Location = new System.Drawing.Point(224, 236);
-            this.txtDateTo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtDateTo.Name = "txtDateTo";
-            this.txtDateTo.PasswordChar = '\0';
-            this.txtDateTo.PlaceholderText = "Date To";
-            this.txtDateTo.SelectedText = "";
-            this.txtDateTo.Size = new System.Drawing.Size(151, 36);
-            this.txtDateTo.TabIndex = 52;
-            // 
             // guna2HtmlLabel6
             // 
             this.guna2HtmlLabel6.AutoSize = false;
@@ -267,29 +244,6 @@
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(97, 23);
             this.guna2HtmlLabel6.TabIndex = 53;
             this.guna2HtmlLabel6.Text = "Date To";
-            // 
-            // txtDateFrom
-            // 
-            this.txtDateFrom.BorderRadius = 8;
-            this.txtDateFrom.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDateFrom.DefaultText = "";
-            this.txtDateFrom.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtDateFrom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtDateFrom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDateFrom.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDateFrom.Enabled = false;
-            this.txtDateFrom.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDateFrom.Font = new System.Drawing.Font("Poppins", 9F);
-            this.txtDateFrom.ForeColor = System.Drawing.Color.Black;
-            this.txtDateFrom.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDateFrom.Location = new System.Drawing.Point(41, 236);
-            this.txtDateFrom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtDateFrom.Name = "txtDateFrom";
-            this.txtDateFrom.PasswordChar = '\0';
-            this.txtDateFrom.PlaceholderText = "Date From";
-            this.txtDateFrom.SelectedText = "";
-            this.txtDateFrom.Size = new System.Drawing.Size(151, 36);
-            this.txtDateFrom.TabIndex = 49;
             // 
             // btnSave
             // 
@@ -353,6 +307,38 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // txtDateFrom
+            // 
+            this.txtDateFrom.BorderRadius = 5;
+            this.txtDateFrom.Checked = true;
+            this.txtDateFrom.CustomFormat = "yyyy-MM-dd";
+            this.txtDateFrom.FillColor = System.Drawing.Color.White;
+            this.txtDateFrom.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDateFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.txtDateFrom.Location = new System.Drawing.Point(41, 236);
+            this.txtDateFrom.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.txtDateFrom.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.txtDateFrom.Name = "txtDateFrom";
+            this.txtDateFrom.Size = new System.Drawing.Size(149, 33);
+            this.txtDateFrom.TabIndex = 59;
+            this.txtDateFrom.Value = new System.DateTime(2024, 7, 1, 14, 6, 29, 436);
+            // 
+            // txtDateTo
+            // 
+            this.txtDateTo.BorderRadius = 5;
+            this.txtDateTo.Checked = true;
+            this.txtDateTo.CustomFormat = "yyyy-MM-dd";
+            this.txtDateTo.FillColor = System.Drawing.Color.White;
+            this.txtDateTo.Font = new System.Drawing.Font("Poppins", 9F);
+            this.txtDateTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.txtDateTo.Location = new System.Drawing.Point(224, 236);
+            this.txtDateTo.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.txtDateTo.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.txtDateTo.Name = "txtDateTo";
+            this.txtDateTo.Size = new System.Drawing.Size(149, 33);
+            this.txtDateTo.TabIndex = 60;
+            this.txtDateTo.Value = new System.DateTime(2024, 7, 1, 14, 6, 29, 436);
+            // 
             // frmSaveAttendance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -384,13 +370,13 @@
         private Guna.UI2.WinForms.Guna2Button btnSave;
         private Guna.UI2.WinForms.Guna2TextBox txtPreparedBy;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
-        private Guna.UI2.WinForms.Guna2TextBox txtDateTo;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
-        private Guna.UI2.WinForms.Guna2TextBox txtDateFrom;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2TextBox txtDateCreated;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
         private System.Windows.Forms.Timer timer1;
         private Guna.UI2.WinForms.Guna2TextBox txtSeries;
+        private Guna.UI2.WinForms.Guna2DateTimePicker txtDateTo;
+        private Guna.UI2.WinForms.Guna2DateTimePicker txtDateFrom;
     }
 }
