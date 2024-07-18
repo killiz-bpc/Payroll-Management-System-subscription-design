@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Collections;
+using Microsoft.Office.Interop.Excel;
 
 namespace Payroll_Management_System.Forms.Menu_Form.Attendance
 {
@@ -63,7 +64,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@attendance_batch_no",attendance_batch_no.ToString());
                 cmd.ExecuteNonQuery();
-                DataTable dt = new DataTable();
+                System.Data.DataTable dt = new System.Data.DataTable();
                 MySqlDataAdapter sda = new MySqlDataAdapter(cmd);
                 sda.Fill(dt);
 
@@ -275,12 +276,49 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
             }
 
         }
+
+        public void attendance_computation()
+        {
+
+            //Deductions
+            double undertime = string.IsNullOrEmpty(txtUndertime.Text) ? 0.0 : Convert.ToDouble(txtUndertime.Text);
+            double absent = string.IsNullOrEmpty(txtAbsences.Text) ? 0.0 : Convert.ToDouble(txtAbsences.Text);
+            double late = string.IsNullOrEmpty(txtLates.Text) ? 0.0 : Convert.ToDouble(txtLates.Text);
+
+            var (deduct_late, deduct_absent) = GetData.GetDeduction(Convert.ToInt32(txtEmpID.Text), undertime, absent, late);
+
+            MessageBox.Show("Total Absent:" + deduct_absent);
+            MessageBox.Show("Total late:" + deduct_late);
+
+
+            //Addition
+            double over_time = string.IsNullOrEmpty(txtOvertime.Text) ? 0.0 : Convert.ToDouble(txtOvertime.Text);
+            double night_premium = string.IsNullOrEmpty(txtNightprem.Text) ? 0.0 : Convert.ToDouble(txtOvertime.Text);
+            double restday_duty = string.IsNullOrEmpty(txtRestDay.Text) ? 0.0 : Convert.ToDouble(txtOvertime.Text);
+            double legal_holiday = string.IsNullOrEmpty(txtLegalHoli.Text) ? 0.0 : Convert.ToDouble(txtOvertime.Text);
+            double special_holiday = string.IsNullOrEmpty(txtSpecialHoli.Text) ? 0.0 : Convert.ToDouble(txtOvertime.Text);
+
+
+            var (addition_overtime, addition_nightpremium, addition_restdayduty, addition_legalholiday, addition_specialholiday) = GetData.GetAddition(Convert.ToInt32(txtEmpID.Text), over_time, night_premium, restday_duty, legal_holiday, special_holiday);
+
+            MessageBox.Show("Total addition_overtime:" + addition_overtime);
+            MessageBox.Show("Total addition_nightpremium:" + addition_nightpremium);
+            MessageBox.Show("Total addition_restdayduty:" + addition_restdayduty);
+            MessageBox.Show("Total addition_legalholiday:" + addition_legalholiday);
+            MessageBox.Show("Total addition_specialholiday:" + addition_specialholiday);
+
+        }
         public void add_new_data()
         {
             add_employee_id();
             
             MessageBox.Show("Employee has been added successfully", "Message Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             dgvAttendance.Rows.Add(txtDepartment.Text, txtEmpID.Text, txtEmployeeName.Text, txtAbsences.Text, txtLates.Text, txtUndertime.Text, txtOvertime.Text, txtNightprem.Text, txtRestDay.Text, txtVacationL.Text, txtSickL.Text, txtLegalHoli.Text, txtSpecialHoli.Text, txtMaternityL.Text, txtPaternityL.Text, txtBereavementL.Text,  txtEmergencyL.Text, txtMagnaL.Text, txtRemarks.Text);
+
+
+
+
+            attendance_computation();
 
             default_textboxes();
 
@@ -292,7 +330,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
             foreach (Control control in infoPanel.Controls)
             {
                 // If the control is a CheckBox
-                if (control is CheckBox checkBox)
+                if (control is System.Windows.Forms.CheckBox checkBox)
                 {
                     // Process the Checked property
                     if (!checkBox.Checked)
@@ -338,17 +376,24 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
 
                 if (!isDuplicate)
                 {
+                    
                     if (!isNewAttendance)
                     {
                         add_existing_data();  // existing batch no
                     }
                     else
                     {
+
                         add_new_data();     // new batch no
-                     
+
+                       
                     }
                   
                 }
+
+              
+      
+
                 default_textboxes();
             }
            
@@ -432,7 +477,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
         }
         private void btnBack_Click(object sender, EventArgs e)
         {
-            frmHome frmHome = Application.OpenForms.OfType<frmHome>().FirstOrDefault();
+            frmHome frmHome = System.Windows.Forms.Application.OpenForms.OfType<frmHome>().FirstOrDefault();
 
             if (frmHome.mainPanel != null)
             {
