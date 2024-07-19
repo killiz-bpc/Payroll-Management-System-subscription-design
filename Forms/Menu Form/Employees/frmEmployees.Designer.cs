@@ -38,6 +38,8 @@
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.dgvEmployees = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.txtActiveStatus = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtDepartment = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
@@ -50,8 +52,6 @@
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtActiveStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.emp_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.first_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.middle_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,6 +61,7 @@
             this.job_title = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.department = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.active_status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employee_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.view_more = new System.Windows.Forms.DataGridViewLinkColumn();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
@@ -129,6 +130,7 @@
             this.job_title,
             this.department,
             this.active_status,
+            this.employee_name,
             this.view_more});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -196,6 +198,41 @@
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
             this.guna2GradientPanel2.Size = new System.Drawing.Size(1176, 106);
             this.guna2GradientPanel2.TabIndex = 13;
+            // 
+            // txtActiveStatus
+            // 
+            this.txtActiveStatus.BackColor = System.Drawing.Color.Transparent;
+            this.txtActiveStatus.BorderRadius = 10;
+            this.txtActiveStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.txtActiveStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtActiveStatus.FocusedColor = System.Drawing.Color.Empty;
+            this.txtActiveStatus.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtActiveStatus.ForeColor = System.Drawing.Color.Black;
+            this.txtActiveStatus.ItemHeight = 30;
+            this.txtActiveStatus.Items.AddRange(new object[] {
+            "Active",
+            "All",
+            "Inactive"});
+            this.txtActiveStatus.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
+            this.txtActiveStatus.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
+            this.txtActiveStatus.Location = new System.Drawing.Point(760, 45);
+            this.txtActiveStatus.Name = "txtActiveStatus";
+            this.txtActiveStatus.Size = new System.Drawing.Size(178, 36);
+            this.txtActiveStatus.Sorted = true;
+            this.txtActiveStatus.TabIndex = 30;
+            this.txtActiveStatus.SelectedIndexChanged += new System.EventHandler(this.txtActiveStatus_SelectedIndexChanged);
+            // 
+            // guna2HtmlLabel6
+            // 
+            this.guna2HtmlLabel6.AutoSize = false;
+            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(760, 23);
+            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(137, 23);
+            this.guna2HtmlLabel6.TabIndex = 22;
+            this.guna2HtmlLabel6.Text = "Employee Status";
             // 
             // txtDepartment
             // 
@@ -357,41 +394,6 @@
             // 
             this.guna2Elipse2.TargetControl = this.guna2GradientPanel3;
             // 
-            // guna2HtmlLabel6
-            // 
-            this.guna2HtmlLabel6.AutoSize = false;
-            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(760, 23);
-            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(137, 23);
-            this.guna2HtmlLabel6.TabIndex = 22;
-            this.guna2HtmlLabel6.Text = "Employee Status";
-            // 
-            // txtActiveStatus
-            // 
-            this.txtActiveStatus.BackColor = System.Drawing.Color.Transparent;
-            this.txtActiveStatus.BorderRadius = 10;
-            this.txtActiveStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.txtActiveStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtActiveStatus.FocusedColor = System.Drawing.Color.Empty;
-            this.txtActiveStatus.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtActiveStatus.ForeColor = System.Drawing.Color.Black;
-            this.txtActiveStatus.ItemHeight = 30;
-            this.txtActiveStatus.Items.AddRange(new object[] {
-            "Active",
-            "All",
-            "Inactive"});
-            this.txtActiveStatus.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
-            this.txtActiveStatus.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
-            this.txtActiveStatus.Location = new System.Drawing.Point(760, 45);
-            this.txtActiveStatus.Name = "txtActiveStatus";
-            this.txtActiveStatus.Size = new System.Drawing.Size(178, 36);
-            this.txtActiveStatus.Sorted = true;
-            this.txtActiveStatus.TabIndex = 30;
-            this.txtActiveStatus.SelectedIndexChanged += new System.EventHandler(this.txtActiveStatus_SelectedIndexChanged);
-            // 
             // emp_id
             // 
             this.emp_id.DataPropertyName = "emp_id";
@@ -469,6 +471,14 @@
             this.active_status.ReadOnly = true;
             this.active_status.Visible = false;
             // 
+            // employee_name
+            // 
+            this.employee_name.DataPropertyName = "employee_name";
+            this.employee_name.HeaderText = "emp name";
+            this.employee_name.Name = "employee_name";
+            this.employee_name.ReadOnly = true;
+            this.employee_name.Visible = false;
+            // 
             // view_more
             // 
             this.view_more.DataPropertyName = "view_more";
@@ -531,6 +541,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn job_title;
         private System.Windows.Forms.DataGridViewTextBoxColumn department;
         private System.Windows.Forms.DataGridViewTextBoxColumn active_status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn employee_name;
         private System.Windows.Forms.DataGridViewLinkColumn view_more;
     }
 }

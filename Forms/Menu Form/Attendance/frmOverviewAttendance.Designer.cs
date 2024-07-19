@@ -31,17 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.dgvAttendance = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.attendance_batch_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.date_from = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.date_to = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.view_more = new System.Windows.Forms.DataGridViewLinkColumn();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnCreateAttendance = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -49,6 +44,13 @@
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.attendance_batch_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.date_from = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.date_to = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.view_more = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.edit_batch = new System.Windows.Forms.DataGridViewLinkColumn();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAttendance)).BeginInit();
@@ -97,7 +99,6 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvAttendance.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvAttendance.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -114,28 +115,29 @@
             this.date_from,
             this.date_to,
             this.status,
-            this.view_more});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAttendance.DefaultCellStyle = dataGridViewCellStyle3;
+            this.view_more,
+            this.edit_batch});
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAttendance.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvAttendance.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvAttendance.Location = new System.Drawing.Point(15, 82);
             this.dgvAttendance.Name = "dgvAttendance";
             this.dgvAttendance.ReadOnly = true;
             this.dgvAttendance.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAttendance.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAttendance.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvAttendance.RowHeadersVisible = false;
             this.dgvAttendance.RowTemplate.Height = 40;
             this.dgvAttendance.Size = new System.Drawing.Size(1108, 601);
@@ -163,60 +165,6 @@
             this.dgvAttendance.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvAttendance.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAttendance_CellContentClick);
             this.dgvAttendance.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgvAttendance_CellPainting);
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "id";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Visible = false;
-            // 
-            // attendance_batch_no
-            // 
-            this.attendance_batch_no.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.attendance_batch_no.DataPropertyName = "attendance_batch_no";
-            this.attendance_batch_no.HeaderText = "Attendance Batch No.";
-            this.attendance_batch_no.Name = "attendance_batch_no";
-            this.attendance_batch_no.ReadOnly = true;
-            // 
-            // date_from
-            // 
-            this.date_from.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.date_from.DataPropertyName = "date_from";
-            this.date_from.HeaderText = "Date From";
-            this.date_from.Name = "date_from";
-            this.date_from.ReadOnly = true;
-            // 
-            // date_to
-            // 
-            this.date_to.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.date_to.DataPropertyName = "date_to";
-            this.date_to.HeaderText = "Date To";
-            this.date_to.Name = "date_to";
-            this.date_to.ReadOnly = true;
-            // 
-            // status
-            // 
-            this.status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.status.DataPropertyName = "status";
-            this.status.HeaderText = "Status";
-            this.status.Name = "status";
-            this.status.ReadOnly = true;
-            // 
-            // view_more
-            // 
-            this.view_more.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.view_more.DataPropertyName = "view_more";
-            this.view_more.FillWeight = 26.29803F;
-            this.view_more.HeaderText = "Action";
-            this.view_more.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.view_more.Name = "view_more";
-            this.view_more.ReadOnly = true;
-            this.view_more.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.view_more.Text = "View More";
-            this.view_more.TrackVisitedState = false;
-            this.view_more.UseColumnTextForLinkValue = true;
             // 
             // guna2HtmlLabel2
             // 
@@ -292,6 +240,75 @@
             // 
             this.guna2Elipse2.TargetControl = this.guna2GradientPanel3;
             // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            // 
+            // attendance_batch_no
+            // 
+            this.attendance_batch_no.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.attendance_batch_no.DataPropertyName = "attendance_batch_no";
+            this.attendance_batch_no.HeaderText = "Attendance Batch No.";
+            this.attendance_batch_no.Name = "attendance_batch_no";
+            this.attendance_batch_no.ReadOnly = true;
+            // 
+            // date_from
+            // 
+            this.date_from.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.date_from.DataPropertyName = "date_from";
+            this.date_from.HeaderText = "Date From";
+            this.date_from.Name = "date_from";
+            this.date_from.ReadOnly = true;
+            // 
+            // date_to
+            // 
+            this.date_to.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.date_to.DataPropertyName = "date_to";
+            this.date_to.HeaderText = "Date To";
+            this.date_to.Name = "date_to";
+            this.date_to.ReadOnly = true;
+            // 
+            // status
+            // 
+            this.status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.status.DataPropertyName = "status";
+            this.status.HeaderText = "Status";
+            this.status.Name = "status";
+            this.status.ReadOnly = true;
+            // 
+            // view_more
+            // 
+            this.view_more.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.view_more.DataPropertyName = "view_more";
+            this.view_more.HeaderText = "Action";
+            this.view_more.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.view_more.Name = "view_more";
+            this.view_more.ReadOnly = true;
+            this.view_more.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.view_more.Text = "View Summary";
+            this.view_more.TrackVisitedState = false;
+            this.view_more.UseColumnTextForLinkValue = true;
+            // 
+            // edit_batch
+            // 
+            this.edit_batch.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.edit_batch.DataPropertyName = "edit_batch";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.edit_batch.DefaultCellStyle = dataGridViewCellStyle3;
+            this.edit_batch.HeaderText = "Configure Batch ";
+            this.edit_batch.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.edit_batch.Name = "edit_batch";
+            this.edit_batch.ReadOnly = true;
+            this.edit_batch.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.edit_batch.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.edit_batch.Text = "Edit Batch";
+            this.edit_batch.TrackVisitedState = false;
+            this.edit_batch.UseColumnTextForLinkValue = true;
+            // 
             // frmOverviewAttendance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -328,5 +345,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn date_to;
         private System.Windows.Forms.DataGridViewTextBoxColumn status;
         private System.Windows.Forms.DataGridViewLinkColumn view_more;
+        private System.Windows.Forms.DataGridViewLinkColumn edit_batch;
     }
 }

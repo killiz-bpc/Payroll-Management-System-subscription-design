@@ -104,7 +104,6 @@ namespace Payroll_Management_System.Connections
             return (basic_salary, daily_rate, hourly_rate, minute_rate);
         }
 
-
         public static (double deduction_late, double deduction_absent) GetDeduction(int emp_id, double undertime, double absent, double late)
         {
             double daily_rate = 0;

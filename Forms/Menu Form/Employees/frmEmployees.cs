@@ -100,7 +100,7 @@ namespace Payroll_Management_System.Forms.Menu_Form
             {
                 string query;
                 conn.Open();
-                query = "SELECT emp_id, first_name, middle_name, last_name, gender, mobile_number, job_title, department, active_status FROM employee_information";
+                query = "SELECT emp_id, employee_name, first_name, middle_name, last_name, gender, mobile_number, job_title, department, active_status FROM employee_information";
 
 
                 if (txtDepartment.Text != "All" && txtActiveStatus.Text != "All") //same naka filter
@@ -133,7 +133,7 @@ namespace Payroll_Management_System.Forms.Menu_Form
                 
 
                 DataView dataView = dataTable.DefaultView;
-                dataView.RowFilter = "first_name LIKE '%" + txtSearch.Text + "%'";
+                dataView.RowFilter = "employee_name LIKE '%" + txtSearch.Text + "%'";
 
 
                 lblTotalEmployees.Text = dgvEmployees.Rows.Count.ToString();

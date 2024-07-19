@@ -293,10 +293,10 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
 
             //Addition
             double over_time = string.IsNullOrEmpty(txtOvertime.Text) ? 0.0 : Convert.ToDouble(txtOvertime.Text);
-            double night_premium = string.IsNullOrEmpty(txtNightprem.Text) ? 0.0 : Convert.ToDouble(txtOvertime.Text);
-            double restday_duty = string.IsNullOrEmpty(txtRestDay.Text) ? 0.0 : Convert.ToDouble(txtOvertime.Text);
-            double legal_holiday = string.IsNullOrEmpty(txtLegalHoli.Text) ? 0.0 : Convert.ToDouble(txtOvertime.Text);
-            double special_holiday = string.IsNullOrEmpty(txtSpecialHoli.Text) ? 0.0 : Convert.ToDouble(txtOvertime.Text);
+            double night_premium = string.IsNullOrEmpty(txtNightprem.Text) ? 0.0 : Convert.ToDouble(txtNightprem.Text);
+            double restday_duty = string.IsNullOrEmpty(txtRestDay.Text) ? 0.0 : Convert.ToDouble(txtRestDay.Text);
+            double legal_holiday = string.IsNullOrEmpty(txtLegalHoli.Text) ? 0.0 : Convert.ToDouble(txtLegalHoli.Text);
+            double special_holiday = string.IsNullOrEmpty(txtSpecialHoli.Text) ? 0.0 : Convert.ToDouble(txtSpecialHoli.Text);
 
 
             var (addition_overtime, addition_nightpremium, addition_restdayduty, addition_legalholiday, addition_specialholiday) = GetData.GetAddition(Convert.ToInt32(txtEmpID.Text), over_time, night_premium, restday_duty, legal_holiday, special_holiday);
@@ -314,9 +314,6 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
             
             MessageBox.Show("Employee has been added successfully", "Message Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             dgvAttendance.Rows.Add(txtDepartment.Text, txtEmpID.Text, txtEmployeeName.Text, txtAbsences.Text, txtLates.Text, txtUndertime.Text, txtOvertime.Text, txtNightprem.Text, txtRestDay.Text, txtVacationL.Text, txtSickL.Text, txtLegalHoli.Text, txtSpecialHoli.Text, txtMaternityL.Text, txtPaternityL.Text, txtBereavementL.Text,  txtEmergencyL.Text, txtMagnaL.Text, txtRemarks.Text);
-
-
-
 
             attendance_computation();
 
@@ -383,10 +380,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
                     }
                     else
                     {
-
                         add_new_data();     // new batch no
-
-                       
                     }
                   
                 }
@@ -624,21 +618,26 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
 
         public void delete_existing_data()
         {
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            if (dgvAttendance.SelectedRows.Count > 0)
             {
-                conn.Open();
-                string query = "DELETE FROM attendance_monitoring WHERE emp_id=@emp_id AND attendance_batch_no=@attendance_batch_no";
-                MySqlCommand cmd = new MySqlCommand(query, conn);
+                using (MySqlConnection conn = new MySqlConnection(connString))
+                {
 
-                cmd.Parameters.AddWithValue("@attendance_batch_no", attendance_batch_no);
-                cmd.Parameters.AddWithValue("@emp_id", txtEmpID.Text);
-                cmd.ExecuteNonQuery();
+                    conn.Open();
+                    string query = "DELETE FROM attendance_monitoring WHERE emp_id=@emp_id AND attendance_batch_no=@attendance_batch_no";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
 
-                MessageBox.Show("deleted");
-                conn.Dispose();
+                    cmd.Parameters.AddWithValue("@attendance_batch_no", attendance_batch_no);
+                    cmd.Parameters.AddWithValue("@emp_id", txtEmpID.Text);
+                    cmd.ExecuteNonQuery();
 
-                load_data();
+                    MessageBox.Show("deleted");
+                    conn.Dispose();
+
+                    load_data();
+                }
             }
+            
         }
 
         public void delete_new_data()
@@ -703,11 +702,13 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
                 selectedRow.Cells["magnacarta_leave"].Value = txtMagnaL.Text;
 
 
+                attendance_computation();
+                MessageBox.Show("Data has been updated successfully", "Message Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-
+                default_textboxes();
             }
 
-            MessageBox.Show("Data has been updated successfully", "Message Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+           
             
         }
 
@@ -748,8 +749,11 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
                     MessageBox.Show("updated");
                     conn.Dispose();
 
+                    
                     load_data();
+                    
                 }
+                attendance_computation();
             }
            
         }
