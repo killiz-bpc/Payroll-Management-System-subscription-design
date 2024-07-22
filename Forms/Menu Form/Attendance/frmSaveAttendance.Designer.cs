@@ -36,6 +36,8 @@
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.txtDateTo = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.txtDateFrom = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.txtSeries = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtDateCreated = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -47,8 +49,6 @@
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.txtDateFrom = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.txtDateTo = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2GradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,12 +75,12 @@
             this.txtPeriod.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.txtPeriod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtPeriod.FocusedColor = System.Drawing.Color.Empty;
-            this.txtPeriod.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPeriod.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtPeriod.ForeColor = System.Drawing.Color.Black;
             this.txtPeriod.ItemHeight = 30;
             this.txtPeriod.Items.AddRange(new object[] {
-            "(1) First cut-off of the month",
-            "(2) Second cut-off of the month"});
+            "First",
+            "Second"});
             this.txtPeriod.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
             this.txtPeriod.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
             this.txtPeriod.Location = new System.Drawing.Point(41, 173);
@@ -100,7 +100,7 @@
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(173, 23);
             this.guna2HtmlLabel1.TabIndex = 34;
-            this.guna2HtmlLabel1.Text = "Period of the Month";
+            this.guna2HtmlLabel1.Text = "Cut-off per Month";
             // 
             // btnClose
             // 
@@ -138,6 +138,38 @@
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(424, 505);
             this.guna2GradientPanel1.TabIndex = 37;
+            // 
+            // txtDateTo
+            // 
+            this.txtDateTo.BorderRadius = 5;
+            this.txtDateTo.Checked = true;
+            this.txtDateTo.CustomFormat = "yyyy-MM-dd";
+            this.txtDateTo.FillColor = System.Drawing.Color.White;
+            this.txtDateTo.Font = new System.Drawing.Font("Poppins", 9F);
+            this.txtDateTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.txtDateTo.Location = new System.Drawing.Point(224, 236);
+            this.txtDateTo.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.txtDateTo.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.txtDateTo.Name = "txtDateTo";
+            this.txtDateTo.Size = new System.Drawing.Size(149, 33);
+            this.txtDateTo.TabIndex = 60;
+            this.txtDateTo.Value = new System.DateTime(2024, 7, 1, 14, 6, 29, 436);
+            // 
+            // txtDateFrom
+            // 
+            this.txtDateFrom.BorderRadius = 5;
+            this.txtDateFrom.Checked = true;
+            this.txtDateFrom.CustomFormat = "yyyy-MM-dd";
+            this.txtDateFrom.FillColor = System.Drawing.Color.White;
+            this.txtDateFrom.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDateFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.txtDateFrom.Location = new System.Drawing.Point(41, 236);
+            this.txtDateFrom.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.txtDateFrom.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.txtDateFrom.Name = "txtDateFrom";
+            this.txtDateFrom.Size = new System.Drawing.Size(149, 33);
+            this.txtDateFrom.TabIndex = 59;
+            this.txtDateFrom.Value = new System.DateTime(2024, 7, 1, 14, 6, 29, 436);
             // 
             // txtSeries
             // 
@@ -306,38 +338,6 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // txtDateFrom
-            // 
-            this.txtDateFrom.BorderRadius = 5;
-            this.txtDateFrom.Checked = true;
-            this.txtDateFrom.CustomFormat = "yyyy-MM-dd";
-            this.txtDateFrom.FillColor = System.Drawing.Color.White;
-            this.txtDateFrom.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDateFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.txtDateFrom.Location = new System.Drawing.Point(41, 236);
-            this.txtDateFrom.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.txtDateFrom.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.txtDateFrom.Name = "txtDateFrom";
-            this.txtDateFrom.Size = new System.Drawing.Size(149, 33);
-            this.txtDateFrom.TabIndex = 59;
-            this.txtDateFrom.Value = new System.DateTime(2024, 7, 1, 14, 6, 29, 436);
-            // 
-            // txtDateTo
-            // 
-            this.txtDateTo.BorderRadius = 5;
-            this.txtDateTo.Checked = true;
-            this.txtDateTo.CustomFormat = "yyyy-MM-dd";
-            this.txtDateTo.FillColor = System.Drawing.Color.White;
-            this.txtDateTo.Font = new System.Drawing.Font("Poppins", 9F);
-            this.txtDateTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.txtDateTo.Location = new System.Drawing.Point(224, 236);
-            this.txtDateTo.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.txtDateTo.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.txtDateTo.Name = "txtDateTo";
-            this.txtDateTo.Size = new System.Drawing.Size(149, 33);
-            this.txtDateTo.TabIndex = 60;
-            this.txtDateTo.Value = new System.DateTime(2024, 7, 1, 14, 6, 29, 436);
             // 
             // frmSaveAttendance
             // 

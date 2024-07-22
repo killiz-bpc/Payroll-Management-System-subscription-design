@@ -61,8 +61,8 @@
             this.job_title = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.department = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.active_status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.employee_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.view_more = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.employee_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployees)).BeginInit();
@@ -130,8 +130,8 @@
             this.job_title,
             this.department,
             this.active_status,
-            this.employee_name,
-            this.view_more});
+            this.view_more,
+            this.employee_name});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -397,7 +397,7 @@
             // emp_id
             // 
             this.emp_id.DataPropertyName = "emp_id";
-            this.emp_id.FillWeight = 26.29803F;
+            this.emp_id.FillWeight = 30.75713F;
             this.emp_id.HeaderText = "Employee ID";
             this.emp_id.Name = "emp_id";
             this.emp_id.ReadOnly = true;
@@ -405,7 +405,7 @@
             // first_name
             // 
             this.first_name.DataPropertyName = "first_name";
-            this.first_name.FillWeight = 27.37409F;
+            this.first_name.FillWeight = 32.01564F;
             this.first_name.HeaderText = "First Name";
             this.first_name.MinimumWidth = 50;
             this.first_name.Name = "first_name";
@@ -414,7 +414,7 @@
             // middle_name
             // 
             this.middle_name.DataPropertyName = "middle_name";
-            this.middle_name.FillWeight = 26.29803F;
+            this.middle_name.FillWeight = 30.75713F;
             this.middle_name.HeaderText = "Middle Name";
             this.middle_name.Name = "middle_name";
             this.middle_name.ReadOnly = true;
@@ -422,7 +422,7 @@
             // last_name
             // 
             this.last_name.DataPropertyName = "last_name";
-            this.last_name.FillWeight = 26.29803F;
+            this.last_name.FillWeight = 30.75713F;
             this.last_name.HeaderText = "Last Name";
             this.last_name.Name = "last_name";
             this.last_name.ReadOnly = true;
@@ -449,6 +449,7 @@
             // 
             this.job_title.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.job_title.DataPropertyName = "job_title";
+            this.job_title.FillWeight = 77.52207F;
             this.job_title.HeaderText = "Job Title";
             this.job_title.MinimumWidth = 2;
             this.job_title.Name = "job_title";
@@ -457,11 +458,13 @@
             // 
             // department
             // 
+            this.department.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.department.DataPropertyName = "department";
             this.department.FillWeight = 26.29803F;
             this.department.HeaderText = "Departments";
             this.department.Name = "department";
             this.department.ReadOnly = true;
+            this.department.Width = 122;
             // 
             // active_status
             // 
@@ -471,18 +474,10 @@
             this.active_status.ReadOnly = true;
             this.active_status.Visible = false;
             // 
-            // employee_name
-            // 
-            this.employee_name.DataPropertyName = "employee_name";
-            this.employee_name.HeaderText = "emp name";
-            this.employee_name.Name = "employee_name";
-            this.employee_name.ReadOnly = true;
-            this.employee_name.Visible = false;
-            // 
             // view_more
             // 
             this.view_more.DataPropertyName = "view_more";
-            this.view_more.FillWeight = 26.29803F;
+            this.view_more.FillWeight = 30.75713F;
             this.view_more.HeaderText = "Action";
             this.view_more.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.view_more.Name = "view_more";
@@ -491,6 +486,14 @@
             this.view_more.Text = "View More";
             this.view_more.TrackVisitedState = false;
             this.view_more.UseColumnTextForLinkValue = true;
+            // 
+            // employee_name
+            // 
+            this.employee_name.DataPropertyName = "employee_name";
+            this.employee_name.HeaderText = "emp name";
+            this.employee_name.Name = "employee_name";
+            this.employee_name.ReadOnly = true;
+            this.employee_name.Visible = false;
             // 
             // frmEmployees
             // 
@@ -541,7 +544,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn job_title;
         private System.Windows.Forms.DataGridViewTextBoxColumn department;
         private System.Windows.Forms.DataGridViewTextBoxColumn active_status;
-        private System.Windows.Forms.DataGridViewTextBoxColumn employee_name;
         private System.Windows.Forms.DataGridViewLinkColumn view_more;
+        private System.Windows.Forms.DataGridViewTextBoxColumn employee_name;
     }
 }

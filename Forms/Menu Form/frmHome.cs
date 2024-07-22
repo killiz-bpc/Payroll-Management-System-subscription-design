@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using Guna.UI2.WinForms;
 using MySql.Data.MySqlClient;
 using Payroll_Management_System.Forms.Menu_Form.Attendance;
+using Payroll_Management_System.Forms.Menu_Form.Payroll;
 
 namespace Payroll_Management_System.Forms.Menu_Form
 {
@@ -171,6 +172,18 @@ namespace Payroll_Management_System.Forms.Menu_Form
         private void btnClose_Click(object sender, EventArgs e)
         {
             btnLogout.PerformClick();
+        }
+
+        private void btnPayroll_Click(object sender, EventArgs e)
+        {
+            frmHome frmHome = Application.OpenForms.OfType<frmHome>().FirstOrDefault();
+
+            if (frmHome.mainPanel != null)
+            {
+
+                frmOverviewPayroll frmOverviewPayroll = new frmOverviewPayroll();
+                frmHome.DisplayForm(frmOverviewPayroll, frmHome.mainPanel);
+            }
         }
     }
 }

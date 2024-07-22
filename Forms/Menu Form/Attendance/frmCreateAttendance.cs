@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Collections;
 using Microsoft.Office.Interop.Excel;
+using System.Configuration;
 
 namespace Payroll_Management_System.Forms.Menu_Form.Attendance
 {
@@ -88,7 +89,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
                 labelAttendanceDetails.Text = "Attendance Details: "+label_string;
                 load_data();
 
-                btnSave.Visible=false;
+                btnSave.Text = "Approve Batch";
             }
 
             // load department
@@ -248,17 +249,10 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
                 load_data();
             }
 
-
-
-
         }
 
         public void add_employee_id()
         {
-            string[] names = txtEmployeeName.Text.Split(',');
-            string last_name = names[0].Trim();
-            string[] full_first_name = names[1].Split(' ');
-            string first_name = full_first_name[1];
             using (MySqlConnection conn = new MySqlConnection(connString))
             {
                 conn.Open();
@@ -286,11 +280,6 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
             double late = string.IsNullOrEmpty(txtLates.Text) ? 0.0 : Convert.ToDouble(txtLates.Text);
 
             var (deduct_late, deduct_absent) = GetData.GetDeduction(Convert.ToInt32(txtEmpID.Text), undertime, absent, late);
-
-            MessageBox.Show("Total Absent:" + deduct_absent);
-            MessageBox.Show("Total late:" + deduct_late);
-
-
             //Addition
             double over_time = string.IsNullOrEmpty(txtOvertime.Text) ? 0.0 : Convert.ToDouble(txtOvertime.Text);
             double night_premium = string.IsNullOrEmpty(txtNightprem.Text) ? 0.0 : Convert.ToDouble(txtNightprem.Text);
@@ -301,11 +290,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
 
             var (addition_overtime, addition_nightpremium, addition_restdayduty, addition_legalholiday, addition_specialholiday) = GetData.GetAddition(Convert.ToInt32(txtEmpID.Text), over_time, night_premium, restday_duty, legal_holiday, special_holiday);
 
-            MessageBox.Show("Total addition_overtime:" + addition_overtime);
-            MessageBox.Show("Total addition_nightpremium:" + addition_nightpremium);
-            MessageBox.Show("Total addition_restdayduty:" + addition_restdayduty);
-            MessageBox.Show("Total addition_legalholiday:" + addition_legalholiday);
-            MessageBox.Show("Total addition_specialholiday:" + addition_specialholiday);
+
 
         }
         public void add_new_data()
@@ -607,7 +592,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
 
         private void txtEmployeeName_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            add_employee_id();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -786,11 +771,55 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
             }
         }
 
+        public void payroll_computation()
+        {
+
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
 
-            frmSaveAttendance frmSaveAttendance = new frmSaveAttendance(dgvAttendance);
-            frmSaveAttendance.ShowDialog();
+            if (attendance_batch_no != null)  //approval
+            {
+                DialogResult result = MessageBox.Show("Approved changes cannot be undone. Are you sure you want to approve?", "Message Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if(result == DialogResult.Yes)
+                {
+                    try
+                    {
+                        using (MySqlConnection conn = new MySqlConnection(connString))
+                        {
+                            conn.Open();
+                            string query = "UPDATE attendance_monitoring SET status='Approved' where attendance_batch_no=@attendance_batch_no";
+                            MySqlCommand cmd = new MySqlCommand(query, conn);
+                            cmd.Parameters.AddWithValue("@attendance_batch_no", attendance_batch_no);
+                            cmd.ExecuteNonQuery();
+                            conn.Dispose();
+                        }
+
+                        MessageBox.Show("Attendance Batch has been approved", "Message Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        frmHome frmHome = System.Windows.Forms.Application.OpenForms.OfType<frmHome>().FirstOrDefault();
+
+                        if (frmHome.mainPanel != null)
+                        {
+                            frmOverviewAttendance frmOverviewAttendance = new frmOverviewAttendance();
+                            frmHome.DisplayForm(frmOverviewAttendance, frmHome.mainPanel);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error Message"+ex);
+                    }
+                    
+                    
+                }
+
+            }
+            else
+            {
+                frmSaveAttendance frmSaveAttendance = new frmSaveAttendance(dgvAttendance);
+                frmSaveAttendance.ShowDialog();
+            }
+           
 
         }
 
@@ -866,6 +895,64 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
             {
                 txtMagnaL.Clear();
                 txtMagnaL.Enabled = false;
+            }
+        }
+
+        private void txtVacationL_Validating(object sender, CancelEventArgs e)
+        {   
+            using(MySqlConnection conn = new MySqlConnection(connString))
+            {
+                double emp_vacation_leave = 0;
+                conn.Open();
+                string query = "SELECT * FROM leave_monitoring WHERE emp_id=@emp_id";
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@emp_id", txtEmpID.Text);
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while(reader.Read())
+                {
+                    emp_vacation_leave = reader.GetDouble("vacation_leave"); 
+                }
+
+                double.TryParse(txtVacationL.Text, out double input);
+                conn.Dispose();
+                if (input > emp_vacation_leave)
+                {
+                    MessageBox.Show("Employee has "+ emp_vacation_leave +" vacation leave left","Message Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    return;
+                }
+
+            }
+
+            
+        }
+
+        private void txtSickL_Validating(object sender, CancelEventArgs e)
+        {
+            using (MySqlConnection conn = new MySqlConnection(connString))
+            {
+                double emp_sick_leave = 0;
+                conn.Open();
+                string query = "SELECT * FROM leave_monitoring WHERE emp_id=@emp_id";
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@emp_id", txtEmpID.Text);
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    emp_sick_leave = reader.GetDouble("sick_leave");
+                }
+
+                double.TryParse(txtSickL.Text, out double input);
+                conn.Dispose();
+                if (input > emp_sick_leave)
+                {
+                    MessageBox.Show("Employee has "+ emp_sick_leave +" sick leave left", "Message Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
             }
         }
     }

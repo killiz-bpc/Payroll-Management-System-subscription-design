@@ -29,15 +29,34 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.btnBack = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.labelAttendanceDetails = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.dgvAttendance = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.department = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emp_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employee_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.absences = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lates = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.under_time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.over_time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.night_premium = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.restday_duty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vacation_leave = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sick_leave = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.legal_holiday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.special_holiday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maternity_leave = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.paternity_leave = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bereavement_leave = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emergency_leave = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.magnacarta_leave = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.txtEmpID = new Guna.UI2.WinForms.Guna2TextBox();
             this.labelAttendance = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -101,25 +120,6 @@
             this.guna2HtmlLabel18 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.department = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emp_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.employee_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.absences = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lates = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.under_time = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.over_time = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.night_premium = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.restday_duty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vacation_leave = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sick_leave = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.legal_holiday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.special_holiday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maternity_leave = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.paternity_leave = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bereavement_leave = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emergency_leave = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.magnacarta_leave = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAttendance)).BeginInit();
@@ -192,23 +192,23 @@
             this.dgvAttendance.AllowUserToAddRows = false;
             this.dgvAttendance.AllowUserToDeleteRows = false;
             this.dgvAttendance.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Poppins Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvAttendance.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Poppins Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvAttendance.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvAttendance.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAttendance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Poppins Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAttendance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvAttendance.ColumnHeadersHeight = 30;
             this.dgvAttendance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvAttendance.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -231,27 +231,27 @@
             this.emergency_leave,
             this.magnacarta_leave,
             this.remarks});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAttendance.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Poppins Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAttendance.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvAttendance.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvAttendance.Location = new System.Drawing.Point(10, 53);
             this.dgvAttendance.Name = "dgvAttendance";
             this.dgvAttendance.ReadOnly = true;
             this.dgvAttendance.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAttendance.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAttendance.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvAttendance.RowHeadersVisible = false;
             this.dgvAttendance.RowTemplate.Height = 40;
             this.dgvAttendance.Size = new System.Drawing.Size(740, 723);
@@ -278,6 +278,179 @@
             this.dgvAttendance.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvAttendance.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvAttendance.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAttendance_CellClick);
+            // 
+            // department
+            // 
+            this.department.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.department.DataPropertyName = "department";
+            this.department.HeaderText = "Department";
+            this.department.Name = "department";
+            this.department.ReadOnly = true;
+            this.department.Width = 115;
+            // 
+            // emp_id
+            // 
+            this.emp_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.emp_id.DataPropertyName = "emp_id";
+            this.emp_id.HeaderText = "Employee ID";
+            this.emp_id.Name = "emp_id";
+            this.emp_id.ReadOnly = true;
+            this.emp_id.Width = 118;
+            // 
+            // employee_name
+            // 
+            this.employee_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.employee_name.DataPropertyName = "employee_name";
+            this.employee_name.FillWeight = 104.0918F;
+            this.employee_name.HeaderText = "Employee Name";
+            this.employee_name.MinimumWidth = 50;
+            this.employee_name.Name = "employee_name";
+            this.employee_name.ReadOnly = true;
+            this.employee_name.Width = 144;
+            // 
+            // absences
+            // 
+            this.absences.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.absences.DataPropertyName = "absences";
+            this.absences.HeaderText = "Absences";
+            this.absences.Name = "absences";
+            this.absences.ReadOnly = true;
+            this.absences.Width = 98;
+            // 
+            // lates
+            // 
+            this.lates.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.lates.DataPropertyName = "lates";
+            this.lates.HeaderText = "Lates";
+            this.lates.Name = "lates";
+            this.lates.ReadOnly = true;
+            this.lates.Width = 68;
+            // 
+            // under_time
+            // 
+            this.under_time.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.under_time.DataPropertyName = "under_time";
+            this.under_time.HeaderText = "Undertime";
+            this.under_time.Name = "under_time";
+            this.under_time.ReadOnly = true;
+            this.under_time.Width = 104;
+            // 
+            // over_time
+            // 
+            this.over_time.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.over_time.DataPropertyName = "over_time";
+            this.over_time.HeaderText = "Overtime";
+            this.over_time.Name = "over_time";
+            this.over_time.ReadOnly = true;
+            this.over_time.Width = 95;
+            // 
+            // night_premium
+            // 
+            this.night_premium.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.night_premium.DataPropertyName = "night_premium";
+            this.night_premium.HeaderText = "Night Premium";
+            this.night_premium.Name = "night_premium";
+            this.night_premium.ReadOnly = true;
+            this.night_premium.Width = 136;
+            // 
+            // restday_duty
+            // 
+            this.restday_duty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.restday_duty.DataPropertyName = "restday_duty";
+            this.restday_duty.HeaderText = "Rest Day Duty";
+            this.restday_duty.Name = "restday_duty";
+            this.restday_duty.ReadOnly = true;
+            this.restday_duty.Width = 131;
+            // 
+            // vacation_leave
+            // 
+            this.vacation_leave.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.vacation_leave.DataPropertyName = "vacation_leave";
+            this.vacation_leave.HeaderText = "Vacation Leave";
+            this.vacation_leave.Name = "vacation_leave";
+            this.vacation_leave.ReadOnly = true;
+            this.vacation_leave.Width = 139;
+            // 
+            // sick_leave
+            // 
+            this.sick_leave.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.sick_leave.DataPropertyName = "sick_leave";
+            this.sick_leave.HeaderText = "Sick Leave";
+            this.sick_leave.Name = "sick_leave";
+            this.sick_leave.ReadOnly = true;
+            this.sick_leave.Width = 105;
+            // 
+            // legal_holiday
+            // 
+            this.legal_holiday.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.legal_holiday.DataPropertyName = "legal_holiday";
+            this.legal_holiday.HeaderText = "Legal Holiday";
+            this.legal_holiday.Name = "legal_holiday";
+            this.legal_holiday.ReadOnly = true;
+            this.legal_holiday.Width = 126;
+            // 
+            // special_holiday
+            // 
+            this.special_holiday.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.special_holiday.DataPropertyName = "special_holiday";
+            this.special_holiday.HeaderText = "Special Holiday";
+            this.special_holiday.Name = "special_holiday";
+            this.special_holiday.ReadOnly = true;
+            this.special_holiday.Width = 140;
+            // 
+            // maternity_leave
+            // 
+            this.maternity_leave.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.maternity_leave.DataPropertyName = "maternity_leave";
+            this.maternity_leave.HeaderText = "Maternity";
+            this.maternity_leave.Name = "maternity_leave";
+            this.maternity_leave.ReadOnly = true;
+            this.maternity_leave.Width = 99;
+            // 
+            // paternity_leave
+            // 
+            this.paternity_leave.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.paternity_leave.DataPropertyName = "paternity_leave";
+            this.paternity_leave.HeaderText = "Paternity";
+            this.paternity_leave.Name = "paternity_leave";
+            this.paternity_leave.ReadOnly = true;
+            this.paternity_leave.Width = 95;
+            // 
+            // bereavement_leave
+            // 
+            this.bereavement_leave.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.bereavement_leave.DataPropertyName = "bereavement_leave";
+            this.bereavement_leave.HeaderText = "Bereavement";
+            this.bereavement_leave.Name = "bereavement_leave";
+            this.bereavement_leave.ReadOnly = true;
+            this.bereavement_leave.Width = 124;
+            // 
+            // emergency_leave
+            // 
+            this.emergency_leave.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.emergency_leave.DataPropertyName = "emergency_leave";
+            this.emergency_leave.HeaderText = "Emergency Leave";
+            this.emergency_leave.Name = "emergency_leave";
+            this.emergency_leave.ReadOnly = true;
+            this.emergency_leave.Width = 153;
+            // 
+            // magnacarta_leave
+            // 
+            this.magnacarta_leave.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.magnacarta_leave.DataPropertyName = "magnacarta_leave";
+            this.magnacarta_leave.HeaderText = "Magna Carta";
+            this.magnacarta_leave.Name = "magnacarta_leave";
+            this.magnacarta_leave.ReadOnly = true;
+            this.magnacarta_leave.Width = 125;
+            // 
+            // remarks
+            // 
+            this.remarks.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.remarks.DataPropertyName = "remarks";
+            this.remarks.HeaderText = "Remarks";
+            this.remarks.Name = "remarks";
+            this.remarks.ReadOnly = true;
+            this.remarks.Width = 93;
             // 
             // guna2GradientPanel2
             // 
@@ -433,6 +606,7 @@
             this.txtEmergencyL.SelectedText = "";
             this.txtEmergencyL.Size = new System.Drawing.Size(78, 41);
             this.txtEmergencyL.TabIndex = 85;
+            this.txtEmergencyL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
             // 
             // isBereavement
             // 
@@ -527,6 +701,7 @@
             this.txtBereavementL.SelectedText = "";
             this.txtBereavementL.Size = new System.Drawing.Size(78, 41);
             this.txtBereavementL.TabIndex = 75;
+            this.txtBereavementL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
             // 
             // txtPaternityL
             // 
@@ -549,6 +724,7 @@
             this.txtPaternityL.SelectedText = "";
             this.txtPaternityL.Size = new System.Drawing.Size(78, 41);
             this.txtPaternityL.TabIndex = 74;
+            this.txtPaternityL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
             // 
             // txtMaternityL
             // 
@@ -571,6 +747,7 @@
             this.txtMaternityL.SelectedText = "";
             this.txtMaternityL.Size = new System.Drawing.Size(78, 41);
             this.txtMaternityL.TabIndex = 73;
+            this.txtMaternityL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
             // 
             // txtMagnaL
             // 
@@ -593,6 +770,7 @@
             this.txtMagnaL.SelectedText = "";
             this.txtMagnaL.Size = new System.Drawing.Size(78, 41);
             this.txtMagnaL.TabIndex = 72;
+            this.txtMagnaL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
             // 
             // isRemarks
             // 
@@ -1151,6 +1329,7 @@
             this.txtSickL.Size = new System.Drawing.Size(78, 41);
             this.txtSickL.TabIndex = 45;
             this.txtSickL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
+            this.txtSickL.Validating += new System.ComponentModel.CancelEventHandler(this.txtSickL_Validating);
             // 
             // guna2HtmlLabel11
             // 
@@ -1204,6 +1383,7 @@
             this.txtVacationL.Size = new System.Drawing.Size(78, 41);
             this.txtVacationL.TabIndex = 42;
             this.txtVacationL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
+            this.txtVacationL.Validating += new System.ComponentModel.CancelEventHandler(this.txtVacationL_Validating);
             // 
             // guna2HtmlLabel10
             // 
@@ -1415,179 +1595,6 @@
             // guna2Elipse2
             // 
             this.guna2Elipse2.TargetControl = this.guna2GradientPanel3;
-            // 
-            // department
-            // 
-            this.department.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.department.DataPropertyName = "department";
-            this.department.HeaderText = "Department";
-            this.department.Name = "department";
-            this.department.ReadOnly = true;
-            this.department.Width = 115;
-            // 
-            // emp_id
-            // 
-            this.emp_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.emp_id.DataPropertyName = "emp_id";
-            this.emp_id.HeaderText = "Employee ID";
-            this.emp_id.Name = "emp_id";
-            this.emp_id.ReadOnly = true;
-            this.emp_id.Width = 118;
-            // 
-            // employee_name
-            // 
-            this.employee_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.employee_name.DataPropertyName = "employee_name";
-            this.employee_name.FillWeight = 104.0918F;
-            this.employee_name.HeaderText = "Employee Name";
-            this.employee_name.MinimumWidth = 50;
-            this.employee_name.Name = "employee_name";
-            this.employee_name.ReadOnly = true;
-            this.employee_name.Width = 144;
-            // 
-            // absences
-            // 
-            this.absences.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.absences.DataPropertyName = "absences";
-            this.absences.HeaderText = "Absences";
-            this.absences.Name = "absences";
-            this.absences.ReadOnly = true;
-            this.absences.Width = 98;
-            // 
-            // lates
-            // 
-            this.lates.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.lates.DataPropertyName = "lates";
-            this.lates.HeaderText = "Lates";
-            this.lates.Name = "lates";
-            this.lates.ReadOnly = true;
-            this.lates.Width = 68;
-            // 
-            // under_time
-            // 
-            this.under_time.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.under_time.DataPropertyName = "under_time";
-            this.under_time.HeaderText = "Undertime";
-            this.under_time.Name = "under_time";
-            this.under_time.ReadOnly = true;
-            this.under_time.Width = 104;
-            // 
-            // over_time
-            // 
-            this.over_time.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.over_time.DataPropertyName = "over_time";
-            this.over_time.HeaderText = "Overtime";
-            this.over_time.Name = "over_time";
-            this.over_time.ReadOnly = true;
-            this.over_time.Width = 95;
-            // 
-            // night_premium
-            // 
-            this.night_premium.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.night_premium.DataPropertyName = "night_premium";
-            this.night_premium.HeaderText = "Night Premium";
-            this.night_premium.Name = "night_premium";
-            this.night_premium.ReadOnly = true;
-            this.night_premium.Width = 136;
-            // 
-            // restday_duty
-            // 
-            this.restday_duty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.restday_duty.DataPropertyName = "restday_duty";
-            this.restday_duty.HeaderText = "Rest Day Duty";
-            this.restday_duty.Name = "restday_duty";
-            this.restday_duty.ReadOnly = true;
-            this.restday_duty.Width = 131;
-            // 
-            // vacation_leave
-            // 
-            this.vacation_leave.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.vacation_leave.DataPropertyName = "vacation_leave";
-            this.vacation_leave.HeaderText = "Vacation Leave";
-            this.vacation_leave.Name = "vacation_leave";
-            this.vacation_leave.ReadOnly = true;
-            this.vacation_leave.Width = 139;
-            // 
-            // sick_leave
-            // 
-            this.sick_leave.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.sick_leave.DataPropertyName = "sick_leave";
-            this.sick_leave.HeaderText = "Sick Leave";
-            this.sick_leave.Name = "sick_leave";
-            this.sick_leave.ReadOnly = true;
-            this.sick_leave.Width = 105;
-            // 
-            // legal_holiday
-            // 
-            this.legal_holiday.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.legal_holiday.DataPropertyName = "legal_holiday";
-            this.legal_holiday.HeaderText = "Legal Holiday";
-            this.legal_holiday.Name = "legal_holiday";
-            this.legal_holiday.ReadOnly = true;
-            this.legal_holiday.Width = 126;
-            // 
-            // special_holiday
-            // 
-            this.special_holiday.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.special_holiday.DataPropertyName = "special_holiday";
-            this.special_holiday.HeaderText = "Special Holiday";
-            this.special_holiday.Name = "special_holiday";
-            this.special_holiday.ReadOnly = true;
-            this.special_holiday.Width = 140;
-            // 
-            // maternity_leave
-            // 
-            this.maternity_leave.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.maternity_leave.DataPropertyName = "maternity_leave";
-            this.maternity_leave.HeaderText = "Maternity";
-            this.maternity_leave.Name = "maternity_leave";
-            this.maternity_leave.ReadOnly = true;
-            this.maternity_leave.Width = 99;
-            // 
-            // paternity_leave
-            // 
-            this.paternity_leave.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.paternity_leave.DataPropertyName = "paternity_leave";
-            this.paternity_leave.HeaderText = "Paternity";
-            this.paternity_leave.Name = "paternity_leave";
-            this.paternity_leave.ReadOnly = true;
-            this.paternity_leave.Width = 95;
-            // 
-            // bereavement_leave
-            // 
-            this.bereavement_leave.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.bereavement_leave.DataPropertyName = "bereavement_leave";
-            this.bereavement_leave.HeaderText = "Bereavement";
-            this.bereavement_leave.Name = "bereavement_leave";
-            this.bereavement_leave.ReadOnly = true;
-            this.bereavement_leave.Width = 124;
-            // 
-            // emergency_leave
-            // 
-            this.emergency_leave.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.emergency_leave.DataPropertyName = "emergency_leave";
-            this.emergency_leave.HeaderText = "Emergency Leave";
-            this.emergency_leave.Name = "emergency_leave";
-            this.emergency_leave.ReadOnly = true;
-            this.emergency_leave.Width = 153;
-            // 
-            // magnacarta_leave
-            // 
-            this.magnacarta_leave.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.magnacarta_leave.DataPropertyName = "magnacarta_leave";
-            this.magnacarta_leave.HeaderText = "Magna Carta";
-            this.magnacarta_leave.Name = "magnacarta_leave";
-            this.magnacarta_leave.ReadOnly = true;
-            this.magnacarta_leave.Width = 125;
-            // 
-            // remarks
-            // 
-            this.remarks.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.remarks.DataPropertyName = "remarks";
-            this.remarks.HeaderText = "Remarks";
-            this.remarks.Name = "remarks";
-            this.remarks.ReadOnly = true;
-            this.remarks.Width = 93;
             // 
             // frmCreateAttendance
             // 

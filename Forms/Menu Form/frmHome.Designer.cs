@@ -141,6 +141,7 @@
             this.btnPayroll.Text = "Payroll";
             this.btnPayroll.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnPayroll.TextOffset = new System.Drawing.Point(22, 0);
+            this.btnPayroll.Click += new System.EventHandler(this.btnPayroll_Click);
             // 
             // btnAttendance
             // 

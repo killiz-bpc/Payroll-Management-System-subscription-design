@@ -104,6 +104,7 @@ namespace Payroll_Management_System.Connections
             return (basic_salary, daily_rate, hourly_rate, minute_rate);
         }
 
+      
         public static (double deduction_late, double deduction_absent) GetDeduction(int emp_id, double undertime, double absent, double late)
         {
             double daily_rate = 0;
@@ -131,7 +132,6 @@ namespace Payroll_Management_System.Connections
                 deduction_absent = absent* daily_rate;
 
                 conn.Dispose();
-
             }
             return (deduction_late, deduction_absent);
         }
@@ -168,15 +168,14 @@ namespace Payroll_Management_System.Connections
                 }
 
                 //compute for overtime
-
                 addition_overtime = over_time*hourly_rate*1.25; 
                 addition_nightpremium = night_premium*hourly_rate*0.10; 
                 addition_restdayduty = restday_duty*daily_rate*1.30;
                 addition_legalholiday = legal_holiday*daily_rate;
                 addition_specialholiday = special_holiday*daily_rate*0.30;
-
                 conn.Dispose();
             }
+
             return (addition_overtime, addition_nightpremium, addition_restdayduty, addition_legalholiday, addition_specialholiday);
         }
     }

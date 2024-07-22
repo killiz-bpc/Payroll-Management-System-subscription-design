@@ -77,6 +77,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
             {
                 if (status != "Prepared")
                 {
+
                     MessageBox.Show("Selected batch has been already approved. It cannot be edited.","Message Error",  MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }

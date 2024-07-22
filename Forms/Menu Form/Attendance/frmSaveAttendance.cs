@@ -87,13 +87,15 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
         {
             string series = txtSeries.Text;
             MySqlConnection conn = new MySqlConnection(connString);
-
-            string query = "INSERT INTO batch_number_tb (attendance_batch_no) VALUES (@attendance_batch_no)";
+            string query = "INSERT INTO batch_number_tb (attendance_batch_no, cutoff_period, date_created, prepared_by) VALUES (@attendance_batch_no, @cutoff_period, @date_created, @prepared_by)";
             MySqlCommand cmd = new MySqlCommand(query, conn);
             conn.Open();
             cmd.Parameters.AddWithValue("@attendance_batch_no", series);
-            cmd.ExecuteNonQuery();
+            cmd.Parameters.AddWithValue("@cutoff_period", txtPeriod.Text);
+            cmd.Parameters.AddWithValue("@date_created", txtDateCreated.Text);
+            cmd.Parameters.AddWithValue("@prepared_by", txtPreparedBy.Text);
 
+            cmd.ExecuteNonQuery();
         }
 
 
@@ -122,8 +124,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
                     cmd.Parameters.AddWithValue("@attendance_batch_no", txtSeries.Text);
                     cmd.Parameters.AddWithValue("@date_from", txtDateFrom.Text);
                     cmd.Parameters.AddWithValue("@date_to", txtDateTo.Text);
-                    
-
+                  
                     cmd.Parameters.AddWithValue("@department", row.Cells["department"].Value.ToString());
                     cmd.Parameters.AddWithValue("@employee_name", row.Cells["employee_name"].Value.ToString());
                     cmd.Parameters.AddWithValue("@emp_id", row.Cells["emp_id"].Value.ToString());
