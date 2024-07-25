@@ -12,6 +12,7 @@ using MySql.Data.MySqlClient;
 using System.Collections;
 using Microsoft.Office.Interop.Excel;
 using System.Configuration;
+using System.Net.Http.Headers;
 
 namespace Payroll_Management_System.Forms.Menu_Form.Attendance
 {
@@ -25,6 +26,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
         public string connString = frmLogin.connString;
 
         public string attendance_batch_no { get;set; }
+        public string cutoff_period { get; set; }
         public string date_from {  get;set; }
         public string date_to {  get;set; }
         public string status {  get;set; }
@@ -271,24 +273,88 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
 
         }
 
+
         public void attendance_computation()
         {
+            foreach(DataGridViewRow row in dgvAttendance.Rows)
+            {
+                double undertime = string.IsNullOrEmpty(row.Cells["under_time"].Value.ToString()) ? 0.0 : Convert.ToDouble(row.Cells["undertime"].Value.ToString());
+                double absences = string.IsNullOrEmpty(row.Cells["absences"].Value.ToString()) ? 0.0 : Convert.ToDouble(row.Cells["absences"].Value.ToString());
+                double lates = string.IsNullOrEmpty(row.Cells["lates"].Value.ToString()) ? 0.0 : Convert.ToDouble(row.Cells["lates"].Value.ToString());
 
-            //Deductions
-            double undertime = string.IsNullOrEmpty(txtUndertime.Text) ? 0.0 : Convert.ToDouble(txtUndertime.Text);
-            double absent = string.IsNullOrEmpty(txtAbsences.Text) ? 0.0 : Convert.ToDouble(txtAbsences.Text);
-            double late = string.IsNullOrEmpty(txtLates.Text) ? 0.0 : Convert.ToDouble(txtLates.Text);
-
-            var (deduct_late, deduct_absent) = GetData.GetDeduction(Convert.ToInt32(txtEmpID.Text), undertime, absent, late);
-            //Addition
-            double over_time = string.IsNullOrEmpty(txtOvertime.Text) ? 0.0 : Convert.ToDouble(txtOvertime.Text);
-            double night_premium = string.IsNullOrEmpty(txtNightprem.Text) ? 0.0 : Convert.ToDouble(txtNightprem.Text);
-            double restday_duty = string.IsNullOrEmpty(txtRestDay.Text) ? 0.0 : Convert.ToDouble(txtRestDay.Text);
-            double legal_holiday = string.IsNullOrEmpty(txtLegalHoli.Text) ? 0.0 : Convert.ToDouble(txtLegalHoli.Text);
-            double special_holiday = string.IsNullOrEmpty(txtSpecialHoli.Text) ? 0.0 : Convert.ToDouble(txtSpecialHoli.Text);
+                double over_time = string.IsNullOrEmpty(row.Cells["over_time"].Value.ToString()) ? 0.0 : Convert.ToDouble(row.Cells["over_time"].Value.ToString());
+                double night_premium = string.IsNullOrEmpty(row.Cells["night_premium"].Value.ToString()) ? 0.0 : Convert.ToDouble(row.Cells["night_premium"].Value.ToString());
+                double restday_duty = string.IsNullOrEmpty(row.Cells["restday_duty"].Value.ToString()) ? 0.0 : Convert.ToDouble(row.Cells["restday_duty"].Value.ToString());
+                double legal_holiday = string.IsNullOrEmpty(row.Cells["legal_holiday"].Value.ToString()) ? 0.0 : Convert.ToDouble(row.Cells["legal_holiday"].Value.ToString());
+                double special_holiday = string.IsNullOrEmpty(row.Cells["special_holiday"].Value.ToString()) ? 0.0 : Convert.ToDouble(row.Cells["special_holiday"].Value.ToString());
 
 
-            var (addition_overtime, addition_nightpremium, addition_restdayduty, addition_legalholiday, addition_specialholiday) = GetData.GetAddition(Convert.ToInt32(txtEmpID.Text), over_time, night_premium, restday_duty, legal_holiday, special_holiday);
+                int emp_id = Convert.ToInt32(row.Cells["emp_id"].Value.ToString());
+                string employee_name = row.Cells["employee_name"].Value.ToString();
+                string department = row.Cells["department"].Value.ToString();
+
+                
+                try
+                {
+                    using (MySqlConnection conn = new MySqlConnection(connString))
+                    {
+                        conn.Open();
+                        var (deduction_late, deduction_absent) = GetData.GetDeduction(emp_id, undertime, absences, lates); //deduction tardiness
+
+                        var (addition_overtime, addition_nightpremium, addition_restdayduty, addition_legalholiday, addition_specialholiday) = GetData.GetAddition(emp_id, over_time, night_premium, restday_duty, legal_holiday, special_holiday); // addition
+                        var (deduction_sss_er, deduction_sss_ee, deduction_philhealth, deduction_pagibig) = GetData.GetMandatory(emp_id); //deduction mandatory
+                        double deduction_hmo = GetData.GetDeductionHMO(emp_id); //deduction HMO
+
+                        string query = "INSERT INTO payroll_process_tb (attendance_batch_no, cutoff_period, emp_id, employee_name, department, addition_overtime, addition_nightpremium, addition_restdayduty, addition_legalholiday, addition_specialholiday, deduction_late, deduction_absent) VALUES (@attendance_batch_no, @cutoff_period, @emp_id, @employee_name, @department, @addition_overtime, @addition_nightpremium, @addition_restdayduty, @addition_legalholiday, @addition_specialholiday, @deduction_late, @deduction_absent)";
+
+                        MySqlCommand cmd = new MySqlCommand(query, conn);
+                        cmd.Parameters.AddWithValue("@attendance_batch_no", attendance_batch_no);
+                        cmd.Parameters.AddWithValue("@cutoff_period", cutoff_period);
+                        cmd.Parameters.AddWithValue("@emp_id", emp_id);
+                        cmd.Parameters.AddWithValue("@employee_name", employee_name);
+                        cmd.Parameters.AddWithValue("@department", department);
+
+                        cmd.Parameters.AddWithValue("@addition_overtime", addition_overtime);
+                        cmd.Parameters.AddWithValue("@addition_nightpremium", addition_nightpremium);
+                        cmd.Parameters.AddWithValue("@addition_restdayduty", addition_restdayduty);
+                        cmd.Parameters.AddWithValue("@addition_legalholiday", addition_legalholiday);
+                        cmd.Parameters.AddWithValue("@addition_specialholiday", addition_specialholiday);
+                        cmd.Parameters.AddWithValue("@deduction_late", deduction_late);
+                        cmd.Parameters.AddWithValue("@deduction_absent", deduction_absent);
+                        
+
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("inserted");
+                        conn.Dispose();
+
+                        MessageBox.Show("ER: "+deduction_sss_er);
+                        MessageBox.Show("EE "+deduction_sss_ee);
+                        MessageBox.Show("HMO "+deduction_hmo);
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show("Error Message"+ex); 
+                }
+               
+            }
+
+            ////Deductions
+            //double undertime = string.IsNullOrEmpty(txtUndertime.Text) ? 0.0 : Convert.ToDouble(txtUndertime.Text);
+            //double absent = string.IsNullOrEmpty(txtAbsences.Text) ? 0.0 : Convert.ToDouble(txtAbsences.Text);
+            //double late = string.IsNullOrEmpty(txtLates.Text) ? 0.0 : Convert.ToDouble(txtLates.Text);
+
+            //var (deduct_late, deduct_absent) = GetData.GetDeduction(Convert.ToInt32(txtEmpID.Text), undertime, absent, late);
+            ////Addition
+            //double over_time = string.IsNullOrEmpty(txtOvertime.Text) ? 0.0 : Convert.ToDouble(txtOvertime.Text);
+            //double night_premium = string.IsNullOrEmpty(txtNightprem.Text) ? 0.0 : Convert.ToDouble(txtNightprem.Text);
+            //double restday_duty = string.IsNullOrEmpty(txtRestDay.Text) ? 0.0 : Convert.ToDouble(txtRestDay.Text);
+            //double legal_holiday = string.IsNullOrEmpty(txtLegalHoli.Text) ? 0.0 : Convert.ToDouble(txtLegalHoli.Text);
+            //double special_holiday = string.IsNullOrEmpty(txtSpecialHoli.Text) ? 0.0 : Convert.ToDouble(txtSpecialHoli.Text);
+
+
+            //var (addition_overtime, addition_nightpremium, addition_restdayduty, addition_legalholiday, addition_specialholiday) = GetData.GetAddition(Convert.ToInt32(txtEmpID.Text), over_time, night_premium, restday_duty, legal_holiday, special_holiday);
 
 
 
@@ -299,8 +365,6 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
             
             MessageBox.Show("Employee has been added successfully", "Message Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             dgvAttendance.Rows.Add(txtDepartment.Text, txtEmpID.Text, txtEmployeeName.Text, txtAbsences.Text, txtLates.Text, txtUndertime.Text, txtOvertime.Text, txtNightprem.Text, txtRestDay.Text, txtVacationL.Text, txtSickL.Text, txtLegalHoli.Text, txtSpecialHoli.Text, txtMaternityL.Text, txtPaternityL.Text, txtBereavementL.Text,  txtEmergencyL.Text, txtMagnaL.Text, txtRemarks.Text);
-
-            attendance_computation();
 
             default_textboxes();
 
@@ -687,7 +751,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
                 selectedRow.Cells["magnacarta_leave"].Value = txtMagnaL.Text;
 
 
-                attendance_computation();
+              
                 MessageBox.Show("Data has been updated successfully", "Message Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 default_textboxes();
@@ -738,7 +802,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
                     load_data();
                     
                 }
-                attendance_computation();
+              
             }
            
         }
@@ -771,10 +835,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
             }
         }
 
-        public void payroll_computation()
-        {
-
-        }
+       
 
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -791,10 +852,13 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
                             conn.Open();
                             string query = "UPDATE attendance_monitoring SET status='Approved' where attendance_batch_no=@attendance_batch_no";
                             MySqlCommand cmd = new MySqlCommand(query, conn);
+
                             cmd.Parameters.AddWithValue("@attendance_batch_no", attendance_batch_no);
                             cmd.ExecuteNonQuery();
                             conn.Dispose();
                         }
+
+                        attendance_computation();
 
                         MessageBox.Show("Attendance Batch has been approved", "Message Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         frmHome frmHome = System.Windows.Forms.Application.OpenForms.OfType<frmHome>().FirstOrDefault();

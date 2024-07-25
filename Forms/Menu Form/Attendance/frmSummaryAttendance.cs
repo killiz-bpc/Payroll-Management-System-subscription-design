@@ -23,6 +23,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
         string connString = frmLogin.connString;
 
         public string attendance_batch_no { get; set; }
+
         public void load_data()
         {
             using (MySqlConnection conn = new MySqlConnection(connString))

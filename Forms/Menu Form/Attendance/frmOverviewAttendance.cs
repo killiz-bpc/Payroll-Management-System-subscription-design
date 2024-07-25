@@ -41,7 +41,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
             using (MySqlConnection conn = new MySqlConnection(connString))
             {
                 conn.Open();
-                string query = "SELECT DISTINCT attendance_batch_no, date_from, date_to, status FROM attendance_monitoring";
+                string query = "SELECT DISTINCT attendance_batch_no, cutoff_period, date_from, date_to, status FROM attendance_monitoring";
 
 
                 MySqlCommand cmd = new MySqlCommand(query, conn);
@@ -69,6 +69,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
             dgvAttendance.CurrentCell = dgvAttendance.Rows[e.RowIndex].Cells[e.ColumnIndex];
 
             string attendance_batch_no = dgvAttendance.CurrentRow.Cells["attendance_batch_no"].Value.ToString();
+            string cutoff_period = dgvAttendance.CurrentRow.Cells["cutoff_period"].Value.ToString();
             string date_from = dgvAttendance.CurrentRow.Cells["date_from"].Value.ToString();
             string date_to = dgvAttendance.CurrentRow.Cells["date_to"].Value.ToString();
             string status = dgvAttendance.CurrentRow.Cells["status"].Value.ToString();
@@ -85,8 +86,10 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
                 {
                     frmCreateAttendance frmCreateAttendance = new frmCreateAttendance();
                     frmCreateAttendance.attendance_batch_no = attendance_batch_no;
+                    frmCreateAttendance.cutoff_period = cutoff_period;
                     frmCreateAttendance.date_from = date_from;
                     frmCreateAttendance.date_to = date_to;
+
                     frmCreateAttendance.status = status;
 
 

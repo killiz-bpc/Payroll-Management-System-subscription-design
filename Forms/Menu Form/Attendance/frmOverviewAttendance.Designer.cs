@@ -46,6 +46,7 @@
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.attendance_batch_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cutoff_period = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date_from = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date_to = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -112,6 +113,7 @@
             this.dgvAttendance.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.attendance_batch_no,
+            this.cutoff_period,
             this.date_from,
             this.date_to,
             this.status,
@@ -256,6 +258,13 @@
             this.attendance_batch_no.Name = "attendance_batch_no";
             this.attendance_batch_no.ReadOnly = true;
             // 
+            // cutoff_period
+            // 
+            this.cutoff_period.DataPropertyName = "cutoff_period";
+            this.cutoff_period.HeaderText = "Period";
+            this.cutoff_period.Name = "cutoff_period";
+            this.cutoff_period.ReadOnly = true;
+            // 
             // date_from
             // 
             this.date_from.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -341,6 +350,7 @@
         private Guna.UI2.WinForms.Guna2DataGridView dgvAttendance;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn attendance_batch_no;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cutoff_period;
         private System.Windows.Forms.DataGridViewTextBoxColumn date_from;
         private System.Windows.Forms.DataGridViewTextBoxColumn date_to;
         private System.Windows.Forms.DataGridViewTextBoxColumn status;

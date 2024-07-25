@@ -5,6 +5,7 @@ using System.Net.NetworkInformation;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI;
 using System.Windows.Forms;
 using Google.Protobuf.WellKnownTypes;
 using Microsoft.Office.Interop.Excel;
@@ -104,6 +105,131 @@ namespace Payroll_Management_System.Connections
             return (basic_salary, daily_rate, hourly_rate, minute_rate);
         }
 
+
+        public static double GetEmployeeSalary(int emp_id)
+        {
+            double salary = 0;
+
+            using (MySqlConnection conn = new MySqlConnection(connString))
+            {
+                conn.Open();
+                string query = "SELECT salary FROM employee_information where emp_id=@emp_id";
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@emp_id", emp_id);
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    salary = reader.GetDouble("salary");
+                }
+                conn.Dispose();
+            }
+
+            return salary;
+        }
+
+        private static string GetEmployeeType(int emp_id)
+        {
+            string employee_type ="";
+            try
+            {
+                
+                using (MySqlConnection conn = new MySqlConnection(connString))
+                {
+                    conn.Open();
+                    string query = "SELECT employee_type from employee_information WHERE emp_id=@emp_id;";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@emp_id", emp_id);
+
+                    MySqlDataReader sdr = cmd.ExecuteReader();
+                    while (sdr.Read())
+                    {
+                        employee_type = sdr.GetString("employee_type");
+                    }
+                    conn.Dispose();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error Message"+ex);
+            }
+
+            return employee_type;
+        }
+
+        public static double GetDeductionHMO(int emp_id)
+        {
+            string employee_type = GetEmployeeType(emp_id);
+            double deduction_hmo = 0;
+            try
+            {
+
+                using (MySqlConnection conn = new MySqlConnection(connString))
+                {
+                    conn.Open();
+                    string query = "SELECT deduction_hmo FROM hmo_tb WHERE @employee_type=@employee_type";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@employee_type", employee_type);
+
+                    MySqlDataReader sdr = cmd.ExecuteReader();
+                    while (sdr.Read())
+                    {
+                        deduction_hmo = sdr.GetDouble("deduction_hmo");
+                    }
+                    conn.Dispose();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error Message"+ex);
+            }
+            return deduction_hmo;
+        }
+
+        private static (double deduction_sss_er, double deduction_sss_ee) GetDeductionSSS(double salary)
+        {
+            double deduction_sss_er = 0;
+            double deduction_sss_ee = 0;
+
+            try
+            {
+                using(MySqlConnection conn = new MySqlConnection(connString))
+                {
+                    conn.Open();
+                    string query = "SELECT employer, employee from sss_tb WHERE @salary BETWEEN salary_from AND salary_to";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@salary",salary);
+
+                    MySqlDataReader sdr = cmd.ExecuteReader();
+                    while (sdr.Read())
+                    {
+                        deduction_sss_er = sdr.GetDouble("employer");
+                        deduction_sss_ee = sdr.GetDouble("employee");
+                    }
+                    conn.Dispose();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error Message"+ex);
+            }
+            return (deduction_sss_er, deduction_sss_ee);
+        }
+
+        public static (double deduction_sss_er, double deduction_sss_ee, double deduction_philhealth, double deduction_pagibig) GetMandatory(int emp_id)
+        {
+
+            double salary = GetEmployeeSalary(emp_id);
+            var (deduction_sss_er, deduction_sss_ee) = GetDeductionSSS(salary);
+
+            double deduction_philhealth = 0;
+            double deduction_pagibig = 0;
+
+            return (deduction_sss_er, deduction_sss_ee, deduction_philhealth, deduction_pagibig);
+        } 
       
         public static (double deduction_late, double deduction_absent) GetDeduction(int emp_id, double undertime, double absent, double late)
         {
