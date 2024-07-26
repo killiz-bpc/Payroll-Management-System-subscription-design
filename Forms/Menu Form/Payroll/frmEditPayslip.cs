@@ -1,5 +1,4 @@
-﻿using Payroll_Management_System.Forms.Menu_Form.Attendance;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,12 +19,13 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
 
         private void btnBack_Click(object sender, EventArgs e)
         {
+            frmViewPayslip frmViewPayslip = new frmViewPayslip();
+
             frmHome frmHome = Application.OpenForms.OfType<frmHome>().FirstOrDefault();
 
             if (frmHome.mainPanel != null)
             {
-                frmOverviewPayroll frmOverviewPayroll = new frmOverviewPayroll();
-                frmHome.DisplayForm(frmOverviewPayroll, frmHome.mainPanel);
+                frmHome.DisplayForm(frmViewPayslip, frmHome.mainPanel);
             }
         }
     }

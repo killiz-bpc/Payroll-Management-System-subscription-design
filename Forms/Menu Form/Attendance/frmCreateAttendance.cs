@@ -13,6 +13,7 @@ using System.Collections;
 using Microsoft.Office.Interop.Excel;
 using System.Configuration;
 using System.Net.Http.Headers;
+using Mysqlx.Datatypes;
 
 namespace Payroll_Management_System.Forms.Menu_Form.Attendance
 {
@@ -296,16 +297,31 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
                 
                 try
                 {
+
+                    
                     using (MySqlConnection conn = new MySqlConnection(connString))
-                    {
+                    { 
                         conn.Open();
                         var (deduction_late, deduction_absent) = GetData.GetDeduction(emp_id, undertime, absences, lates); //deduction tardiness
 
                         var (addition_overtime, addition_nightpremium, addition_restdayduty, addition_legalholiday, addition_specialholiday) = GetData.GetAddition(emp_id, over_time, night_premium, restday_duty, legal_holiday, special_holiday); // addition
-                        var (deduction_sss_er, deduction_sss_ee, deduction_philhealth, deduction_pagibig) = GetData.GetMandatory(emp_id); //deduction mandatory
-                        double deduction_hmo = GetData.GetDeductionHMO(emp_id); //deduction HMO
 
-                        string query = "INSERT INTO payroll_process_tb (attendance_batch_no, cutoff_period, emp_id, employee_name, department, addition_overtime, addition_nightpremium, addition_restdayduty, addition_legalholiday, addition_specialholiday, deduction_late, deduction_absent) VALUES (@attendance_batch_no, @cutoff_period, @emp_id, @employee_name, @department, @addition_overtime, @addition_nightpremium, @addition_restdayduty, @addition_legalholiday, @addition_specialholiday, @deduction_late, @deduction_absent)";
+                        double deduction_sss_er = 0;
+                        double deduction_sss_ee = 0;
+                        double deduction_philhealth = 0;
+                        double deduction_pagibig = 0;
+
+
+                        //deduction mandatory
+                        if (cutoff_period == "Second")
+                        {
+                            (deduction_sss_er, deduction_sss_ee, deduction_philhealth, deduction_pagibig) = GetData.GetMandatory(emp_id);
+                        }
+                        //deduction HMO
+                        double deduction_hmo = GetData.GetDeductionHMO(emp_id); 
+
+
+                        string query = "INSERT INTO payroll_process_tb (attendance_batch_no, cutoff_period, emp_id, employee_name, department, addition_overtime, addition_nightpremium, addition_restdayduty, addition_legalholiday, addition_specialholiday, deduction_late, deduction_absent, deduction_sss_er, deduction_sss_ee, deduction_philhealth, deduction_pagibig, deduction_hmo, deduction_tax, status) VALUES (@attendance_batch_no, @cutoff_period, @emp_id, @employee_name, @department, @addition_overtime, @addition_nightpremium, @addition_restdayduty, @addition_legalholiday, @addition_specialholiday, @deduction_late, @deduction_absent, @deduction_sss_er, @deduction_sss_ee, @deduction_philhealth, @deduction_pagibig, @deduction_hmo, 0, 'For Payroll')";
 
                         MySqlCommand cmd = new MySqlCommand(query, conn);
                         cmd.Parameters.AddWithValue("@attendance_batch_no", attendance_batch_no);
@@ -321,16 +337,21 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
                         cmd.Parameters.AddWithValue("@addition_specialholiday", addition_specialholiday);
                         cmd.Parameters.AddWithValue("@deduction_late", deduction_late);
                         cmd.Parameters.AddWithValue("@deduction_absent", deduction_absent);
-                        
+
+
+                        //mandatory
+                        cmd.Parameters.AddWithValue("@deduction_sss_er", deduction_sss_er);
+                        cmd.Parameters.AddWithValue("@deduction_sss_ee", deduction_sss_ee);
+                        cmd.Parameters.AddWithValue("@deduction_philhealth", deduction_philhealth);
+                        cmd.Parameters.AddWithValue("@deduction_pagibig", deduction_pagibig);
+
+                        //hmo
+                        cmd.Parameters.AddWithValue("@deduction_hmo", deduction_hmo);
 
                         cmd.ExecuteNonQuery();
-                        MessageBox.Show("inserted");
                         conn.Dispose();
-
-                        MessageBox.Show("ER: "+deduction_sss_er);
-                        MessageBox.Show("EE "+deduction_sss_ee);
-                        MessageBox.Show("HMO "+deduction_hmo);
                     }
+                    MessageBox.Show("inserted");
                 }
                 catch (Exception ex)
                 {

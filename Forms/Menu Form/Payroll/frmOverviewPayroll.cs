@@ -31,7 +31,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
                 using(MySqlConnection conn = new MySqlConnection(connString))
                 {
                     conn.Open();
-                    string query = "SELECT DISTINCT attendance_batch_no FROM attendance_monitoring where status='Approved'";
+                    string query = "SELECT DISTINCT attendance_batch_no FROM payroll_process_tb where status='For Payroll'";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     
                     MySqlDataReader sdr = cmd.ExecuteReader();
@@ -99,7 +99,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
                 using (MySqlConnection conn = new MySqlConnection(connString))
                 {
                     conn.Open();
-                    string query = "SELECT emp_id, employee_name FROM payroll_process_tb where attendance_batch_no=@attendance_batch_no AND department=@department";
+                    string query = "SELECT emp_id, employee_name FROM payroll_process_tb where attendance_batch_no=@attendance_batch_no AND department=@department AND status='For Payroll'";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
 
                     cmd.Parameters.AddWithValue("@attendance_batch_no", txtAttendanceBatch.Text);
@@ -133,13 +133,16 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
                 dgvPayslip.CurrentCell = dgvPayslip.Rows[e.RowIndex].Cells[e.ColumnIndex];
 
                 string employee_id = dgvPayslip.CurrentRow.Cells["emp_id"].Value.ToString();
-                frmEditPayslip frmEditPayslip = new frmEditPayslip();
+
+                
+
+                frmViewPayslip frmViewPayslip = new frmViewPayslip();
 
                 frmHome frmHome = Application.OpenForms.OfType<frmHome>().FirstOrDefault();
 
                 if (frmHome.mainPanel != null)
                 {
-                    frmHome.DisplayForm(frmEditPayslip, frmHome.mainPanel);
+                    frmHome.DisplayForm(frmViewPayslip, frmHome.mainPanel);
                 }
 
 

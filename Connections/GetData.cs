@@ -130,6 +130,7 @@ namespace Payroll_Management_System.Connections
 
         private static string GetEmployeeType(int emp_id)
         {
+           
             string employee_type ="";
             try
             {
@@ -155,6 +156,7 @@ namespace Payroll_Management_System.Connections
                 MessageBox.Show("Error Message"+ex);
             }
 
+            
             return employee_type;
         }
 
@@ -168,7 +170,7 @@ namespace Payroll_Management_System.Connections
                 using (MySqlConnection conn = new MySqlConnection(connString))
                 {
                     conn.Open();
-                    string query = "SELECT deduction_hmo FROM hmo_tb WHERE @employee_type=@employee_type";
+                    string query = "SELECT deduction_hmo FROM hmo_tb WHERE employee_type=@employee_type";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@employee_type", employee_type);
 
@@ -179,6 +181,11 @@ namespace Payroll_Management_System.Connections
                     }
                     conn.Dispose();
                 }
+
+
+                MessageBox.Show("Emp ID:" + emp_id);
+                MessageBox.Show("employee_type:" + employee_type);
+                MessageBox.Show("deduction_hmo:" + deduction_hmo);
             }
             catch (Exception ex)
             {
@@ -218,15 +225,48 @@ namespace Payroll_Management_System.Connections
             }
             return (deduction_sss_er, deduction_sss_ee);
         }
+        private static double GetDeductionPhilhealth(double salary)
+        {
+            double deduction_philhealth = 0;
+            double percent = 0;
+
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(connString))
+                {
+                    conn.Open();
+                    string query = "SELECT percent from philhealth_tb WHERE @salary BETWEEN salary_from AND salary_to";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@salary", salary);
+
+                    MySqlDataReader sdr = cmd.ExecuteReader();
+                    while (sdr.Read())
+                    {
+                        percent = sdr.GetDouble("percent");
+                    }
+                    conn.Dispose();
+                }
+
+                deduction_philhealth = salary * percent;
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error Message"+ex);
+            }
+            return deduction_philhealth;
+        }
+
 
         public static (double deduction_sss_er, double deduction_sss_ee, double deduction_philhealth, double deduction_pagibig) GetMandatory(int emp_id)
         {
 
             double salary = GetEmployeeSalary(emp_id);
             var (deduction_sss_er, deduction_sss_ee) = GetDeductionSSS(salary);
+            double deduction_philhealth = GetDeductionPhilhealth(salary);
+            double deduction_pagibig = 200;
 
-            double deduction_philhealth = 0;
-            double deduction_pagibig = 0;
 
             return (deduction_sss_er, deduction_sss_ee, deduction_philhealth, deduction_pagibig);
         } 
