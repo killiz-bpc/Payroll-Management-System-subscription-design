@@ -23,15 +23,17 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
         string connString = frmLogin.connString;
 
         public string attendance_batch_no { get; set; }
+        public string status { get; set; }
 
         public void load_data()
         {
             using (MySqlConnection conn = new MySqlConnection(connString))
             {
                 conn.Open();
-                string query = "SELECT department, emp_id, employee_name, absences, lates, under_time, night_premium, over_time, restday_duty, vacation_leave, sick_leave, legal_holiday, special_holiday, maternity_leave, paternity_leave, bereavement_leave, emergency_leave, magnacarta_leave, remarks FROM attendance_monitoring WHERE attendance_batch_no=@attendance_batch_no";
+                string query = "SELECT department, emp_id, employee_name, absences, lates, under_time, night_premium, over_time, restday_duty, vacation_leave, sick_leave, legal_holiday, special_holiday, maternity_leave, paternity_leave, bereavement_leave, emergency_leave, magnacarta_leave, remarks FROM attendance_monitoring WHERE attendance_batch_no=@attendance_batch_no AND status=@status";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@attendance_batch_no", attendance_batch_no.ToString());
+                cmd.Parameters.AddWithValue("@status", status.ToString());
                 cmd.ExecuteNonQuery();
                 System.Data.DataTable dt = new System.Data.DataTable();
                 MySqlDataAdapter sda = new MySqlDataAdapter(cmd);

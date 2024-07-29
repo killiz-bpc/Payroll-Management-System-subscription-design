@@ -32,7 +32,10 @@
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.btnBack = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2TextBox14 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel31 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2TextBox15 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TextBox20 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox21 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox22 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -68,8 +71,8 @@
             this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel22 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel21 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtAttendanceBatchNo = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtPeriod = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel19 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel20 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel18 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -90,14 +93,12 @@
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.btnSave = new Guna.UI2.WinForms.Guna2Button();
+            this.btnApprove = new Guna.UI2.WinForms.Guna2Button();
+            this.txtDeptTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtEmpName = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.labelAttendanceDetails = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2TextBox14 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel31 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
@@ -145,6 +146,7 @@
             this.guna2GradientPanel3.Controls.Add(this.guna2TextBox14);
             this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel31);
             this.guna2GradientPanel3.Controls.Add(this.guna2TextBox15);
+            this.guna2GradientPanel3.Controls.Add(this.btnSave);
             this.guna2GradientPanel3.Controls.Add(this.guna2TextBox20);
             this.guna2GradientPanel3.Controls.Add(this.guna2TextBox21);
             this.guna2GradientPanel3.Controls.Add(this.guna2TextBox22);
@@ -180,8 +182,8 @@
             this.guna2GradientPanel3.Controls.Add(this.guna2TextBox3);
             this.guna2GradientPanel3.Controls.Add(this.guna2TextBox4);
             this.guna2GradientPanel3.Controls.Add(this.guna2TextBox2);
-            this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel22);
-            this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel21);
+            this.guna2GradientPanel3.Controls.Add(this.txtAttendanceBatchNo);
+            this.guna2GradientPanel3.Controls.Add(this.txtPeriod);
             this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel19);
             this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel20);
             this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel18);
@@ -206,6 +208,42 @@
             this.guna2GradientPanel3.Size = new System.Drawing.Size(1140, 492);
             this.guna2GradientPanel3.TabIndex = 11;
             // 
+            // guna2TextBox14
+            // 
+            this.guna2TextBox14.BorderRadius = 8;
+            this.guna2TextBox14.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox14.DefaultText = "0.00";
+            this.guna2TextBox14.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox14.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox14.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox14.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox14.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox14.Font = new System.Drawing.Font("Poppins", 9F);
+            this.guna2TextBox14.ForeColor = System.Drawing.Color.Black;
+            this.guna2TextBox14.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox14.Location = new System.Drawing.Point(424, 321);
+            this.guna2TextBox14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2TextBox14.Name = "guna2TextBox14";
+            this.guna2TextBox14.PasswordChar = '\0';
+            this.guna2TextBox14.PlaceholderText = "asd";
+            this.guna2TextBox14.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.guna2TextBox14.SelectedText = "";
+            this.guna2TextBox14.Size = new System.Drawing.Size(103, 33);
+            this.guna2TextBox14.TabIndex = 144;
+            this.guna2TextBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // guna2HtmlLabel31
+            // 
+            this.guna2HtmlLabel31.AutoSize = false;
+            this.guna2HtmlLabel31.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel31.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel31.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel31.Location = new System.Drawing.Point(316, 331);
+            this.guna2HtmlLabel31.Name = "guna2HtmlLabel31";
+            this.guna2HtmlLabel31.Size = new System.Drawing.Size(172, 23);
+            this.guna2HtmlLabel31.TabIndex = 143;
+            this.guna2HtmlLabel31.Text = "Other Allowances";
+            // 
             // guna2TextBox15
             // 
             this.guna2TextBox15.BorderRadius = 8;
@@ -229,6 +267,27 @@
             this.guna2TextBox15.Size = new System.Drawing.Size(103, 33);
             this.guna2TextBox15.TabIndex = 142;
             this.guna2TextBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSave.Animated = true;
+            this.btnSave.BackColor = System.Drawing.Color.Transparent;
+            this.btnSave.BorderColor = System.Drawing.Color.Transparent;
+            this.btnSave.BorderRadius = 10;
+            this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
+            this.btnSave.Font = new System.Drawing.Font("Poppins", 9F);
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(946, 29);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(169, 43);
+            this.btnSave.TabIndex = 17;
+            this.btnSave.Text = "&Edit Payslip";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // guna2TextBox20
             // 
@@ -902,29 +961,29 @@
             this.guna2TextBox2.TabIndex = 104;
             this.guna2TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // guna2HtmlLabel22
+            // txtAttendanceBatchNo
             // 
-            this.guna2HtmlLabel22.AutoSize = false;
-            this.guna2HtmlLabel22.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel22.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel22.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel22.Location = new System.Drawing.Point(16, 44);
-            this.guna2HtmlLabel22.Name = "guna2HtmlLabel22";
-            this.guna2HtmlLabel22.Size = new System.Drawing.Size(234, 19);
-            this.guna2HtmlLabel22.TabIndex = 103;
-            this.guna2HtmlLabel22.Text = "Attendance Batch No. : BPC-ATB-010";
+            this.txtAttendanceBatchNo.AutoSize = false;
+            this.txtAttendanceBatchNo.BackColor = System.Drawing.Color.Transparent;
+            this.txtAttendanceBatchNo.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAttendanceBatchNo.ForeColor = System.Drawing.Color.Black;
+            this.txtAttendanceBatchNo.Location = new System.Drawing.Point(16, 44);
+            this.txtAttendanceBatchNo.Name = "txtAttendanceBatchNo";
+            this.txtAttendanceBatchNo.Size = new System.Drawing.Size(234, 19);
+            this.txtAttendanceBatchNo.TabIndex = 103;
+            this.txtAttendanceBatchNo.Text = "Attendance Batch No. : BPC-ATB-010";
             // 
-            // guna2HtmlLabel21
+            // txtPeriod
             // 
-            this.guna2HtmlLabel21.AutoSize = false;
-            this.guna2HtmlLabel21.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel21.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel21.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel21.Location = new System.Drawing.Point(16, 63);
-            this.guna2HtmlLabel21.Name = "guna2HtmlLabel21";
-            this.guna2HtmlLabel21.Size = new System.Drawing.Size(121, 19);
-            this.guna2HtmlLabel21.TabIndex = 102;
-            this.guna2HtmlLabel21.Text = "Period: First";
+            this.txtPeriod.AutoSize = false;
+            this.txtPeriod.BackColor = System.Drawing.Color.Transparent;
+            this.txtPeriod.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPeriod.ForeColor = System.Drawing.Color.Black;
+            this.txtPeriod.Location = new System.Drawing.Point(16, 63);
+            this.txtPeriod.Name = "txtPeriod";
+            this.txtPeriod.Size = new System.Drawing.Size(121, 19);
+            this.txtPeriod.TabIndex = 102;
+            this.txtPeriod.Text = "Period: First";
             // 
             // guna2HtmlLabel19
             // 
@@ -1171,59 +1230,59 @@
             this.guna2GradientPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2GradientPanel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.guna2GradientPanel2.Controls.Add(this.guna2HtmlLabel5);
-            this.guna2GradientPanel2.Controls.Add(this.guna2HtmlLabel1);
-            this.guna2GradientPanel2.Controls.Add(this.btnSave);
+            this.guna2GradientPanel2.Controls.Add(this.btnApprove);
+            this.guna2GradientPanel2.Controls.Add(this.txtDeptTitle);
+            this.guna2GradientPanel2.Controls.Add(this.txtEmpName);
             this.guna2GradientPanel2.Location = new System.Drawing.Point(28, 78);
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
             this.guna2GradientPanel2.Size = new System.Drawing.Size(1140, 102);
             this.guna2GradientPanel2.TabIndex = 10;
             // 
-            // guna2HtmlLabel5
+            // btnApprove
             // 
-            this.guna2HtmlLabel5.AutoSize = false;
-            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(16, 57);
-            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(217, 22);
-            this.guna2HtmlLabel5.TabIndex = 19;
-            this.guna2HtmlLabel5.Text = "Admin | Junior IT Programmer";
+            this.btnApprove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnApprove.Animated = true;
+            this.btnApprove.BackColor = System.Drawing.Color.Transparent;
+            this.btnApprove.BorderColor = System.Drawing.Color.Transparent;
+            this.btnApprove.BorderRadius = 10;
+            this.btnApprove.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnApprove.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnApprove.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnApprove.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnApprove.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
+            this.btnApprove.Font = new System.Drawing.Font("Poppins", 9F);
+            this.btnApprove.ForeColor = System.Drawing.Color.White;
+            this.btnApprove.Location = new System.Drawing.Point(946, 30);
+            this.btnApprove.Name = "btnApprove";
+            this.btnApprove.Size = new System.Drawing.Size(169, 43);
+            this.btnApprove.TabIndex = 145;
+            this.btnApprove.Text = "&Approve Payslip";
+            this.btnApprove.Click += new System.EventHandler(this.btnApprove_Click);
             // 
-            // guna2HtmlLabel1
+            // txtDeptTitle
             // 
-            this.guna2HtmlLabel1.AutoSize = false;
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Poppins Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(16, 22);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(489, 36);
-            this.guna2HtmlLabel1.TabIndex = 18;
-            this.guna2HtmlLabel1.Text = "Vidal, Cleeve Aarejohn F.";
+            this.txtDeptTitle.AutoSize = false;
+            this.txtDeptTitle.BackColor = System.Drawing.Color.Transparent;
+            this.txtDeptTitle.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDeptTitle.ForeColor = System.Drawing.Color.Black;
+            this.txtDeptTitle.Location = new System.Drawing.Point(16, 57);
+            this.txtDeptTitle.Name = "txtDeptTitle";
+            this.txtDeptTitle.Size = new System.Drawing.Size(772, 22);
+            this.txtDeptTitle.TabIndex = 19;
+            this.txtDeptTitle.Text = "Admin | Junior IT Programmer";
             // 
-            // btnSave
+            // txtEmpName
             // 
-            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.Animated = true;
-            this.btnSave.BackColor = System.Drawing.Color.Transparent;
-            this.btnSave.BorderColor = System.Drawing.Color.Transparent;
-            this.btnSave.BorderRadius = 10;
-            this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
-            this.btnSave.Font = new System.Drawing.Font("Poppins", 9F);
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(948, 29);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(169, 43);
-            this.btnSave.TabIndex = 17;
-            this.btnSave.Text = "&Edit Payslip";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.txtEmpName.AutoSize = false;
+            this.txtEmpName.BackColor = System.Drawing.Color.Transparent;
+            this.txtEmpName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.txtEmpName.Font = new System.Drawing.Font("Poppins Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpName.ForeColor = System.Drawing.Color.Black;
+            this.txtEmpName.Location = new System.Drawing.Point(16, 22);
+            this.txtEmpName.Name = "txtEmpName";
+            this.txtEmpName.Size = new System.Drawing.Size(838, 36);
+            this.txtEmpName.TabIndex = 18;
+            this.txtEmpName.Text = "Vidal, Cleeve Aarejohn F.";
             // 
             // labelAttendanceDetails
             // 
@@ -1248,42 +1307,6 @@
             this.guna2Elipse2.BorderRadius = 10;
             this.guna2Elipse2.TargetControl = this.guna2GradientPanel3;
             // 
-            // guna2TextBox14
-            // 
-            this.guna2TextBox14.BorderRadius = 8;
-            this.guna2TextBox14.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox14.DefaultText = "0.00";
-            this.guna2TextBox14.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox14.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox14.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox14.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox14.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox14.Font = new System.Drawing.Font("Poppins", 9F);
-            this.guna2TextBox14.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox14.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox14.Location = new System.Drawing.Point(424, 321);
-            this.guna2TextBox14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox14.Name = "guna2TextBox14";
-            this.guna2TextBox14.PasswordChar = '\0';
-            this.guna2TextBox14.PlaceholderText = "asd";
-            this.guna2TextBox14.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.guna2TextBox14.SelectedText = "";
-            this.guna2TextBox14.Size = new System.Drawing.Size(103, 33);
-            this.guna2TextBox14.TabIndex = 144;
-            this.guna2TextBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // guna2HtmlLabel31
-            // 
-            this.guna2HtmlLabel31.AutoSize = false;
-            this.guna2HtmlLabel31.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel31.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel31.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel31.Location = new System.Drawing.Point(316, 331);
-            this.guna2HtmlLabel31.Name = "guna2HtmlLabel31";
-            this.guna2HtmlLabel31.Size = new System.Drawing.Size(172, 23);
-            this.guna2HtmlLabel31.TabIndex = 143;
-            this.guna2HtmlLabel31.Text = "Other Allowances";
-            // 
             // frmViewPayslip
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1293,6 +1316,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmViewPayslip";
             this.Text = "frmEditPayslip";
+            this.Load += new System.EventHandler(this.frmViewPayslip_Load);
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel3.ResumeLayout(false);
             this.guna2GradientPanel2.ResumeLayout(false);
@@ -1311,10 +1335,10 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel labelAttendanceDetails;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtEmpName;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtDeptTitle;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel17;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel16;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
@@ -1331,8 +1355,8 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel19;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel20;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel18;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel22;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel21;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtAttendanceBatchNo;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtPeriod;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox13;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox7;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox8;
@@ -1371,5 +1395,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel37;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox14;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel31;
+        private Guna.UI2.WinForms.Guna2Button btnApprove;
     }
 }

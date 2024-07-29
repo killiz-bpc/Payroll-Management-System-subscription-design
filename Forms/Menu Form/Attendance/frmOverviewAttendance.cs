@@ -106,6 +106,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
             {
                 frmSummaryAttendance frmSummaryAttendance = new frmSummaryAttendance();
                 frmSummaryAttendance.attendance_batch_no = attendance_batch_no;
+                frmSummaryAttendance.status = status;
                 frmSummaryAttendance.ShowDialog();
             }
         }

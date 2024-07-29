@@ -41,7 +41,7 @@
             this.txtAttendanceBatch = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtDepartment = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.btnAddEmployee = new Guna.UI2.WinForms.Guna2Button();
+            this.btnLoad = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.dgvPayslip = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -53,6 +53,7 @@
             this.tabOther = new System.Windows.Forms.TabPage();
             this.guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.guna2GradientPanel5 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -60,7 +61,6 @@
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2GradientPanel5 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2GradientPanel1.SuspendLayout();
             this.tabInformation.SuspendLayout();
             this.tabPersonal.SuspendLayout();
@@ -150,7 +150,7 @@
             this.guna2GradientPanel2.Controls.Add(this.txtAttendanceBatch);
             this.guna2GradientPanel2.Controls.Add(this.guna2HtmlLabel6);
             this.guna2GradientPanel2.Controls.Add(this.txtDepartment);
-            this.guna2GradientPanel2.Controls.Add(this.btnAddEmployee);
+            this.guna2GradientPanel2.Controls.Add(this.btnLoad);
             this.guna2GradientPanel2.Controls.Add(this.guna2HtmlLabel4);
             this.guna2GradientPanel2.Location = new System.Drawing.Point(8, 11);
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
@@ -209,25 +209,26 @@
             this.txtDepartment.TabIndex = 21;
             this.txtDepartment.SelectedIndexChanged += new System.EventHandler(this.txtDepartment_SelectedIndexChanged);
             // 
-            // btnAddEmployee
+            // btnLoad
             // 
-            this.btnAddEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddEmployee.Animated = true;
-            this.btnAddEmployee.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddEmployee.BorderColor = System.Drawing.Color.Transparent;
-            this.btnAddEmployee.BorderRadius = 10;
-            this.btnAddEmployee.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddEmployee.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddEmployee.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddEmployee.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddEmployee.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
-            this.btnAddEmployee.Font = new System.Drawing.Font("Poppins", 9F);
-            this.btnAddEmployee.ForeColor = System.Drawing.Color.White;
-            this.btnAddEmployee.Location = new System.Drawing.Point(977, 19);
-            this.btnAddEmployee.Name = "btnAddEmployee";
-            this.btnAddEmployee.Size = new System.Drawing.Size(159, 47);
-            this.btnAddEmployee.TabIndex = 15;
-            this.btnAddEmployee.Text = "&Generate";
+            this.btnLoad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLoad.Animated = true;
+            this.btnLoad.BackColor = System.Drawing.Color.Transparent;
+            this.btnLoad.BorderColor = System.Drawing.Color.Transparent;
+            this.btnLoad.BorderRadius = 10;
+            this.btnLoad.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLoad.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLoad.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLoad.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLoad.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
+            this.btnLoad.Font = new System.Drawing.Font("Poppins", 9F);
+            this.btnLoad.ForeColor = System.Drawing.Color.White;
+            this.btnLoad.Location = new System.Drawing.Point(977, 19);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(159, 47);
+            this.btnLoad.TabIndex = 15;
+            this.btnLoad.Text = "&Load Data";
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // guna2HtmlLabel4
             // 
@@ -410,6 +411,15 @@
             this.tabPage1.TabIndex = 3;
             this.tabPage1.Text = "Other Deductions";
             // 
+            // guna2GradientPanel5
+            // 
+            this.guna2GradientPanel5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.guna2GradientPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2GradientPanel5.Location = new System.Drawing.Point(0, 0);
+            this.guna2GradientPanel5.Name = "guna2GradientPanel5";
+            this.guna2GradientPanel5.Size = new System.Drawing.Size(1165, 631);
+            this.guna2GradientPanel5.TabIndex = 14;
+            // 
             // guna2HtmlLabel3
             // 
             this.guna2HtmlLabel3.AutoSize = false;
@@ -462,15 +472,6 @@
             // 
             this.guna2Elipse4.TargetControl = this.guna2GradientPanel3;
             // 
-            // guna2GradientPanel5
-            // 
-            this.guna2GradientPanel5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.guna2GradientPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2GradientPanel5.Location = new System.Drawing.Point(0, 0);
-            this.guna2GradientPanel5.Name = "guna2GradientPanel5";
-            this.guna2GradientPanel5.Size = new System.Drawing.Size(1165, 631);
-            this.guna2GradientPanel5.TabIndex = 14;
-            // 
             // frmOverviewPayroll
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -504,7 +505,7 @@
         private Guna.UI2.WinForms.Guna2ComboBox txtAttendanceBatch;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private Guna.UI2.WinForms.Guna2ComboBox txtDepartment;
-        private Guna.UI2.WinForms.Guna2Button btnAddEmployee;
+        private Guna.UI2.WinForms.Guna2Button btnLoad;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;

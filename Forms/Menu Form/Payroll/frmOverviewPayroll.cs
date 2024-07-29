@@ -21,7 +21,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
 
         string connString = frmLogin.GetConnectionString();
 
-
+        public string cutoff_period { get; set; }
 
 
         public void load_attendance_batch_no()
@@ -31,7 +31,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
                 using(MySqlConnection conn = new MySqlConnection(connString))
                 {
                     conn.Open();
-                    string query = "SELECT DISTINCT attendance_batch_no FROM payroll_process_tb where status='For Payroll'";
+                    string query = "SELECT DISTINCT attendance_batch_no FROM attendance_monitoring where status='Approved'";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     
                     MySqlDataReader sdr = cmd.ExecuteReader();
@@ -53,17 +53,19 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
 
         private void frmOverviewPayroll_Load(object sender, EventArgs e)
         {
+            dgvPayslip.Visible=false;
             load_attendance_batch_no();
         }
 
         public void load_department()
         {
+            
             try
             {
                 using (MySqlConnection conn = new MySqlConnection(connString))
                 {
                     conn.Open();
-                    string query = "SELECT DISTINCT department FROM payroll_process_tb where attendance_batch_no=@attendance_batch_no";
+                    string query = "SELECT DISTINCT department, cutoff_period FROM attendance_monitoring where attendance_batch_no=@attendance_batch_no";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@attendance_batch_no",txtAttendanceBatch.Text);
 
@@ -74,6 +76,9 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
                         txtDepartment.Items.Clear();
                         string department = sdr.GetString("department");
                         txtDepartment.Items.Add(department);
+
+                        string cutoff_period = sdr.GetString("cutoff_period");
+                        this.cutoff_period = cutoff_period;
                     }
 
                     conn.Dispose();
@@ -88,6 +93,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
 
         private void txtAttendanceBatch_SelectedIndexChanged(object sender, EventArgs e)
         {
+            dgvPayslip.Visible=false;
             load_department();
         }
 
@@ -99,7 +105,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
                 using (MySqlConnection conn = new MySqlConnection(connString))
                 {
                     conn.Open();
-                    string query = "SELECT emp_id, employee_name FROM payroll_process_tb where attendance_batch_no=@attendance_batch_no AND department=@department AND status='For Payroll'";
+                    string query = "SELECT emp_id, employee_name FROM attendance_monitoring where attendance_batch_no=@attendance_batch_no AND department=@department AND status='Approved'";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
 
                     cmd.Parameters.AddWithValue("@attendance_batch_no", txtAttendanceBatch.Text);
@@ -123,7 +129,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
 
         private void txtDepartment_SelectedIndexChanged(object sender, EventArgs e)
         {
-            load_data();
+            
         }
 
         private void dgvPayslip_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -132,11 +138,14 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
             {
                 dgvPayslip.CurrentCell = dgvPayslip.Rows[e.RowIndex].Cells[e.ColumnIndex];
 
-                string employee_id = dgvPayslip.CurrentRow.Cells["emp_id"].Value.ToString();
+                int emp_id = Convert.ToInt32(dgvPayslip.CurrentRow.Cells["emp_id"].Value.ToString());
 
-                
 
                 frmViewPayslip frmViewPayslip = new frmViewPayslip();
+                frmViewPayslip.emp_id=emp_id;
+                frmViewPayslip.attendance_batch_no=txtAttendanceBatch.Text;
+                frmViewPayslip.cutoff_period=cutoff_period;
+
 
                 frmHome frmHome = Application.OpenForms.OfType<frmHome>().FirstOrDefault();
 
@@ -147,6 +156,12 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
 
 
             }
+        }
+
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            load_data();
+            dgvPayslip.Visible=true;
         }
     }
 }

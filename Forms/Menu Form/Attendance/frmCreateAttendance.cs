@@ -82,8 +82,6 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
         private void frmCreateAttendance_Load(object sender, EventArgs e)
         {
 
-
-
             if (attendance_batch_no != null)
             {
                 isNewAttendance = false;
