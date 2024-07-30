@@ -287,7 +287,6 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
                 double legal_holiday = string.IsNullOrEmpty(row.Cells["legal_holiday"].Value.ToString()) ? 0.0 : Convert.ToDouble(row.Cells["legal_holiday"].Value.ToString());
                 double special_holiday = string.IsNullOrEmpty(row.Cells["special_holiday"].Value.ToString()) ? 0.0 : Convert.ToDouble(row.Cells["special_holiday"].Value.ToString());
 
-
                 int emp_id = Convert.ToInt32(row.Cells["emp_id"].Value.ToString());
                 string employee_name = row.Cells["employee_name"].Value.ToString();
                 string department = row.Cells["department"].Value.ToString();
@@ -877,7 +876,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Attendance
                             conn.Dispose();
                         }
 
-                        attendance_computation();
+                       // attendance_computation();
 
                         MessageBox.Show("Attendance Batch has been approved", "Message Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         frmHome frmHome = System.Windows.Forms.Application.OpenForms.OfType<frmHome>().FirstOrDefault();

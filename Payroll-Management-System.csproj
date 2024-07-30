@@ -28,7 +28,7 @@
     <MinimumRequiredVersion>1.0.0.6</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>24</ApplicationRevision>
+    <ApplicationRevision>25</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -176,6 +176,7 @@
   <ItemGroup>
     <Compile Include="Connections\GetData.cs" />
     <Compile Include="Connections\GetPayslip.cs" />
+    <Compile Include="Connections\GetPayslipDetails.cs" />
     <Compile Include="Forms\Menu Form\Attendance\frmAttendance.cs">
       <SubType>Form</SubType>
     </Compile>

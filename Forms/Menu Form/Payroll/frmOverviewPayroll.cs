@@ -53,7 +53,8 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
 
         private void frmOverviewPayroll_Load(object sender, EventArgs e)
         {
-            dgvPayslip.Visible=false;
+            panelSlip.Visible=false;
+            btnLoad.Enabled=false;
             load_attendance_batch_no();
         }
 
@@ -65,15 +66,16 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
                 using (MySqlConnection conn = new MySqlConnection(connString))
                 {
                     conn.Open();
-                    string query = "SELECT DISTINCT department, cutoff_period FROM attendance_monitoring where attendance_batch_no=@attendance_batch_no";
+                    string query = "SELECT DISTINCT department, cutoff_period FROM attendance_monitoring where attendance_batch_no=@attendance_batch_no AND status='Approved'";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@attendance_batch_no",txtAttendanceBatch.Text);
 
                     MySqlDataReader sdr = cmd.ExecuteReader();
 
+                    txtDepartment.Items.Clear();
                     while (sdr.Read())
                     {
-                        txtDepartment.Items.Clear();
+
                         string department = sdr.GetString("department");
                         txtDepartment.Items.Add(department);
 
@@ -93,7 +95,8 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
 
         private void txtAttendanceBatch_SelectedIndexChanged(object sender, EventArgs e)
         {
-            dgvPayslip.Visible=false;
+            panelSlip.Visible=false;
+            btnLoad.Enabled = false;
             load_department();
         }
 
@@ -129,7 +132,8 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
 
         private void txtDepartment_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            panelSlip.Visible=false;
+            btnLoad.Enabled=true;
         }
 
         private void dgvPayslip_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -161,7 +165,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
         private void btnLoad_Click(object sender, EventArgs e)
         {
             load_data();
-            dgvPayslip.Visible=true;
+            panelSlip.Visible=true;
         }
     }
 }
