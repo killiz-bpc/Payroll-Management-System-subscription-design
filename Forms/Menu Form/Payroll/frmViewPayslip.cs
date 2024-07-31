@@ -24,13 +24,6 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
         public string attendance_batch_no { get; set; }
         public string cutoff_period { get; set; }
 
-        public string employee_name { get; set; }
-        public string job_title { get; set; }
-        public string department { get; set; }
-
-
-
-
         string connString = frmLogin.connString;
 
         private void btnBack_Click(object sender, EventArgs e)

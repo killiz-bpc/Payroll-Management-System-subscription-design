@@ -51,7 +51,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
                 txtJobTitle.Text = GetPayslipDetails.job_title;
                 txtDepartment.Text = GetPayslipDetails.department;
 
-                txtBasicSalary.Text = GetPayslipDetails.department;
+                txtBasicSalary.Text = GetPayslipDetails.basic_salary.ToString("N3");
 
                 //deductions
                 txtTardiness.Text = GetPayslipDetails.deduction_late.ToString("N3");
