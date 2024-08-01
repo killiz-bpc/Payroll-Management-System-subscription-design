@@ -39,6 +39,32 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
             }
         }
 
+        public void gross_salary_computation()
+        {
+
+            try
+            {
+                double overtime = string.IsNullOrWhiteSpace(txtOvertime.Text) ? 0 : Convert.ToDouble(txtOvertime.Text);
+                double nightprem = string.IsNullOrWhiteSpace(txtNightPrem.Text) ? 0 : Convert.ToDouble(txtNightPrem.Text);
+                double restday_duty = string.IsNullOrWhiteSpace(txtRestdayDuty.Text) ? 0 : Convert.ToDouble(txtRestdayDuty.Text);
+                double legal_holiday = string.IsNullOrWhiteSpace(txtLegalHoliday.Text) ? 0 : Convert.ToDouble(txtLegalHoliday.Text);
+                double special_holiday = string.IsNullOrWhiteSpace(txtSpecialHoliday.Text) ? 0 : Convert.ToDouble(txtSpecialHoliday.Text);
+
+                // Calculate gross salary
+                double gross_salary = overtime + nightprem + restday_duty + legal_holiday + special_holiday;
+
+                // Display gross salary in the text box formatted to three decimal places
+                txtGrossSalary.Text = gross_salary.ToString("N3");
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error Message"+ex);
+                
+            }
+           
+        }
+
         private void frmEditPayslip_Load(object sender, EventArgs e)
         {
             frmViewPayslip frmViewPayslip = new frmViewPayslip();
@@ -65,6 +91,13 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
                 txtLegalHoliday.Text = GetPayslipDetails.addition_legalholiday.ToString("N3");
                 txtSpecialHoliday.Text = GetPayslipDetails.addition_specialholiday.ToString("N3");
 
+
+
+
+                
+
+
+
             }
             else
             {
@@ -81,6 +114,19 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
             if (frmHome.mainPanel != null)
             {
                 frmHome.DisplayForm(frmViewPayslip, frmHome.mainPanel);
+            }
+        }
+
+        private void txtOvertime_Validated(object sender, EventArgs e)
+        {
+            gross_salary_computation();
+        }
+
+        private void txtOvertime_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
             }
         }
     }
