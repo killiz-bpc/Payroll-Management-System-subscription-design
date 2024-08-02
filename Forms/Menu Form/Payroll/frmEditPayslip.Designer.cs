@@ -69,6 +69,7 @@
             this.guna2HtmlLabel36 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnBack = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.txtGrossSalary = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtSpecialHoliday = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtBasicSalary = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtLegalHoliday = new Guna.UI2.WinForms.Guna2TextBox();
@@ -105,7 +106,7 @@
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.txtGrossSalary = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2GradientPanel5.SuspendLayout();
             this.guna2GradientPanel4.SuspendLayout();
@@ -131,6 +132,7 @@
             this.guna2GradientPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2GradientPanel5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.guna2GradientPanel5.Controls.Add(this.guna2Button1);
             this.guna2GradientPanel5.Controls.Add(this.guna2TextBox34);
             this.guna2GradientPanel5.Controls.Add(this.btnSave);
             this.guna2GradientPanel5.Controls.Add(this.guna2HtmlLabel38);
@@ -847,6 +849,31 @@
             this.guna2GradientPanel3.Size = new System.Drawing.Size(1090, 166);
             this.guna2GradientPanel3.TabIndex = 11;
             // 
+            // txtGrossSalary
+            // 
+            this.txtGrossSalary.BorderRadius = 8;
+            this.txtGrossSalary.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.txtGrossSalary.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtGrossSalary.DefaultText = "0.00";
+            this.txtGrossSalary.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtGrossSalary.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtGrossSalary.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtGrossSalary.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtGrossSalary.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtGrossSalary.Font = new System.Drawing.Font("Poppins Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGrossSalary.ForeColor = System.Drawing.Color.Black;
+            this.txtGrossSalary.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtGrossSalary.Location = new System.Drawing.Point(822, 121);
+            this.txtGrossSalary.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtGrossSalary.Name = "txtGrossSalary";
+            this.txtGrossSalary.PasswordChar = '\0';
+            this.txtGrossSalary.PlaceholderText = "asd";
+            this.txtGrossSalary.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtGrossSalary.SelectedText = "";
+            this.txtGrossSalary.Size = new System.Drawing.Size(121, 33);
+            this.txtGrossSalary.TabIndex = 163;
+            this.txtGrossSalary.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // txtSpecialHoliday
             // 
             this.txtSpecialHoliday.BorderRadius = 8;
@@ -1423,30 +1450,25 @@
             this.guna2Elipse4.BorderRadius = 10;
             this.guna2Elipse4.TargetControl = this.guna2GradientPanel5;
             // 
-            // txtGrossSalary
+            // guna2Button1
             // 
-            this.txtGrossSalary.BorderRadius = 8;
-            this.txtGrossSalary.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.txtGrossSalary.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtGrossSalary.DefaultText = "0.00";
-            this.txtGrossSalary.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtGrossSalary.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtGrossSalary.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtGrossSalary.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtGrossSalary.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtGrossSalary.Font = new System.Drawing.Font("Poppins Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGrossSalary.ForeColor = System.Drawing.Color.Black;
-            this.txtGrossSalary.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtGrossSalary.Location = new System.Drawing.Point(822, 121);
-            this.txtGrossSalary.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtGrossSalary.Name = "txtGrossSalary";
-            this.txtGrossSalary.PasswordChar = '\0';
-            this.txtGrossSalary.PlaceholderText = "asd";
-            this.txtGrossSalary.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtGrossSalary.SelectedText = "";
-            this.txtGrossSalary.Size = new System.Drawing.Size(121, 33);
-            this.txtGrossSalary.TabIndex = 163;
-            this.txtGrossSalary.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.guna2Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.guna2Button1.Animated = true;
+            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.BorderRadius = 10;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Poppins", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(371, 61);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(622, 39);
+            this.guna2Button1.TabIndex = 148;
+            this.guna2Button1.Text = "new update new update";
             // 
             // frmEditPayslip
             // 
@@ -1546,5 +1568,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtTardiness;
         private Guna.UI2.WinForms.Guna2TextBox txtAbsent;
         private Guna.UI2.WinForms.Guna2TextBox txtGrossSalary;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }
