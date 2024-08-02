@@ -22,7 +22,13 @@ namespace Payroll_Management_System.Connections
         public static double deduction_late { get; set; }
         public static double deduction_undertime { get; set; }
         public static double deduction_absent { get; set; }
-        public static double hmo { get; set; }
+        public static double deduction_hmo { get; set; }
+        public static double deduction_sss { get; set; }
+        public static double deduction_philhealth { get; set; }
+        public static double deduction_pagibig { get; set; }
+
+
+
 
 
     }

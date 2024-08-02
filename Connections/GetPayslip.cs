@@ -317,7 +317,11 @@ namespace Payroll_Management_System.Connections
         }
 
     
-
+        public static double ConvertToDouble(string textbox)
+        {
+            string new_text_box = textbox.Replace(",","");
+            return Convert.ToDouble(new_text_box);
+        }
 
 
     }

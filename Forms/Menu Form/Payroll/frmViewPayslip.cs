@@ -50,18 +50,13 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
             txtAttendanceBatchNo.Text = "Attendance Batch No. : "+attendance_batch_no;
             txtPeriod.Text = "Period: "+cutoff_period;
 
-            
-            //textboxes
-
-            txtHMO.Text = Convert.ToString(GetPayslip.GetDeductionHMO(emp_id));
-
             //get computation from attendance
             var (deduction_late, deduction_undertime, deduction_absent, addition_overtime, addition_nightpremium, addition_restdayduty, addition_legalholiday, addition_specialholiday) = GetPayslip.GetAttendanceComputation(emp_id, attendance_batch_no);
 
             //basic salary
             double basic_salary = GetPayslip.GetEmployeeSalary(emp_id, attendance_batch_no, cutoff_period);
             txtBasicSalary.Text = basic_salary.ToString("N3");
-
+            
             //deductions
             txtTardiness.Text = deduction_late.ToString("N3");
             txtUndertime.Text = deduction_undertime.ToString("N3");
@@ -80,7 +75,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
             {
                 txtPagibig.Text = deduction_pagibig.ToString("N3");
                 txtPhilhealth.Text = deduction_philhealth.ToString("N3");
-                txtSSS.Text = deduction_sss_ee.ToString("N3");
+                txtSSS.Text = deduction_sss_ee.ToString("N3");   
             }
             else
             {
@@ -88,35 +83,113 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
                 deduction_sss_er = 0.00;
                 deduction_philhealth = 0.00;
                 deduction_pagibig = 0.00;
-
             }
 
+            //hmo deductions
+            double deduction_hmo = GetPayslip.GetDeductionHMO(emp_id);
+            txtHMO.Text = deduction_hmo.ToString("N3");
 
-            //automated total computation
-            double gross_salary = basic_salary + addition_overtime + addition_nightpremium + addition_restdayduty + addition_legalholiday + addition_specialholiday;
-            txtGrossSalary.Text = gross_salary.ToString("N3");
-            double total_deductions = deduction_late + deduction_undertime + deduction_absent + deduction_philhealth + deduction_pagibig + deduction_sss_ee;
-            txtTotalDeductions.Text = total_deductions.ToString("N3");
-            double net_salary = gross_salary-total_deductions;
-            txtNetSalary.Text = net_salary.ToString("N3");
-
-
-            //store data to retrieve in edit payslip form
+            //store data to retrieve it in edit payslip form
             GetPayslipDetails.employee_name= employee_name;
             GetPayslipDetails.job_title= job_title;
             GetPayslipDetails.department= department;
-
+            //attendance
             GetPayslipDetails.basic_salary= basic_salary;
             GetPayslipDetails.addition_overtime= addition_overtime;
             GetPayslipDetails.addition_nightpremium= addition_nightpremium;
             GetPayslipDetails.addition_restdayduty= addition_restdayduty;
             GetPayslipDetails.addition_legalholiday= addition_legalholiday;
             GetPayslipDetails.addition_specialholiday= addition_specialholiday;
-
             GetPayslipDetails.deduction_late= deduction_late;
             GetPayslipDetails.deduction_undertime= deduction_undertime;
             GetPayslipDetails.deduction_absent= deduction_absent;
+            //mandatory
+            GetPayslipDetails.deduction_philhealth = deduction_philhealth;
+            GetPayslipDetails.deduction_sss = deduction_sss_ee;
+            GetPayslipDetails.deduction_pagibig = deduction_pagibig;
+            GetPayslipDetails.deduction_hmo= deduction_hmo;
 
+
+        }
+
+        public void gross_salary_computation()
+        {
+            // gross salary computation
+            try
+
+            {
+                Guna.UI2.WinForms.Guna2TextBox[] addition_input = //array ng textfields
+                {
+                    txtBasicSalary, txtOvertime, txtNightPrem, txtRestdayDuty, txtLegalHoliday, txtSpecialHoliday, txtSpecialHoliday,
+                    txtTransportationAllowance, txtMealAllowance, txtCarAllowance, txtGasAllowance, txtNonTaxAllowance, txtOtherAllowance
+                };
+
+                double gross_salary = 0;
+                foreach (Guna.UI2.WinForms.Guna2TextBox textBox in addition_input)
+                {
+                    double value = string.IsNullOrWhiteSpace(textBox.Text) ? 0 : Convert.ToDouble(textBox.Text); //if null = 0; else  = value
+                    gross_salary += value;
+                }
+                txtGrossSalary.Text = gross_salary.ToString("N3");
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error Message: "+ex.Message);
+
+            }
+
+
+        }
+
+        public void total_deduction_computation()
+        {
+            try
+
+            {
+                Guna.UI2.WinForms.Guna2TextBox[] arr_deductions =
+                {
+                   txtTardiness, txtAbsent, txtUndertime, txtSSS, txtPhilhealth, txtPagibig, txtHMO, txtWithholdingTax,
+                   txtSSSLoan, txtCalamityLoan, txtPagibigLoan, txtProductDeductions, txtCashAdvance, txtOtherDeductions
+                };
+
+                double total_deductions = 0;
+                foreach (Guna.UI2.WinForms.Guna2TextBox textbox in arr_deductions)
+                {
+                    double value = string.IsNullOrEmpty(textbox.Text) ? 0 : Convert.ToDouble(textbox.Text);
+                    total_deductions += value;
+                }
+                txtTotalDeductions.Text = total_deductions.ToString("N3");
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error Message"+ex);
+
+            }
+        }
+
+        public void net_salary_computation()
+        {
+            try
+
+            {
+                double gross_salary = string.IsNullOrWhiteSpace(txtGrossSalary.Text) ? 0 : Convert.ToDouble(txtGrossSalary.Text);
+                double total_deductions = string.IsNullOrWhiteSpace(txtTotalDeductions.Text) ? 0 : Convert.ToDouble(txtTotalDeductions.Text);
+
+
+                // Calculate gross salary
+                double net_salary = gross_salary - total_deductions;
+
+                // Display gross salary in the text box formatted to three decimal places
+                txtNetSalary.Text = net_salary.ToString("N3");
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error Message"+ex);
+
+            }
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -124,9 +197,6 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
             frmEditPayslip.emp_id = emp_id;
             frmEditPayslip.attendance_batch_no = attendance_batch_no;
             frmEditPayslip.cutoff_period = cutoff_period;
-
-
-
             frmHome frmHome = Application.OpenForms.OfType<frmHome>().FirstOrDefault();
 
             if (frmHome.mainPanel != null)
@@ -141,6 +211,9 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
             if (!isSaved)
             {
                 load_data();
+                gross_salary_computation();
+                total_deduction_computation();
+                net_salary_computation();
             }
             else
             {
