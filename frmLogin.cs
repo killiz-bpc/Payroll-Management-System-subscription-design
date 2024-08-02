@@ -149,6 +149,7 @@ namespace Payroll_Management_System
                     }
                     catch (MySqlException ex)
                     {
+                        MessageBox.Show("Error Message"+ex);
                         DialogResult result = MessageBox.Show("Connection Error. Do you want to connect as outside?", "Message Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
                         if (result == DialogResult.Yes)
                         {

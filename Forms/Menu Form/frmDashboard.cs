@@ -16,5 +16,11 @@ namespace Payroll_Management_System.Forms.Menu_Form
         {
             InitializeComponent();
         }
+
+        private void frmDashboard_Load(object sender, EventArgs e)
+        {
+
+
+        }
     }
 }

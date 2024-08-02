@@ -167,5 +167,16 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
             load_data();
             panelSlip.Visible=true;
         }
+
+        private void btnGenerate_Click(object sender, EventArgs e)
+        {
+            frmHome frmHome = Application.OpenForms.OfType<frmHome>().FirstOrDefault();
+            frmGeneratePayroll frmGeneratePayroll = new frmGeneratePayroll();
+
+            if (frmHome.mainPanel != null)
+            {
+                frmHome.DisplayForm(frmGeneratePayroll, frmHome.mainPanel);
+            }
+        }
     }
 }

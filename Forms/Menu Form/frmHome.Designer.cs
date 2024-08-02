@@ -69,7 +69,7 @@
             this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLeft.Location = new System.Drawing.Point(0, 29);
             this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(216, 810);
+            this.panelLeft.Size = new System.Drawing.Size(216, 771);
             this.panelLeft.TabIndex = 0;
             // 
             // panelButtons
@@ -83,7 +83,7 @@
             this.panelButtons.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelButtons.Location = new System.Drawing.Point(0, 72);
             this.panelButtons.Name = "panelButtons";
-            this.panelButtons.Size = new System.Drawing.Size(216, 738);
+            this.panelButtons.Size = new System.Drawing.Size(216, 699);
             this.panelButtons.TabIndex = 1;
             // 
             // btnLogout
@@ -103,7 +103,7 @@
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
             this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLogout.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnLogout.Location = new System.Drawing.Point(0, 685);
+            this.btnLogout.Location = new System.Drawing.Point(0, 646);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
             this.btnLogout.PressedDepth = 50;
@@ -249,7 +249,7 @@
             this.lblPosition.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
             this.lblPosition.Location = new System.Drawing.Point(54, 37);
             this.lblPosition.Name = "lblPosition";
-            this.lblPosition.Size = new System.Drawing.Size(157, 31);
+            this.lblPosition.Size = new System.Drawing.Size(206, 31);
             this.lblPosition.TabIndex = 1;
             this.lblPosition.Text = "Junior Programmer";
             // 
@@ -261,7 +261,7 @@
             this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
             this.lblName.Location = new System.Drawing.Point(55, 15);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(164, 38);
+            this.lblName.Size = new System.Drawing.Size(205, 38);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Vidal, Cleeve 8";
             this.lblName.Click += new System.EventHandler(this.guna2HtmlLabel1_Click);
@@ -285,7 +285,7 @@
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(216, 29);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1161, 810);
+            this.panelMain.Size = new System.Drawing.Size(984, 771);
             this.panelMain.TabIndex = 1;
             this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel2_Paint);
             this.panelMain.MouseMove += new System.Windows.Forms.MouseEventHandler(this.guna2GradientPanel2_MouseMove);
@@ -303,7 +303,7 @@
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageSize = new System.Drawing.Size(15, 15);
-            this.btnClose.Location = new System.Drawing.Point(1347, 0);
+            this.btnClose.Location = new System.Drawing.Point(1170, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(30, 29);
             this.btnClose.TabIndex = 0;
@@ -320,7 +320,7 @@
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(0, 0);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(1377, 29);
+            this.panelTop.Size = new System.Drawing.Size(1200, 29);
             this.panelTop.TabIndex = 0;
             this.panelTop.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_top_Paint);
             this.panelTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_top_MouseMove);
@@ -332,7 +332,7 @@
             this.btnMin.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnMin.FillColor = System.Drawing.Color.Transparent;
             this.btnMin.IconColor = System.Drawing.Color.Black;
-            this.btnMin.Location = new System.Drawing.Point(1287, 0);
+            this.btnMin.Location = new System.Drawing.Point(1110, 0);
             this.btnMin.Name = "btnMin";
             this.btnMin.Size = new System.Drawing.Size(30, 29);
             this.btnMin.TabIndex = 6;
@@ -344,7 +344,7 @@
             this.guna2ControlBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1317, 0);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1140, 0);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(30, 29);
             this.guna2ControlBox1.TabIndex = 7;
@@ -376,7 +376,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1377, 839);
+            this.ClientSize = new System.Drawing.Size(1200, 800);
+            this.ControlBox = false;
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelLeft);
             this.Controls.Add(this.panelTop);
@@ -385,7 +386,10 @@
             this.Name = "frmHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmHome_FormClosing);
             this.Load += new System.EventHandler(this.frmHome_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmHome_KeyDown);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmHome_KeyPress);
             this.panelLeft.ResumeLayout(false);
             this.panelButtons.ResumeLayout(false);
             this.guna2GradientPanel4.ResumeLayout(false);

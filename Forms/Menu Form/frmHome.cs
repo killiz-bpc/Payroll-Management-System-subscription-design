@@ -158,9 +158,10 @@ namespace Payroll_Management_System.Forms.Menu_Form
             DialogResult result = MessageBox.Show("Are you sure you want to logout?", "Message Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if(DialogResult.Yes == result)
             {
+                this.Close();
                 frmLogin frmLogin = new frmLogin();
                 frmLogin.Show();
-                this.Close();
+                
             }
             else
             {
@@ -184,6 +185,34 @@ namespace Payroll_Management_System.Forms.Menu_Form
                 frmOverviewPayroll frmOverviewPayroll = new frmOverviewPayroll();
                 frmHome.DisplayForm(frmOverviewPayroll, frmHome.mainPanel);
             }
+        }
+
+        private void frmHome_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Alt && e.KeyCode == Keys.F4)
+            {
+                MessageBox.Show("alt f4");
+            }
+
+            if (e.Alt && e.KeyCode == Keys.S)
+            {
+                MessageBox.Show("alt s");
+            }
+
+            if (e.Alt && e.KeyCode == Keys.F6)
+            {
+                MessageBox.Show("alt f6");
+            }
+        }
+
+        private void frmHome_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
+        }
+
+        private void frmHome_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
         }
     }
 }

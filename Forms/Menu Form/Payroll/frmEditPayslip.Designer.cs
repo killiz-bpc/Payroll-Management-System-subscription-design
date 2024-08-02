@@ -122,9 +122,8 @@
             this.guna2GradientPanel1.Controls.Add(this.guna2GradientPanel2);
             this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(1533, 985);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(1200, 800);
             this.guna2GradientPanel1.TabIndex = 13;
             // 
             // guna2GradientPanel5
@@ -136,10 +135,9 @@
             this.guna2GradientPanel5.Controls.Add(this.btnSave);
             this.guna2GradientPanel5.Controls.Add(this.guna2HtmlLabel38);
             this.guna2GradientPanel5.Controls.Add(this.guna2HtmlLabel39);
-            this.guna2GradientPanel5.Location = new System.Drawing.Point(37, 779);
-            this.guna2GradientPanel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2GradientPanel5.Location = new System.Drawing.Point(28, 633);
             this.guna2GradientPanel5.Name = "guna2GradientPanel5";
-            this.guna2GradientPanel5.Size = new System.Drawing.Size(1453, 191);
+            this.guna2GradientPanel5.Size = new System.Drawing.Size(1140, 155);
             this.guna2GradientPanel5.TabIndex = 19;
             // 
             // guna2TextBox34
@@ -156,14 +154,14 @@
             this.guna2TextBox34.Font = new System.Drawing.Font("Poppins", 9F);
             this.guna2TextBox34.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox34.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox34.Location = new System.Drawing.Point(21, 75);
-            this.guna2TextBox34.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2TextBox34.Location = new System.Drawing.Point(16, 61);
+            this.guna2TextBox34.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox34.Name = "guna2TextBox34";
             this.guna2TextBox34.PasswordChar = '\0';
             this.guna2TextBox34.PlaceholderText = "asd";
             this.guna2TextBox34.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.guna2TextBox34.SelectedText = "";
-            this.guna2TextBox34.Size = new System.Drawing.Size(161, 41);
+            this.guna2TextBox34.Size = new System.Drawing.Size(121, 33);
             this.guna2TextBox34.TabIndex = 147;
             // 
             // btnSave
@@ -180,10 +178,9 @@
             this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
             this.btnSave.Font = new System.Drawing.Font("Poppins", 9F);
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(21, 127);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSave.Location = new System.Drawing.Point(16, 103);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(215, 48);
+            this.btnSave.Size = new System.Drawing.Size(161, 39);
             this.btnSave.TabIndex = 17;
             this.btnSave.Text = "&Save Changes";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -194,10 +191,9 @@
             this.guna2HtmlLabel38.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel38.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel38.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel38.Location = new System.Drawing.Point(21, 47);
-            this.guna2HtmlLabel38.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel38.Location = new System.Drawing.Point(16, 38);
             this.guna2HtmlLabel38.Name = "guna2HtmlLabel38";
-            this.guna2HtmlLabel38.Size = new System.Drawing.Size(161, 28);
+            this.guna2HtmlLabel38.Size = new System.Drawing.Size(121, 23);
             this.guna2HtmlLabel38.TabIndex = 116;
             this.guna2HtmlLabel38.Text = "Net Salary";
             // 
@@ -207,10 +203,9 @@
             this.guna2HtmlLabel39.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel39.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel39.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel39.Location = new System.Drawing.Point(11, 9);
-            this.guna2HtmlLabel39.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel39.Location = new System.Drawing.Point(8, 7);
             this.guna2HtmlLabel39.Name = "guna2HtmlLabel39";
-            this.guna2HtmlLabel39.Size = new System.Drawing.Size(289, 27);
+            this.guna2HtmlLabel39.Size = new System.Drawing.Size(217, 22);
             this.guna2HtmlLabel39.TabIndex = 72;
             this.guna2HtmlLabel39.Text = "Net Salary";
             // 
@@ -250,10 +245,9 @@
             this.guna2GradientPanel4.Controls.Add(this.guna2HtmlLabel34);
             this.guna2GradientPanel4.Controls.Add(this.guna2HtmlLabel35);
             this.guna2GradientPanel4.Controls.Add(this.guna2HtmlLabel36);
-            this.guna2GradientPanel4.Location = new System.Drawing.Point(37, 480);
-            this.guna2GradientPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2GradientPanel4.Location = new System.Drawing.Point(28, 390);
             this.guna2GradientPanel4.Name = "guna2GradientPanel4";
-            this.guna2GradientPanel4.Size = new System.Drawing.Size(1453, 255);
+            this.guna2GradientPanel4.Size = new System.Drawing.Size(1140, 207);
             this.guna2GradientPanel4.TabIndex = 18;
             // 
             // txtAbsent
@@ -269,14 +263,14 @@
             this.txtAbsent.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtAbsent.ForeColor = System.Drawing.Color.Black;
             this.txtAbsent.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAbsent.Location = new System.Drawing.Point(225, 59);
-            this.txtAbsent.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtAbsent.Location = new System.Drawing.Point(169, 48);
+            this.txtAbsent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAbsent.Name = "txtAbsent";
             this.txtAbsent.PasswordChar = '\0';
             this.txtAbsent.PlaceholderText = "asd";
             this.txtAbsent.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtAbsent.SelectedText = "";
-            this.txtAbsent.Size = new System.Drawing.Size(161, 41);
+            this.txtAbsent.Size = new System.Drawing.Size(121, 33);
             this.txtAbsent.TabIndex = 164;
             this.txtAbsent.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -293,14 +287,14 @@
             this.txtTardiness.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtTardiness.ForeColor = System.Drawing.Color.Black;
             this.txtTardiness.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTardiness.Location = new System.Drawing.Point(21, 59);
-            this.txtTardiness.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTardiness.Location = new System.Drawing.Point(16, 48);
+            this.txtTardiness.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTardiness.Name = "txtTardiness";
             this.txtTardiness.PasswordChar = '\0';
             this.txtTardiness.PlaceholderText = "asd";
             this.txtTardiness.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtTardiness.SelectedText = "";
-            this.txtTardiness.Size = new System.Drawing.Size(161, 41);
+            this.txtTardiness.Size = new System.Drawing.Size(121, 33);
             this.txtTardiness.TabIndex = 163;
             this.txtTardiness.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -317,14 +311,14 @@
             this.txtUndertime.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtUndertime.ForeColor = System.Drawing.Color.Black;
             this.txtUndertime.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUndertime.Location = new System.Drawing.Point(444, 59);
-            this.txtUndertime.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtUndertime.Location = new System.Drawing.Point(333, 48);
+            this.txtUndertime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUndertime.Name = "txtUndertime";
             this.txtUndertime.PasswordChar = '\0';
             this.txtUndertime.PlaceholderText = "asd";
             this.txtUndertime.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtUndertime.SelectedText = "";
-            this.txtUndertime.Size = new System.Drawing.Size(161, 41);
+            this.txtUndertime.Size = new System.Drawing.Size(121, 33);
             this.txtUndertime.TabIndex = 162;
             // 
             // guna2HtmlLabel22
@@ -333,10 +327,9 @@
             this.guna2HtmlLabel22.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel22.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel22.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel22.Location = new System.Drawing.Point(444, 37);
-            this.guna2HtmlLabel22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel22.Location = new System.Drawing.Point(333, 30);
             this.guna2HtmlLabel22.Name = "guna2HtmlLabel22";
-            this.guna2HtmlLabel22.Size = new System.Drawing.Size(101, 28);
+            this.guna2HtmlLabel22.Size = new System.Drawing.Size(76, 23);
             this.guna2HtmlLabel22.TabIndex = 161;
             this.guna2HtmlLabel22.Text = "Undertime";
             // 
@@ -353,14 +346,14 @@
             this.txtHMO.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtHMO.ForeColor = System.Drawing.Color.Black;
             this.txtHMO.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtHMO.Location = new System.Drawing.Point(23, 130);
-            this.txtHMO.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtHMO.Location = new System.Drawing.Point(17, 106);
+            this.txtHMO.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtHMO.Name = "txtHMO";
             this.txtHMO.PasswordChar = '\0';
             this.txtHMO.PlaceholderText = "asd";
             this.txtHMO.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtHMO.SelectedText = "";
-            this.txtHMO.Size = new System.Drawing.Size(161, 41);
+            this.txtHMO.Size = new System.Drawing.Size(121, 33);
             this.txtHMO.TabIndex = 160;
             // 
             // guna2TextBox28
@@ -377,14 +370,14 @@
             this.guna2TextBox28.Font = new System.Drawing.Font("Poppins", 9F);
             this.guna2TextBox28.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox28.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox28.Location = new System.Drawing.Point(443, 203);
-            this.guna2TextBox28.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2TextBox28.Location = new System.Drawing.Point(332, 165);
+            this.guna2TextBox28.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox28.Name = "guna2TextBox28";
             this.guna2TextBox28.PasswordChar = '\0';
             this.guna2TextBox28.PlaceholderText = "asd";
             this.guna2TextBox28.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.guna2TextBox28.SelectedText = "";
-            this.guna2TextBox28.Size = new System.Drawing.Size(161, 41);
+            this.guna2TextBox28.Size = new System.Drawing.Size(121, 33);
             this.guna2TextBox28.TabIndex = 149;
             // 
             // guna2HtmlLabel20
@@ -393,10 +386,9 @@
             this.guna2HtmlLabel20.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel20.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel20.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel20.Location = new System.Drawing.Point(443, 181);
-            this.guna2HtmlLabel20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel20.Location = new System.Drawing.Point(332, 147);
             this.guna2HtmlLabel20.Name = "guna2HtmlLabel20";
-            this.guna2HtmlLabel20.Size = new System.Drawing.Size(161, 28);
+            this.guna2HtmlLabel20.Size = new System.Drawing.Size(121, 23);
             this.guna2HtmlLabel20.TabIndex = 148;
             this.guna2HtmlLabel20.Text = "Total Deductions";
             // 
@@ -413,14 +405,14 @@
             this.guna2TextBox24.Font = new System.Drawing.Font("Poppins", 9F);
             this.guna2TextBox24.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox24.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox24.Location = new System.Drawing.Point(224, 203);
-            this.guna2TextBox24.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2TextBox24.Location = new System.Drawing.Point(168, 165);
+            this.guna2TextBox24.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox24.Name = "guna2TextBox24";
             this.guna2TextBox24.PasswordChar = '\0';
             this.guna2TextBox24.PlaceholderText = "asd";
             this.guna2TextBox24.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.guna2TextBox24.SelectedText = "";
-            this.guna2TextBox24.Size = new System.Drawing.Size(161, 41);
+            this.guna2TextBox24.Size = new System.Drawing.Size(121, 33);
             this.guna2TextBox24.TabIndex = 159;
             // 
             // guna2HtmlLabel32
@@ -429,10 +421,9 @@
             this.guna2HtmlLabel32.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel32.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel32.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel32.Location = new System.Drawing.Point(224, 180);
-            this.guna2HtmlLabel32.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel32.Location = new System.Drawing.Point(168, 146);
             this.guna2HtmlLabel32.Name = "guna2HtmlLabel32";
-            this.guna2HtmlLabel32.Size = new System.Drawing.Size(161, 28);
+            this.guna2HtmlLabel32.Size = new System.Drawing.Size(121, 23);
             this.guna2HtmlLabel32.TabIndex = 158;
             this.guna2HtmlLabel32.Text = "Other Deductions";
             // 
@@ -449,14 +440,14 @@
             this.guna2TextBox15.Font = new System.Drawing.Font("Poppins", 9F);
             this.guna2TextBox15.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox15.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox15.Location = new System.Drawing.Point(23, 203);
-            this.guna2TextBox15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2TextBox15.Location = new System.Drawing.Point(17, 165);
+            this.guna2TextBox15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox15.Name = "guna2TextBox15";
             this.guna2TextBox15.PasswordChar = '\0';
             this.guna2TextBox15.PlaceholderText = "asd";
             this.guna2TextBox15.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.guna2TextBox15.SelectedText = "";
-            this.guna2TextBox15.Size = new System.Drawing.Size(161, 41);
+            this.guna2TextBox15.Size = new System.Drawing.Size(121, 33);
             this.guna2TextBox15.TabIndex = 152;
             // 
             // guna2TextBox20
@@ -472,14 +463,14 @@
             this.guna2TextBox20.Font = new System.Drawing.Font("Poppins", 9F);
             this.guna2TextBox20.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox20.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox20.Location = new System.Drawing.Point(1129, 132);
-            this.guna2TextBox20.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2TextBox20.Location = new System.Drawing.Point(847, 107);
+            this.guna2TextBox20.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox20.Name = "guna2TextBox20";
             this.guna2TextBox20.PasswordChar = '\0';
             this.guna2TextBox20.PlaceholderText = "asd";
             this.guna2TextBox20.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.guna2TextBox20.SelectedText = "";
-            this.guna2TextBox20.Size = new System.Drawing.Size(161, 41);
+            this.guna2TextBox20.Size = new System.Drawing.Size(121, 33);
             this.guna2TextBox20.TabIndex = 151;
             // 
             // guna2TextBox21
@@ -495,14 +486,14 @@
             this.guna2TextBox21.Font = new System.Drawing.Font("Poppins", 9F);
             this.guna2TextBox21.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox21.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox21.Location = new System.Drawing.Point(883, 132);
-            this.guna2TextBox21.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2TextBox21.Location = new System.Drawing.Point(662, 107);
+            this.guna2TextBox21.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox21.Name = "guna2TextBox21";
             this.guna2TextBox21.PasswordChar = '\0';
             this.guna2TextBox21.PlaceholderText = "asd";
             this.guna2TextBox21.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.guna2TextBox21.SelectedText = "";
-            this.guna2TextBox21.Size = new System.Drawing.Size(161, 41);
+            this.guna2TextBox21.Size = new System.Drawing.Size(121, 33);
             this.guna2TextBox21.TabIndex = 150;
             // 
             // guna2TextBox22
@@ -518,14 +509,14 @@
             this.guna2TextBox22.Font = new System.Drawing.Font("Poppins", 9F);
             this.guna2TextBox22.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox22.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox22.Location = new System.Drawing.Point(643, 132);
-            this.guna2TextBox22.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2TextBox22.Location = new System.Drawing.Point(482, 107);
+            this.guna2TextBox22.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox22.Name = "guna2TextBox22";
             this.guna2TextBox22.PasswordChar = '\0';
             this.guna2TextBox22.PlaceholderText = "asd";
             this.guna2TextBox22.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.guna2TextBox22.SelectedText = "";
-            this.guna2TextBox22.Size = new System.Drawing.Size(161, 41);
+            this.guna2TextBox22.Size = new System.Drawing.Size(121, 33);
             this.guna2TextBox22.TabIndex = 149;
             // 
             // guna2TextBox23
@@ -541,14 +532,14 @@
             this.guna2TextBox23.Font = new System.Drawing.Font("Poppins", 9F);
             this.guna2TextBox23.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox23.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox23.Location = new System.Drawing.Point(443, 132);
-            this.guna2TextBox23.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2TextBox23.Location = new System.Drawing.Point(332, 107);
+            this.guna2TextBox23.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox23.Name = "guna2TextBox23";
             this.guna2TextBox23.PasswordChar = '\0';
             this.guna2TextBox23.PlaceholderText = "asd";
             this.guna2TextBox23.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.guna2TextBox23.SelectedText = "";
-            this.guna2TextBox23.Size = new System.Drawing.Size(161, 41);
+            this.guna2TextBox23.Size = new System.Drawing.Size(121, 33);
             this.guna2TextBox23.TabIndex = 148;
             // 
             // guna2TextBox13
@@ -564,14 +555,14 @@
             this.guna2TextBox13.Font = new System.Drawing.Font("Poppins", 9F);
             this.guna2TextBox13.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox13.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox13.Location = new System.Drawing.Point(227, 132);
-            this.guna2TextBox13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2TextBox13.Location = new System.Drawing.Point(170, 107);
+            this.guna2TextBox13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox13.Name = "guna2TextBox13";
             this.guna2TextBox13.PasswordChar = '\0';
             this.guna2TextBox13.PlaceholderText = "asd";
             this.guna2TextBox13.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.guna2TextBox13.SelectedText = "";
-            this.guna2TextBox13.Size = new System.Drawing.Size(161, 41);
+            this.guna2TextBox13.Size = new System.Drawing.Size(121, 33);
             this.guna2TextBox13.TabIndex = 129;
             // 
             // guna2TextBox8
@@ -587,14 +578,14 @@
             this.guna2TextBox8.Font = new System.Drawing.Font("Poppins", 9F);
             this.guna2TextBox8.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox8.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox8.Location = new System.Drawing.Point(1129, 59);
-            this.guna2TextBox8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2TextBox8.Location = new System.Drawing.Point(847, 48);
+            this.guna2TextBox8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox8.Name = "guna2TextBox8";
             this.guna2TextBox8.PasswordChar = '\0';
             this.guna2TextBox8.PlaceholderText = "asd";
             this.guna2TextBox8.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.guna2TextBox8.SelectedText = "";
-            this.guna2TextBox8.Size = new System.Drawing.Size(161, 41);
+            this.guna2TextBox8.Size = new System.Drawing.Size(121, 33);
             this.guna2TextBox8.TabIndex = 127;
             // 
             // guna2TextBox9
@@ -610,14 +601,14 @@
             this.guna2TextBox9.Font = new System.Drawing.Font("Poppins", 9F);
             this.guna2TextBox9.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox9.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox9.Location = new System.Drawing.Point(883, 59);
-            this.guna2TextBox9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2TextBox9.Location = new System.Drawing.Point(662, 48);
+            this.guna2TextBox9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox9.Name = "guna2TextBox9";
             this.guna2TextBox9.PasswordChar = '\0';
             this.guna2TextBox9.PlaceholderText = "asd";
             this.guna2TextBox9.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.guna2TextBox9.SelectedText = "";
-            this.guna2TextBox9.Size = new System.Drawing.Size(161, 41);
+            this.guna2TextBox9.Size = new System.Drawing.Size(121, 33);
             this.guna2TextBox9.TabIndex = 126;
             // 
             // guna2TextBox10
@@ -633,14 +624,14 @@
             this.guna2TextBox10.Font = new System.Drawing.Font("Poppins", 9F);
             this.guna2TextBox10.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox10.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox10.Location = new System.Drawing.Point(643, 59);
-            this.guna2TextBox10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2TextBox10.Location = new System.Drawing.Point(482, 48);
+            this.guna2TextBox10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox10.Name = "guna2TextBox10";
             this.guna2TextBox10.PasswordChar = '\0';
             this.guna2TextBox10.PlaceholderText = "asd";
             this.guna2TextBox10.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.guna2TextBox10.SelectedText = "";
-            this.guna2TextBox10.Size = new System.Drawing.Size(161, 41);
+            this.guna2TextBox10.Size = new System.Drawing.Size(121, 33);
             this.guna2TextBox10.TabIndex = 125;
             // 
             // guna2HtmlLabel16
@@ -649,10 +640,9 @@
             this.guna2HtmlLabel16.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel16.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel16.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel16.Location = new System.Drawing.Point(227, 108);
-            this.guna2HtmlLabel16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel16.Location = new System.Drawing.Point(170, 88);
             this.guna2HtmlLabel16.Name = "guna2HtmlLabel16";
-            this.guna2HtmlLabel16.Size = new System.Drawing.Size(101, 28);
+            this.guna2HtmlLabel16.Size = new System.Drawing.Size(76, 23);
             this.guna2HtmlLabel16.TabIndex = 122;
             this.guna2HtmlLabel16.Text = "Gross Tax";
             // 
@@ -662,10 +652,9 @@
             this.guna2HtmlLabel11.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel11.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel11.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel11.Location = new System.Drawing.Point(21, 108);
-            this.guna2HtmlLabel11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel11.Location = new System.Drawing.Point(16, 88);
             this.guna2HtmlLabel11.Name = "guna2HtmlLabel11";
-            this.guna2HtmlLabel11.Size = new System.Drawing.Size(101, 28);
+            this.guna2HtmlLabel11.Size = new System.Drawing.Size(76, 23);
             this.guna2HtmlLabel11.TabIndex = 121;
             this.guna2HtmlLabel11.Text = "HMO";
             // 
@@ -675,10 +664,9 @@
             this.guna2HtmlLabel12.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel12.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel12.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel12.Location = new System.Drawing.Point(1129, 37);
-            this.guna2HtmlLabel12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel12.Location = new System.Drawing.Point(847, 30);
             this.guna2HtmlLabel12.Name = "guna2HtmlLabel12";
-            this.guna2HtmlLabel12.Size = new System.Drawing.Size(101, 28);
+            this.guna2HtmlLabel12.Size = new System.Drawing.Size(68, 23);
             this.guna2HtmlLabel12.TabIndex = 120;
             this.guna2HtmlLabel12.Text = "Pag-ibig";
             // 
@@ -688,10 +676,9 @@
             this.guna2HtmlLabel13.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel13.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel13.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel13.Location = new System.Drawing.Point(643, 37);
-            this.guna2HtmlLabel13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel13.Location = new System.Drawing.Point(482, 30);
             this.guna2HtmlLabel13.Name = "guna2HtmlLabel13";
-            this.guna2HtmlLabel13.Size = new System.Drawing.Size(101, 28);
+            this.guna2HtmlLabel13.Size = new System.Drawing.Size(76, 23);
             this.guna2HtmlLabel13.TabIndex = 119;
             this.guna2HtmlLabel13.Text = "SSS";
             // 
@@ -701,10 +688,9 @@
             this.guna2HtmlLabel14.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel14.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel14.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel14.Location = new System.Drawing.Point(884, 37);
-            this.guna2HtmlLabel14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel14.Location = new System.Drawing.Point(663, 30);
             this.guna2HtmlLabel14.Name = "guna2HtmlLabel14";
-            this.guna2HtmlLabel14.Size = new System.Drawing.Size(101, 28);
+            this.guna2HtmlLabel14.Size = new System.Drawing.Size(88, 23);
             this.guna2HtmlLabel14.TabIndex = 118;
             this.guna2HtmlLabel14.Text = "Philhealth";
             // 
@@ -714,10 +700,9 @@
             this.guna2HtmlLabel15.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel15.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel15.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel15.Location = new System.Drawing.Point(223, 37);
-            this.guna2HtmlLabel15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel15.Location = new System.Drawing.Point(167, 30);
             this.guna2HtmlLabel15.Name = "guna2HtmlLabel15";
-            this.guna2HtmlLabel15.Size = new System.Drawing.Size(101, 28);
+            this.guna2HtmlLabel15.Size = new System.Drawing.Size(76, 23);
             this.guna2HtmlLabel15.TabIndex = 117;
             this.guna2HtmlLabel15.Text = "Absent";
             // 
@@ -727,10 +712,9 @@
             this.guna2HtmlLabel17.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel17.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel17.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel17.Location = new System.Drawing.Point(21, 37);
-            this.guna2HtmlLabel17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel17.Location = new System.Drawing.Point(16, 30);
             this.guna2HtmlLabel17.Name = "guna2HtmlLabel17";
-            this.guna2HtmlLabel17.Size = new System.Drawing.Size(161, 28);
+            this.guna2HtmlLabel17.Size = new System.Drawing.Size(121, 23);
             this.guna2HtmlLabel17.TabIndex = 116;
             this.guna2HtmlLabel17.Text = "Tardiness";
             // 
@@ -740,10 +724,9 @@
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(11, 9);
-            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(8, 7);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(289, 27);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(217, 22);
             this.guna2HtmlLabel2.TabIndex = 72;
             this.guna2HtmlLabel2.Text = "Deductions";
             // 
@@ -753,10 +736,9 @@
             this.guna2HtmlLabel37.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel37.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel37.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel37.Location = new System.Drawing.Point(443, 108);
-            this.guna2HtmlLabel37.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel37.Location = new System.Drawing.Point(332, 88);
             this.guna2HtmlLabel37.Name = "guna2HtmlLabel37";
-            this.guna2HtmlLabel37.Size = new System.Drawing.Size(161, 28);
+            this.guna2HtmlLabel37.Size = new System.Drawing.Size(121, 23);
             this.guna2HtmlLabel37.TabIndex = 153;
             this.guna2HtmlLabel37.Text = "SSS Loan";
             // 
@@ -766,10 +748,9 @@
             this.guna2HtmlLabel33.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel33.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel33.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel33.Location = new System.Drawing.Point(23, 180);
-            this.guna2HtmlLabel33.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel33.Location = new System.Drawing.Point(17, 146);
             this.guna2HtmlLabel33.Name = "guna2HtmlLabel33";
-            this.guna2HtmlLabel33.Size = new System.Drawing.Size(161, 28);
+            this.guna2HtmlLabel33.Size = new System.Drawing.Size(121, 23);
             this.guna2HtmlLabel33.TabIndex = 157;
             this.guna2HtmlLabel33.Text = "Cash Advances";
             // 
@@ -779,10 +760,9 @@
             this.guna2HtmlLabel34.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel34.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel34.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel34.Location = new System.Drawing.Point(1125, 108);
-            this.guna2HtmlLabel34.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel34.Location = new System.Drawing.Point(844, 88);
             this.guna2HtmlLabel34.Name = "guna2HtmlLabel34";
-            this.guna2HtmlLabel34.Size = new System.Drawing.Size(161, 28);
+            this.guna2HtmlLabel34.Size = new System.Drawing.Size(124, 23);
             this.guna2HtmlLabel34.TabIndex = 156;
             this.guna2HtmlLabel34.Text = "Product Deductions";
             // 
@@ -792,10 +772,9 @@
             this.guna2HtmlLabel35.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel35.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel35.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel35.Location = new System.Drawing.Point(885, 108);
-            this.guna2HtmlLabel35.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel35.Location = new System.Drawing.Point(664, 88);
             this.guna2HtmlLabel35.Name = "guna2HtmlLabel35";
-            this.guna2HtmlLabel35.Size = new System.Drawing.Size(161, 28);
+            this.guna2HtmlLabel35.Size = new System.Drawing.Size(87, 23);
             this.guna2HtmlLabel35.TabIndex = 155;
             this.guna2HtmlLabel35.Text = "Pag-ibig Loan";
             // 
@@ -805,10 +784,9 @@
             this.guna2HtmlLabel36.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel36.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel36.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel36.Location = new System.Drawing.Point(644, 108);
-            this.guna2HtmlLabel36.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel36.Location = new System.Drawing.Point(483, 88);
             this.guna2HtmlLabel36.Name = "guna2HtmlLabel36";
-            this.guna2HtmlLabel36.Size = new System.Drawing.Size(161, 28);
+            this.guna2HtmlLabel36.Size = new System.Drawing.Size(101, 23);
             this.guna2HtmlLabel36.TabIndex = 154;
             this.guna2HtmlLabel36.Text = "Calamity Loan";
             // 
@@ -825,10 +803,9 @@
             this.btnBack.FillColor = System.Drawing.SystemColors.Control;
             this.btnBack.Font = new System.Drawing.Font("Poppins", 9.75F);
             this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
-            this.btnBack.Location = new System.Drawing.Point(16, 6);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBack.Location = new System.Drawing.Point(12, 5);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(113, 36);
+            this.btnBack.Size = new System.Drawing.Size(85, 29);
             this.btnBack.TabIndex = 16;
             this.btnBack.Text = "< Back";
             this.btnBack.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -865,10 +842,9 @@
             this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel3);
             this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel10);
             this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel6);
-            this.guna2GradientPanel3.Location = new System.Drawing.Point(37, 245);
-            this.guna2GradientPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2GradientPanel3.Location = new System.Drawing.Point(28, 199);
             this.guna2GradientPanel3.Name = "guna2GradientPanel3";
-            this.guna2GradientPanel3.Size = new System.Drawing.Size(1453, 204);
+            this.guna2GradientPanel3.Size = new System.Drawing.Size(1140, 166);
             this.guna2GradientPanel3.TabIndex = 11;
             // 
             // txtGrossSalary
@@ -885,14 +861,14 @@
             this.txtGrossSalary.Font = new System.Drawing.Font("Poppins Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGrossSalary.ForeColor = System.Drawing.Color.Black;
             this.txtGrossSalary.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtGrossSalary.Location = new System.Drawing.Point(1096, 149);
-            this.txtGrossSalary.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtGrossSalary.Location = new System.Drawing.Point(822, 121);
+            this.txtGrossSalary.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGrossSalary.Name = "txtGrossSalary";
             this.txtGrossSalary.PasswordChar = '\0';
             this.txtGrossSalary.PlaceholderText = "asd";
             this.txtGrossSalary.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtGrossSalary.SelectedText = "";
-            this.txtGrossSalary.Size = new System.Drawing.Size(161, 41);
+            this.txtGrossSalary.Size = new System.Drawing.Size(121, 33);
             this.txtGrossSalary.TabIndex = 163;
             this.txtGrossSalary.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -909,14 +885,14 @@
             this.txtSpecialHoliday.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtSpecialHoliday.ForeColor = System.Drawing.Color.Black;
             this.txtSpecialHoliday.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSpecialHoliday.Location = new System.Drawing.Point(1096, 74);
-            this.txtSpecialHoliday.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtSpecialHoliday.Location = new System.Drawing.Point(822, 60);
+            this.txtSpecialHoliday.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSpecialHoliday.Name = "txtSpecialHoliday";
             this.txtSpecialHoliday.PasswordChar = '\0';
             this.txtSpecialHoliday.PlaceholderText = "asd";
             this.txtSpecialHoliday.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtSpecialHoliday.SelectedText = "";
-            this.txtSpecialHoliday.Size = new System.Drawing.Size(161, 41);
+            this.txtSpecialHoliday.Size = new System.Drawing.Size(121, 33);
             this.txtSpecialHoliday.TabIndex = 162;
             this.txtSpecialHoliday.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
             this.txtSpecialHoliday.Validated += new System.EventHandler(this.txtOvertime_Validated);
@@ -934,14 +910,14 @@
             this.txtBasicSalary.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtBasicSalary.ForeColor = System.Drawing.Color.Black;
             this.txtBasicSalary.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBasicSalary.Location = new System.Drawing.Point(21, 74);
-            this.txtBasicSalary.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtBasicSalary.Location = new System.Drawing.Point(16, 60);
+            this.txtBasicSalary.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBasicSalary.Name = "txtBasicSalary";
             this.txtBasicSalary.PasswordChar = '\0';
             this.txtBasicSalary.PlaceholderText = "asd";
             this.txtBasicSalary.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtBasicSalary.SelectedText = "";
-            this.txtBasicSalary.Size = new System.Drawing.Size(161, 41);
+            this.txtBasicSalary.Size = new System.Drawing.Size(121, 33);
             this.txtBasicSalary.TabIndex = 157;
             // 
             // txtLegalHoliday
@@ -957,14 +933,14 @@
             this.txtLegalHoliday.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtLegalHoliday.ForeColor = System.Drawing.Color.Black;
             this.txtLegalHoliday.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLegalHoliday.Location = new System.Drawing.Point(877, 74);
-            this.txtLegalHoliday.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtLegalHoliday.Location = new System.Drawing.Point(658, 60);
+            this.txtLegalHoliday.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtLegalHoliday.Name = "txtLegalHoliday";
             this.txtLegalHoliday.PasswordChar = '\0';
             this.txtLegalHoliday.PlaceholderText = "asd";
             this.txtLegalHoliday.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtLegalHoliday.SelectedText = "";
-            this.txtLegalHoliday.Size = new System.Drawing.Size(161, 41);
+            this.txtLegalHoliday.Size = new System.Drawing.Size(121, 33);
             this.txtLegalHoliday.TabIndex = 161;
             this.txtLegalHoliday.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
             this.txtLegalHoliday.Validated += new System.EventHandler(this.txtOvertime_Validated);
@@ -975,10 +951,9 @@
             this.guna2HtmlLabel21.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel21.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel21.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel21.Location = new System.Drawing.Point(1096, 123);
-            this.guna2HtmlLabel21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel21.Location = new System.Drawing.Point(822, 100);
             this.guna2HtmlLabel21.Name = "guna2HtmlLabel21";
-            this.guna2HtmlLabel21.Size = new System.Drawing.Size(140, 28);
+            this.guna2HtmlLabel21.Size = new System.Drawing.Size(105, 23);
             this.guna2HtmlLabel21.TabIndex = 155;
             this.guna2HtmlLabel21.Text = "Gross Salary";
             // 
@@ -995,14 +970,14 @@
             this.guna2TextBox14.Font = new System.Drawing.Font("Poppins", 9F);
             this.guna2TextBox14.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox14.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox14.Location = new System.Drawing.Point(883, 151);
-            this.guna2TextBox14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2TextBox14.Location = new System.Drawing.Point(662, 123);
+            this.guna2TextBox14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox14.Name = "guna2TextBox14";
             this.guna2TextBox14.PasswordChar = '\0';
             this.guna2TextBox14.PlaceholderText = "asd";
             this.guna2TextBox14.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.guna2TextBox14.SelectedText = "";
-            this.guna2TextBox14.Size = new System.Drawing.Size(161, 41);
+            this.guna2TextBox14.Size = new System.Drawing.Size(121, 33);
             this.guna2TextBox14.TabIndex = 154;
             // 
             // txtRestdayDuty
@@ -1018,14 +993,14 @@
             this.txtRestdayDuty.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtRestdayDuty.ForeColor = System.Drawing.Color.Black;
             this.txtRestdayDuty.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtRestdayDuty.Location = new System.Drawing.Point(640, 76);
-            this.txtRestdayDuty.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtRestdayDuty.Location = new System.Drawing.Point(480, 62);
+            this.txtRestdayDuty.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtRestdayDuty.Name = "txtRestdayDuty";
             this.txtRestdayDuty.PasswordChar = '\0';
             this.txtRestdayDuty.PlaceholderText = "asd";
             this.txtRestdayDuty.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtRestdayDuty.SelectedText = "";
-            this.txtRestdayDuty.Size = new System.Drawing.Size(161, 41);
+            this.txtRestdayDuty.Size = new System.Drawing.Size(121, 33);
             this.txtRestdayDuty.TabIndex = 160;
             this.txtRestdayDuty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
             this.txtRestdayDuty.Validated += new System.EventHandler(this.txtOvertime_Validated);
@@ -1036,10 +1011,9 @@
             this.guna2HtmlLabel31.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel31.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel31.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel31.Location = new System.Drawing.Point(877, 127);
-            this.guna2HtmlLabel31.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel31.Location = new System.Drawing.Point(658, 103);
             this.guna2HtmlLabel31.Name = "guna2HtmlLabel31";
-            this.guna2HtmlLabel31.Size = new System.Drawing.Size(229, 28);
+            this.guna2HtmlLabel31.Size = new System.Drawing.Size(172, 23);
             this.guna2HtmlLabel31.TabIndex = 153;
             this.guna2HtmlLabel31.Text = "Other Allowances";
             // 
@@ -1056,14 +1030,14 @@
             this.guna2TextBox16.Font = new System.Drawing.Font("Poppins", 9F);
             this.guna2TextBox16.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox16.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox16.Location = new System.Drawing.Point(641, 151);
-            this.guna2TextBox16.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2TextBox16.Location = new System.Drawing.Point(481, 123);
+            this.guna2TextBox16.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox16.Name = "guna2TextBox16";
             this.guna2TextBox16.PasswordChar = '\0';
             this.guna2TextBox16.PlaceholderText = "asd";
             this.guna2TextBox16.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.guna2TextBox16.SelectedText = "";
-            this.guna2TextBox16.Size = new System.Drawing.Size(161, 41);
+            this.guna2TextBox16.Size = new System.Drawing.Size(121, 33);
             this.guna2TextBox16.TabIndex = 152;
             // 
             // txtNightPrem
@@ -1079,14 +1053,14 @@
             this.txtNightPrem.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtNightPrem.ForeColor = System.Drawing.Color.Black;
             this.txtNightPrem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNightPrem.Location = new System.Drawing.Point(444, 76);
-            this.txtNightPrem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNightPrem.Location = new System.Drawing.Point(333, 62);
+            this.txtNightPrem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNightPrem.Name = "txtNightPrem";
             this.txtNightPrem.PasswordChar = '\0';
             this.txtNightPrem.PlaceholderText = "asd";
             this.txtNightPrem.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtNightPrem.SelectedText = "";
-            this.txtNightPrem.Size = new System.Drawing.Size(161, 41);
+            this.txtNightPrem.Size = new System.Drawing.Size(121, 33);
             this.txtNightPrem.TabIndex = 159;
             this.txtNightPrem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
             this.txtNightPrem.Validated += new System.EventHandler(this.txtOvertime_Validated);
@@ -1104,14 +1078,14 @@
             this.guna2TextBox17.Font = new System.Drawing.Font("Poppins", 9F);
             this.guna2TextBox17.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox17.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox17.Location = new System.Drawing.Point(441, 151);
-            this.guna2TextBox17.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2TextBox17.Location = new System.Drawing.Point(331, 123);
+            this.guna2TextBox17.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox17.Name = "guna2TextBox17";
             this.guna2TextBox17.PasswordChar = '\0';
             this.guna2TextBox17.PlaceholderText = "asd";
             this.guna2TextBox17.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.guna2TextBox17.SelectedText = "";
-            this.guna2TextBox17.Size = new System.Drawing.Size(161, 41);
+            this.guna2TextBox17.Size = new System.Drawing.Size(121, 33);
             this.guna2TextBox17.TabIndex = 151;
             // 
             // txtOvertime
@@ -1127,14 +1101,14 @@
             this.txtOvertime.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtOvertime.ForeColor = System.Drawing.Color.Black;
             this.txtOvertime.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtOvertime.Location = new System.Drawing.Point(252, 76);
-            this.txtOvertime.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtOvertime.Location = new System.Drawing.Point(189, 62);
+            this.txtOvertime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtOvertime.Name = "txtOvertime";
             this.txtOvertime.PasswordChar = '\0';
             this.txtOvertime.PlaceholderText = "asd";
             this.txtOvertime.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtOvertime.SelectedText = "";
-            this.txtOvertime.Size = new System.Drawing.Size(161, 41);
+            this.txtOvertime.Size = new System.Drawing.Size(121, 33);
             this.txtOvertime.TabIndex = 158;
             this.txtOvertime.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
             this.txtOvertime.Validated += new System.EventHandler(this.txtOvertime_Validated);
@@ -1152,14 +1126,14 @@
             this.guna2TextBox18.Font = new System.Drawing.Font("Poppins", 9F);
             this.guna2TextBox18.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox18.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox18.Location = new System.Drawing.Point(249, 151);
-            this.guna2TextBox18.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2TextBox18.Location = new System.Drawing.Point(187, 123);
+            this.guna2TextBox18.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox18.Name = "guna2TextBox18";
             this.guna2TextBox18.PasswordChar = '\0';
             this.guna2TextBox18.PlaceholderText = "asd";
             this.guna2TextBox18.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.guna2TextBox18.SelectedText = "";
-            this.guna2TextBox18.Size = new System.Drawing.Size(161, 41);
+            this.guna2TextBox18.Size = new System.Drawing.Size(121, 33);
             this.guna2TextBox18.TabIndex = 150;
             // 
             // guna2HtmlLabel27
@@ -1168,10 +1142,9 @@
             this.guna2HtmlLabel27.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel27.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel27.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel27.Location = new System.Drawing.Point(641, 126);
-            this.guna2HtmlLabel27.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel27.Location = new System.Drawing.Point(481, 102);
             this.guna2HtmlLabel27.Name = "guna2HtmlLabel27";
-            this.guna2HtmlLabel27.Size = new System.Drawing.Size(229, 28);
+            this.guna2HtmlLabel27.Size = new System.Drawing.Size(172, 23);
             this.guna2HtmlLabel27.TabIndex = 149;
             this.guna2HtmlLabel27.Text = "Gas Allowance";
             // 
@@ -1181,10 +1154,9 @@
             this.guna2HtmlLabel28.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel28.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel28.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel28.Location = new System.Drawing.Point(441, 126);
-            this.guna2HtmlLabel28.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel28.Location = new System.Drawing.Point(331, 102);
             this.guna2HtmlLabel28.Name = "guna2HtmlLabel28";
-            this.guna2HtmlLabel28.Size = new System.Drawing.Size(161, 28);
+            this.guna2HtmlLabel28.Size = new System.Drawing.Size(121, 23);
             this.guna2HtmlLabel28.TabIndex = 148;
             this.guna2HtmlLabel28.Text = "Car Allowance";
             // 
@@ -1194,10 +1166,9 @@
             this.guna2HtmlLabel29.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel29.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel29.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel29.Location = new System.Drawing.Point(249, 126);
-            this.guna2HtmlLabel29.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel29.Location = new System.Drawing.Point(187, 102);
             this.guna2HtmlLabel29.Name = "guna2HtmlLabel29";
-            this.guna2HtmlLabel29.Size = new System.Drawing.Size(161, 28);
+            this.guna2HtmlLabel29.Size = new System.Drawing.Size(121, 23);
             this.guna2HtmlLabel29.TabIndex = 147;
             this.guna2HtmlLabel29.Text = "Meal Allowance";
             // 
@@ -1214,14 +1185,14 @@
             this.guna2TextBox19.Font = new System.Drawing.Font("Poppins", 9F);
             this.guna2TextBox19.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox19.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox19.Location = new System.Drawing.Point(21, 151);
-            this.guna2TextBox19.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2TextBox19.Location = new System.Drawing.Point(16, 123);
+            this.guna2TextBox19.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox19.Name = "guna2TextBox19";
             this.guna2TextBox19.PasswordChar = '\0';
             this.guna2TextBox19.PlaceholderText = "asd";
             this.guna2TextBox19.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.guna2TextBox19.SelectedText = "";
-            this.guna2TextBox19.Size = new System.Drawing.Size(161, 41);
+            this.guna2TextBox19.Size = new System.Drawing.Size(121, 33);
             this.guna2TextBox19.TabIndex = 146;
             // 
             // guna2HtmlLabel30
@@ -1230,10 +1201,9 @@
             this.guna2HtmlLabel30.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel30.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel30.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel30.Location = new System.Drawing.Point(21, 127);
-            this.guna2HtmlLabel30.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel30.Location = new System.Drawing.Point(16, 103);
             this.guna2HtmlLabel30.Name = "guna2HtmlLabel30";
-            this.guna2HtmlLabel30.Size = new System.Drawing.Size(215, 27);
+            this.guna2HtmlLabel30.Size = new System.Drawing.Size(161, 22);
             this.guna2HtmlLabel30.TabIndex = 145;
             this.guna2HtmlLabel30.Text = "Transportation Allowance";
             // 
@@ -1243,10 +1213,9 @@
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(1096, 48);
-            this.guna2HtmlLabel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(822, 39);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(136, 28);
+            this.guna2HtmlLabel7.Size = new System.Drawing.Size(102, 23);
             this.guna2HtmlLabel7.TabIndex = 115;
             this.guna2HtmlLabel7.Text = "Special Holiday";
             // 
@@ -1256,10 +1225,9 @@
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel8.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(883, 50);
-            this.guna2HtmlLabel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(662, 41);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            this.guna2HtmlLabel8.Size = new System.Drawing.Size(136, 28);
+            this.guna2HtmlLabel8.Size = new System.Drawing.Size(102, 23);
             this.guna2HtmlLabel8.TabIndex = 114;
             this.guna2HtmlLabel8.Text = "Legal Holiday";
             // 
@@ -1269,10 +1237,9 @@
             this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel9.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel9.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(643, 50);
-            this.guna2HtmlLabel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(482, 41);
             this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
-            this.guna2HtmlLabel9.Size = new System.Drawing.Size(136, 28);
+            this.guna2HtmlLabel9.Size = new System.Drawing.Size(102, 23);
             this.guna2HtmlLabel9.TabIndex = 113;
             this.guna2HtmlLabel9.Text = "Restday Duty";
             // 
@@ -1282,10 +1249,9 @@
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(443, 50);
-            this.guna2HtmlLabel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(332, 41);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(136, 28);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(102, 23);
             this.guna2HtmlLabel4.TabIndex = 112;
             this.guna2HtmlLabel4.Text = "Night Differential";
             // 
@@ -1295,10 +1261,9 @@
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(251, 50);
-            this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(188, 41);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(136, 28);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(102, 23);
             this.guna2HtmlLabel3.TabIndex = 111;
             this.guna2HtmlLabel3.Text = "Overtime";
             // 
@@ -1308,10 +1273,9 @@
             this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel10.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel10.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel10.Location = new System.Drawing.Point(21, 50);
-            this.guna2HtmlLabel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel10.Location = new System.Drawing.Point(16, 41);
             this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
-            this.guna2HtmlLabel10.Size = new System.Drawing.Size(109, 28);
+            this.guna2HtmlLabel10.Size = new System.Drawing.Size(82, 23);
             this.guna2HtmlLabel10.TabIndex = 109;
             this.guna2HtmlLabel10.Text = "Basic Salary";
             // 
@@ -1321,10 +1285,9 @@
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(8, 11);
-            this.guna2HtmlLabel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(6, 9);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(289, 27);
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(217, 22);
             this.guna2HtmlLabel6.TabIndex = 72;
             this.guna2HtmlLabel6.Text = "Salary Structure";
             // 
@@ -1340,10 +1303,9 @@
             this.guna2GradientPanel2.Controls.Add(this.guna2HtmlLabel5);
             this.guna2GradientPanel2.Controls.Add(this.txtEmployeeName);
             this.guna2GradientPanel2.Controls.Add(this.guna2HtmlLabel1);
-            this.guna2GradientPanel2.Location = new System.Drawing.Point(37, 49);
-            this.guna2GradientPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2GradientPanel2.Location = new System.Drawing.Point(28, 40);
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
-            this.guna2GradientPanel2.Size = new System.Drawing.Size(1453, 142);
+            this.guna2GradientPanel2.Size = new System.Drawing.Size(1140, 115);
             this.guna2GradientPanel2.TabIndex = 10;
             // 
             // guna2HtmlLabel19
@@ -1352,10 +1314,9 @@
             this.guna2HtmlLabel19.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel19.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel19.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel19.Location = new System.Drawing.Point(11, 10);
-            this.guna2HtmlLabel19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel19.Location = new System.Drawing.Point(8, 8);
             this.guna2HtmlLabel19.Name = "guna2HtmlLabel19";
-            this.guna2HtmlLabel19.Size = new System.Drawing.Size(289, 27);
+            this.guna2HtmlLabel19.Size = new System.Drawing.Size(217, 27);
             this.guna2HtmlLabel19.TabIndex = 155;
             this.guna2HtmlLabel19.Text = "Edit Payslip";
             // 
@@ -1373,14 +1334,14 @@
             this.txtDepartment.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtDepartment.ForeColor = System.Drawing.Color.Black;
             this.txtDepartment.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDepartment.Location = new System.Drawing.Point(1021, 74);
-            this.txtDepartment.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtDepartment.Location = new System.Drawing.Point(766, 60);
+            this.txtDepartment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDepartment.Name = "txtDepartment";
             this.txtDepartment.PasswordChar = '\0';
             this.txtDepartment.PlaceholderText = "asd";
             this.txtDepartment.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtDepartment.SelectedText = "";
-            this.txtDepartment.Size = new System.Drawing.Size(400, 41);
+            this.txtDepartment.Size = new System.Drawing.Size(300, 33);
             this.txtDepartment.TabIndex = 116;
             // 
             // guna2HtmlLabel18
@@ -1389,10 +1350,9 @@
             this.guna2HtmlLabel18.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel18.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel18.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel18.Location = new System.Drawing.Point(1021, 50);
-            this.guna2HtmlLabel18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel18.Location = new System.Drawing.Point(766, 41);
             this.guna2HtmlLabel18.Name = "guna2HtmlLabel18";
-            this.guna2HtmlLabel18.Size = new System.Drawing.Size(248, 28);
+            this.guna2HtmlLabel18.Size = new System.Drawing.Size(186, 23);
             this.guna2HtmlLabel18.TabIndex = 115;
             this.guna2HtmlLabel18.Text = "Department";
             // 
@@ -1410,14 +1370,14 @@
             this.txtJobTitle.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtJobTitle.ForeColor = System.Drawing.Color.Black;
             this.txtJobTitle.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtJobTitle.Location = new System.Drawing.Point(513, 74);
-            this.txtJobTitle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtJobTitle.Location = new System.Drawing.Point(385, 60);
+            this.txtJobTitle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtJobTitle.Name = "txtJobTitle";
             this.txtJobTitle.PasswordChar = '\0';
             this.txtJobTitle.PlaceholderText = "asd";
             this.txtJobTitle.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtJobTitle.SelectedText = "";
-            this.txtJobTitle.Size = new System.Drawing.Size(481, 41);
+            this.txtJobTitle.Size = new System.Drawing.Size(361, 33);
             this.txtJobTitle.TabIndex = 114;
             // 
             // guna2HtmlLabel5
@@ -1426,10 +1386,9 @@
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(513, 50);
-            this.guna2HtmlLabel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(385, 41);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(173, 28);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(130, 23);
             this.guna2HtmlLabel5.TabIndex = 113;
             this.guna2HtmlLabel5.Text = "Job Title";
             // 
@@ -1447,14 +1406,14 @@
             this.txtEmployeeName.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtEmployeeName.ForeColor = System.Drawing.Color.Black;
             this.txtEmployeeName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmployeeName.Location = new System.Drawing.Point(11, 74);
-            this.txtEmployeeName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtEmployeeName.Location = new System.Drawing.Point(8, 60);
+            this.txtEmployeeName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmployeeName.Name = "txtEmployeeName";
             this.txtEmployeeName.PasswordChar = '\0';
             this.txtEmployeeName.PlaceholderText = "asd";
             this.txtEmployeeName.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtEmployeeName.SelectedText = "";
-            this.txtEmployeeName.Size = new System.Drawing.Size(480, 41);
+            this.txtEmployeeName.Size = new System.Drawing.Size(360, 33);
             this.txtEmployeeName.TabIndex = 112;
             // 
             // guna2HtmlLabel1
@@ -1463,10 +1422,9 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(11, 50);
-            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(8, 41);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(248, 28);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(186, 23);
             this.guna2HtmlLabel1.TabIndex = 111;
             this.guna2HtmlLabel1.Text = "Employee Name";
             // 
@@ -1492,12 +1450,11 @@
             // 
             // frmEditPayslip
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1533, 985);
+            this.ClientSize = new System.Drawing.Size(1200, 800);
             this.Controls.Add(this.guna2GradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmEditPayslip";
             this.Text = "frmEditPayslip";
             this.Load += new System.EventHandler(this.frmEditPayslip_Load);
