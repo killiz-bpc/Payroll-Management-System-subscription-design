@@ -109,11 +109,13 @@
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2GradientPanel5.SuspendLayout();
             this.guna2GradientPanel4.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
@@ -154,7 +156,7 @@
             this.txtNetSalary.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtNetSalary.Enabled = false;
             this.txtNetSalary.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNetSalary.Font = new System.Drawing.Font("Poppins", 9F);
+            this.txtNetSalary.Font = new System.Drawing.Font("Poppins Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNetSalary.ForeColor = System.Drawing.Color.Black;
             this.txtNetSalary.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNetSalary.Location = new System.Drawing.Point(16, 61);
@@ -262,6 +264,7 @@
             this.txtTotalDeductions.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtTotalDeductions.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtTotalDeductions.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTotalDeductions.Enabled = false;
             this.txtTotalDeductions.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTotalDeductions.Font = new System.Drawing.Font("Poppins Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotalDeductions.ForeColor = System.Drawing.Color.Black;
@@ -270,7 +273,7 @@
             this.txtTotalDeductions.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTotalDeductions.Name = "txtTotalDeductions";
             this.txtTotalDeductions.PasswordChar = '\0';
-            this.txtTotalDeductions.PlaceholderText = "asd";
+            this.txtTotalDeductions.PlaceholderText = "Input Amount";
             this.txtTotalDeductions.ReadOnly = true;
             this.txtTotalDeductions.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtTotalDeductions.SelectedText = "";
@@ -294,12 +297,13 @@
             this.txtOtherDeductions.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtOtherDeductions.Name = "txtOtherDeductions";
             this.txtOtherDeductions.PasswordChar = '\0';
-            this.txtOtherDeductions.PlaceholderText = "asd";
+            this.txtOtherDeductions.PlaceholderText = "Input Amount";
             this.txtOtherDeductions.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtOtherDeductions.SelectedText = "";
             this.txtOtherDeductions.Size = new System.Drawing.Size(120, 33);
             this.txtOtherDeductions.TabIndex = 175;
             this.txtOtherDeductions.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
+            this.txtOtherDeductions.Validating += new System.ComponentModel.CancelEventHandler(this.txtTransportationAllowance_Validating);
             this.txtOtherDeductions.Validated += new System.EventHandler(this.txtSSS_Validated);
             // 
             // txtCashAdvance
@@ -319,12 +323,13 @@
             this.txtCashAdvance.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashAdvance.Name = "txtCashAdvance";
             this.txtCashAdvance.PasswordChar = '\0';
-            this.txtCashAdvance.PlaceholderText = "asd";
+            this.txtCashAdvance.PlaceholderText = "Input Amount";
             this.txtCashAdvance.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtCashAdvance.SelectedText = "";
             this.txtCashAdvance.Size = new System.Drawing.Size(121, 33);
             this.txtCashAdvance.TabIndex = 174;
             this.txtCashAdvance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
+            this.txtCashAdvance.Validating += new System.ComponentModel.CancelEventHandler(this.txtTransportationAllowance_Validating);
             this.txtCashAdvance.Validated += new System.EventHandler(this.txtSSS_Validated);
             // 
             // txtProductDeductions
@@ -344,12 +349,13 @@
             this.txtProductDeductions.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtProductDeductions.Name = "txtProductDeductions";
             this.txtProductDeductions.PasswordChar = '\0';
-            this.txtProductDeductions.PlaceholderText = "asd";
+            this.txtProductDeductions.PlaceholderText = "Input Amount";
             this.txtProductDeductions.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtProductDeductions.SelectedText = "";
             this.txtProductDeductions.Size = new System.Drawing.Size(121, 33);
             this.txtProductDeductions.TabIndex = 173;
             this.txtProductDeductions.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
+            this.txtProductDeductions.Validating += new System.ComponentModel.CancelEventHandler(this.txtTransportationAllowance_Validating);
             this.txtProductDeductions.Validated += new System.EventHandler(this.txtSSS_Validated);
             // 
             // txtPagibigLoan
@@ -369,12 +375,13 @@
             this.txtPagibigLoan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPagibigLoan.Name = "txtPagibigLoan";
             this.txtPagibigLoan.PasswordChar = '\0';
-            this.txtPagibigLoan.PlaceholderText = "asd";
+            this.txtPagibigLoan.PlaceholderText = "Input Amount";
             this.txtPagibigLoan.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtPagibigLoan.SelectedText = "";
             this.txtPagibigLoan.Size = new System.Drawing.Size(121, 33);
             this.txtPagibigLoan.TabIndex = 172;
             this.txtPagibigLoan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
+            this.txtPagibigLoan.Validating += new System.ComponentModel.CancelEventHandler(this.txtTransportationAllowance_Validating);
             this.txtPagibigLoan.Validated += new System.EventHandler(this.txtSSS_Validated);
             // 
             // txtCalamityLoan
@@ -394,12 +401,13 @@
             this.txtCalamityLoan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCalamityLoan.Name = "txtCalamityLoan";
             this.txtCalamityLoan.PasswordChar = '\0';
-            this.txtCalamityLoan.PlaceholderText = "asd";
+            this.txtCalamityLoan.PlaceholderText = "Input Amount";
             this.txtCalamityLoan.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtCalamityLoan.SelectedText = "";
             this.txtCalamityLoan.Size = new System.Drawing.Size(121, 33);
             this.txtCalamityLoan.TabIndex = 171;
             this.txtCalamityLoan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
+            this.txtCalamityLoan.Validating += new System.ComponentModel.CancelEventHandler(this.txtTransportationAllowance_Validating);
             this.txtCalamityLoan.Validated += new System.EventHandler(this.txtSSS_Validated);
             // 
             // txtSSSLoan
@@ -419,12 +427,13 @@
             this.txtSSSLoan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSSSLoan.Name = "txtSSSLoan";
             this.txtSSSLoan.PasswordChar = '\0';
-            this.txtSSSLoan.PlaceholderText = "asd";
+            this.txtSSSLoan.PlaceholderText = "Input Amount";
             this.txtSSSLoan.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtSSSLoan.SelectedText = "";
             this.txtSSSLoan.Size = new System.Drawing.Size(120, 33);
             this.txtSSSLoan.TabIndex = 170;
             this.txtSSSLoan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
+            this.txtSSSLoan.Validating += new System.ComponentModel.CancelEventHandler(this.txtTransportationAllowance_Validating);
             this.txtSSSLoan.Validated += new System.EventHandler(this.txtSSS_Validated);
             // 
             // txtWithholdingTax
@@ -444,12 +453,13 @@
             this.txtWithholdingTax.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtWithholdingTax.Name = "txtWithholdingTax";
             this.txtWithholdingTax.PasswordChar = '\0';
-            this.txtWithholdingTax.PlaceholderText = "asd";
+            this.txtWithholdingTax.PlaceholderText = "Input Amount";
             this.txtWithholdingTax.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtWithholdingTax.SelectedText = "";
             this.txtWithholdingTax.Size = new System.Drawing.Size(119, 33);
             this.txtWithholdingTax.TabIndex = 169;
             this.txtWithholdingTax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
+            this.txtWithholdingTax.Validating += new System.ComponentModel.CancelEventHandler(this.txtTransportationAllowance_Validating);
             this.txtWithholdingTax.Validated += new System.EventHandler(this.txtSSS_Validated);
             // 
             // txtHMO
@@ -469,12 +479,13 @@
             this.txtHMO.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtHMO.Name = "txtHMO";
             this.txtHMO.PasswordChar = '\0';
-            this.txtHMO.PlaceholderText = "asd";
+            this.txtHMO.PlaceholderText = "Input Amount";
             this.txtHMO.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtHMO.SelectedText = "";
             this.txtHMO.Size = new System.Drawing.Size(121, 33);
             this.txtHMO.TabIndex = 168;
             this.txtHMO.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
+            this.txtHMO.Validating += new System.ComponentModel.CancelEventHandler(this.txtTransportationAllowance_Validating);
             this.txtHMO.Validated += new System.EventHandler(this.txtSSS_Validated);
             // 
             // txtPagibig
@@ -494,12 +505,13 @@
             this.txtPagibig.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPagibig.Name = "txtPagibig";
             this.txtPagibig.PasswordChar = '\0';
-            this.txtPagibig.PlaceholderText = "asd";
+            this.txtPagibig.PlaceholderText = "Input Amount";
             this.txtPagibig.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtPagibig.SelectedText = "";
             this.txtPagibig.Size = new System.Drawing.Size(120, 33);
             this.txtPagibig.TabIndex = 167;
             this.txtPagibig.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
+            this.txtPagibig.Validating += new System.ComponentModel.CancelEventHandler(this.txtTransportationAllowance_Validating);
             this.txtPagibig.Validated += new System.EventHandler(this.txtSSS_Validated);
             // 
             // txtPhilhealth
@@ -519,12 +531,13 @@
             this.txtPhilhealth.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPhilhealth.Name = "txtPhilhealth";
             this.txtPhilhealth.PasswordChar = '\0';
-            this.txtPhilhealth.PlaceholderText = "asd";
+            this.txtPhilhealth.PlaceholderText = "Input Amount";
             this.txtPhilhealth.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtPhilhealth.SelectedText = "";
             this.txtPhilhealth.Size = new System.Drawing.Size(121, 33);
             this.txtPhilhealth.TabIndex = 166;
             this.txtPhilhealth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
+            this.txtPhilhealth.Validating += new System.ComponentModel.CancelEventHandler(this.txtTransportationAllowance_Validating);
             this.txtPhilhealth.Validated += new System.EventHandler(this.txtSSS_Validated);
             // 
             // txtSSS
@@ -544,12 +557,13 @@
             this.txtSSS.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSSS.Name = "txtSSS";
             this.txtSSS.PasswordChar = '\0';
-            this.txtSSS.PlaceholderText = "asd";
+            this.txtSSS.PlaceholderText = "Input Amount";
             this.txtSSS.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtSSS.SelectedText = "";
             this.txtSSS.Size = new System.Drawing.Size(123, 33);
             this.txtSSS.TabIndex = 165;
             this.txtSSS.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
+            this.txtSSS.Validating += new System.ComponentModel.CancelEventHandler(this.txtTransportationAllowance_Validating);
             this.txtSSS.Validated += new System.EventHandler(this.txtSSS_Validated);
             // 
             // txtAbsent
@@ -900,6 +914,7 @@
             this.txtOtherAllowance.Size = new System.Drawing.Size(121, 33);
             this.txtOtherAllowance.TabIndex = 6;
             this.txtOtherAllowance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
+            this.txtOtherAllowance.Validating += new System.ComponentModel.CancelEventHandler(this.txtTransportationAllowance_Validating);
             this.txtOtherAllowance.Validated += new System.EventHandler(this.txtOvertime_Validated);
             // 
             // txtNonTaxAllowance
@@ -925,6 +940,7 @@
             this.txtNonTaxAllowance.Size = new System.Drawing.Size(118, 33);
             this.txtNonTaxAllowance.TabIndex = 5;
             this.txtNonTaxAllowance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
+            this.txtNonTaxAllowance.Validating += new System.ComponentModel.CancelEventHandler(this.txtTransportationAllowance_Validating);
             this.txtNonTaxAllowance.Validated += new System.EventHandler(this.txtOvertime_Validated);
             // 
             // guna2HtmlLabel23
@@ -962,6 +978,7 @@
             this.txtGasAllowance.Size = new System.Drawing.Size(122, 33);
             this.txtGasAllowance.TabIndex = 4;
             this.txtGasAllowance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
+            this.txtGasAllowance.Validating += new System.ComponentModel.CancelEventHandler(this.txtTransportationAllowance_Validating);
             this.txtGasAllowance.Validated += new System.EventHandler(this.txtOvertime_Validated);
             // 
             // txtCarAllowance
@@ -987,6 +1004,7 @@
             this.txtCarAllowance.Size = new System.Drawing.Size(120, 33);
             this.txtCarAllowance.TabIndex = 3;
             this.txtCarAllowance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
+            this.txtCarAllowance.Validating += new System.ComponentModel.CancelEventHandler(this.txtTransportationAllowance_Validating);
             this.txtCarAllowance.Validated += new System.EventHandler(this.txtOvertime_Validated);
             // 
             // txtMealAllowance
@@ -1012,6 +1030,7 @@
             this.txtMealAllowance.Size = new System.Drawing.Size(119, 33);
             this.txtMealAllowance.TabIndex = 2;
             this.txtMealAllowance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
+            this.txtMealAllowance.Validating += new System.ComponentModel.CancelEventHandler(this.txtTransportationAllowance_Validating);
             this.txtMealAllowance.Validated += new System.EventHandler(this.txtOvertime_Validated);
             // 
             // txtTransportationAllowance
@@ -1037,6 +1056,7 @@
             this.txtTransportationAllowance.Size = new System.Drawing.Size(120, 33);
             this.txtTransportationAllowance.TabIndex = 1;
             this.txtTransportationAllowance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
+            this.txtTransportationAllowance.Validating += new System.ComponentModel.CancelEventHandler(this.txtTransportationAllowance_Validating);
             this.txtTransportationAllowance.Validated += new System.EventHandler(this.txtOvertime_Validated);
             // 
             // txtGrossSalary
@@ -1088,6 +1108,7 @@
             this.txtSpecialHoliday.Size = new System.Drawing.Size(121, 33);
             this.txtSpecialHoliday.TabIndex = 162;
             this.txtSpecialHoliday.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
+            this.txtSpecialHoliday.Validating += new System.ComponentModel.CancelEventHandler(this.txtSpecialHoliday_Validating);
             this.txtSpecialHoliday.Validated += new System.EventHandler(this.txtOvertime_Validated);
             // 
             // txtBasicSalary
@@ -1099,6 +1120,7 @@
             this.txtBasicSalary.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtBasicSalary.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtBasicSalary.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBasicSalary.Enabled = false;
             this.txtBasicSalary.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBasicSalary.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtBasicSalary.ForeColor = System.Drawing.Color.Black;
@@ -1543,6 +1565,10 @@
             this.guna2Elipse4.BorderRadius = 10;
             this.guna2Elipse4.TargetControl = this.guna2GradientPanel5;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmEditPayslip
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1558,6 +1584,7 @@
             this.guna2GradientPanel4.ResumeLayout(false);
             this.guna2GradientPanel3.ResumeLayout(false);
             this.guna2GradientPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1644,5 +1671,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtOtherDeductions;
         private Guna.UI2.WinForms.Guna2TextBox txtCashAdvance;
         private Guna.UI2.WinForms.Guna2TextBox txtTotalDeductions;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

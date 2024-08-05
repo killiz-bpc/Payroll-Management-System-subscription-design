@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using Payroll_Management_System.Connections;
 using Payroll_Management_System.Forms.Menu_Form.Attendance;
 
 namespace Payroll_Management_System.Forms.Menu_Form.Payroll
@@ -146,9 +147,12 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
 
 
                 frmViewPayslip frmViewPayslip = new frmViewPayslip();
-                frmViewPayslip.emp_id=emp_id;
-                frmViewPayslip.attendance_batch_no=txtAttendanceBatch.Text;
-                frmViewPayslip.cutoff_period=cutoff_period;
+
+                GetPayslipDetails.emp_id = emp_id;
+                GetPayslipDetails.attendance_batch_no= txtAttendanceBatch.Text;
+                GetPayslipDetails.cutoff_period =cutoff_period;
+
+                GetPayslipDetails.isSaved = false;
 
 
                 frmHome frmHome = Application.OpenForms.OfType<frmHome>().FirstOrDefault();
