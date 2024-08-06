@@ -341,7 +341,6 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
             }
             else
             {
-               
                 load_saved_data();
             }
             gross_salary_computation();

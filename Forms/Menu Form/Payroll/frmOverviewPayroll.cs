@@ -133,10 +133,42 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
 
         private void txtDepartment_SelectedIndexChanged(object sender, EventArgs e)
         {
-            panelSlip.Visible=false;
+            btnLoad.PerformClick();
+            panelSlip.Visible=true;
             btnLoad.Enabled=true;
         }
 
+        public void check_payroll_tb()
+        {
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(connString))
+                {
+                    conn.Open();
+                    string query = "SELECT COUNT(*) FROM payroll_process_tb WHERE emp_id=@emp_id AND attendance_batch_no=@attendance_batch_no";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@emp_id", GetPayslipDetails.emp_id);
+                    cmd.Parameters.AddWithValue("@attendance_batch_no", txtAttendanceBatch.Text);
+                    int count= Convert.ToInt32(cmd.ExecuteScalar());
+                    
+                    if(count>0) //match data
+                    {
+                        GetPayslipDetails.isSaved =true;
+                    }
+                    else
+                    {
+                        GetPayslipDetails.isSaved=false;
+                    }
+
+
+
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error:"+ex, "Message Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         private void dgvPayslip_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == dgvPayslip.Columns["view_more"].Index && e.RowIndex >= 0)
@@ -152,9 +184,9 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
                 GetPayslipDetails.attendance_batch_no= txtAttendanceBatch.Text;
                 GetPayslipDetails.cutoff_period =cutoff_period;
 
-                GetPayslipDetails.isSaved = false;
+                check_payroll_tb();
 
-
+               
                 frmHome frmHome = Application.OpenForms.OfType<frmHome>().FirstOrDefault();
 
                 if (frmHome.mainPanel != null)

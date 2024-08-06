@@ -43,6 +43,9 @@
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnBack = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.btnLoad = new Guna.UI2.WinForms.Guna2Button();
+            this.txtAttendanceBatch = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtSeries = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtDateFrom = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -57,11 +60,9 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.txtAttendanceBatch = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.btnLoad = new Guna.UI2.WinForms.Guna2Button();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emp_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.job_title = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.basic_salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gross_salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total_deductions = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -123,8 +124,9 @@
             this.dgvPayroll.ColumnHeadersHeight = 30;
             this.dgvPayroll.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvPayroll.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
+            this.emp_id,
             this.dataGridViewTextBoxColumn2,
+            this.job_title,
             this.basic_salary,
             this.gross_salary,
             this.total_deductions,
@@ -176,6 +178,7 @@
             this.dgvPayroll.ThemeStyle.RowsStyle.Height = 40;
             this.dgvPayroll.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvPayroll.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvPayroll.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPayroll_CellContentClick);
             // 
             // guna2HtmlLabel5
             // 
@@ -234,6 +237,60 @@
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
             this.guna2GradientPanel2.Size = new System.Drawing.Size(1140, 270);
             this.guna2GradientPanel2.TabIndex = 10;
+            // 
+            // btnLoad
+            // 
+            this.btnLoad.Animated = true;
+            this.btnLoad.BackColor = System.Drawing.Color.Transparent;
+            this.btnLoad.BorderColor = System.Drawing.Color.Transparent;
+            this.btnLoad.BorderRadius = 10;
+            this.btnLoad.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLoad.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLoad.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLoad.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLoad.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
+            this.btnLoad.Font = new System.Drawing.Font("Poppins", 9F);
+            this.btnLoad.ForeColor = System.Drawing.Color.White;
+            this.btnLoad.Location = new System.Drawing.Point(17, 215);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(227, 37);
+            this.btnLoad.TabIndex = 176;
+            this.btnLoad.Text = "&Load Data";
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            // 
+            // txtAttendanceBatch
+            // 
+            this.txtAttendanceBatch.BackColor = System.Drawing.Color.Transparent;
+            this.txtAttendanceBatch.BorderRadius = 10;
+            this.txtAttendanceBatch.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.txtAttendanceBatch.DropDownHeight = 250;
+            this.txtAttendanceBatch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtAttendanceBatch.FocusedColor = System.Drawing.Color.Empty;
+            this.txtAttendanceBatch.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAttendanceBatch.ForeColor = System.Drawing.Color.Black;
+            this.txtAttendanceBatch.IntegralHeight = false;
+            this.txtAttendanceBatch.ItemHeight = 30;
+            this.txtAttendanceBatch.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
+            this.txtAttendanceBatch.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
+            this.txtAttendanceBatch.Location = new System.Drawing.Point(17, 73);
+            this.txtAttendanceBatch.MaxDropDownItems = 10;
+            this.txtAttendanceBatch.Name = "txtAttendanceBatch";
+            this.txtAttendanceBatch.Size = new System.Drawing.Size(227, 36);
+            this.txtAttendanceBatch.Sorted = true;
+            this.txtAttendanceBatch.TabIndex = 175;
+            this.txtAttendanceBatch.SelectedIndexChanged += new System.EventHandler(this.txtAttendanceBatch_SelectedIndexChanged);
+            // 
+            // guna2HtmlLabel6
+            // 
+            this.guna2HtmlLabel6.AutoSize = false;
+            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(16, 52);
+            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(210, 23);
+            this.guna2HtmlLabel6.TabIndex = 174;
+            this.guna2HtmlLabel6.Text = "Attendance Batch No.";
             // 
             // txtSeries
             // 
@@ -387,6 +444,7 @@
             this.txtDepartment.Size = new System.Drawing.Size(334, 36);
             this.txtDepartment.Sorted = true;
             this.txtDepartment.TabIndex = 162;
+            this.txtDepartment.SelectedIndexChanged += new System.EventHandler(this.txtDepartment_SelectedIndexChanged);
             // 
             // guna2HtmlLabel4
             // 
@@ -424,68 +482,14 @@
             // 
             this.guna2Elipse3.TargetControl = this.panelEmployeeDetails;
             // 
-            // txtAttendanceBatch
+            // emp_id
             // 
-            this.txtAttendanceBatch.BackColor = System.Drawing.Color.Transparent;
-            this.txtAttendanceBatch.BorderRadius = 10;
-            this.txtAttendanceBatch.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.txtAttendanceBatch.DropDownHeight = 250;
-            this.txtAttendanceBatch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtAttendanceBatch.FocusedColor = System.Drawing.Color.Empty;
-            this.txtAttendanceBatch.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAttendanceBatch.ForeColor = System.Drawing.Color.Black;
-            this.txtAttendanceBatch.IntegralHeight = false;
-            this.txtAttendanceBatch.ItemHeight = 30;
-            this.txtAttendanceBatch.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
-            this.txtAttendanceBatch.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
-            this.txtAttendanceBatch.Location = new System.Drawing.Point(17, 70);
-            this.txtAttendanceBatch.MaxDropDownItems = 10;
-            this.txtAttendanceBatch.Name = "txtAttendanceBatch";
-            this.txtAttendanceBatch.Size = new System.Drawing.Size(227, 36);
-            this.txtAttendanceBatch.Sorted = true;
-            this.txtAttendanceBatch.TabIndex = 175;
-            this.txtAttendanceBatch.SelectedIndexChanged += new System.EventHandler(this.txtAttendanceBatch_SelectedIndexChanged);
-            // 
-            // guna2HtmlLabel6
-            // 
-            this.guna2HtmlLabel6.AutoSize = false;
-            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(17, 48);
-            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(210, 23);
-            this.guna2HtmlLabel6.TabIndex = 174;
-            this.guna2HtmlLabel6.Text = "Attendance Batch No.";
-            // 
-            // btnLoad
-            // 
-            this.btnLoad.Animated = true;
-            this.btnLoad.BackColor = System.Drawing.Color.Transparent;
-            this.btnLoad.BorderColor = System.Drawing.Color.Transparent;
-            this.btnLoad.BorderRadius = 10;
-            this.btnLoad.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLoad.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLoad.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLoad.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLoad.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
-            this.btnLoad.Font = new System.Drawing.Font("Poppins", 9F);
-            this.btnLoad.ForeColor = System.Drawing.Color.White;
-            this.btnLoad.Location = new System.Drawing.Point(17, 215);
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(227, 37);
-            this.btnLoad.TabIndex = 176;
-            this.btnLoad.Text = "&Load Data";
-            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "emp_id";
-            this.dataGridViewTextBoxColumn1.FillWeight = 30.75713F;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Employee ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Visible = false;
+            this.emp_id.DataPropertyName = "emp_id";
+            this.emp_id.FillWeight = 30.75713F;
+            this.emp_id.HeaderText = "Employee ID";
+            this.emp_id.Name = "emp_id";
+            this.emp_id.ReadOnly = true;
+            this.emp_id.Visible = false;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -493,6 +497,13 @@
             this.dataGridViewTextBoxColumn2.HeaderText = "Employee Name";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // job_title
+            // 
+            this.job_title.DataPropertyName = "job_title";
+            this.job_title.HeaderText = "Job Title";
+            this.job_title.Name = "job_title";
+            this.job_title.ReadOnly = true;
             // 
             // basic_salary
             // 
@@ -534,7 +545,7 @@
             // view_more
             // 
             this.view_more.DataPropertyName = "view_more";
-            this.view_more.FillWeight = 30.75713F;
+            this.view_more.FillWeight = 45F;
             this.view_more.HeaderText = "Action";
             this.view_more.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.view_more.Name = "view_more";
@@ -587,8 +598,9 @@
         private Guna.UI2.WinForms.Guna2ComboBox txtAttendanceBatch;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private Guna.UI2.WinForms.Guna2Button btnLoad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emp_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn job_title;
         private System.Windows.Forms.DataGridViewTextBoxColumn basic_salary;
         private System.Windows.Forms.DataGridViewTextBoxColumn gross_salary;
         private System.Windows.Forms.DataGridViewTextBoxColumn total_deductions;
