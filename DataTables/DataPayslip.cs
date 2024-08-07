@@ -4,6 +4,10 @@
 
     partial class DataPayslip
     {
+        partial class employee_informationDataTable
+        {
+        }
+
         partial class payroll_process_tbDataTable
         {
         }

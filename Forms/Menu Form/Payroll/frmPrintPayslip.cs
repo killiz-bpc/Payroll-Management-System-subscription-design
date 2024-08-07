@@ -19,6 +19,8 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
         public string connString = frmLogin.connString;
 
         public int emp_id { get; set; }
+        public string attendance_batch_no { get; set; } 
+
         public frmPrintPayslip()
         {
             InitializeComponent();
@@ -37,10 +39,30 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
                 using (MySqlConnection conn = new MySqlConnection(connString))
                 {
                     conn.Open();
-                    string query = "SELECT emp_id, employee_name, basic_salary, gross_salary, total_deductions, net_salary FROM payroll_process_tb WHERE emp_id=@emp_id";
+                    string query = @"
+                                    SELECT 
+                                        payroll_process_tb.*, 
+                                        employee_information.job_title, 
+                                        employee_information.sss_no, 
+                                        employee_information.tin_no, 
+                                        employee_information.HDMF_no, 
+                                        employee_information.philhealth_no, 
+                                        attendance_monitoring.date_from, 
+                                        attendance_monitoring.date_to
+                                    FROM 
+                                        employee_information
+                                    INNER JOIN 
+                                        payroll_process_tb ON employee_information.emp_id = payroll_process_tb.emp_id
+                                    INNER JOIN 
+                                        attendance_monitoring ON attendance_monitoring.attendance_batch_no = payroll_process_tb.attendance_batch_no
+                                    WHERE 
+                                        payroll_process_tb.emp_id=@emp_id AND payroll_process_tb.attendance_batch_no=@attendance_batch_no";
+
+                    
 
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@emp_id", emp_id);
+                    cmd.Parameters.AddWithValue("@attendance_batch_no", attendance_batch_no);
                     using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                     {
                         sda.Fill(dt);

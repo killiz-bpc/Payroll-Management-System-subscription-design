@@ -153,6 +153,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
                 int emp_id = Convert.ToInt32(dgvPayroll.CurrentRow.Cells["emp_id"].Value.ToString());
                 frmPrintPayslip frmPrintPayslip = new frmPrintPayslip();
                 frmPrintPayslip.emp_id = emp_id;
+                frmPrintPayslip.attendance_batch_no = txtAttendanceBatch.Text;
                 frmPrintPayslip.ShowDialog();
 
             }
