@@ -40,6 +40,14 @@
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.panelEmployeeDetails = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.dgvPayroll = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.emp_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.job_title = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.basic_salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gross_salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.total_deductions = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.net_salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.view_more = new System.Windows.Forms.DataGridViewLinkColumn();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnBack = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
@@ -60,14 +68,7 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.emp_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.job_title = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.basic_salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gross_salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.total_deductions = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.net_salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.view_more = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.guna2GradientPanel1.SuspendLayout();
             this.panelEmployeeDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPayroll)).BeginInit();
@@ -179,6 +180,80 @@
             this.dgvPayroll.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvPayroll.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvPayroll.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPayroll_CellContentClick);
+            this.dgvPayroll.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPayroll_CellContentDoubleClick);
+            // 
+            // emp_id
+            // 
+            this.emp_id.DataPropertyName = "emp_id";
+            this.emp_id.FillWeight = 30.75713F;
+            this.emp_id.HeaderText = "Employee ID";
+            this.emp_id.Name = "emp_id";
+            this.emp_id.ReadOnly = true;
+            this.emp_id.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "employee_name";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Employee Name";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // job_title
+            // 
+            this.job_title.DataPropertyName = "job_title";
+            this.job_title.HeaderText = "Job Title";
+            this.job_title.Name = "job_title";
+            this.job_title.ReadOnly = true;
+            // 
+            // basic_salary
+            // 
+            this.basic_salary.DataPropertyName = "basic_salary";
+            dataGridViewCellStyle3.Format = "C2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.basic_salary.DefaultCellStyle = dataGridViewCellStyle3;
+            this.basic_salary.HeaderText = "Basic Salary";
+            this.basic_salary.Name = "basic_salary";
+            this.basic_salary.ReadOnly = true;
+            // 
+            // gross_salary
+            // 
+            this.gross_salary.DataPropertyName = "gross_salary";
+            dataGridViewCellStyle4.Format = "C2";
+            this.gross_salary.DefaultCellStyle = dataGridViewCellStyle4;
+            this.gross_salary.HeaderText = "Gross Salary";
+            this.gross_salary.Name = "gross_salary";
+            this.gross_salary.ReadOnly = true;
+            // 
+            // total_deductions
+            // 
+            this.total_deductions.DataPropertyName = "total_deductions";
+            dataGridViewCellStyle5.Format = "C2";
+            this.total_deductions.DefaultCellStyle = dataGridViewCellStyle5;
+            this.total_deductions.HeaderText = "Deduction";
+            this.total_deductions.Name = "total_deductions";
+            this.total_deductions.ReadOnly = true;
+            // 
+            // net_salary
+            // 
+            this.net_salary.DataPropertyName = "net_salary";
+            dataGridViewCellStyle6.Format = "C2";
+            this.net_salary.DefaultCellStyle = dataGridViewCellStyle6;
+            this.net_salary.HeaderText = "Net Salary";
+            this.net_salary.Name = "net_salary";
+            this.net_salary.ReadOnly = true;
+            // 
+            // view_more
+            // 
+            this.view_more.DataPropertyName = "view_more";
+            this.view_more.FillWeight = 45F;
+            this.view_more.HeaderText = "Action";
+            this.view_more.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.view_more.Name = "view_more";
+            this.view_more.ReadOnly = true;
+            this.view_more.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.view_more.Text = "View More";
+            this.view_more.TrackVisitedState = false;
+            this.view_more.UseColumnTextForLinkValue = true;
             // 
             // guna2HtmlLabel5
             // 
@@ -412,6 +487,7 @@
             this.txtPreparedBy.SelectedText = "";
             this.txtPreparedBy.Size = new System.Drawing.Size(334, 36);
             this.txtPreparedBy.TabIndex = 164;
+            this.txtPreparedBy.TextChanged += new System.EventHandler(this.txtPreparedBy_TextChanged);
             // 
             // guna2HtmlLabel7
             // 
@@ -482,78 +558,9 @@
             // 
             this.guna2Elipse3.TargetControl = this.panelEmployeeDetails;
             // 
-            // emp_id
+            // timer1
             // 
-            this.emp_id.DataPropertyName = "emp_id";
-            this.emp_id.FillWeight = 30.75713F;
-            this.emp_id.HeaderText = "Employee ID";
-            this.emp_id.Name = "emp_id";
-            this.emp_id.ReadOnly = true;
-            this.emp_id.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "employee_name";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Employee Name";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // job_title
-            // 
-            this.job_title.DataPropertyName = "job_title";
-            this.job_title.HeaderText = "Job Title";
-            this.job_title.Name = "job_title";
-            this.job_title.ReadOnly = true;
-            // 
-            // basic_salary
-            // 
-            this.basic_salary.DataPropertyName = "basic_salary";
-            dataGridViewCellStyle3.Format = "C2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.basic_salary.DefaultCellStyle = dataGridViewCellStyle3;
-            this.basic_salary.HeaderText = "Basic Salary";
-            this.basic_salary.Name = "basic_salary";
-            this.basic_salary.ReadOnly = true;
-            // 
-            // gross_salary
-            // 
-            this.gross_salary.DataPropertyName = "gross_salary";
-            dataGridViewCellStyle4.Format = "C2";
-            this.gross_salary.DefaultCellStyle = dataGridViewCellStyle4;
-            this.gross_salary.HeaderText = "Gross Salary";
-            this.gross_salary.Name = "gross_salary";
-            this.gross_salary.ReadOnly = true;
-            // 
-            // total_deductions
-            // 
-            this.total_deductions.DataPropertyName = "total_deductions";
-            dataGridViewCellStyle5.Format = "C2";
-            this.total_deductions.DefaultCellStyle = dataGridViewCellStyle5;
-            this.total_deductions.HeaderText = "Deduction";
-            this.total_deductions.Name = "total_deductions";
-            this.total_deductions.ReadOnly = true;
-            // 
-            // net_salary
-            // 
-            this.net_salary.DataPropertyName = "net_salary";
-            dataGridViewCellStyle6.Format = "C2";
-            this.net_salary.DefaultCellStyle = dataGridViewCellStyle6;
-            this.net_salary.HeaderText = "Net Salary";
-            this.net_salary.Name = "net_salary";
-            this.net_salary.ReadOnly = true;
-            // 
-            // view_more
-            // 
-            this.view_more.DataPropertyName = "view_more";
-            this.view_more.FillWeight = 45F;
-            this.view_more.HeaderText = "Action";
-            this.view_more.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.view_more.Name = "view_more";
-            this.view_more.ReadOnly = true;
-            this.view_more.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.view_more.Text = "View More";
-            this.view_more.TrackVisitedState = false;
-            this.view_more.UseColumnTextForLinkValue = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frmGeneratePayroll
             // 
@@ -606,5 +613,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn total_deductions;
         private System.Windows.Forms.DataGridViewTextBoxColumn net_salary;
         private System.Windows.Forms.DataGridViewLinkColumn view_more;
+        private System.Windows.Forms.Timer timer1;
     }
 }

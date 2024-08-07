@@ -40,7 +40,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
                 {
                     conn.Open();
                     string query = @"
-                                    SELECT 
+                                    SELECT DISTINCT
                                         payroll_process_tb.*, 
                                         employee_information.job_title, 
                                         employee_information.sss_no, 
@@ -59,14 +59,18 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
                                         payroll_process_tb.emp_id=@emp_id AND payroll_process_tb.attendance_batch_no=@attendance_batch_no";
 
                     
-
+                        
                     MySqlCommand cmd = new MySqlCommand(query, conn);
+                   
                     cmd.Parameters.AddWithValue("@emp_id", emp_id);
                     cmd.Parameters.AddWithValue("@attendance_batch_no", attendance_batch_no);
+
                     using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                     {
                         sda.Fill(dt);
                     }
+
+                    
                 }
 
                 reportViewer1.LocalReport.DataSources.Clear();

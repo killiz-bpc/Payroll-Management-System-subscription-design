@@ -17,6 +17,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
         public frmGeneratePayroll()
         {
             InitializeComponent();
+            timer1.Start();
         }
 
         string connString = frmLogin.connString;
@@ -60,6 +61,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
 
         private void frmGeneratePayroll_Load(object sender, EventArgs e)
         {
+            txtPreparedBy.Text = GetData.GetEmployeeName(frmLogin.lastName, frmLogin.firstName, "");
             load_attendance_batch_no();
             panelEmployeeDetails.Visible=false; 
         }
@@ -157,6 +159,21 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
                 frmPrintPayslip.ShowDialog();
 
             }
+        }
+
+        private void txtPreparedBy_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            txtDateCreated.Text = DateTime.Now.ToString("yyyy-MM-dd");
+        }
+
+        private void dgvPayroll_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

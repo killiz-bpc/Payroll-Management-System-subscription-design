@@ -89,7 +89,7 @@ namespace Payroll_Management_System.Forms.Menu_Form
 
             string accessRights = frmLogin.accessRights;
 
-            if (accessRights == "User")
+            if (accessRights == "User" || accessRights == "user")
             {
                 btnEmployees.Visible = false;
                 btnAttendance.Visible = false;

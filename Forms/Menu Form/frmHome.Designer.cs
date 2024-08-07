@@ -249,7 +249,7 @@
             this.lblPosition.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
             this.lblPosition.Location = new System.Drawing.Point(54, 37);
             this.lblPosition.Name = "lblPosition";
-            this.lblPosition.Size = new System.Drawing.Size(206, 31);
+            this.lblPosition.Size = new System.Drawing.Size(162, 31);
             this.lblPosition.TabIndex = 1;
             this.lblPosition.Text = "Junior Programmer";
             // 
