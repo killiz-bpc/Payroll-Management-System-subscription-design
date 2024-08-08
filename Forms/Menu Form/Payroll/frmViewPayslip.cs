@@ -109,6 +109,14 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
             GetPayslipDetails.deduction_sss = deduction_sss_ee;
             GetPayslipDetails.deduction_pagibig = deduction_pagibig;
             GetPayslipDetails.deduction_hmo= deduction_hmo;
+
+
+            
+            GetPayslipDetails.gross_pay = basic_salary - (deduction_absent + deduction_late + deduction_undertime);
+
+            txtGrossSalary.Text = GetPayslipDetails.gross_pay.ToString("N3");
+            
+           
         }
 
         public void load_saved_data()
@@ -156,6 +164,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
                     string deduction_other_deductions = "";
                     string total_deductions = "";
                     string net_salary = "";
+                    string salary_adjustment = "";
 
 
                     while (sdr.Read())
@@ -189,6 +198,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
                         deduction_other_deductions = sdr.GetDouble("deduction_other_deductions").ToString();
                         total_deductions = sdr.GetDouble("total_deductions").ToString();
                         net_salary = sdr.GetDouble("net_salary").ToString();
+                        salary_adjustment = sdr.GetDouble("salary_adjustment").ToString();
                     }
 
 
@@ -230,6 +240,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
                     txtOtherDeductions.Text = deduction_other_deductions;
                     txtTotalDeductions.Text = total_deductions;
                     txtNetSalary.Text = net_salary;
+                    txtSalaryAdjustment.Text = salary_adjustment;
 
 
 
@@ -242,44 +253,50 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
             }
         }
 
-        public void gross_salary_computation()
-        {
-            // gross salary computation
-            try
-
-            {
-                Guna.UI2.WinForms.Guna2TextBox[] addition_input = //array ng textfields
-                {
-                    txtBasicSalary, txtOvertime, txtNightPrem, txtRestdayDuty, txtLegalHoliday, txtSpecialHoliday, txtSpecialHoliday,
-                    txtTransportationAllowance, txtMealAllowance, txtCarAllowance, txtGasAllowance, txtNonTaxAllowance, txtOtherAllowance
-                };
-
-                double gross_salary = 0;
-                foreach (Guna.UI2.WinForms.Guna2TextBox textBox in addition_input)
-                {
-                    double value = string.IsNullOrWhiteSpace(textBox.Text) ? 0 : Convert.ToDouble(textBox.Text); //if null = 0; else  = value
-                    gross_salary += value;
-                }
-                txtGrossSalary.Text = gross_salary.ToString("N3");
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show("Error Message: "+ex.Message);
-
-            }
-
-
-        }
-
-        public void total_deduction_computation()
+        public void gross_pay_computation()
         {
             try
 
             {
                 Guna.UI2.WinForms.Guna2TextBox[] arr_deductions =
                 {
-                   txtTardiness, txtAbsent, txtUndertime, txtSSS, txtPhilhealth, txtPagibig, txtHMO, txtWithholdingTax,
+                   txtBasicSalary, txtSalaryAdjustment, txtTardiness, txtAbsent, txtUndertime
+                };
+
+                double gross_pay = 0;
+                foreach (Guna.UI2.WinForms.Guna2TextBox textbox in arr_deductions)
+                {
+                    double value = string.IsNullOrEmpty(textbox.Text) ? 0 : Convert.ToDouble(textbox.Text);
+
+                    if (textbox != txtBasicSalary && textbox != txtSalaryAdjustment)
+                    {
+                        value = -value;
+                    }
+
+                    gross_pay += value;
+                }
+
+                txtGrossSalary.Text = gross_pay.ToString("N3");
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error Message"+ex);
+
+            }
+        }
+
+
+        public void total_deduction_computation()
+        {
+
+            try
+
+            {
+
+                Guna.UI2.WinForms.Guna2TextBox[] arr_deductions =
+                {
+                   txtSSS, txtPhilhealth, txtPagibig, txtHMO, txtWithholdingTax,
                    txtSSSLoan, txtCalamityLoan, txtPagibigLoan, txtProductDeductions, txtCashAdvance, txtOtherDeductions
                 };
 
@@ -289,6 +306,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
                     double value = string.IsNullOrEmpty(textbox.Text) ? 0 : Convert.ToDouble(textbox.Text);
                     total_deductions += value;
                 }
+
                 txtTotalDeductions.Text = total_deductions.ToString("N3");
             }
             catch (Exception ex)
@@ -304,15 +322,29 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
             try
 
             {
+                Guna.UI2.WinForms.Guna2TextBox[] overall_compensation =
+               {
+                    txtOvertime, txtNightPrem, txtRestdayDuty, txtLegalHoliday, txtSpecialHoliday, txtSpecialHoliday,
+                    txtTransportationAllowance, txtMealAllowance, txtCarAllowance, txtGasAllowance, txtNonTaxAllowance, txtOtherAllowance
+                };
+
+                double compensation = 0;
+                foreach (Guna.UI2.WinForms.Guna2TextBox textbox in overall_compensation)
+                {
+                    double input_value = string.IsNullOrEmpty(textbox.Text) ? 0.0 : Convert.ToDouble(textbox.Text);
+                    compensation+=input_value;
+                }
+
+
                 double gross_salary = string.IsNullOrWhiteSpace(txtGrossSalary.Text) ? 0 : Convert.ToDouble(txtGrossSalary.Text);
                 double total_deductions = string.IsNullOrWhiteSpace(txtTotalDeductions.Text) ? 0 : Convert.ToDouble(txtTotalDeductions.Text);
 
 
                 // Calculate gross salary
-                double net_salary = gross_salary - total_deductions;
-
+                double net_salary = gross_salary + compensation - total_deductions;
                 // Display gross salary in the text box formatted to three decimal places
                 txtNetSalary.Text = net_salary.ToString("N3");
+
             }
             catch (Exception ex)
             {
@@ -321,6 +353,10 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
 
             }
         }
+
+
+
+
         private void btnSave_Click(object sender, EventArgs e)
         {
             frmEditPayslip frmEditPayslip = new frmEditPayslip();
@@ -343,9 +379,10 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
             {
                 load_saved_data();
             }
-            gross_salary_computation();
-            total_deduction_computation();
-            net_salary_computation();
+
+            gross_pay_computation();
+            total_deduction_computation();  //pre-computation ng total deduction
+            net_salary_computation(); //pre-computation ng net salary
         }
 
         public void insert_data()
@@ -355,7 +392,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
                 using (MySqlConnection conn = new MySqlConnection(connString))
                 {
                     conn.Open();
-                    string query = "INSERT INTO payroll_process_tb (attendance_batch_no,  cutoff_period, emp_id, employee_name, department, basic_salary, addition_overtime, addition_nightpremium, addition_legalholiday, addition_restdayduty, addition_specialholiday, addition_transpo_allowance, addition_meal_allowance, addition_gas_allowance, addition_nontax_allowance, addition_other_allowance, gross_salary, deduction_late, deduction_undertime, deduction_absent, deduction_sss_ee, deduction_philhealth, deduction_pagibig, deduction_product_deductions, deduction_hmo, deduction_withholdingtax, deduction_sss_loan, deduction_calamity_loan, deduction_pagibig_loan, deduction_cash_advances, deduction_other_deductions, total_deductions, net_salary) VALUES (@attendance_batch_no,  @cutoff_period, @emp_id, @employee_name, @department, @basic_salary, @addition_overtime, @addition_nightpremium, @addition_legalholiday, @addition_restdayduty, @addition_specialholiday, @addition_transpo_allowance, @addition_meal_allowance, @addition_gas_allowance, @addition_nontax_allowance, @addition_other_allowance, @gross_salary, @deduction_late, @deduction_undertime, @deduction_absent, @deduction_sss_ee, @deduction_philhealth, @deduction_pagibig, @deduction_product_deductions, @deduction_hmo, @deduction_withholdingtax, @deduction_sss_loan, @deduction_calamity_loan, @deduction_pagibig_loan, @deduction_cash_advances, @deduction_other_deductions, @total_deductions, @net_salary)";
+                    string query = "INSERT INTO payroll_process_tb (attendance_batch_no,  cutoff_period, emp_id, employee_name, department, basic_salary, addition_overtime, addition_nightpremium, addition_legalholiday, addition_restdayduty, addition_specialholiday, addition_transpo_allowance, addition_meal_allowance, addition_gas_allowance, addition_nontax_allowance, addition_other_allowance, gross_salary, deduction_late, deduction_undertime, deduction_absent, deduction_sss_ee, deduction_philhealth, deduction_pagibig, deduction_product_deductions, deduction_hmo, deduction_withholdingtax, deduction_sss_loan, deduction_calamity_loan, deduction_pagibig_loan, deduction_cash_advances, deduction_other_deductions, total_deductions, net_salary, salary_adjustment) VALUES (@attendance_batch_no,  @cutoff_period, @emp_id, @employee_name, @department, @basic_salary, @addition_overtime, @addition_nightpremium, @addition_legalholiday, @addition_restdayduty, @addition_specialholiday, @addition_transpo_allowance, @addition_meal_allowance, @addition_gas_allowance, @addition_nontax_allowance, @addition_other_allowance, @gross_salary, @deduction_late, @deduction_undertime, @deduction_absent, @deduction_sss_ee, @deduction_philhealth, @deduction_pagibig, @deduction_product_deductions, @deduction_hmo, @deduction_withholdingtax, @deduction_sss_loan, @deduction_calamity_loan, @deduction_pagibig_loan, @deduction_cash_advances, @deduction_other_deductions, @total_deductions, @net_salary, @salary_adjustment)";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
 
 
@@ -392,7 +429,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
                     cmd.Parameters.AddWithValue("@deduction_other_deductions", GetPayslip.ConvertToDouble(txtOtherDeductions.Text));
                     cmd.Parameters.AddWithValue("@total_deductions", GetPayslip.ConvertToDouble(txtTotalDeductions.Text));
                     cmd.Parameters.AddWithValue("@net_salary", GetPayslip.ConvertToDouble(txtNetSalary.Text));
-
+                    cmd.Parameters.AddWithValue("@salary_adjustment", GetPayslip.ConvertToDouble(txtSalaryAdjustment.Text));
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Payslip has been saved successfully", "Message Information", MessageBoxButtons.OK, MessageBoxIcon.Information);

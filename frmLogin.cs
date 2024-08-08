@@ -179,7 +179,7 @@ namespace Payroll_Management_System
 
         private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            Application.Exit();
         }
     }
 }

@@ -110,6 +110,8 @@
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.guna2HtmlLabel25 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtSalaryAdjustment = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2GradientPanel5.SuspendLayout();
             this.guna2GradientPanel4.SuspendLayout();
@@ -128,7 +130,7 @@
             this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(1200, 800);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(1244, 800);
             this.guna2GradientPanel1.TabIndex = 13;
             // 
             // guna2GradientPanel5
@@ -136,13 +138,17 @@
             this.guna2GradientPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2GradientPanel5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.guna2GradientPanel5.Controls.Add(this.txtTotalDeductions);
             this.guna2GradientPanel5.Controls.Add(this.txtNetSalary);
             this.guna2GradientPanel5.Controls.Add(this.btnSave);
             this.guna2GradientPanel5.Controls.Add(this.guna2HtmlLabel38);
             this.guna2GradientPanel5.Controls.Add(this.guna2HtmlLabel39);
-            this.guna2GradientPanel5.Location = new System.Drawing.Point(28, 633);
+            this.guna2GradientPanel5.Controls.Add(this.txtGrossSalary);
+            this.guna2GradientPanel5.Controls.Add(this.guna2HtmlLabel21);
+            this.guna2GradientPanel5.Controls.Add(this.guna2HtmlLabel20);
+            this.guna2GradientPanel5.Location = new System.Drawing.Point(28, 580);
             this.guna2GradientPanel5.Name = "guna2GradientPanel5";
-            this.guna2GradientPanel5.Size = new System.Drawing.Size(1140, 155);
+            this.guna2GradientPanel5.Size = new System.Drawing.Size(1184, 183);
             this.guna2GradientPanel5.TabIndex = 19;
             // 
             // txtNetSalary
@@ -159,14 +165,14 @@
             this.txtNetSalary.Font = new System.Drawing.Font("Poppins Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNetSalary.ForeColor = System.Drawing.Color.Black;
             this.txtNetSalary.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNetSalary.Location = new System.Drawing.Point(16, 61);
+            this.txtNetSalary.Location = new System.Drawing.Point(349, 64);
             this.txtNetSalary.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNetSalary.Name = "txtNetSalary";
             this.txtNetSalary.PasswordChar = '\0';
             this.txtNetSalary.PlaceholderText = "asd";
             this.txtNetSalary.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtNetSalary.SelectedText = "";
-            this.txtNetSalary.Size = new System.Drawing.Size(161, 33);
+            this.txtNetSalary.Size = new System.Drawing.Size(150, 33);
             this.txtNetSalary.TabIndex = 147;
             // 
             // btnSave
@@ -183,9 +189,9 @@
             this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(91)))), ((int)(((byte)(34)))));
             this.btnSave.Font = new System.Drawing.Font("Poppins", 9F);
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(16, 103);
+            this.btnSave.Location = new System.Drawing.Point(17, 126);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(161, 39);
+            this.btnSave.Size = new System.Drawing.Size(149, 39);
             this.btnSave.TabIndex = 17;
             this.btnSave.Text = "&Save Changes";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -196,7 +202,7 @@
             this.guna2HtmlLabel38.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel38.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel38.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel38.Location = new System.Drawing.Point(16, 38);
+            this.guna2HtmlLabel38.Location = new System.Drawing.Point(349, 41);
             this.guna2HtmlLabel38.Name = "guna2HtmlLabel38";
             this.guna2HtmlLabel38.Size = new System.Drawing.Size(121, 23);
             this.guna2HtmlLabel38.TabIndex = 116;
@@ -212,14 +218,13 @@
             this.guna2HtmlLabel39.Name = "guna2HtmlLabel39";
             this.guna2HtmlLabel39.Size = new System.Drawing.Size(217, 22);
             this.guna2HtmlLabel39.TabIndex = 72;
-            this.guna2HtmlLabel39.Text = "Net Salary";
+            this.guna2HtmlLabel39.Text = "Overall Structure";
             // 
             // guna2GradientPanel4
             // 
             this.guna2GradientPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2GradientPanel4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.guna2GradientPanel4.Controls.Add(this.txtTotalDeductions);
             this.guna2GradientPanel4.Controls.Add(this.txtOtherDeductions);
             this.guna2GradientPanel4.Controls.Add(this.txtCashAdvance);
             this.guna2GradientPanel4.Controls.Add(this.txtProductDeductions);
@@ -235,7 +240,6 @@
             this.guna2GradientPanel4.Controls.Add(this.txtTardiness);
             this.guna2GradientPanel4.Controls.Add(this.txtUndertime);
             this.guna2GradientPanel4.Controls.Add(this.guna2HtmlLabel22);
-            this.guna2GradientPanel4.Controls.Add(this.guna2HtmlLabel20);
             this.guna2GradientPanel4.Controls.Add(this.guna2HtmlLabel32);
             this.guna2GradientPanel4.Controls.Add(this.guna2HtmlLabel16);
             this.guna2GradientPanel4.Controls.Add(this.guna2HtmlLabel11);
@@ -252,7 +256,7 @@
             this.guna2GradientPanel4.Controls.Add(this.guna2HtmlLabel36);
             this.guna2GradientPanel4.Location = new System.Drawing.Point(28, 390);
             this.guna2GradientPanel4.Name = "guna2GradientPanel4";
-            this.guna2GradientPanel4.Size = new System.Drawing.Size(1140, 224);
+            this.guna2GradientPanel4.Size = new System.Drawing.Size(1184, 165);
             this.guna2GradientPanel4.TabIndex = 18;
             // 
             // txtTotalDeductions
@@ -269,7 +273,7 @@
             this.txtTotalDeductions.Font = new System.Drawing.Font("Poppins Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotalDeductions.ForeColor = System.Drawing.Color.Black;
             this.txtTotalDeductions.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTotalDeductions.Location = new System.Drawing.Point(17, 172);
+            this.txtTotalDeductions.Location = new System.Drawing.Point(183, 64);
             this.txtTotalDeductions.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTotalDeductions.Name = "txtTotalDeductions";
             this.txtTotalDeductions.PasswordChar = '\0';
@@ -277,7 +281,7 @@
             this.txtTotalDeductions.ReadOnly = true;
             this.txtTotalDeductions.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtTotalDeductions.SelectedText = "";
-            this.txtTotalDeductions.Size = new System.Drawing.Size(119, 33);
+            this.txtTotalDeductions.Size = new System.Drawing.Size(150, 33);
             this.txtTotalDeductions.TabIndex = 176;
             // 
             // txtOtherDeductions
@@ -293,14 +297,14 @@
             this.txtOtherDeductions.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtOtherDeductions.ForeColor = System.Drawing.Color.Black;
             this.txtOtherDeductions.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtOtherDeductions.Location = new System.Drawing.Point(946, 107);
+            this.txtOtherDeductions.Location = new System.Drawing.Point(1016, 109);
             this.txtOtherDeductions.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtOtherDeductions.Name = "txtOtherDeductions";
             this.txtOtherDeductions.PasswordChar = '\0';
             this.txtOtherDeductions.PlaceholderText = "Input Amount";
             this.txtOtherDeductions.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtOtherDeductions.SelectedText = "";
-            this.txtOtherDeductions.Size = new System.Drawing.Size(120, 33);
+            this.txtOtherDeductions.Size = new System.Drawing.Size(150, 33);
             this.txtOtherDeductions.TabIndex = 175;
             this.txtOtherDeductions.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
             this.txtOtherDeductions.Validating += new System.ComponentModel.CancelEventHandler(this.txtTransportationAllowance_Validating);
@@ -319,14 +323,14 @@
             this.txtCashAdvance.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtCashAdvance.ForeColor = System.Drawing.Color.Black;
             this.txtCashAdvance.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCashAdvance.Location = new System.Drawing.Point(794, 107);
+            this.txtCashAdvance.Location = new System.Drawing.Point(848, 109);
             this.txtCashAdvance.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashAdvance.Name = "txtCashAdvance";
             this.txtCashAdvance.PasswordChar = '\0';
             this.txtCashAdvance.PlaceholderText = "Input Amount";
             this.txtCashAdvance.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtCashAdvance.SelectedText = "";
-            this.txtCashAdvance.Size = new System.Drawing.Size(121, 33);
+            this.txtCashAdvance.Size = new System.Drawing.Size(150, 33);
             this.txtCashAdvance.TabIndex = 174;
             this.txtCashAdvance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
             this.txtCashAdvance.Validating += new System.ComponentModel.CancelEventHandler(this.txtTransportationAllowance_Validating);
@@ -345,14 +349,14 @@
             this.txtProductDeductions.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtProductDeductions.ForeColor = System.Drawing.Color.Black;
             this.txtProductDeductions.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtProductDeductions.Location = new System.Drawing.Point(645, 107);
+            this.txtProductDeductions.Location = new System.Drawing.Point(678, 109);
             this.txtProductDeductions.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtProductDeductions.Name = "txtProductDeductions";
             this.txtProductDeductions.PasswordChar = '\0';
             this.txtProductDeductions.PlaceholderText = "Input Amount";
             this.txtProductDeductions.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtProductDeductions.SelectedText = "";
-            this.txtProductDeductions.Size = new System.Drawing.Size(121, 33);
+            this.txtProductDeductions.Size = new System.Drawing.Size(150, 33);
             this.txtProductDeductions.TabIndex = 173;
             this.txtProductDeductions.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
             this.txtProductDeductions.Validating += new System.ComponentModel.CancelEventHandler(this.txtTransportationAllowance_Validating);
@@ -371,14 +375,14 @@
             this.txtPagibigLoan.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtPagibigLoan.ForeColor = System.Drawing.Color.Black;
             this.txtPagibigLoan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPagibigLoan.Location = new System.Drawing.Point(482, 107);
+            this.txtPagibigLoan.Location = new System.Drawing.Point(514, 109);
             this.txtPagibigLoan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPagibigLoan.Name = "txtPagibigLoan";
             this.txtPagibigLoan.PasswordChar = '\0';
             this.txtPagibigLoan.PlaceholderText = "Input Amount";
             this.txtPagibigLoan.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtPagibigLoan.SelectedText = "";
-            this.txtPagibigLoan.Size = new System.Drawing.Size(121, 33);
+            this.txtPagibigLoan.Size = new System.Drawing.Size(150, 33);
             this.txtPagibigLoan.TabIndex = 172;
             this.txtPagibigLoan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
             this.txtPagibigLoan.Validating += new System.ComponentModel.CancelEventHandler(this.txtTransportationAllowance_Validating);
@@ -397,14 +401,14 @@
             this.txtCalamityLoan.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtCalamityLoan.ForeColor = System.Drawing.Color.Black;
             this.txtCalamityLoan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCalamityLoan.Location = new System.Drawing.Point(322, 107);
+            this.txtCalamityLoan.Location = new System.Drawing.Point(348, 109);
             this.txtCalamityLoan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCalamityLoan.Name = "txtCalamityLoan";
             this.txtCalamityLoan.PasswordChar = '\0';
             this.txtCalamityLoan.PlaceholderText = "Input Amount";
             this.txtCalamityLoan.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtCalamityLoan.SelectedText = "";
-            this.txtCalamityLoan.Size = new System.Drawing.Size(121, 33);
+            this.txtCalamityLoan.Size = new System.Drawing.Size(150, 33);
             this.txtCalamityLoan.TabIndex = 171;
             this.txtCalamityLoan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
             this.txtCalamityLoan.Validating += new System.ComponentModel.CancelEventHandler(this.txtTransportationAllowance_Validating);
@@ -423,14 +427,14 @@
             this.txtSSSLoan.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtSSSLoan.ForeColor = System.Drawing.Color.Black;
             this.txtSSSLoan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSSSLoan.Location = new System.Drawing.Point(168, 107);
+            this.txtSSSLoan.Location = new System.Drawing.Point(183, 109);
             this.txtSSSLoan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSSSLoan.Name = "txtSSSLoan";
             this.txtSSSLoan.PasswordChar = '\0';
             this.txtSSSLoan.PlaceholderText = "Input Amount";
             this.txtSSSLoan.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtSSSLoan.SelectedText = "";
-            this.txtSSSLoan.Size = new System.Drawing.Size(120, 33);
+            this.txtSSSLoan.Size = new System.Drawing.Size(150, 33);
             this.txtSSSLoan.TabIndex = 170;
             this.txtSSSLoan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
             this.txtSSSLoan.Validating += new System.ComponentModel.CancelEventHandler(this.txtTransportationAllowance_Validating);
@@ -449,14 +453,14 @@
             this.txtWithholdingTax.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtWithholdingTax.ForeColor = System.Drawing.Color.Black;
             this.txtWithholdingTax.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtWithholdingTax.Location = new System.Drawing.Point(17, 107);
+            this.txtWithholdingTax.Location = new System.Drawing.Point(17, 109);
             this.txtWithholdingTax.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtWithholdingTax.Name = "txtWithholdingTax";
             this.txtWithholdingTax.PasswordChar = '\0';
             this.txtWithholdingTax.PlaceholderText = "Input Amount";
             this.txtWithholdingTax.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtWithholdingTax.SelectedText = "";
-            this.txtWithholdingTax.Size = new System.Drawing.Size(119, 33);
+            this.txtWithholdingTax.Size = new System.Drawing.Size(150, 33);
             this.txtWithholdingTax.TabIndex = 169;
             this.txtWithholdingTax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
             this.txtWithholdingTax.Validating += new System.ComponentModel.CancelEventHandler(this.txtTransportationAllowance_Validating);
@@ -475,14 +479,14 @@
             this.txtHMO.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtHMO.ForeColor = System.Drawing.Color.Black;
             this.txtHMO.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtHMO.Location = new System.Drawing.Point(945, 48);
+            this.txtHMO.Location = new System.Drawing.Point(1015, 50);
             this.txtHMO.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtHMO.Name = "txtHMO";
             this.txtHMO.PasswordChar = '\0';
             this.txtHMO.PlaceholderText = "Input Amount";
             this.txtHMO.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtHMO.SelectedText = "";
-            this.txtHMO.Size = new System.Drawing.Size(121, 33);
+            this.txtHMO.Size = new System.Drawing.Size(150, 33);
             this.txtHMO.TabIndex = 168;
             this.txtHMO.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
             this.txtHMO.Validating += new System.ComponentModel.CancelEventHandler(this.txtTransportationAllowance_Validating);
@@ -501,14 +505,14 @@
             this.txtPagibig.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtPagibig.ForeColor = System.Drawing.Color.Black;
             this.txtPagibig.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPagibig.Location = new System.Drawing.Point(795, 48);
+            this.txtPagibig.Location = new System.Drawing.Point(849, 50);
             this.txtPagibig.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPagibig.Name = "txtPagibig";
             this.txtPagibig.PasswordChar = '\0';
             this.txtPagibig.PlaceholderText = "Input Amount";
             this.txtPagibig.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtPagibig.SelectedText = "";
-            this.txtPagibig.Size = new System.Drawing.Size(120, 33);
+            this.txtPagibig.Size = new System.Drawing.Size(150, 33);
             this.txtPagibig.TabIndex = 167;
             this.txtPagibig.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
             this.txtPagibig.Validating += new System.ComponentModel.CancelEventHandler(this.txtTransportationAllowance_Validating);
@@ -527,14 +531,14 @@
             this.txtPhilhealth.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtPhilhealth.ForeColor = System.Drawing.Color.Black;
             this.txtPhilhealth.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPhilhealth.Location = new System.Drawing.Point(646, 48);
+            this.txtPhilhealth.Location = new System.Drawing.Point(679, 50);
             this.txtPhilhealth.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPhilhealth.Name = "txtPhilhealth";
             this.txtPhilhealth.PasswordChar = '\0';
             this.txtPhilhealth.PlaceholderText = "Input Amount";
             this.txtPhilhealth.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtPhilhealth.SelectedText = "";
-            this.txtPhilhealth.Size = new System.Drawing.Size(121, 33);
+            this.txtPhilhealth.Size = new System.Drawing.Size(150, 33);
             this.txtPhilhealth.TabIndex = 166;
             this.txtPhilhealth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
             this.txtPhilhealth.Validating += new System.ComponentModel.CancelEventHandler(this.txtTransportationAllowance_Validating);
@@ -553,14 +557,14 @@
             this.txtSSS.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtSSS.ForeColor = System.Drawing.Color.Black;
             this.txtSSS.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSSS.Location = new System.Drawing.Point(480, 48);
+            this.txtSSS.Location = new System.Drawing.Point(512, 50);
             this.txtSSS.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSSS.Name = "txtSSS";
             this.txtSSS.PasswordChar = '\0';
             this.txtSSS.PlaceholderText = "Input Amount";
             this.txtSSS.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtSSS.SelectedText = "";
-            this.txtSSS.Size = new System.Drawing.Size(123, 33);
+            this.txtSSS.Size = new System.Drawing.Size(150, 33);
             this.txtSSS.TabIndex = 165;
             this.txtSSS.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
             this.txtSSS.Validating += new System.ComponentModel.CancelEventHandler(this.txtTransportationAllowance_Validating);
@@ -580,14 +584,14 @@
             this.txtAbsent.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtAbsent.ForeColor = System.Drawing.Color.Black;
             this.txtAbsent.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAbsent.Location = new System.Drawing.Point(167, 48);
+            this.txtAbsent.Location = new System.Drawing.Point(182, 50);
             this.txtAbsent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAbsent.Name = "txtAbsent";
             this.txtAbsent.PasswordChar = '\0';
             this.txtAbsent.PlaceholderText = "Input Amount";
             this.txtAbsent.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtAbsent.SelectedText = "";
-            this.txtAbsent.Size = new System.Drawing.Size(121, 33);
+            this.txtAbsent.Size = new System.Drawing.Size(150, 33);
             this.txtAbsent.TabIndex = 164;
             // 
             // txtTardiness
@@ -604,14 +608,14 @@
             this.txtTardiness.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtTardiness.ForeColor = System.Drawing.Color.Black;
             this.txtTardiness.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTardiness.Location = new System.Drawing.Point(16, 48);
+            this.txtTardiness.Location = new System.Drawing.Point(16, 50);
             this.txtTardiness.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTardiness.Name = "txtTardiness";
             this.txtTardiness.PasswordChar = '\0';
             this.txtTardiness.PlaceholderText = "Input Amount";
             this.txtTardiness.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtTardiness.SelectedText = "";
-            this.txtTardiness.Size = new System.Drawing.Size(121, 33);
+            this.txtTardiness.Size = new System.Drawing.Size(150, 33);
             this.txtTardiness.TabIndex = 163;
             // 
             // txtUndertime
@@ -628,14 +632,14 @@
             this.txtUndertime.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtUndertime.ForeColor = System.Drawing.Color.Black;
             this.txtUndertime.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUndertime.Location = new System.Drawing.Point(322, 48);
+            this.txtUndertime.Location = new System.Drawing.Point(348, 50);
             this.txtUndertime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUndertime.Name = "txtUndertime";
             this.txtUndertime.PasswordChar = '\0';
             this.txtUndertime.PlaceholderText = "Input Amount";
             this.txtUndertime.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtUndertime.SelectedText = "";
-            this.txtUndertime.Size = new System.Drawing.Size(121, 33);
+            this.txtUndertime.Size = new System.Drawing.Size(150, 33);
             this.txtUndertime.TabIndex = 162;
             // 
             // guna2HtmlLabel22
@@ -644,7 +648,7 @@
             this.guna2HtmlLabel22.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel22.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel22.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel22.Location = new System.Drawing.Point(322, 30);
+            this.guna2HtmlLabel22.Location = new System.Drawing.Point(348, 32);
             this.guna2HtmlLabel22.Name = "guna2HtmlLabel22";
             this.guna2HtmlLabel22.Size = new System.Drawing.Size(76, 23);
             this.guna2HtmlLabel22.TabIndex = 161;
@@ -656,7 +660,7 @@
             this.guna2HtmlLabel20.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel20.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel20.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel20.Location = new System.Drawing.Point(17, 154);
+            this.guna2HtmlLabel20.Location = new System.Drawing.Point(183, 46);
             this.guna2HtmlLabel20.Name = "guna2HtmlLabel20";
             this.guna2HtmlLabel20.Size = new System.Drawing.Size(121, 23);
             this.guna2HtmlLabel20.TabIndex = 148;
@@ -668,7 +672,7 @@
             this.guna2HtmlLabel32.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel32.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel32.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel32.Location = new System.Drawing.Point(945, 88);
+            this.guna2HtmlLabel32.Location = new System.Drawing.Point(1015, 90);
             this.guna2HtmlLabel32.Name = "guna2HtmlLabel32";
             this.guna2HtmlLabel32.Size = new System.Drawing.Size(121, 23);
             this.guna2HtmlLabel32.TabIndex = 158;
@@ -680,7 +684,7 @@
             this.guna2HtmlLabel16.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel16.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel16.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel16.Location = new System.Drawing.Point(15, 88);
+            this.guna2HtmlLabel16.Location = new System.Drawing.Point(15, 90);
             this.guna2HtmlLabel16.Name = "guna2HtmlLabel16";
             this.guna2HtmlLabel16.Size = new System.Drawing.Size(116, 23);
             this.guna2HtmlLabel16.TabIndex = 122;
@@ -692,7 +696,7 @@
             this.guna2HtmlLabel11.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel11.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel11.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel11.Location = new System.Drawing.Point(945, 30);
+            this.guna2HtmlLabel11.Location = new System.Drawing.Point(1015, 32);
             this.guna2HtmlLabel11.Name = "guna2HtmlLabel11";
             this.guna2HtmlLabel11.Size = new System.Drawing.Size(76, 23);
             this.guna2HtmlLabel11.TabIndex = 121;
@@ -704,7 +708,7 @@
             this.guna2HtmlLabel12.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel12.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel12.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel12.Location = new System.Drawing.Point(794, 30);
+            this.guna2HtmlLabel12.Location = new System.Drawing.Point(848, 32);
             this.guna2HtmlLabel12.Name = "guna2HtmlLabel12";
             this.guna2HtmlLabel12.Size = new System.Drawing.Size(68, 23);
             this.guna2HtmlLabel12.TabIndex = 120;
@@ -716,7 +720,7 @@
             this.guna2HtmlLabel13.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel13.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel13.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel13.Location = new System.Drawing.Point(482, 30);
+            this.guna2HtmlLabel13.Location = new System.Drawing.Point(514, 32);
             this.guna2HtmlLabel13.Name = "guna2HtmlLabel13";
             this.guna2HtmlLabel13.Size = new System.Drawing.Size(76, 23);
             this.guna2HtmlLabel13.TabIndex = 119;
@@ -728,7 +732,7 @@
             this.guna2HtmlLabel14.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel14.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel14.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel14.Location = new System.Drawing.Point(646, 30);
+            this.guna2HtmlLabel14.Location = new System.Drawing.Point(679, 32);
             this.guna2HtmlLabel14.Name = "guna2HtmlLabel14";
             this.guna2HtmlLabel14.Size = new System.Drawing.Size(88, 23);
             this.guna2HtmlLabel14.TabIndex = 118;
@@ -740,7 +744,7 @@
             this.guna2HtmlLabel15.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel15.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel15.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel15.Location = new System.Drawing.Point(165, 30);
+            this.guna2HtmlLabel15.Location = new System.Drawing.Point(180, 32);
             this.guna2HtmlLabel15.Name = "guna2HtmlLabel15";
             this.guna2HtmlLabel15.Size = new System.Drawing.Size(76, 23);
             this.guna2HtmlLabel15.TabIndex = 117;
@@ -752,7 +756,7 @@
             this.guna2HtmlLabel17.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel17.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel17.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel17.Location = new System.Drawing.Point(16, 30);
+            this.guna2HtmlLabel17.Location = new System.Drawing.Point(16, 32);
             this.guna2HtmlLabel17.Name = "guna2HtmlLabel17";
             this.guna2HtmlLabel17.Size = new System.Drawing.Size(121, 23);
             this.guna2HtmlLabel17.TabIndex = 116;
@@ -766,7 +770,7 @@
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(8, 7);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(217, 22);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(147, 22);
             this.guna2HtmlLabel2.TabIndex = 72;
             this.guna2HtmlLabel2.Text = "Deductions";
             // 
@@ -776,7 +780,7 @@
             this.guna2HtmlLabel37.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel37.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel37.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel37.Location = new System.Drawing.Point(167, 88);
+            this.guna2HtmlLabel37.Location = new System.Drawing.Point(182, 90);
             this.guna2HtmlLabel37.Name = "guna2HtmlLabel37";
             this.guna2HtmlLabel37.Size = new System.Drawing.Size(121, 23);
             this.guna2HtmlLabel37.TabIndex = 153;
@@ -788,7 +792,7 @@
             this.guna2HtmlLabel33.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel33.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel33.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel33.Location = new System.Drawing.Point(794, 88);
+            this.guna2HtmlLabel33.Location = new System.Drawing.Point(848, 90);
             this.guna2HtmlLabel33.Name = "guna2HtmlLabel33";
             this.guna2HtmlLabel33.Size = new System.Drawing.Size(121, 23);
             this.guna2HtmlLabel33.TabIndex = 157;
@@ -800,7 +804,7 @@
             this.guna2HtmlLabel34.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel34.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel34.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel34.Location = new System.Drawing.Point(646, 88);
+            this.guna2HtmlLabel34.Location = new System.Drawing.Point(679, 90);
             this.guna2HtmlLabel34.Name = "guna2HtmlLabel34";
             this.guna2HtmlLabel34.Size = new System.Drawing.Size(124, 23);
             this.guna2HtmlLabel34.TabIndex = 156;
@@ -812,7 +816,7 @@
             this.guna2HtmlLabel35.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel35.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel35.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel35.Location = new System.Drawing.Point(482, 88);
+            this.guna2HtmlLabel35.Location = new System.Drawing.Point(514, 90);
             this.guna2HtmlLabel35.Name = "guna2HtmlLabel35";
             this.guna2HtmlLabel35.Size = new System.Drawing.Size(87, 23);
             this.guna2HtmlLabel35.TabIndex = 155;
@@ -824,7 +828,7 @@
             this.guna2HtmlLabel36.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel36.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel36.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel36.Location = new System.Drawing.Point(323, 88);
+            this.guna2HtmlLabel36.Location = new System.Drawing.Point(349, 90);
             this.guna2HtmlLabel36.Name = "guna2HtmlLabel36";
             this.guna2HtmlLabel36.Size = new System.Drawing.Size(101, 23);
             this.guna2HtmlLabel36.TabIndex = 154;
@@ -857,6 +861,8 @@
             this.guna2GradientPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2GradientPanel3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.guna2GradientPanel3.Controls.Add(this.txtSalaryAdjustment);
+            this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel25);
             this.guna2GradientPanel3.Controls.Add(this.txtOtherAllowance);
             this.guna2GradientPanel3.Controls.Add(this.txtNonTaxAllowance);
             this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel23);
@@ -864,11 +870,9 @@
             this.guna2GradientPanel3.Controls.Add(this.txtCarAllowance);
             this.guna2GradientPanel3.Controls.Add(this.txtMealAllowance);
             this.guna2GradientPanel3.Controls.Add(this.txtTransportationAllowance);
-            this.guna2GradientPanel3.Controls.Add(this.txtGrossSalary);
             this.guna2GradientPanel3.Controls.Add(this.txtSpecialHoliday);
             this.guna2GradientPanel3.Controls.Add(this.txtBasicSalary);
             this.guna2GradientPanel3.Controls.Add(this.txtLegalHoliday);
-            this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel21);
             this.guna2GradientPanel3.Controls.Add(this.txtRestdayDuty);
             this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel31);
             this.guna2GradientPanel3.Controls.Add(this.txtNightPrem);
@@ -887,7 +891,7 @@
             this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel6);
             this.guna2GradientPanel3.Location = new System.Drawing.Point(28, 199);
             this.guna2GradientPanel3.Name = "guna2GradientPanel3";
-            this.guna2GradientPanel3.Size = new System.Drawing.Size(1140, 166);
+            this.guna2GradientPanel3.Size = new System.Drawing.Size(1184, 166);
             this.guna2GradientPanel3.TabIndex = 11;
             this.guna2GradientPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel3_Paint);
             // 
@@ -904,14 +908,14 @@
             this.txtOtherAllowance.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtOtherAllowance.ForeColor = System.Drawing.Color.Black;
             this.txtOtherAllowance.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtOtherAllowance.Location = new System.Drawing.Point(645, 121);
+            this.txtOtherAllowance.Location = new System.Drawing.Point(850, 120);
             this.txtOtherAllowance.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtOtherAllowance.Name = "txtOtherAllowance";
             this.txtOtherAllowance.PasswordChar = '\0';
             this.txtOtherAllowance.PlaceholderText = "Input Amount";
             this.txtOtherAllowance.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtOtherAllowance.SelectedText = "";
-            this.txtOtherAllowance.Size = new System.Drawing.Size(121, 33);
+            this.txtOtherAllowance.Size = new System.Drawing.Size(150, 33);
             this.txtOtherAllowance.TabIndex = 6;
             this.txtOtherAllowance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
             this.txtOtherAllowance.Validating += new System.ComponentModel.CancelEventHandler(this.txtTransportationAllowance_Validating);
@@ -930,14 +934,14 @@
             this.txtNonTaxAllowance.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtNonTaxAllowance.ForeColor = System.Drawing.Color.Black;
             this.txtNonTaxAllowance.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNonTaxAllowance.Location = new System.Drawing.Point(482, 121);
+            this.txtNonTaxAllowance.Location = new System.Drawing.Point(679, 120);
             this.txtNonTaxAllowance.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNonTaxAllowance.Name = "txtNonTaxAllowance";
             this.txtNonTaxAllowance.PasswordChar = '\0';
             this.txtNonTaxAllowance.PlaceholderText = "Input Amount";
             this.txtNonTaxAllowance.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtNonTaxAllowance.SelectedText = "";
-            this.txtNonTaxAllowance.Size = new System.Drawing.Size(118, 33);
+            this.txtNonTaxAllowance.Size = new System.Drawing.Size(150, 33);
             this.txtNonTaxAllowance.TabIndex = 5;
             this.txtNonTaxAllowance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
             this.txtNonTaxAllowance.Validating += new System.ComponentModel.CancelEventHandler(this.txtTransportationAllowance_Validating);
@@ -949,7 +953,7 @@
             this.guna2HtmlLabel23.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel23.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel23.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel23.Location = new System.Drawing.Point(482, 103);
+            this.guna2HtmlLabel23.Location = new System.Drawing.Point(679, 99);
             this.guna2HtmlLabel23.Name = "guna2HtmlLabel23";
             this.guna2HtmlLabel23.Size = new System.Drawing.Size(158, 20);
             this.guna2HtmlLabel23.TabIndex = 168;
@@ -968,14 +972,14 @@
             this.txtGasAllowance.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtGasAllowance.ForeColor = System.Drawing.Color.Black;
             this.txtGasAllowance.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtGasAllowance.Location = new System.Drawing.Point(322, 121);
+            this.txtGasAllowance.Location = new System.Drawing.Point(512, 120);
             this.txtGasAllowance.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGasAllowance.Name = "txtGasAllowance";
             this.txtGasAllowance.PasswordChar = '\0';
             this.txtGasAllowance.PlaceholderText = "Input Amount";
             this.txtGasAllowance.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtGasAllowance.SelectedText = "";
-            this.txtGasAllowance.Size = new System.Drawing.Size(122, 33);
+            this.txtGasAllowance.Size = new System.Drawing.Size(150, 33);
             this.txtGasAllowance.TabIndex = 4;
             this.txtGasAllowance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
             this.txtGasAllowance.Validating += new System.ComponentModel.CancelEventHandler(this.txtTransportationAllowance_Validating);
@@ -994,14 +998,14 @@
             this.txtCarAllowance.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtCarAllowance.ForeColor = System.Drawing.Color.Black;
             this.txtCarAllowance.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCarAllowance.Location = new System.Drawing.Point(166, 121);
+            this.txtCarAllowance.Location = new System.Drawing.Point(348, 120);
             this.txtCarAllowance.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCarAllowance.Name = "txtCarAllowance";
             this.txtCarAllowance.PasswordChar = '\0';
             this.txtCarAllowance.PlaceholderText = "Input Amount";
             this.txtCarAllowance.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtCarAllowance.SelectedText = "";
-            this.txtCarAllowance.Size = new System.Drawing.Size(120, 33);
+            this.txtCarAllowance.Size = new System.Drawing.Size(150, 33);
             this.txtCarAllowance.TabIndex = 3;
             this.txtCarAllowance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
             this.txtCarAllowance.Validating += new System.ComponentModel.CancelEventHandler(this.txtTransportationAllowance_Validating);
@@ -1020,14 +1024,14 @@
             this.txtMealAllowance.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtMealAllowance.ForeColor = System.Drawing.Color.Black;
             this.txtMealAllowance.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMealAllowance.Location = new System.Drawing.Point(17, 121);
+            this.txtMealAllowance.Location = new System.Drawing.Point(182, 120);
             this.txtMealAllowance.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMealAllowance.Name = "txtMealAllowance";
             this.txtMealAllowance.PasswordChar = '\0';
             this.txtMealAllowance.PlaceholderText = "Input Amount";
             this.txtMealAllowance.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtMealAllowance.SelectedText = "";
-            this.txtMealAllowance.Size = new System.Drawing.Size(119, 33);
+            this.txtMealAllowance.Size = new System.Drawing.Size(150, 33);
             this.txtMealAllowance.TabIndex = 2;
             this.txtMealAllowance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
             this.txtMealAllowance.Validating += new System.ComponentModel.CancelEventHandler(this.txtTransportationAllowance_Validating);
@@ -1046,14 +1050,14 @@
             this.txtTransportationAllowance.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtTransportationAllowance.ForeColor = System.Drawing.Color.Black;
             this.txtTransportationAllowance.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTransportationAllowance.Location = new System.Drawing.Point(946, 62);
+            this.txtTransportationAllowance.Location = new System.Drawing.Point(17, 120);
             this.txtTransportationAllowance.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTransportationAllowance.Name = "txtTransportationAllowance";
             this.txtTransportationAllowance.PasswordChar = '\0';
             this.txtTransportationAllowance.PlaceholderText = "Input Amount";
             this.txtTransportationAllowance.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtTransportationAllowance.SelectedText = "";
-            this.txtTransportationAllowance.Size = new System.Drawing.Size(120, 33);
+            this.txtTransportationAllowance.Size = new System.Drawing.Size(150, 33);
             this.txtTransportationAllowance.TabIndex = 1;
             this.txtTransportationAllowance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
             this.txtTransportationAllowance.Validating += new System.ComponentModel.CancelEventHandler(this.txtTransportationAllowance_Validating);
@@ -1074,14 +1078,14 @@
             this.txtGrossSalary.Font = new System.Drawing.Font("Poppins Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGrossSalary.ForeColor = System.Drawing.Color.Black;
             this.txtGrossSalary.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtGrossSalary.Location = new System.Drawing.Point(794, 121);
+            this.txtGrossSalary.Location = new System.Drawing.Point(18, 64);
             this.txtGrossSalary.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGrossSalary.Name = "txtGrossSalary";
             this.txtGrossSalary.PasswordChar = '\0';
             this.txtGrossSalary.PlaceholderText = "Input Amount";
             this.txtGrossSalary.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtGrossSalary.SelectedText = "";
-            this.txtGrossSalary.Size = new System.Drawing.Size(272, 33);
+            this.txtGrossSalary.Size = new System.Drawing.Size(150, 33);
             this.txtGrossSalary.TabIndex = 163;
             // 
             // txtSpecialHoliday
@@ -1098,14 +1102,14 @@
             this.txtSpecialHoliday.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtSpecialHoliday.ForeColor = System.Drawing.Color.Black;
             this.txtSpecialHoliday.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSpecialHoliday.Location = new System.Drawing.Point(794, 62);
+            this.txtSpecialHoliday.Location = new System.Drawing.Point(849, 52);
             this.txtSpecialHoliday.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSpecialHoliday.Name = "txtSpecialHoliday";
             this.txtSpecialHoliday.PasswordChar = '\0';
             this.txtSpecialHoliday.PlaceholderText = "Input Amount";
             this.txtSpecialHoliday.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtSpecialHoliday.SelectedText = "";
-            this.txtSpecialHoliday.Size = new System.Drawing.Size(121, 33);
+            this.txtSpecialHoliday.Size = new System.Drawing.Size(150, 33);
             this.txtSpecialHoliday.TabIndex = 162;
             this.txtSpecialHoliday.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
             this.txtSpecialHoliday.Validating += new System.ComponentModel.CancelEventHandler(this.txtSpecialHoliday_Validating);
@@ -1125,14 +1129,14 @@
             this.txtBasicSalary.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtBasicSalary.ForeColor = System.Drawing.Color.Black;
             this.txtBasicSalary.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBasicSalary.Location = new System.Drawing.Point(15, 62);
+            this.txtBasicSalary.Location = new System.Drawing.Point(15, 52);
             this.txtBasicSalary.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBasicSalary.Name = "txtBasicSalary";
             this.txtBasicSalary.PasswordChar = '\0';
             this.txtBasicSalary.PlaceholderText = "Input Amount";
             this.txtBasicSalary.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtBasicSalary.SelectedText = "";
-            this.txtBasicSalary.Size = new System.Drawing.Size(121, 33);
+            this.txtBasicSalary.Size = new System.Drawing.Size(150, 33);
             this.txtBasicSalary.TabIndex = 157;
             // 
             // txtLegalHoliday
@@ -1149,14 +1153,14 @@
             this.txtLegalHoliday.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtLegalHoliday.ForeColor = System.Drawing.Color.Black;
             this.txtLegalHoliday.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLegalHoliday.Location = new System.Drawing.Point(645, 62);
+            this.txtLegalHoliday.Location = new System.Drawing.Point(679, 52);
             this.txtLegalHoliday.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtLegalHoliday.Name = "txtLegalHoliday";
             this.txtLegalHoliday.PasswordChar = '\0';
             this.txtLegalHoliday.PlaceholderText = "Input Amount";
             this.txtLegalHoliday.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtLegalHoliday.SelectedText = "";
-            this.txtLegalHoliday.Size = new System.Drawing.Size(121, 33);
+            this.txtLegalHoliday.Size = new System.Drawing.Size(150, 33);
             this.txtLegalHoliday.TabIndex = 161;
             this.txtLegalHoliday.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
             this.txtLegalHoliday.Validated += new System.EventHandler(this.txtOvertime_Validated);
@@ -1167,11 +1171,11 @@
             this.guna2HtmlLabel21.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel21.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel21.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel21.Location = new System.Drawing.Point(794, 102);
+            this.guna2HtmlLabel21.Location = new System.Drawing.Point(18, 45);
             this.guna2HtmlLabel21.Name = "guna2HtmlLabel21";
             this.guna2HtmlLabel21.Size = new System.Drawing.Size(105, 23);
             this.guna2HtmlLabel21.TabIndex = 155;
-            this.guna2HtmlLabel21.Text = "Gross Salary";
+            this.guna2HtmlLabel21.Text = "Gross Pay";
             this.guna2HtmlLabel21.Click += new System.EventHandler(this.guna2HtmlLabel21_Click);
             // 
             // txtRestdayDuty
@@ -1188,14 +1192,14 @@
             this.txtRestdayDuty.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtRestdayDuty.ForeColor = System.Drawing.Color.Black;
             this.txtRestdayDuty.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtRestdayDuty.Location = new System.Drawing.Point(482, 62);
+            this.txtRestdayDuty.Location = new System.Drawing.Point(514, 52);
             this.txtRestdayDuty.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtRestdayDuty.Name = "txtRestdayDuty";
             this.txtRestdayDuty.PasswordChar = '\0';
             this.txtRestdayDuty.PlaceholderText = "Input Amount";
             this.txtRestdayDuty.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtRestdayDuty.SelectedText = "";
-            this.txtRestdayDuty.Size = new System.Drawing.Size(121, 33);
+            this.txtRestdayDuty.Size = new System.Drawing.Size(150, 33);
             this.txtRestdayDuty.TabIndex = 160;
             this.txtRestdayDuty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
             this.txtRestdayDuty.Validated += new System.EventHandler(this.txtOvertime_Validated);
@@ -1206,7 +1210,7 @@
             this.guna2HtmlLabel31.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel31.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel31.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel31.Location = new System.Drawing.Point(645, 103);
+            this.guna2HtmlLabel31.Location = new System.Drawing.Point(853, 99);
             this.guna2HtmlLabel31.Name = "guna2HtmlLabel31";
             this.guna2HtmlLabel31.Size = new System.Drawing.Size(117, 23);
             this.guna2HtmlLabel31.TabIndex = 153;
@@ -1226,14 +1230,14 @@
             this.txtNightPrem.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtNightPrem.ForeColor = System.Drawing.Color.Black;
             this.txtNightPrem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNightPrem.Location = new System.Drawing.Point(323, 62);
+            this.txtNightPrem.Location = new System.Drawing.Point(348, 52);
             this.txtNightPrem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNightPrem.Name = "txtNightPrem";
             this.txtNightPrem.PasswordChar = '\0';
             this.txtNightPrem.PlaceholderText = "Input Amount";
             this.txtNightPrem.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtNightPrem.SelectedText = "";
-            this.txtNightPrem.Size = new System.Drawing.Size(121, 33);
+            this.txtNightPrem.Size = new System.Drawing.Size(150, 33);
             this.txtNightPrem.TabIndex = 159;
             this.txtNightPrem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
             this.txtNightPrem.Validated += new System.EventHandler(this.txtOvertime_Validated);
@@ -1252,14 +1256,14 @@
             this.txtOvertime.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtOvertime.ForeColor = System.Drawing.Color.Black;
             this.txtOvertime.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtOvertime.Location = new System.Drawing.Point(166, 62);
+            this.txtOvertime.Location = new System.Drawing.Point(182, 52);
             this.txtOvertime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtOvertime.Name = "txtOvertime";
             this.txtOvertime.PasswordChar = '\0';
             this.txtOvertime.PlaceholderText = "Input Amount";
             this.txtOvertime.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtOvertime.SelectedText = "";
-            this.txtOvertime.Size = new System.Drawing.Size(121, 33);
+            this.txtOvertime.Size = new System.Drawing.Size(150, 33);
             this.txtOvertime.TabIndex = 158;
             this.txtOvertime.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
             this.txtOvertime.Validated += new System.EventHandler(this.txtOvertime_Validated);
@@ -1270,7 +1274,7 @@
             this.guna2HtmlLabel27.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel27.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel27.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel27.Location = new System.Drawing.Point(323, 102);
+            this.guna2HtmlLabel27.Location = new System.Drawing.Point(512, 99);
             this.guna2HtmlLabel27.Name = "guna2HtmlLabel27";
             this.guna2HtmlLabel27.Size = new System.Drawing.Size(120, 23);
             this.guna2HtmlLabel27.TabIndex = 149;
@@ -1282,7 +1286,7 @@
             this.guna2HtmlLabel28.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel28.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel28.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel28.Location = new System.Drawing.Point(165, 102);
+            this.guna2HtmlLabel28.Location = new System.Drawing.Point(348, 99);
             this.guna2HtmlLabel28.Name = "guna2HtmlLabel28";
             this.guna2HtmlLabel28.Size = new System.Drawing.Size(121, 23);
             this.guna2HtmlLabel28.TabIndex = 148;
@@ -1294,7 +1298,7 @@
             this.guna2HtmlLabel29.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel29.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel29.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel29.Location = new System.Drawing.Point(16, 102);
+            this.guna2HtmlLabel29.Location = new System.Drawing.Point(182, 99);
             this.guna2HtmlLabel29.Name = "guna2HtmlLabel29";
             this.guna2HtmlLabel29.Size = new System.Drawing.Size(121, 23);
             this.guna2HtmlLabel29.TabIndex = 147;
@@ -1306,7 +1310,7 @@
             this.guna2HtmlLabel30.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel30.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel30.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel30.Location = new System.Drawing.Point(945, 42);
+            this.guna2HtmlLabel30.Location = new System.Drawing.Point(16, 100);
             this.guna2HtmlLabel30.Name = "guna2HtmlLabel30";
             this.guna2HtmlLabel30.Size = new System.Drawing.Size(161, 22);
             this.guna2HtmlLabel30.TabIndex = 145;
@@ -1318,7 +1322,7 @@
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(794, 42);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(850, 31);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(102, 23);
             this.guna2HtmlLabel7.TabIndex = 115;
@@ -1330,7 +1334,7 @@
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel8.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(645, 41);
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(679, 31);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
             this.guna2HtmlLabel8.Size = new System.Drawing.Size(102, 23);
             this.guna2HtmlLabel8.TabIndex = 114;
@@ -1342,7 +1346,7 @@
             this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel9.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel9.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(480, 41);
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(512, 31);
             this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
             this.guna2HtmlLabel9.Size = new System.Drawing.Size(102, 23);
             this.guna2HtmlLabel9.TabIndex = 113;
@@ -1354,7 +1358,7 @@
             this.guna2HtmlLabel24.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel24.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel24.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel24.Location = new System.Drawing.Point(322, 42);
+            this.guna2HtmlLabel24.Location = new System.Drawing.Point(347, 32);
             this.guna2HtmlLabel24.Name = "guna2HtmlLabel24";
             this.guna2HtmlLabel24.Size = new System.Drawing.Size(102, 23);
             this.guna2HtmlLabel24.TabIndex = 112;
@@ -1366,7 +1370,7 @@
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(322, 41);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(347, 31);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(102, 23);
             this.guna2HtmlLabel4.TabIndex = 112;
@@ -1378,7 +1382,7 @@
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(167, 41);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(183, 31);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(102, 23);
             this.guna2HtmlLabel3.TabIndex = 111;
@@ -1390,7 +1394,7 @@
             this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel10.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel10.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel10.Location = new System.Drawing.Point(16, 42);
+            this.guna2HtmlLabel10.Location = new System.Drawing.Point(16, 32);
             this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
             this.guna2HtmlLabel10.Size = new System.Drawing.Size(82, 23);
             this.guna2HtmlLabel10.TabIndex = 109;
@@ -1422,7 +1426,7 @@
             this.guna2GradientPanel2.Controls.Add(this.guna2HtmlLabel1);
             this.guna2GradientPanel2.Location = new System.Drawing.Point(28, 68);
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
-            this.guna2GradientPanel2.Size = new System.Drawing.Size(1140, 115);
+            this.guna2GradientPanel2.Size = new System.Drawing.Size(1184, 115);
             this.guna2GradientPanel2.TabIndex = 10;
             // 
             // guna2HtmlLabel19
@@ -1451,14 +1455,14 @@
             this.txtDepartment.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtDepartment.ForeColor = System.Drawing.Color.Black;
             this.txtDepartment.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDepartment.Location = new System.Drawing.Point(766, 60);
+            this.txtDepartment.Location = new System.Drawing.Point(814, 60);
             this.txtDepartment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDepartment.Name = "txtDepartment";
             this.txtDepartment.PasswordChar = '\0';
             this.txtDepartment.PlaceholderText = "asd";
             this.txtDepartment.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtDepartment.SelectedText = "";
-            this.txtDepartment.Size = new System.Drawing.Size(300, 33);
+            this.txtDepartment.Size = new System.Drawing.Size(351, 33);
             this.txtDepartment.TabIndex = 116;
             // 
             // guna2HtmlLabel18
@@ -1467,7 +1471,7 @@
             this.guna2HtmlLabel18.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel18.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel18.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel18.Location = new System.Drawing.Point(766, 41);
+            this.guna2HtmlLabel18.Location = new System.Drawing.Point(814, 41);
             this.guna2HtmlLabel18.Name = "guna2HtmlLabel18";
             this.guna2HtmlLabel18.Size = new System.Drawing.Size(186, 23);
             this.guna2HtmlLabel18.TabIndex = 115;
@@ -1494,7 +1498,7 @@
             this.txtJobTitle.PlaceholderText = "asd";
             this.txtJobTitle.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtJobTitle.SelectedText = "";
-            this.txtJobTitle.Size = new System.Drawing.Size(361, 33);
+            this.txtJobTitle.Size = new System.Drawing.Size(409, 33);
             this.txtJobTitle.TabIndex = 114;
             // 
             // guna2HtmlLabel5
@@ -1569,11 +1573,49 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // guna2HtmlLabel25
+            // 
+            this.guna2HtmlLabel25.AutoSize = false;
+            this.guna2HtmlLabel25.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel25.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel25.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel25.Location = new System.Drawing.Point(1017, 31);
+            this.guna2HtmlLabel25.Name = "guna2HtmlLabel25";
+            this.guna2HtmlLabel25.Size = new System.Drawing.Size(119, 23);
+            this.guna2HtmlLabel25.TabIndex = 169;
+            this.guna2HtmlLabel25.Text = "Salary Adjustment";
+            // 
+            // txtSalaryAdjustment
+            // 
+            this.txtSalaryAdjustment.BorderRadius = 8;
+            this.txtSalaryAdjustment.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSalaryAdjustment.DefaultText = "0.00";
+            this.txtSalaryAdjustment.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSalaryAdjustment.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSalaryAdjustment.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSalaryAdjustment.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSalaryAdjustment.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSalaryAdjustment.Font = new System.Drawing.Font("Poppins", 9F);
+            this.txtSalaryAdjustment.ForeColor = System.Drawing.Color.Black;
+            this.txtSalaryAdjustment.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSalaryAdjustment.Location = new System.Drawing.Point(1015, 52);
+            this.txtSalaryAdjustment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSalaryAdjustment.Name = "txtSalaryAdjustment";
+            this.txtSalaryAdjustment.PasswordChar = '\0';
+            this.txtSalaryAdjustment.PlaceholderText = "Input Amount";
+            this.txtSalaryAdjustment.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtSalaryAdjustment.SelectedText = "";
+            this.txtSalaryAdjustment.Size = new System.Drawing.Size(150, 33);
+            this.txtSalaryAdjustment.TabIndex = 170;
+            this.txtSalaryAdjustment.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOvertime_KeyPress);
+            this.txtSalaryAdjustment.Validating += new System.ComponentModel.CancelEventHandler(this.txtTransportationAllowance_Validating);
+            this.txtSalaryAdjustment.Validated += new System.EventHandler(this.txtOvertime_Validated);
+            // 
             // frmEditPayslip
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 800);
+            this.ClientSize = new System.Drawing.Size(1244, 800);
             this.Controls.Add(this.guna2GradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmEditPayslip";
@@ -1672,5 +1714,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtCashAdvance;
         private Guna.UI2.WinForms.Guna2TextBox txtTotalDeductions;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private Guna.UI2.WinForms.Guna2TextBox txtSalaryAdjustment;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel25;
     }
 }

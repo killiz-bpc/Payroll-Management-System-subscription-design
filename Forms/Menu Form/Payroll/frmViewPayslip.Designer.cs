@@ -109,6 +109,8 @@
             this.labelAttendanceDetails = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.txtSalaryAdjustment = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel39 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
@@ -153,6 +155,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2GradientPanel3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.guna2GradientPanel3.Controls.Add(this.txtSalaryAdjustment);
+            this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel39);
             this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel38);
             this.guna2GradientPanel3.Controls.Add(this.txtNetSalary);
             this.guna2GradientPanel3.Controls.Add(this.txtTotalDeductions);
@@ -317,7 +321,7 @@
             this.txtGrossSalary.Font = new System.Drawing.Font("Poppins Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGrossSalary.ForeColor = System.Drawing.Color.Black;
             this.txtGrossSalary.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtGrossSalary.Location = new System.Drawing.Point(132, 393);
+            this.txtGrossSalary.Location = new System.Drawing.Point(132, 435);
             this.txtGrossSalary.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGrossSalary.Name = "txtGrossSalary";
             this.txtGrossSalary.PasswordChar = '\0';
@@ -335,11 +339,11 @@
             this.guna2HtmlLabel21.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel21.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel21.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel21.Location = new System.Drawing.Point(18, 404);
+            this.guna2HtmlLabel21.Location = new System.Drawing.Point(18, 443);
             this.guna2HtmlLabel21.Name = "guna2HtmlLabel21";
             this.guna2HtmlLabel21.Size = new System.Drawing.Size(121, 23);
             this.guna2HtmlLabel21.TabIndex = 149;
-            this.guna2HtmlLabel21.Text = "Gross Salary";
+            this.guna2HtmlLabel21.Text = "Gross Pay";
             // 
             // txtUndertime
             // 
@@ -1538,6 +1542,43 @@
             this.guna2Elipse2.BorderRadius = 10;
             this.guna2Elipse2.TargetControl = this.guna2GradientPanel3;
             // 
+            // txtSalaryAdjustment
+            // 
+            this.txtSalaryAdjustment.BorderRadius = 8;
+            this.txtSalaryAdjustment.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSalaryAdjustment.DefaultText = "0.00";
+            this.txtSalaryAdjustment.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSalaryAdjustment.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSalaryAdjustment.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSalaryAdjustment.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSalaryAdjustment.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSalaryAdjustment.Font = new System.Drawing.Font("Poppins", 9F);
+            this.txtSalaryAdjustment.ForeColor = System.Drawing.Color.Black;
+            this.txtSalaryAdjustment.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSalaryAdjustment.Location = new System.Drawing.Point(132, 394);
+            this.txtSalaryAdjustment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSalaryAdjustment.Name = "txtSalaryAdjustment";
+            this.txtSalaryAdjustment.PasswordChar = '\0';
+            this.txtSalaryAdjustment.PlaceholderText = "asd";
+            this.txtSalaryAdjustment.ReadOnly = true;
+            this.txtSalaryAdjustment.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtSalaryAdjustment.SelectedText = "";
+            this.txtSalaryAdjustment.Size = new System.Drawing.Size(101, 33);
+            this.txtSalaryAdjustment.TabIndex = 157;
+            this.txtSalaryAdjustment.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // guna2HtmlLabel39
+            // 
+            this.guna2HtmlLabel39.AutoSize = false;
+            this.guna2HtmlLabel39.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel39.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel39.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel39.Location = new System.Drawing.Point(16, 402);
+            this.guna2HtmlLabel39.Name = "guna2HtmlLabel39";
+            this.guna2HtmlLabel39.Size = new System.Drawing.Size(121, 23);
+            this.guna2HtmlLabel39.TabIndex = 156;
+            this.guna2HtmlLabel39.Text = "Salary Adjustment";
+            // 
             // frmViewPayslip
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1637,5 +1678,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel22;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel38;
         private Guna.UI2.WinForms.Guna2TextBox txtNetSalary;
+        private Guna.UI2.WinForms.Guna2TextBox txtSalaryAdjustment;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel39;
     }
 }

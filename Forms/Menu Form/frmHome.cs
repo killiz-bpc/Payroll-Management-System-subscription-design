@@ -155,19 +155,7 @@ namespace Payroll_Management_System.Forms.Menu_Form
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to logout?", "Message Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if(DialogResult.Yes == result)
-            {
-                this.Close();
-                frmLogin frmLogin = new frmLogin();
-                frmLogin.Show();
-                
-            }
-            else
-            {
-                return;
-            }
-            
+            this.Close();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -207,7 +195,20 @@ namespace Payroll_Management_System.Forms.Menu_Form
 
         private void frmHome_FormClosing(object sender, FormClosingEventArgs e)
         {
-            
+            DialogResult result = MessageBox.Show("Are you sure you want to logout?", "Message Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (DialogResult.Yes == result)
+            {
+                
+                frmLogin frmLogin = new frmLogin();
+                frmLogin.Show();
+
+                e.Cancel = false;
+
+            }
+            else
+            {
+                e.Cancel = true;
+            }
         }
 
         private void frmHome_KeyPress(object sender, KeyPressEventArgs e)

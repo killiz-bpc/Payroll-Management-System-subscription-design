@@ -31,6 +31,8 @@ namespace Payroll_Management_System.Connections
         public static double deduction_philhealth { get; set; }
         public static double deduction_pagibig { get; set; }
 
+        public static double gross_pay {  get; set; }   
+
 
 
 
