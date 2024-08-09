@@ -176,7 +176,7 @@
   <ItemGroup>
     <Compile Include="Connections\GetData.cs" />
     <Compile Include="Connections\GetPayslip.cs" />
-    <Compile Include="Connections\GetPayslipDetails.cs" />
+    <Compile Include="Connections\Payslip.cs" />
     <Compile Include="DataTables\DataPayslip.cs">
       <DependentUpon>DataPayslip.xsd</DependentUpon>
     </Compile>
@@ -455,5 +455,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -42,20 +42,20 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
         public void load_data()
         {
             // header 
-            var (employee_name, department, job_title) = GetPayslip.GetEmployeeInfo(GetPayslipDetails.emp_id);
+            var (employee_name, department, job_title) = GetPayslip.GetEmployeeInfo(Payslip.emp_id);
             txtEmpName.Text = employee_name;
             txtDeptTitle.Text = department + " | " + job_title;
             emp_department = department;
 
             // reference (attendance batch no. and cutoff period
-            txtAttendanceBatchNo.Text = "Attendance Batch No. : "+GetPayslipDetails.attendance_batch_no;
-            txtPeriod.Text = "Period: "+GetPayslipDetails.cutoff_period;
+            txtAttendanceBatchNo.Text = "Attendance Batch No. : "+Payslip.attendance_batch_no;
+            txtPeriod.Text = "Period: "+Payslip.cutoff_period;
 
             //get computation from attendance
-            var (deduction_late, deduction_undertime, deduction_absent, addition_overtime, addition_nightpremium, addition_restdayduty, addition_legalholiday, addition_specialholiday) = GetPayslip.GetAttendanceComputation(GetPayslipDetails.emp_id, GetPayslipDetails.attendance_batch_no);
+            var (deduction_late, deduction_undertime, deduction_absent, addition_overtime, addition_nightpremium, addition_restdayduty, addition_legalholiday, addition_specialholiday) = GetPayslip.GetAttendanceComputation(Payslip.emp_id, Payslip.attendance_batch_no);
 
             //basic salary
-            double basic_salary = GetPayslip.GetEmployeeSalary(GetPayslipDetails.emp_id, GetPayslipDetails.attendance_batch_no, GetPayslipDetails.cutoff_period);
+            double basic_salary = GetPayslip.GetEmployeeSalary(Payslip.emp_id, Payslip.attendance_batch_no, Payslip.cutoff_period);
             txtBasicSalary.Text = basic_salary.ToString("N3");
             
             //deductions
@@ -72,7 +72,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
 
             //mandatory deductions
             var (deduction_sss_er, deduction_sss_ee, deduction_philhealth, deduction_pagibig) = GetPayslip.GetDeductionMandatory(basic_salary);
-            if (GetPayslipDetails.cutoff_period != "First")
+            if (Payslip.cutoff_period != "First")
             {
                 txtPagibig.Text = deduction_pagibig.ToString("N3");
                 txtPhilhealth.Text = deduction_philhealth.ToString("N3");
@@ -87,34 +87,34 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
             }
 
             //hmo deductions
-            double deduction_hmo = GetPayslip.GetDeductionHMO(GetPayslipDetails.emp_id);
+            double deduction_hmo = GetPayslip.GetDeductionHMO(Payslip.emp_id);
             txtHMO.Text = deduction_hmo.ToString("N3");
 
             //store data to retrieve it in edit payslip form
-            GetPayslipDetails.employee_name= employee_name;
-            GetPayslipDetails.job_title= job_title;
-            GetPayslipDetails.department= department;
+            Payslip.employee_name= employee_name;
+            Payslip.job_title= job_title;
+            Payslip.department= department;
             //attendance
-            GetPayslipDetails.basic_salary= basic_salary;
-            GetPayslipDetails.addition_overtime= addition_overtime;
-            GetPayslipDetails.addition_nightpremium= addition_nightpremium;
-            GetPayslipDetails.addition_restdayduty= addition_restdayduty;
-            GetPayslipDetails.addition_legalholiday= addition_legalholiday;
-            GetPayslipDetails.addition_specialholiday= addition_specialholiday;
-            GetPayslipDetails.deduction_late= deduction_late;
-            GetPayslipDetails.deduction_undertime= deduction_undertime;
-            GetPayslipDetails.deduction_absent= deduction_absent;
+            Payslip.basic_salary= basic_salary;
+            Payslip.addition_overtime= addition_overtime;
+            Payslip.addition_nightpremium= addition_nightpremium;
+            Payslip.addition_restdayduty= addition_restdayduty;
+            Payslip.addition_legalholiday= addition_legalholiday;
+            Payslip.addition_specialholiday= addition_specialholiday;
+            Payslip.deduction_late= deduction_late;
+            Payslip.deduction_undertime= deduction_undertime;
+            Payslip.deduction_absent= deduction_absent;
             //mandatory
-            GetPayslipDetails.deduction_philhealth = deduction_philhealth;
-            GetPayslipDetails.deduction_sss = deduction_sss_ee;
-            GetPayslipDetails.deduction_pagibig = deduction_pagibig;
-            GetPayslipDetails.deduction_hmo= deduction_hmo;
+            Payslip.deduction_philhealth = deduction_philhealth;
+            Payslip.deduction_sss = deduction_sss_ee;
+            Payslip.deduction_pagibig = deduction_pagibig;
+            Payslip.deduction_hmo= deduction_hmo;
 
 
             
-            GetPayslipDetails.gross_pay = basic_salary - (deduction_absent + deduction_late + deduction_undertime);
+            Payslip.gross_pay = basic_salary - (deduction_absent + deduction_late + deduction_undertime);
 
-            txtGrossSalary.Text = GetPayslipDetails.gross_pay.ToString("N3");
+            txtGrossSalary.Text = Payslip.gross_pay.ToString("N3");
             
            
         }
@@ -128,9 +128,9 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
                     conn.Open();
                     string query = "SELECT * FROM payroll_process_tb where emp_id=@emp_id AND attendance_batch_no=@attendance_batch_no AND cutoff_period=@cutoff_period";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@emp_id", GetPayslipDetails.emp_id);
-                    cmd.Parameters.AddWithValue("@attendance_batch_no", GetPayslipDetails.attendance_batch_no);
-                    cmd.Parameters.AddWithValue("@cutoff_period", GetPayslipDetails.cutoff_period);
+                    cmd.Parameters.AddWithValue("@emp_id", Payslip.emp_id);
+                    cmd.Parameters.AddWithValue("@attendance_batch_no", Payslip.attendance_batch_no);
+                    cmd.Parameters.AddWithValue("@cutoff_period", Payslip.cutoff_period);
 
                     MySqlDataReader sdr = cmd.ExecuteReader();
 
@@ -202,13 +202,13 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
                     }
 
 
-                    var (employee_name, department, job_title) = GetPayslip.GetEmployeeInfo(GetPayslipDetails.emp_id);
+                    var (employee_name, department, job_title) = GetPayslip.GetEmployeeInfo(Payslip.emp_id);
                     txtEmpName.Text = employee_name;
                     txtDeptTitle.Text = department + " | " + job_title;
 
                     // reference (attendance batch no. and cutoff period
-                    txtAttendanceBatchNo.Text = "Attendance Batch No. : "+GetPayslipDetails.attendance_batch_no;
-                    txtPeriod.Text = "Period: "+GetPayslipDetails.cutoff_period;
+                    txtAttendanceBatchNo.Text = "Attendance Batch No. : "+Payslip.attendance_batch_no;
+                    txtPeriod.Text = "Period: "+Payslip.cutoff_period;
 
 
                     txtBasicSalary.Text = basic_salary;
@@ -371,7 +371,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
 
         private void frmViewPayslip_Load(object sender, EventArgs e)
         {
-            if (!GetPayslipDetails.isSaved)
+            if (!Payslip.isSaved)
             {
                 load_data();
             }
@@ -396,9 +396,9 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
                     MySqlCommand cmd = new MySqlCommand(query, conn);
 
 
-                    cmd.Parameters.AddWithValue("@attendance_batch_no", GetPayslipDetails.attendance_batch_no);
-                    cmd.Parameters.AddWithValue("@cutoff_period", GetPayslipDetails.cutoff_period);
-                    cmd.Parameters.AddWithValue("@emp_id", GetPayslipDetails.emp_id);
+                    cmd.Parameters.AddWithValue("@attendance_batch_no", Payslip.attendance_batch_no);
+                    cmd.Parameters.AddWithValue("@cutoff_period", Payslip.cutoff_period);
+                    cmd.Parameters.AddWithValue("@emp_id", Payslip.emp_id);
                     cmd.Parameters.AddWithValue("@employee_name", txtEmpName.Text);
                     cmd.Parameters.AddWithValue("@department", emp_department);
                     cmd.Parameters.AddWithValue("@basic_salary", GetPayslip.ConvertToDouble(txtBasicSalary.Text));
@@ -433,7 +433,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Payslip has been saved successfully", "Message Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    GetPayslipDetails.isSaved = true;
+                    Payslip.isSaved = true;
                 }
             }
             catch (Exception ex)
@@ -448,7 +448,7 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
             DialogResult result = MessageBox.Show("Are you sure you want to approve this payslip?", "Message Information", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if(result == DialogResult.Yes)
             {
-                if (!GetPayslipDetails.isSaved)
+                if (!Payslip.isSaved)
                 {
                     insert_data();  //kapag ayaw na pumunta sa edit payslip diretso save agad
                 }
@@ -460,8 +460,8 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
                         conn.Open();
                         string query = "UPDATE attendance_monitoring SET status = 'For Payroll' WHERE attendance_batch_no=@attendance_batch_no AND emp_id=@emp_id";
                         MySqlCommand cmd = new MySqlCommand(query, conn);
-                        cmd.Parameters.AddWithValue("@attendance_batch_no", GetPayslipDetails.attendance_batch_no);
-                        cmd.Parameters.AddWithValue("@emp_id", GetPayslipDetails.emp_id);
+                        cmd.Parameters.AddWithValue("@attendance_batch_no", Payslip.attendance_batch_no);
+                        cmd.Parameters.AddWithValue("@emp_id", Payslip.emp_id);
 
                         cmd.ExecuteNonQuery();
 

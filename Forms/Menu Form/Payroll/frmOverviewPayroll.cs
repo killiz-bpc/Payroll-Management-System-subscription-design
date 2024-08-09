@@ -147,17 +147,17 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
                     conn.Open();
                     string query = "SELECT COUNT(*) FROM payroll_process_tb WHERE emp_id=@emp_id AND attendance_batch_no=@attendance_batch_no";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@emp_id", GetPayslipDetails.emp_id);
+                    cmd.Parameters.AddWithValue("@emp_id", Payslip.emp_id);
                     cmd.Parameters.AddWithValue("@attendance_batch_no", txtAttendanceBatch.Text);
                     int count= Convert.ToInt32(cmd.ExecuteScalar());
                     
                     if(count>0) //match data
                     {
-                        GetPayslipDetails.isSaved =true;
+                        Payslip.isSaved =true;
                     }
                     else
                     {
-                        GetPayslipDetails.isSaved=false;
+                        Payslip.isSaved=false;
                     }
 
 
@@ -180,9 +180,9 @@ namespace Payroll_Management_System.Forms.Menu_Form.Payroll
 
                 frmViewPayslip frmViewPayslip = new frmViewPayslip();
 
-                GetPayslipDetails.emp_id = emp_id;
-                GetPayslipDetails.attendance_batch_no= txtAttendanceBatch.Text;
-                GetPayslipDetails.cutoff_period =cutoff_period;
+                Payslip.emp_id = emp_id;
+                Payslip.attendance_batch_no= txtAttendanceBatch.Text;
+                Payslip.cutoff_period =cutoff_period;
 
                 check_payroll_tb();
 
